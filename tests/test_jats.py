@@ -40,27 +40,30 @@ class TestJATS(unittest.TestCase):
             test_outfile = os.path.join(self.outputdir, f + ".json")
             parser = jats.JATSParser()
 
-            with open(test_infile, "rb") as fp:
+            with open(test_infile, "r") as fp:
                 input_data = fp.read()
 
-            with open(test_outfile, "rb") as fp:
+            with open(test_outfile, "r") as fp:
                 output_text = fp.read()
                 output_data = json.loads(output_text)
 
-            parsed = parser.parse(input_data)
+            for parsed in parser.parse(input_data):
+                # make sure this is valid schema
+                try:
+                    ads_schema_validator().validate(parsed)
+                except Exception:
+                    self.fail("Schema validation failed")
 
-            # make sure this is valid schema
-            try:
-                ads_schema_validator().validate(parsed)
-            except Exception:
-                self.fail("Schema validation failed")
+                # this field won't match the test data, so check and then discard
+                time_difference = (
+                    datetime.datetime.strptime(parsed["recordData"]["parsedTime"], TIMESTAMP_FMT)
+                    - datetime.datetime.utcnow()
+                )
+                self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
+                parsed["recordData"]["parsedTime"] = ""
 
-            # this field won't match the test data, so check and then discard
-            time_difference = (
-                datetime.datetime.strptime(parsed["recordData"]["parsedTime"], TIMESTAMP_FMT)
-                - datetime.datetime.utcnow()
-            )
-            self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
-            parsed["recordData"]["parsedTime"] = ""
+                self.assertEqual(parsed, output_data)
 
-            self.assertEqual(parsed, output_data)
+
+if __name__ == "__main__":
+    unittest.main()

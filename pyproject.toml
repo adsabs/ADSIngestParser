@@ -19,7 +19,7 @@ packages = [
 ]
 
 dependencies = [
-    'click>=8.0.3',
+    'click==8.0.3',
     'beautifulsoup4==4.10.0',
     'lxml==4.7.1',
     'namedentities==1.9.4',

@@ -222,29 +222,30 @@ class DataciteParser(BaseXmlToDictParser):
         self.base_metadata["doctype"] = doctype
 
     def parse(self, text):
-        d = self.xmltodict(text)
+        for chunk in self.get_chunks(text, r"<resource\b[^>]*>", r"</resource\b[^>]*>"):
+            d = self.xmltodict(chunk)
 
-        # as a convenience, remove the OAI wrapper if it's there
-        self.input_metadata = d.get("record", {}).get("metadata", {}).get("resource") or d.get(
-            "resource"
-        )
+            # as a convenience, remove the OAI wrapper if it's there
+            self.input_metadata = d.get("record", {}).get("metadata", {}).get("resource") or d.get(
+                "resource"
+            )
 
-        # check for namespace to make sure it's a compatible datacite schema
-        schema = self.input_metadata.get("@xmlns")
-        if schema not in self.DC_SCHEMAS:
-            raise WrongSchemaException('Unexpected XML schema "%s"' % schema)
+            # check for namespace to make sure it's a compatible datacite schema
+            schema = self.input_metadata.get("@xmlns")
+            if schema not in self.DC_SCHEMAS:
+                raise WrongSchemaException('Unexpected XML schema "%s"' % schema)
 
-        self._parse_contrib(author=True)
-        self._parse_contrib(author=False)
-        self._parse_title_abstract()
-        self._parse_publisher()
-        self._parse_pubdate()
-        self._parse_keywords()
-        self._parse_ids()
-        self._parse_related_refs()
-        self._parse_permissions()
-        self._parse_doctype()
+            self._parse_contrib(author=True)
+            self._parse_contrib(author=False)
+            self._parse_title_abstract()
+            self._parse_publisher()
+            self._parse_pubdate()
+            self._parse_keywords()
+            self._parse_ids()
+            self._parse_related_refs()
+            self._parse_permissions()
+            self._parse_doctype()
 
-        output = serializer.serialize(self.base_metadata, format="OtherXML")
+            output = serializer.serialize(self.base_metadata, format="OtherXML")
 
-        return output
+            yield output

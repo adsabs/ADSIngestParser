@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 from adsingestp import serializer, utils
 from adsingestp.ingest_exceptions import JATSContribException
-from adsingestp.parsers.base import BaseBeautifulSoupParser
+from adsingestp.parsers.base import BaseBeautifulSoupParser, BaseXmlToDictParser
 
 logger = logging.getLogger(__name__)
 
@@ -403,7 +403,7 @@ class JATSAffils(object):
             raise JATSContribException(err)
 
 
-class JATSParser(BaseBeautifulSoupParser):
+class JATSParser(BaseBeautifulSoupParser, BaseXmlToDictParser):
     fix_ampersand = re.compile(r"(&amp;)(.*?)(;)")
 
     JATS_TAGS_MATH = [
@@ -831,6 +831,9 @@ class JATSParser(BaseBeautifulSoupParser):
                     pass
 
     def _parse_page(self):
+        if not self.article_meta:
+            return
+
         fpage = self.article_meta.fpage
         if fpage is None:
             fpage = self.article_meta.pageStart
@@ -905,48 +908,49 @@ class JATSParser(BaseBeautifulSoupParser):
             self.base_metadata[k] = v
 
     def parse(self, text):
+        for chunk in self.get_chunks(text, r"<article(?!-)[^>]*>", r"</article(?!-)[^>]*>"):
+            d = self.bsstrtodict(chunk, parser="lxml-xml")
+            document = d.article
 
-        d = self.bsstrtodict(text, parser="lxml-xml")
-        document = d.article
+            front_meta = document.front
+            self.back_meta = document.back
 
-        front_meta = document.front
-        self.back_meta = document.back
+            try:
+                self.article_meta = front_meta.find("article-meta")
+                self.journal_meta = front_meta.find("journal-meta")
+            except Exception:
+                return {}
 
-        try:
-            self.article_meta = front_meta.find("article-meta")
-            self.journal_meta = front_meta.find("journal-meta")
-        except Exception:
-            return {}
+            if self.article_meta:
+                # Volume:
+                volume = self.article_meta.volume
+                self.base_metadata["volume"] = self._detag(volume, [])
 
-        # parse individual pieces
-        self._parse_title_abstract()
-        self._parse_author()
-        self._parse_copyright()
-        self._parse_keywords()
+                # Issue:
+                issue = self.article_meta.issue
+                self.base_metadata["issue"] = self._detag(issue, [])
 
-        # Volume:
-        volume = self.article_meta.volume
-        self.base_metadata["volume"] = self._detag(volume, [])
+            # parse individual pieces
+            self._parse_title_abstract()
+            self._parse_author()
+            self._parse_copyright()
+            self._parse_keywords()
 
-        # Issue:
-        issue = self.article_meta.issue
-        self.base_metadata["issue"] = self._detag(issue, [])
+            self._parse_pub()
+            self._parse_related()
+            self._parse_ids()
+            self._parse_pubdate()
+            self._parse_edhistory()
+            self._parse_permissions()
+            self._parse_page()
 
-        self._parse_pub()
-        self._parse_related()
-        self._parse_ids()
-        self._parse_pubdate()
-        self._parse_edhistory()
-        self._parse_permissions()
-        self._parse_page()
+            self._parse_references()
 
-        self._parse_references()
+            self.entity_convert()
 
-        self.entity_convert()
+            output = serializer.serialize(self.base_metadata, format="JATS")
 
-        output = serializer.serialize(self.base_metadata, format="JATS")
-
-        return output
+            yield output
 
     def add_fulltext(self):
         pass

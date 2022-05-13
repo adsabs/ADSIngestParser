@@ -8,12 +8,12 @@ from adsingestp.ingest_exceptions import (
     WrongSchemaException,
     XmlLoadException,
 )
-from adsingestp.parsers.base import BaseBeautifulSoupParser
+from adsingestp.parsers.base import BaseBeautifulSoupParser, BaseXmlToDictParser
 
 logger = logging.getLogger(__name__)
 
 
-class CrossrefParser(BaseBeautifulSoupParser):
+class CrossrefParser(BaseBeautifulSoupParser, BaseXmlToDictParser):
     def __init__(self):
         self.base_metadata = {}
         self.input_metadata = None
@@ -289,81 +289,84 @@ class CrossrefParser(BaseBeautifulSoupParser):
             self.base_metadata["references"] = ref_list
 
     def parse(self, text):
-        try:
-            d = self.bsstrtodict(text, parser="lxml-xml")
-            records_in_file = d.find_all("doi_record")
-            if len(records_in_file) > 1:
-                raise TooManyDocumentsException(
-                    "This file has %s records, should have only one!" % len(records_in_file)
+        for chunk in self.get_chunks(text, r"<record[^>]*>", r"</record[^>]*>"):
+            try:
+                d = self.bsstrtodict(chunk, parser="lxml-xml")
+                records_in_file = d.find_all("doi_record")
+                if len(records_in_file) > 1:
+                    raise TooManyDocumentsException(
+                        "This file has %s records, should have only one!" % len(records_in_file)
+                    )
+            except Exception as err:
+                raise XmlLoadException(err)
+
+            try:
+                self.input_metadata = d.find("crossref").extract()
+            except Exception as err:
+                raise NotCrossrefXMLException(err)
+
+            type_found = False
+            self.record_type = None
+            if self.input_metadata.find("journal"):
+                type_found = True
+                self.record_type = "journal"
+                self.record_meta = self.input_metadata.find("journal_article").extract()
+            if self.input_metadata.find("conference"):
+                if type_found:
+                    raise WrongSchemaException("Too many document types found in CrossRef record")
+                else:
+                    type_found = True
+                    self.record_type = "conference"
+                    self.record_meta = self.input_metadata.find("conference_paper").extract()
+            if self.input_metadata.find("book"):
+                if type_found:
+                    raise WrongSchemaException("Too many document types found in CrossRef record")
+                else:
+                    type_found = True
+                    self.record_type = "book"
+                    if self.input_metadata.find("book_metadata"):
+                        self.record_meta = self.input_metadata.find("book_metadata").extract()
+                    elif self.input_metadata.find("book_series_metadata"):
+                        self.record_meta = self.input_metadata.find(
+                            "book_series_metadata"
+                        ).extract()
+
+            if not type_found:
+                raise WrongSchemaException(
+                    "Didn't find allowed document type (article, conference, book) in CrossRef record"
                 )
-        except Exception as err:
-            raise XmlLoadException(err)
 
-        try:
-            self.input_metadata = d.find("crossref").extract()
-        except Exception as err:
-            raise NotCrossrefXMLException(err)
+            if self.record_type == "journal":
+                self._parse_pub()
 
-        type_found = False
-        self.record_type = None
-        if self.input_metadata.find("journal"):
-            type_found = True
-            self.record_type = "journal"
-            self.record_meta = self.input_metadata.find("journal_article").extract()
-        if self.input_metadata.find("conference"):
-            if type_found:
-                raise WrongSchemaException("Too many document types found in CrossRef record")
-            else:
-                type_found = True
-                self.record_type = "conference"
-                self.record_meta = self.input_metadata.find("conference_paper").extract()
-        if self.input_metadata.find("book"):
-            if type_found:
-                raise WrongSchemaException("Too many document types found in CrossRef record")
-            else:
-                type_found = True
-                self.record_type = "book"
-                if self.input_metadata.find("book_metadata"):
-                    self.record_meta = self.input_metadata.find("book_metadata").extract()
-                elif self.input_metadata.find("book_series_metadata"):
-                    self.record_meta = self.input_metadata.find("book_series_metadata").extract()
+            if self.record_type == "conference":
+                self._parse_conf_event_proceedings()
 
-        if not type_found:
-            raise WrongSchemaException(
-                "Didn't find allowed document type (article, conference, book) in CrossRef record"
-            )
-
-        if self.record_type == "journal":
-            self._parse_pub()
-
-        if self.record_type == "conference":
-            self._parse_conf_event_proceedings()
-
-        if self.record_type == "book":
-            if self.record_meta.find("publisher") and self.record_meta.find("publisher").find(
-                "publisher_name"
-            ):
-                self.base_metadata["publisher"] = self.record_meta.find(
+            if self.record_type == "book":
+                if self.record_meta.find("publisher") and self.record_meta.find("publisher").find(
                     "publisher_name"
-                ).get_text()
+                ):
+                    self.base_metadata["publisher"] = self.record_meta.find(
+                        "publisher_name"
+                    ).get_text()
 
-            if self.record_meta.find("isbn"):
-                self.base_metadata["isbn"] = self._get_isbn(self.record_meta.find_all("isbn"))
+                if self.record_meta.find("isbn"):
+                    self.base_metadata["isbn"] = self._get_isbn(self.record_meta.find_all("isbn"))
 
-            if self.record_meta.find("series_metadata"):
-                self._parse_book_series()
+                if self.record_meta.find("series_metadata"):
+                    self._parse_book_series()
 
-        self._parse_issue()
-        self._parse_title_abstract()
-        self._parse_contrib()
-        self._parse_pubdate()
-        self._parse_edhistory_copyright()
-        self._parse_page()
-        self._parse_ids()
-        self._parse_references()
+            self._parse_issue()
+            self._parse_title_abstract()
+            self._parse_contrib()
+            self._parse_pubdate()
+            self._parse_edhistory_copyright()
+            self._parse_page()
+            self._parse_ids()
+            self._parse_references()
 
-        self.entity_convert()
+            self.entity_convert()
 
-        output = serializer.serialize(self.base_metadata, format="OtherXML")
+            output = serializer.serialize(self.base_metadata, format="OtherXML")
 
-        return output
+            yield output
