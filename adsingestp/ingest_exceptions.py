@@ -1,5 +1,6 @@
 # TODO add exception handling
 
+
 class IngestParserException(Exception):
     pass
 
@@ -40,6 +41,7 @@ class UnicodeHandlerError(IngestParserException):
     """
     Error in the UnicodeHandler.
     """
+
     pass
 
 

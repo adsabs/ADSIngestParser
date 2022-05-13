@@ -37,14 +37,14 @@ class TestDatacite(unittest.TestCase):
             test_outfile = os.path.join(self.outputdir, f + ".json")
             parser = datacite.DataciteParser()
 
-            with open(test_infile, "rb") as fp:
+            with open(test_infile, "r") as fp:
                 input_data = fp.read()
 
-            with open(test_outfile, "rb") as fp:
+            with open(test_outfile, "r") as fp:
                 output_text = fp.read()
                 output_data = json.loads(output_text)
 
-            parsed = parser.parse(input_data)
+            parsed = list(parser.parse(input_data))[0]
 
             # make sure this is valid schema
             try:
@@ -62,3 +62,7 @@ class TestDatacite(unittest.TestCase):
             parsed["recordData"]["parsedTime"] = ""
 
             self.assertEqual(parsed, output_data)
+
+
+if __name__ == "__main__":
+    unittest.main()

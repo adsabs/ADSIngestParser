@@ -1,3 +1,5 @@
+import re
+
 import bs4
 import xmltodict as xmltodict_parser
 
@@ -51,6 +53,31 @@ class BaseXmlToDictParser(object):
             return d
         else:
             return d
+
+    def get_chunks(self, input, startpattern, endpattern):
+        """Super simple method (though not inefficient) to cut input
+        into chunk-sized documents, preserving header/footer"""
+
+        s = re.compile(startpattern, re.IGNORECASE)
+        e = re.compile(endpattern, re.IGNORECASE)
+        x = s.search(input)
+        if x is None:
+            return input  # not found, return the whole thing
+        istart = x.start()
+        iend = None
+        for x in e.finditer(input, istart + 1):
+            iend = x.end() + 1
+        if iend is None:
+            return input  # not found, return the whole thing
+
+        header = input[0:istart]
+        footer = input[iend:]
+
+        for snext in s.finditer(input, istart + 1):
+            yield header + input[istart : snext.start()] + footer
+            istart = snext.start()
+
+        yield header + input[istart:iend] + footer
 
 
 class BaseBeautifulSoupParser(object):

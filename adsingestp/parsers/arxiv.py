@@ -127,26 +127,27 @@ class ArxivParser(BaseXmlToDictParser):
             self.base_metadata["keywords"] = keywords_out
 
     def parse(self, text):
-        d = self.xmltodict(text)
+        for chunk in self.get_chunks(text, r"<record(?!-)[^>]*>", r"</record(?!-)[^>]*>"):
+            d = self.xmltodict(chunk)
 
-        self.input_header = d.get("record", {}).get("header", {})
-        self.input_metadata = d.get("record", {}).get("metadata", {}).get("oai_dc:dc", {})
+            self.input_header = d.get("record", {}).get("header", {})
+            self.input_metadata = d.get("record", {}).get("metadata", {}).get("oai_dc:dc", {})
 
-        schema_spec = []
-        for s in self._array(self.input_metadata["@xmlns:oai_dc"]):
-            schema_spec.append(self._text(s))
-        if len(schema_spec) == 0:
-            raise NoSchemaException("Unknown record schema.")
-        elif schema_spec[0] not in self.DUBCORE_SCHEMA:
-            raise WrongSchemaException("Wrong schema.")
+            schema_spec = []
+            for s in self._array(self.input_metadata["@xmlns:oai_dc"]):
+                schema_spec.append(self._text(s))
+            if len(schema_spec) == 0:
+                raise NoSchemaException("Unknown record schema.")
+            elif schema_spec[0] not in self.DUBCORE_SCHEMA:
+                raise WrongSchemaException("Wrong schema.")
 
-        self._parse_ids()
-        self._parse_title()
-        self._parse_author()
-        self._parse_pubdate()
-        self._parse_abstract()
-        self._parse_keywords()
+            self._parse_ids()
+            self._parse_title()
+            self._parse_author()
+            self._parse_pubdate()
+            self._parse_abstract()
+            self._parse_keywords()
 
-        output = serializer.serialize(self.base_metadata, format="OtherXML")
+            output = serializer.serialize(self.base_metadata, format="OtherXML")
 
-        return output
+            yield output
