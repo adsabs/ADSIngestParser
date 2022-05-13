@@ -12,6 +12,6 @@
             "env": {
                 "GEVENT_SUPPORT": "False"
             }
-        },
+        }
     ]
 }
