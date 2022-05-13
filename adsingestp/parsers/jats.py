@@ -477,7 +477,7 @@ class JATSParser(BaseBeautifulSoupParser, BaseXmlToDictParser):
             s_new = "&" + s[1] + ";"
             newr = newr.replace(s_old, s_new)
 
-        newr = newr.replace(u"\n", u" ").replace(u"  ", u" ")
+        newr = newr.replace("\n", " ").replace("  ", " ")
         newr = newr.replace("&nbsp;", " ")
         newr = newr.strip()
 
