@@ -139,6 +139,7 @@ def clean_output(in_text):
 
     return output
 
+
 class EntityConverter(object):
     def __init__(self):
         self.input_text = ""

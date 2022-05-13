@@ -6,7 +6,7 @@
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
-    },
+    }
   },
   "terminal.integrated.env.linux": {
     "PYTHONPATH": ".:tests"
