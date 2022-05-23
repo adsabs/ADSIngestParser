@@ -70,12 +70,14 @@ class ArxivParser(BaseBeautifulSoupParser):
             parsed_name = name_parser.parse(
                 a, collaborations_params=self.author_collaborations_params
             )
+            # TODO: Check collaborations
             if len(parsed_name) > 1:
                 logger.warning(
                     "More than one name parsed, can only accept one. Input: %s, output: %s",
                     a,
                     parsed_name,
                 )
+            # TODO: Unnecessary duplication of a dict (parsed_name_first == author_tmp)
             parsed_name_first = parsed_name[0]
             for key in parsed_name_first.keys():
                 author_tmp[key] = parsed_name_first[key]

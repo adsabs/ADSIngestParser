@@ -65,12 +65,14 @@ class JATSAffils(object):
         """
         email_new = set()
         for em in email:
-            if " " in em:
-                for e in em.strip().split():
-                    if "@" in e:
+            if " " in em: # sblanco..@cfa.harvard.edu klockhart@cfa
+                          # sblanco @cfa.harvard.edu
+                          # sblanco@cfa.harvard .edu # if @ and we remove all in-between spaces, does it match an email regex?
+                for e in em.strip().split(): # TODO: Ask curators what they would prefer to do if not all elements are emails
+                    if "@" in e: # TODO: Better email matching
                         email_new.add(e.strip())
             else:
-                if "@" in em:
+                if "@" in em: # TODO: regex
                     email_new.add(em.strip())
         return list(email_new)
 
@@ -86,7 +88,7 @@ class JATSAffils(object):
         elif not isinstance(orcid, list):
             raise TypeError("ORCID must be str or list")
 
-        for orc in orcid:
+        for orc in orcid: # TODO: regex xxxx-xxxx-xxxx-xxxx
             osplit = orc.strip().split()
             for o in osplit:
                 o = o.rstrip("/").split("/")[-1]
@@ -140,7 +142,7 @@ class JATSAffils(object):
             # note that the ingest schema allows a single email address, but we've extracted all
             # here in case that changes to allow more than one
             if auth["email"]:
-                auth["email"] = auth["email"][0]
+                auth["email"] = auth["email"][0] # TODO: Data model allows only one email per author, could this be a flaw?
             else:
                 auth["email"] = ""
 
@@ -260,6 +262,7 @@ class JATSAffils(object):
                     orcid_out = ""
 
                 # create the author dict
+                # TODO: auth[corresp] = l_correspondent # just for readability
                 auth.update(corresp=l_correspondent)
                 auth.update(surname=surname)
                 auth.update(given=given)

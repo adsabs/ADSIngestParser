@@ -207,6 +207,7 @@ class CrossrefParser(BaseBeautifulSoupParser):
     def _parse_pubdate(self):
         pubdates_raw = self.record_meta.find_all("publication_date")
         for p in pubdates_raw:
+            # TODO: replace by: datetype = p.get("media_type", "print") ?
             try:
                 datetype = p["media_type"]
             except KeyError as err:
@@ -221,7 +222,7 @@ class CrossrefParser(BaseBeautifulSoupParser):
                     self.base_metadata["pubdate_electronic"] = pubdate
                 else:
                     logger.warning("Unknown date type")
-            except IngestParserException:
+            except IngestParserException: # TODO: do we need this?
                 pass
 
     def _parse_edhistory_copyright(self):
@@ -280,7 +281,7 @@ class CrossrefParser(BaseBeautifulSoupParser):
         """
         try:
             d = self.bsstrtodict(text, parser="lxml-xml")
-        except Exception as err:
+        except Exception as err: # TODO: This might not be necessary (check other try/except too)
             raise XmlLoadException(err)
 
         records_in_file = d.find_all("doi_record")
