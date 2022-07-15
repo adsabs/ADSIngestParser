@@ -83,7 +83,10 @@ class CrossrefParser(BaseBeautifulSoupParser):
         issns = []
         for i in issn_all:
             if i.get_text() and re_issn.match(i.get_text()):
-                issns.append((i["media_type"], i.get_text()))
+                if i.has_attr("media_type"):
+                    issns.append((i["media_type"], i.get_text()))
+                else:
+                    issns.append(("print", i.get_text()))
         self.base_metadata["issn"] = issns
 
     def _parse_issue(self):
@@ -198,7 +201,11 @@ class CrossrefParser(BaseBeautifulSoupParser):
     def _parse_pubdate(self):
         pubdates_raw = self.record_meta.find_all("publication_date")
         for p in pubdates_raw:
-            datetype = p.get("media_type", "print")
+            try:
+                datetype = p.get("media_type", "print")
+            except Exception as err:
+                logger.warn("Pubdate without a media type! Assigning print: %s" % err)
+                datetype = "print"
 
             pubdate = self._get_date(p)
             if datetype == "print":
@@ -329,7 +336,10 @@ class CrossrefParser(BaseBeautifulSoupParser):
 
         self._parse_issue()
         self._parse_title_abstract()
-        self._parse_contrib()
+        try:
+            self._parse_contrib()
+        except Exception as err:
+            logger.warn('No contributors in parsed record: %s' % err)
         self._parse_pubdate()
         self._parse_edhistory_copyright()
         self._parse_page()
