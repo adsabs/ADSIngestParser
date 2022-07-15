@@ -355,7 +355,10 @@ class CrossrefParser(BaseBeautifulSoupParser):
             logger.warn('No contributors in parsed record: %s' % err)
         self._parse_pubdate()
         self._parse_edhistory_copyright()
-        self._parse_page()
+        try:
+            self._parse_page()
+        except Exception as err:
+            logger.warn('No pages in parsed record: %s' % err)
         self._parse_ids()
         self._parse_references()
 
