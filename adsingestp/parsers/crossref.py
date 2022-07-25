@@ -83,7 +83,10 @@ class CrossrefParser(BaseBeautifulSoupParser):
         issns = []
         for i in issn_all:
             if i.get_text() and re_issn.match(i.get_text()):
-                issns.append((i["media_type"], i.get_text()))
+                if i.has_attr("media_type"):
+                    issns.append((i["media_type"], i.get_text()))
+                else:
+                    issns.append(("print", i.get_text()))
         self.base_metadata["issn"] = issns
 
     def _parse_issue(self):
@@ -198,7 +201,11 @@ class CrossrefParser(BaseBeautifulSoupParser):
     def _parse_pubdate(self):
         pubdates_raw = self.record_meta.find_all("publication_date")
         for p in pubdates_raw:
-            datetype = p.get("media_type", "print")
+            try:
+                datetype = p.get("media_type", "print")
+            except Exception as err:
+                logger.warn("Pubdate without a media type! Assigning print: %s" % err)
+                datetype = "print"
 
             pubdate = self._get_date(p)
             if datetype == "print":
@@ -296,14 +303,20 @@ class CrossrefParser(BaseBeautifulSoupParser):
         if self.input_metadata.find("journal"):
             type_found = True
             self.record_type = "journal"
-            self.record_meta = self.input_metadata.find("journal_article").extract()
+            try:
+                self.record_meta = self.input_metadata.find("journal_article").extract()
+            except Exception:
+                self.record_meta = None
         if self.input_metadata.find("conference"):
             if type_found:
                 raise WrongSchemaException("Too many document types found in CrossRef record")
             else:
                 type_found = True
                 self.record_type = "conference"
-                self.record_meta = self.input_metadata.find("conference_paper").extract()
+                try:
+                    self.record_meta = self.input_metadata.find("conference_paper").extract()
+                except Exception:
+                    self.record_meta = None
         if self.input_metadata.find("book"):
             if type_found:
                 raise WrongSchemaException("Too many document types found in CrossRef record")
@@ -314,10 +327,16 @@ class CrossrefParser(BaseBeautifulSoupParser):
                     self.record_meta = self.input_metadata.find("book_metadata").extract()
                 elif self.input_metadata.find("book_series_metadata"):
                     self.record_meta = self.input_metadata.find("book_series_metadata").extract()
+                else:
+                    self.record_meta = None
 
         if not type_found:
             raise WrongSchemaException(
                 "Didn't find allowed document type (article, conference, book) in CrossRef record"
+            )
+        elif not self.record_meta:
+            raise WrongSchemaException(
+                "Null record_meta for document type %s in CrossRef record" % self.record_type
             )
 
         if self.record_type == "journal":
@@ -342,10 +361,18 @@ class CrossrefParser(BaseBeautifulSoupParser):
 
         self._parse_issue()
         self._parse_title_abstract()
-        self._parse_contrib()
+        try:
+            self._parse_contrib()
+        except Exception:
+            # logger.warn('No contributors in parsed record: %s' % err)
+            pass
         self._parse_pubdate()
         self._parse_edhistory_copyright()
-        self._parse_page()
+        try:
+            self._parse_page()
+        except Exception:
+            # logger.warn('No pages in parsed record: %s' % err)
+            pass
         self._parse_ids()
         self._parse_references()
 
