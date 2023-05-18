@@ -4,7 +4,7 @@
    {"name": {"given_name": "H.", "pubraw": "Lenske, H.", "surname": "Lenske"}},
    {"name": {"given_name": "P.", "pubraw": "von Neumann-Cosel, P.", "surname": "von Neumann-Cosel"}},
    {"name": {"given_name": "I.", "pubraw": "Poltoratska, I.", "surname": "Poltoratska"}},
-   {"name": {"given_name": "V.", "middle-name": "Yu.", "pubraw": "Ponomarev, V. Yu.", "surname": "Ponomarev"}},
+   {"name": {"given_name": "V.", "middle_name": "Yu.", "pubraw": "Ponomarev, V. Yu.", "surname": "Ponomarev"}},
    {"name": {"given_name": "A.", "pubraw": "Richter, A.", "surname": "Richter"}},
    {"name": {"given_name": "D.", "pubraw": "Savran, D.", "surname": "Savran"}},
    {"name": {"given_name": "N.", "pubraw": "Tsoneva, N.", "surname": "Tsoneva"}}],
