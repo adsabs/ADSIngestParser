@@ -75,11 +75,19 @@ If a parser fails to properly parse any legitimate metadata file having that for
 
 We are restricted from making some content publicly available in some cases, so parser authors should check with curators to ensure we are not violating publisher rights by making content available on Github. When such cases occur, the metadata file should be kept largely intact to the extent possible, with impermissible data redacted in such a way that the replacement text still provides a sufficient parsing test. When possible, parser authors should use content with open-access licensing for test cases.
 
-Unittest output files should be in .json format and contain the parsed metadata in the ingest data model format. The file effectively contains a Python dictionary, though some small edits must be made to conform to the .json file standard (e.g. a Boolean is capitalized in Python but lower case in .json: `True` vs. `true`). In addition, please pretty print the input and output data before copying it into the relevant files, to make the diff work correctly. This is the recommended method (adjust the `width` as needed to keep from introducing extraneous line breaks):
+Unittest output files should be in .json format and contain the parsed metadata in the ingest data model format. The file effectively contains a Python dictionary, though some small edits must be made to conform to the .json file standard (e.g. a Boolean is capitalized in Python but lower case in .json: `True` vs. `true`). In addition, please pretty print the input and output data before copying it into the relevant files, to make the diff work correctly. There are a few different methods for doing this; here are a few options:
+
+* `pprint`: adjust the `width` as needed to keep from introducing extraneous line breaks
 
 ```
 import pprint
 pprint.pprint(output, width=2000)
+```
+
+* `json.dumps`:
+
+```
+json.dumps(output, indent=2)
 ```
 
 ## Documentation
