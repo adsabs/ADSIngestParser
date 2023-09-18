@@ -8,6 +8,8 @@ Parser for Copernicus Publishing
 
 import logging
 
+from bs4 import BeautifulSoup
+
 from adsingestp import utils
 from adsingestp.ingest_exceptions import (
     MissingAuthorsException,
@@ -17,7 +19,6 @@ from adsingestp.ingest_exceptions import (
     XmlLoadException,
 )
 from adsingestp.parsers.base import BaseBeautifulSoupParser
-from bs4 import BeautifulSoup
 logger = logging.getLogger(__name__)
 
 
@@ -26,24 +27,28 @@ class CopernicusParser(BaseBeautifulSoupParser):
 
     author_collaborations_params = {
         "keywords": ["group", "team", "collaboration"],
-        "remove_the": False}
+        "remove_the": False,
+    }
 
 
     def __init__(self):
         self.base_metadata = {}
+
         self.input_header = None  
         self.input_metadata = None
 
-    def _parse_journal(self):        
-        if self.input_metadata.find('journal'):
-            journal_metadata = self.input_metadata.find('journal')
-            
-            if journal_metadata.find('journal_title'):
-                self.base_metadata['publication'] = journal_metadata.find('journal_title').get_text()
-                
-            if journal_metadata.find('volume_number'):
-                self.base_metadata['volume'] = journal_metadata.find('volume_number').get_text()
+    def _parse_journal(self):
+        if self.input_metadata.find("journal"):
+            journal_metadata = self.input_metadata.find("journal")
 
+            if journal_metadata.find("journal_title"):
+                self.base_metadata["publication"] = journal_metadata.find(
+                    "journal_title"
+                ).get_text()
+
+            if journal_metadata.find("volume_number"):
+                self.base_metadata["volume"] = journal_metadata.find("volume_number").get_text()
+ 
     def _parse_pagination(self):
         if self.input_metadata.find('start_page'):
             self.base_metadata['page_first'] = self.input_metadata.find('start_page').get_text()
