@@ -26,11 +26,11 @@ class TestCopernicus(unittest.TestCase):
 
     def test_copernicus(self):
         filenames = [
-            "Copernicus_ESSD_essd-15-3075-2023",
-            "Copernicus_ISPAn_isprs-annals-X-M-1-2023-237-2023",
-            "Copernicus_GeChr_gchron-5-323-2023",
-			"Copernicus_ISPAr_isprs-archives-XLVIII-M-2-2023-721-2023",
-        ]
+             "Copernicus_ESSD_essd-15-3075-2023",
+             "Copernicus_ISPAn_isprs-annals-X-M-1-2023-237-2023",
+             "Copernicus_GeChr_gchron-5-323-2023",
+             "Copernicus_ISPAr_isprs-archives-XLVIII-M-2-2023-721-2023",
+         ]
         for f in filenames:
             test_infile = os.path.join(self.inputdir, f + ".xml")
             test_outfile = os.path.join(self.outputdir, f + ".json")
@@ -63,4 +63,3 @@ class TestCopernicus(unittest.TestCase):
             # pdb.set_trace()
             self.maxDiff = None
             self.assertEqual(parsed, output_data)
-

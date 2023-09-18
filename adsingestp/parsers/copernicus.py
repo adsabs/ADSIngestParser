@@ -69,7 +69,7 @@ class CopernicusParser(BaseBeautifulSoupParser):
 
         if self.input_metadata.find("eissn"):
             issns.append(("electronic", self.input_metadata.find("issn").get_text()))
-        
+
         self.base_metadata["issn"] = issns
 
         if self.input_metadata.find("doi"):
@@ -113,7 +113,7 @@ class CopernicusParser(BaseBeautifulSoupParser):
             parsed_name = name_parser.parse(
                 name, collaborations_params=self.author_collaborations_params
             )
-           author_temp = parsed_name[0]
+            author_temp = parsed_name[0]
 
             if a.find("email"):
                 author_temp["email"] = a.find("email").get_text()
@@ -122,17 +122,16 @@ class CopernicusParser(BaseBeautifulSoupParser):
 
             if a["affiliations"]:
                 aff_temp = []
-                for author_affil in str(a["affiliations"]).split(",") :
-                    aff_temp.append(affil_map[author_affil])                    
+                for author_affil in str(a["affiliations"]).split(","):
+                    aff_temp.append(affil_map[author_affil])
                 author_temp["aff"] = aff_temp
-                                
-                
+
             author_list.append(author_temp)
 
         if not author_list:
             raise MissingAuthorsException("No contributors found for")
 
-        self.base_metadata["authors"] = author_list        
+        self.base_metadata["authors"] = author_list
 
     def _parse_pubdate(self):
         if self.input_metadata.find("publication_date"):
@@ -184,7 +183,7 @@ class CopernicusParser(BaseBeautifulSoupParser):
             d = self.bsstrtodict(text, parser="lxml-xml")
         except Exception as err:
             raise XmlLoadException(err)
-        
+
         try:
             self.input_metadata = d.find("article")
         except Exception as err:
