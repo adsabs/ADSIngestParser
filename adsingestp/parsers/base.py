@@ -1,6 +1,7 @@
 import html
 import re
 from datetime import datetime
+
 import bs4
 
 from adsingestp.ingest_exceptions import WrongFormatException
