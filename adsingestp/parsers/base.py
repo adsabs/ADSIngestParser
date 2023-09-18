@@ -402,8 +402,7 @@ class IngestBase(object):
         # ] # TODO need an example
 
         output["esources"] = [
-            {"source": source, "location": location 
-            }
+            {"source": source, "location": location}
             for (source, location) in input_dict.get("esources", "")
         ]
 

@@ -19,6 +19,7 @@ from adsingestp.ingest_exceptions import (
     XmlLoadException,
 )
 from adsingestp.parsers.base import BaseBeautifulSoupParser
+
 logger = logging.getLogger(__name__)
 
 
@@ -33,8 +34,7 @@ class CopernicusParser(BaseBeautifulSoupParser):
 
     def __init__(self):
         self.base_metadata = {}
-
-        self.input_header = None  
+        self.input_header = None
         self.input_metadata = None
 
     def _parse_journal(self):
@@ -48,16 +48,19 @@ class CopernicusParser(BaseBeautifulSoupParser):
 
             if journal_metadata.find("volume_number"):
                 self.base_metadata["volume"] = journal_metadata.find("volume_number").get_text()
- 
-    def _parse_pagination(self):
-        if self.input_metadata.find('start_page'):
-            self.base_metadata['page_first'] = self.input_metadata.find('start_page').get_text()
 
-        if self.input_metadata.find('end_page'):
-            self.base_metadata['page_last'] = self.input_metadata.find('end_page').get_text()
+
+    def _parse_pagination(self):
+        if self.input_metadata.find("start_page"):
+            self.base_metadata["page_first"] = self.input_metadata.find("start_page").get_text()
+
+        if self.input_metadata.find("end_page"):
+            self.base_metadata["page_last"] = self.input_metadata.find("end_page").get_text()
     
         if self.record_meta.find("article_number"):
-            self.base_metadata["electronic_id"] = self.input_metadata.find("article_number").get_text()
+            self.base_metadata["electronic_id"] = self.input_metadata.find(
+                "article_number"
+            ).get_text()
 
     def _parse_ids(self):
         self.base_metadata["ids"] = {}
@@ -78,14 +81,14 @@ class CopernicusParser(BaseBeautifulSoupParser):
         title_array = self.input_metadata.find_all("article_title")
         if title_array:
             title_array_text = [i.get_text() for i in title_array]
-            #use BS to remove html markup inside title field
+            # use BS to remove html markup inside title field
             if len(title_array) == 1:
-                title_temp = BeautifulSoup(title_array_text[0], 'html.parser')
+                title_temp = BeautifulSoup(title_array_text[0], "html.parser")
                 title = title_temp.get_text().title()
 
                 self.base_metadata["title"] = title
             else:
-                title_temp = BeautifulSoup(": ".join(title_array_text), 'html.parser')
+                title_temp = BeautifulSoup(": ".join(title_array_text), "html.parser")
                 title = title_temp.get_text().title()
 
                 self.base_metadata["title"] = title
@@ -99,30 +102,31 @@ class CopernicusParser(BaseBeautifulSoupParser):
         
         affil_map = {}
         
-        #Create a dictionary to map affiliation names to affiliation numbers
-        if self.input_metadata.find_all('affiliations'):
-            affil_list = self.input_metadata.find_all('affiliations')[0].find_all('affiliation')
+        # Create a dictionary to map affiliation names to affiliation numbers
+        if self.input_metadata.find_all("affiliations"):
+            affil_list = self.input_metadata.find_all("affiliations")[0].find_all("affiliation")
             for aff in affil_list:
-                affil_map[aff.get('numeration','')] = self._clean_output(aff.get_text())
+                affil_map[aff.get("numeration","")] = self._clean_output(aff.get_text())
 
         author_array = self.input_metadata.find_all("author")
         for a in author_array:
             author_temp = {}
-            name = a.find('name').get_text()
+            name = a.find("name").get_text()
             parsed_name = name_parser.parse(
-                name, collaborations_params=self.author_collaborations_params)
+                name, collaborations_params=self.author_collaborations_params
+            )
             author_temp = parsed_name[0]        
             
-            if a.find('email'):
-                author_temp['email'] = a.find('email').get_text()
-            if a.find('contrib-id'):
-                author_temp['orcid'] = a.find('contrib-id').get_text()
+            if a.find("email"):
+                author_temp["email"] = a.find("email").get_text()
+            if a.find("contrib-id"):
+                author_temp["orcid"] = a.find("contrib-id").get_text()
                 
-            if a['affiliations']:
+            if a["affiliations"]:
                 aff_temp = []
-                for author_affil in str(a['affiliations']).split(',') :
+                for author_affil in str(a["affiliations"]).split(",") :
                     aff_temp.append(affil_map[author_affil])                    
-                author_temp['aff'] = aff_temp
+                author_temp["aff"] = aff_temp
                                 
                 
             author_list.append(author_temp)
@@ -136,7 +140,8 @@ class CopernicusParser(BaseBeautifulSoupParser):
     def _parse_pubdate(self):
         if self.input_metadata.find("publication_date"):
             self.base_metadata["pubdate_electronic"] = self.input_metadata.find(
-                "publication_date").get_text()
+                "publication_date"
+            ).get_text()
         
 
     def _parse_abstract(self):
@@ -145,8 +150,8 @@ class CopernicusParser(BaseBeautifulSoupParser):
             for s in self.input_metadata.find("abstract"):
                 abstract_html = s.get_text()
 
-                #Use BS to remove html markup
-                abstract_temp = BeautifulSoup(abstract_html, 'html.parser')
+                # Use BS to remove html markup
+                abstract_temp = BeautifulSoup(abstract_html, "html.parser")
                 abstract = abstract_temp.get_text()
 
         if abstract:
@@ -154,7 +159,9 @@ class CopernicusParser(BaseBeautifulSoupParser):
 
 
     def _parse_references(self):
-        if self.input_metadata.find("references") and self.input_metadata.find("references").find("reference"):
+        if self.input_metadata.find("references") and self.input_metadata.find("references").find(
+                "reference"
+            ):
             references = []
             for ref in self.input_metadata.find("references").find_all("reference"):
                 # output raw XML for reference service to parse later
@@ -165,12 +172,12 @@ class CopernicusParser(BaseBeautifulSoupParser):
 
     def _parse_esources(self):
         links = []
-        if self.input_metadata.find('fulltext_pdf'):
-            links.append(('pub_pdf', self.input_metadata.find('fulltext_pdf').get_text()))
-        if self.input_metadata.find('abstract_html'):
-            links.append(('pub_html', self.input_metadata.find('abstract_html').get_text()))
+        if self.input_metadata.find("fulltext_pdf"):
+            links.append(("pub_pdf", self.input_metadata.find("fulltext_pdf").get_text()))
+        if self.input_metadata.find("abstract_html"):
+            links.append(("pub_html", self.input_metadata.find("abstract_html").get_text()))
         
-        self.base_metadata['esources'] = links
+        self.base_metadata["esources"] = links
 
     def parse(self, text):
         """
@@ -184,7 +191,7 @@ class CopernicusParser(BaseBeautifulSoupParser):
             raise XmlLoadException(err)
         
         try:
-            self.input_metadata = d.find("article") 
+            self.input_metadata = d.find("article")
         except Exception as err:
             raise NoSchemaException(err)
 
@@ -192,14 +199,14 @@ class CopernicusParser(BaseBeautifulSoupParser):
         if schema not in self.copernicus_schema:
             raise WrongSchemaException('Unexpected XML schema "%s"' % schema)
 
-        self._parse_journal() 
-        self._parse_ids()  
+        self._parse_journal()
+        self._parse_ids()
         self._parse_title()
         self._parse_author()
         self._parse_pubdate()
         self._parse_abstract()
         self._parse_references()
-        self._parse_esources()        
+        self._parse_esources()
 
         self.base_metadata = self._entity_convert(self.base_metadata)
 
