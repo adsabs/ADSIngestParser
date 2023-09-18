@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Wed Aug 30 14:46:15 2023
 
@@ -18,10 +16,8 @@ from adsingestp.ingest_exceptions import (
     WrongSchemaException,
     XmlLoadException,
 )
-from adsingestp.parsers.base import BaseBeautifulSoupParser, IngestBase
-import pdb
-import re
-
+from adsingestp.parsers.base import BaseBeautifulSoupParser
+from bs4 import BeautifulSoup
 logger = logging.getLogger(__name__)
 
 
@@ -55,34 +51,39 @@ class CopernicusParser(BaseBeautifulSoupParser):
         if self.input_metadata.find('end_page'):
             self.base_metadata['page_last'] = self.input_metadata.find('end_page').get_text()
     
+        if self.record_meta.find("article_number"):
+            self.base_metadata["electronic_id"] = self.input_metadata.find("article_number").get_text()
 
     def _parse_ids(self):
         self.base_metadata["ids"] = {}
 
-        self.base_metadata["issn"] = []
-        if self.input_metadata.find("prism:issn"):
-            self.base_metadata["issn"] = [
-                ("not specified", self.input_metadata.find("prism:issn").get_text())
-            ]
+        issns = []
+        if self.input_metadata.find("issn"):
+            issns.append(("print", self.input_metadata.find("issn").get_text()))
+
+        if self.input_metadata.find("eissn"):
+            issns.append(("electronic", self.input_metadata.find("issn").get_text()))
+            
+        self.base_metadata["issn"]  = issns
 
         if self.input_metadata.find("doi"):
             self.base_metadata["ids"]["doi"] = self.input_metadata.find("doi").get_text()
-
-    # # TODO: IS THIS FIELD NECESSARY??
-    #     if self.pubmeta_unit.find("article_number"):
-    #         self.base_metadata["ids"]["pub-id"] = self.pubmeta_unit.find(
-    #             "article_number").get_text()
 
     def _parse_title(self):
         title_array = self.input_metadata.find_all("article_title")
         if title_array:
             title_array_text = [i.get_text() for i in title_array]
+            #use BS to remove html markup inside title field
             if len(title_array) == 1:
-                self.base_metadata["title"] = self._clean_output(
-                    title_array_text[0])
+                title_temp = BeautifulSoup(title_array_text[0], 'html.parser')
+                title = title_temp.get_text().title()
+
+                self.base_metadata["title"] = title
             else:
-                self.base_metadata["title"] = self._clean_output(
-                    ": ".join(title_array_text))
+                title_temp = BeautifulSoup(": ".join(title_array_text), 'html.parser')
+                title = title_temp.get_text().title()
+
+                self.base_metadata["title"] = title
                 
         else:
             raise MissingTitleException("No title found")
@@ -92,10 +93,12 @@ class CopernicusParser(BaseBeautifulSoupParser):
         name_parser = utils.AuthorNames()
         
         affil_map = {}
+        
+        #Create a dictionary to map affiliation names to affiliation numbers
         if self.input_metadata.find_all('affiliations'):
             affil_list = self.input_metadata.find_all('affiliations')[0].find_all('affiliation')
             for aff in affil_list:
-                affil_map[aff.get('numeration','')] = aff.get_text()
+                affil_map[aff.get('numeration','')] = self._clean_output(aff.get_text())
 
         author_array = self.input_metadata.find_all("author")
         for a in author_array:
@@ -129,15 +132,6 @@ class CopernicusParser(BaseBeautifulSoupParser):
         if self.input_metadata.find("publication_date"):
             self.base_metadata["pubdate_electronic"] = self.input_metadata.find(
                 "publication_date").get_text()
-
-        # if self.input_metadata.find("publication_date"):
-        #     dates = []
-        #     for d in self.input_metadata.find("publication_date").find_all("date"):
-        #         t = d.get("dateType", "")
-        #         dates.append({"type": t, "date": d.get_text()})
-
-        #     if dates:
-        #         self.base_metadata["pubdate_other"] = dates
         
 
     def _parse_abstract(self):
@@ -145,13 +139,14 @@ class CopernicusParser(BaseBeautifulSoupParser):
         if self.input_metadata.find("abstract"):
             for s in self.input_metadata.find("abstract"):
                 abstract_html = s.get_text()
-                # abstract = ''.join(xml.etree.ElementTree.fromstring(abstract_html).itertext())
-                clean = re.compile('<.*?>')
-                abstract = re.sub(clean, '', abstract_html)    #TODO: use something other than regex? native xml library did not work     
-        # pdb.set_trace()
-        
+
+                #Use BS to remove html markup
+                abstract_temp = BeautifulSoup(abstract_html, 'html.parser')
+                abstract = abstract_temp.get_text()
+
         if abstract:
             self.base_metadata["abstract"] = self._clean_output(abstract)
+
 
     def _parse_references(self):
         if self.input_metadata.find("references") and self.input_metadata.find("references").find("reference"):
@@ -162,7 +157,16 @@ class CopernicusParser(BaseBeautifulSoupParser):
                 references.append(ref_xml)
 
             self.base_metadata["references"] = references
-            
+
+    def _parse_esources(self):
+        links = []
+        if self.input_metadata.find('fulltext_pdf'):
+            links.append(('pub_pdf', self.input_metadata.find('fulltext_pdf').get_text()))
+        if self.input_metadata.find('abstract_html'):
+            links.append(('pub_html', self.input_metadata.find('abstract_html').get_text()))
+        
+        self.base_metadata['esources'] = links
+
     def parse(self, text):
         """
         Parse Copernicus XML into standard JSON format
@@ -174,22 +178,23 @@ class CopernicusParser(BaseBeautifulSoupParser):
         except Exception as err:
             raise XmlLoadException(err)
         
-        if d.find("article"):
+        try:
             self.input_metadata = d.find("article") 
-#        else:
-#            raise <someerror> #TODO
+        except Exception as err:
+            raise NoSchemaException(err)
 
         schema = self.input_metadata.get("xmlns:xlink", "")
         if schema not in self.copernicus_schema:
             raise WrongSchemaException('Unexpected XML schema "%s"' % schema)
 
-        self._parse_journal() #journal name, pub + issue number
-        self._parse_ids()  # doi and alternate ids (e.g., article_number)
+        self._parse_journal() 
+        self._parse_ids()  
         self._parse_title()
         self._parse_author()
         self._parse_pubdate()
         self._parse_abstract()
         self._parse_references()
+        self._parse_esources()        
 
         self.base_metadata = self._entity_convert(self.base_metadata)
 

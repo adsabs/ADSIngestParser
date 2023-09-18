@@ -1,7 +1,7 @@
 import html
 import re
 from datetime import datetime
-
+import pdb
 import bs4
 
 from adsingestp.ingest_exceptions import WrongFormatException
@@ -402,12 +402,13 @@ class IngestBase(object):
         #     "XXX"
         # ] # TODO need an example
 
-        # output["esources"] = [
-        #     {
-        #         "source": "XXX",
-        #         "location": "XXX"
-        #     }
-        # ] # TODO need an example
+        output["esources"] = [
+            {
+                "source": source,
+                "location": location 
+            }
+            for (source, location) in input_dict.get("esources", "")
+        ]
 
         # output["dataLinks"] = [
         #     {

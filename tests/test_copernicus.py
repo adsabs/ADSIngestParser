@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Wed Aug 30 17:03:57 2023
 
@@ -12,8 +10,6 @@ import datetime
 import json
 import os
 import unittest
-import pprint
-import pdb
 
 from adsingestschema import ads_schema_validator
 
@@ -33,7 +29,7 @@ class TestCopernicus(unittest.TestCase):
             "Copernicus_ESSD_essd-15-3075-2023",
             "Copernicus_ISPAn_isprs-annals-X-M-1-2023-237-2023",
             "Copernicus_GeChr_gchron-5-323-2023",
-			"Copernicus_ISPAr_isprs-archives-XLVIII-M-2-2023-721-2023"
+			"Copernicus_ISPAr_isprs-archives-XLVIII-M-2-2023-721-2023",
             ]
         for f in filenames:
             test_infile = os.path.join(self.inputdir, f + ".xml")
@@ -44,14 +40,10 @@ class TestCopernicus(unittest.TestCase):
                 input_data = fp.read()
 
             parsed = parser.parse(input_data)
-            parsed_pprint = pprint.pprint(parsed, width = 2000)
-            # parsed_json = json.dumps(parsed, indent=2)
 
-            with open(test_outfile, "w") as fp:
-                # fp.write(parsed_json)
-                pprint.pprint(parsed, fp, width = 2000)
-            #     output_data = json.loads(output_text)
-
+            with open(test_outfile, "rb") as fp:
+                output_text = fp.read()
+                output_data = json.loads(output_text)
 
             # make sure this is valid schema
             try:
@@ -68,5 +60,7 @@ class TestCopernicus(unittest.TestCase):
             self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
             parsed["recordData"]["parsedTime"] = ""
 
-            # self.assertEqual(parsed, output_data)
+            # pdb.set_trace()
+            self.maxDiff = None
+            self.assertEqual(parsed, output_data)
 
