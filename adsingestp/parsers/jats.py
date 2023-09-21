@@ -1,6 +1,7 @@
 import logging
 import re
 from collections import OrderedDict
+from copy import copy
 
 from bs4 import BeautifulSoup
 from ordered_set import OrderedSet
@@ -9,9 +10,6 @@ from adsingestp import utils
 from adsingestp.ingest_exceptions import XmlLoadException
 from adsingestp.parsers.base import BaseBeautifulSoupParser
 
-from copy import copy
-
-import pdb
 logger = logging.getLogger(__name__)
 
 
@@ -188,33 +186,34 @@ class JATSAffils(object):
             art_contrib_groups = article_metadata.find_all("contrib-group")
 
         authors_out = []
-        contribs_out = []        
+        contribs_out = []
 
         # JATS puts author data in <contrib-group>, giving individual authors in each <contrib>
         for art_group in art_contrib_groups:
             art_contrib_group = art_group.extract()
 
-
-        # extract <contrib> from each <contrib-group>
+            # extract <contrib> from each <contrib-group>
             contribs_raw_init = []
-            if art_contrib_group.find_all("contrib", recursive = False):
-                contribs_raw_init = art_contrib_group.find_all("contrib", recursive = False)
+            if art_contrib_group.find_all("contrib", recursive=False):
+                contribs_raw_init = art_contrib_group.find_all("contrib", recursive=False)
 
             default_key = "ALLAUTH"
 
-        # cycle through <contrib> to check if a <collab> is listed in the same level as an author an has multiple authors nested under it; targeted for Springer            
+            # cycle through <contrib> to check if a <collab> is listed in the same level as an author an has multiple authors nested under it; targeted for Springer
             contribs_raw = []
             collabflag = None
-            for i in range(len(contribs_raw_init)): 
-                if contribs_raw_init[i].find('collab'): 
-                    # find nested collab authors and unnest them 
-                    if contribs_raw_init[i].find('collab').find('institution'):                         
+            for i in range(len(contribs_raw_init)):
+                if contribs_raw_init[i].find("collab"):
+                    # find nested collab authors and unnest them
+                    if contribs_raw_init[i].find("collab").find("institution"):
                         # save the author position of collab to add collab as an author later
                         collabflag = i
-                        collab_authors = contribs_raw_init[i].find_all('contrib')
-                        # add new collab tag to each unnested author 
+                        collab_authors = contribs_raw_init[i].find_all("contrib")
+                        # add new collab tag to each unnested author
                         for ca in collab_authors:
-                            collabtag = copy(contribs_raw_init[collabflag].find('collab').find('institution'))
+                            collabtag = copy(
+                                contribs_raw_init[collabflag].find("collab").find("institution")
+                            )
                             ca.append(collabtag)
                             contribs_raw.append(ca)
                     else:
@@ -229,13 +228,13 @@ class JATSAffils(object):
                 # note: IOP, APS get affil data within each contrib block,
                 #       OUP, AIP, Springer, etc get them via xrefs.
                 auth = {}
-                count+=1
+                count += 1
                 collab = contrib.find("collab")
 
-                #Springer collab info for nested authors is given as <institution>
+                # Springer collab info for nested authors is given as <institution>
                 if not collab:
                     collab = contrib.find("institution")
-                        
+
                 if collab:
                     collab_affil = ""
                     collab_name = collab.get_text()
@@ -250,14 +249,10 @@ class JATSAffils(object):
                         "email": [],
                         "corresp": False,
                     }
-                    
-                    
+
                 l_correspondent = False
-                try:
-                    if contrib.get("corresp", "") == "yes":
+                if contrib.get("corresp", "") == "yes":
                         l_correspondent = True
-                except:
-                    l_correspondent = False
 
                 # get author's name
                 if contrib.find("name") and contrib.find("name").find("surname"):
@@ -349,9 +344,9 @@ class JATSAffils(object):
                 auth["xemail"] = xref_email
                 auth["orcid"] = orcid_out
                 auth["email"] = email_list
-                if collab: 
+                if collab:
                     auth["collab"] = collab_name
-                    
+
                 # this is a list of author dicts
                 if auth:
                     if contrib.get("contrib-type", "author") == "author":
@@ -368,10 +363,9 @@ class JATSAffils(object):
                 contrib.decompose()
 
             if self.collab:
-                #add collab in the correct author position
+                # add collab in the correct author position
                 if collabflag:
                     authors_out.insert(collabflag, self.collab)
-                    
 
             # special case: affs defined in contrib-group, but not in individual contrib
             if art_contrib_group:
