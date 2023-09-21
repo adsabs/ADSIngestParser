@@ -252,7 +252,7 @@ class JATSAffils(object):
 
                 l_correspondent = False
                 if contrib.get("corresp", "") == "yes":
-                        l_correspondent = True
+                    l_correspondent = True
 
                 # get author's name
                 if contrib.find("name") and contrib.find("name").find("surname"):
