@@ -8,7 +8,6 @@ from adsingestp.ingest_exceptions import (
     XmlLoadException,
 )
 from adsingestp.parsers.base import BaseBeautifulSoupParser
-import pdb
 logger = logging.getLogger(__name__)
 
 # compile outside of the class definition -- it only needs to be compiled once
@@ -357,8 +356,8 @@ class CrossrefParser(BaseBeautifulSoupParser):
 
     def _parse_esources(self):
         links = []
-        if self.record_meta.find('doi_data'):
-            if self.record_meta.find('doi_data').find("resource"):
+        if self.record_meta.find("doi_data"):
+            if self.record_meta.find("doi_data").find("resource"):
                 links.append(("pub_html", self.record_meta.find("resource").get_text()))
 
         self.base_metadata["esources"] = links

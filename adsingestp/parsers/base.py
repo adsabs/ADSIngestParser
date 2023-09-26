@@ -406,7 +406,7 @@ class IngestBase(object):
             {"source": source, "location": location}
             for (source, location) in input_dict.get("esources", "")
         ]
-        
+
         # output["dataLinks"] = [
         #     {
         #         "title": "XXX",
