@@ -249,6 +249,12 @@
     "<ref id=\"apjac25eabib81\"><element-citation publication-type=\"journal\" xlink:type=\"simple\"><person-group person-group-type=\"author\"> <name name-style=\"western\"><surname>Wasserburg</surname><given-names>G. J.</given-names></name> <name name-style=\"western\"><surname>Busso</surname><given-names>M.</given-names></name> <name name-style=\"western\"><surname>Gallino</surname><given-names>R.</given-names></name> <name name-style=\"western\"><surname>Nollett</surname><given-names>K. M.</given-names></name> </person-group><year>2006</year><source>NuPhA</source><volume>777</volume><fpage>5</fpage><ext-link ext-link-type=\"bibcode\" xlink:type=\"simple\">2006NuPhA.777....5W</ext-link><pub-id pub-id-type=\"doi\">10.1016/j.nuclphysa.2005.07.015</pub-id></element-citation></ref>",
     "<ref id=\"apjac25eabib82\"><element-citation publication-type=\"journal\" xlink:type=\"simple\"><person-group person-group-type=\"author\"> <name name-style=\"western\"><surname>Young</surname><given-names>E. D.</given-names></name> </person-group><year>2014</year><source>E&PSL</source><volume>392</volume><fpage>16</fpage><ext-link ext-link-type=\"bibcode\" xlink:type=\"simple\">2014E&PSL.392...16Y</ext-link><pub-id pub-id-type=\"doi\">10.1016/j.epsl.2014.02.014</pub-id></element-citation></ref>"
   ],
+  "esources": [
+    {
+      "source": "pub_pdf",
+      "location": "apj_923_1_47.pdf"
+    }
+  ],
   "keywords": [
     {
       "keyString": "1636",

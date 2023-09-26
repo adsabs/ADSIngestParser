@@ -163,6 +163,12 @@
     "<ref id=\"b799cc3bd37e47b9d18b3654c86456197\"><label>[54]</label><element-citation publication-type=\"other\" xlink:type=\"simple\"><comment> M. Zingale, <italic toggle=\"yes\">Introduction to Computational Astrophysical Hydrodynamics</italic>, <ext-link ext-link-type=\"uri\" xlink:href=\"http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf\" xlink:type=\"simple\">http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf</ext-link>.   </comment></element-citation></ref>",
     "<ref id=\"b869deae2f493f21948d6030dfaad7ec0\"><label>[55]</label><element-citation publication-type=\"journal\" xlink:type=\"simple\"><person-group person-group-type=\"author\"> <name name-style=\"western\"><surname>Colella</surname><given-names>Phillip</given-names></name> <name name-style=\"western\"><surname>Woodward</surname><given-names>Paul R.</given-names></name> </person-group><article-title>The Piecewise Parabolic Method (PPM) for Gas Dynamical Simulations</article-title><source>J. Comput. Phys.</source><year>1984</year><volume>54</volume><fpage>174</fpage><lpage>201</lpage><pub-id pub-id-type=\"doi\">10.1016/0021-9991(84)90143-8</pub-id></element-citation></ref>"
   ],
+  "esources": [
+    {
+      "source": "pub_pdf",
+      "location": "jcap_2023_05_001.pdf"
+    }
+  ],
   "keywords": [
     {
       "keyString": "cosmological simulations",

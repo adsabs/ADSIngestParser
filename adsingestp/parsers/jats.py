@@ -10,6 +10,8 @@ from adsingestp import utils
 from adsingestp.ingest_exceptions import XmlLoadException
 from adsingestp.parsers.base import BaseBeautifulSoupParser
 
+import pdb
+
 logger = logging.getLogger(__name__)
 
 
@@ -885,6 +887,30 @@ class JATSParser(BaseBeautifulSoupParser):
                 s = str(r.extract()).replace("\n", " ").replace("\xa0", " ")
                 ref_list_text.append(s)
             self.base_metadata["references"] = ref_list_text
+            
+    def _parse_esources(self):
+        links = []
+
+        rawlinks = self.article_meta.find_all('self-uri')
+        
+        if rawlinks:
+            for l in rawlinks:
+                if l.get('content-type') == 'full_html':
+                    links.append(("pub_html", l.get("xlink:href")))
+                    
+                if l.get('content-type') == 'pdf':
+                    links.append(("pub_pdf", l.get("xlink:href")))
+
+            # add a check to see if pub_html exists in links. if not, search for abstract link
+            for l in rawlinks:
+                try:
+                    html = dict(links)['pub_html']
+                    continue
+                except:
+                    if l.get('content-type') == 'abstract':
+                        links.append(("pub_html", l.get("xlink:href")))
+
+        self.base_metadata["esources"] = links        
 
     def parse(self, text, bsparser="lxml-xml"):
         """
@@ -928,6 +954,7 @@ class JATSParser(BaseBeautifulSoupParser):
         self._parse_edhistory()
         self._parse_permissions()
         self._parse_page()
+        self._parse_esources()
 
         self._parse_references()
 

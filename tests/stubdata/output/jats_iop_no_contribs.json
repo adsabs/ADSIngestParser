@@ -61,6 +61,12 @@
     "<ref id=\"epl23100304bib2\"><label>2</label><element-citation publication-type=\"journal\" xlink:type=\"simple\"><person-group person-group-type=\"author\"> <name name-style=\"western\"><surname>Li</surname><given-names>Kun</given-names></name> <etal/> </person-group><year>2019</year><source>EPL</source><volume>128</volume><elocation-id content-type=\"artnum\">38002</elocation-id></element-citation></ref>",
     "<ref id=\"epl23100304bib3\"><label>3</label><element-citation publication-type=\"journal\" xlink:type=\"simple\"><person-group person-group-type=\"author\"> <name name-style=\"western\"><surname>Yang</surname><given-names>Mu</given-names></name> <name name-style=\"western\"><surname>Liu</surname><given-names>Haitao</given-names></name> </person-group><year>2022</year><source>EPL</source><volume>139</volume><elocation-id content-type=\"artnum\">61002</elocation-id></element-citation></ref>"
   ],
+  "esources": [
+    {
+      "source": "pub_pdf",
+      "location": "epl_142_3_30000.pdf"
+    }
+  ],
   "copyright": {
     "status": true,
     "statement": "Copyright \u00a9 EPLA, 2023"
