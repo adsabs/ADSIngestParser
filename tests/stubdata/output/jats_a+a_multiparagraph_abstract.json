@@ -364,6 +364,16 @@
     "<ref id=\"R54\"> <mixed-citation publication-type=\"journal\"> <string-name><surname>Woodward</surname>, <given-names>C. E.</given-names></string-name>, <string-name><surname>Evans</surname>, <given-names>A.</given-names></string-name>, <string-name><surname>Banerjee</surname>, <given-names>D. P. K.</given-names></string-name>, et al. <year>2021</year>, <source>AJ</source>, <volume>162</volume>, <fpage>183</fpage> </mixed-citation> </ref>",
     "<ref id=\"R55\"> <mixed-citation publication-type=\"journal\"> <string-name><surname>Worthey</surname>, <given-names>G.</given-names></string-name>, & <string-name><surname>Lee</surname>, <given-names>H.-C.</given-names></string-name> <year>2011</year>, <source>A&AS</source>, <volume>193</volume>, <fpage>1</fpage> </mixed-citation> </ref>"
   ],
+  "esources": [
+    {
+      "source": "pub_html",
+      "location": "https://www.aanda.org/articles/aa/full_html/2023/02/aa42959-21/aa42959-21.html"
+    },
+    {
+      "source": "pub_pdf",
+      "location": "https://www.aanda.org/articles/aa/pdf/2023/02/aa42959-21.pdf"
+    }
+  ],
   "keywords": [
     {
       "keyString": "stars: individual: V838 Mon",
