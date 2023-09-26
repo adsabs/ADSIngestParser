@@ -1,14 +1,4 @@
-"""
-Created on Wed Aug 30 14:46:15 2023
-
-@author: mugdhapolimera
-
-Parser for Copernicus Publishing
-"""
-
 import logging
-
-from bs4 import BeautifulSoup
 
 from adsingestp import utils
 from adsingestp.ingest_exceptions import (
@@ -19,7 +9,7 @@ from adsingestp.ingest_exceptions import (
     XmlLoadException,
 )
 from adsingestp.parsers.base import BaseBeautifulSoupParser
-
+import pdb
 logger = logging.getLogger(__name__)
 
 
@@ -76,21 +66,13 @@ class CopernicusParser(BaseBeautifulSoupParser):
             self.base_metadata["ids"]["doi"] = self.input_metadata.find("doi").get_text()
 
     def _parse_title(self):
-        title_array = self.input_metadata.find_all("article_title")
+        title_array = self.input_metadata.find("article_title").get_text()
         if title_array:
-            title_array_text = [i.get_text() for i in title_array]
-            # use BS to remove html markup inside title field
-            if len(title_array) == 1:
-                title_temp = BeautifulSoup(title_array_text[0], "html.parser")
-                title = title_temp.get_text().title()
+            title_temp = self.bsstrtodict(title_array, "html.parser")
+            title = title_temp.get_text().title()
 
-                self.base_metadata["title"] = title
-            else:
-                title_temp = BeautifulSoup(": ".join(title_array_text), "html.parser")
-                title = title_temp.get_text().title()
-
-                self.base_metadata["title"] = title
-
+            self.base_metadata["title"] = title
+            
         else:
             raise MissingTitleException("No title found")
 
@@ -101,8 +83,8 @@ class CopernicusParser(BaseBeautifulSoupParser):
         affil_map = {}
 
         # Create a dictionary to map affiliation names to affiliation numbers
-        if self.input_metadata.find_all("affiliations"):
-            affil_list = self.input_metadata.find_all("affiliations")[0].find_all("affiliation")
+        if self.input_metadata.find("affiliations"):
+            affil_list = self.input_metadata.find("affiliations").find_all("affiliation")
             for aff in affil_list:
                 affil_map[aff.get("numeration", "")] = self._clean_output(aff.get_text())
 
@@ -118,7 +100,9 @@ class CopernicusParser(BaseBeautifulSoupParser):
             if a.find("email"):
                 author_temp["email"] = a.find("email").get_text()
             if a.find("contrib-id"):
-                author_temp["orcid"] = a.find("contrib-id").get_text()
+                orcid = a.find("contrib-id").get_text()
+                orcid = orcid.replace("http://orcid.org/", "").replace("https://orcid.org/", "")
+                author_temp["orcid"] = orcid
 
             if a["affiliations"]:
                 aff_temp = []
@@ -138,6 +122,9 @@ class CopernicusParser(BaseBeautifulSoupParser):
             self.base_metadata["pubdate_electronic"] = self.input_metadata.find(
                 "publication_date"
             ).get_text()
+            self.base_metadata["pubdate_print"] = self.input_metadata.find(
+                "publication_date"
+            ).get_text()
 
     def _parse_abstract(self):
         abstract = None
@@ -146,7 +133,7 @@ class CopernicusParser(BaseBeautifulSoupParser):
                 abstract_html = s.get_text()
 
                 # Use BS to remove html markup
-                abstract_temp = BeautifulSoup(abstract_html, "html.parser")
+                abstract_temp = self.bsstrtodict(abstract_html, "html.parser")
                 abstract = abstract_temp.get_text()
 
         if abstract:
@@ -156,11 +143,11 @@ class CopernicusParser(BaseBeautifulSoupParser):
         if self.input_metadata.find("references") and self.input_metadata.find("references").find(
             "reference"
         ):
-            references = []
-            for ref in self.input_metadata.find("references").find_all("reference"):
+            references = self.input_metadata.find("references").find_all("reference")
+            for i in range(len(references)):
                 # output raw XML for reference service to parse later
-                ref_xml = str(ref.extract()).replace("\n", " ")
-                references.append(ref_xml)
+                ref_xml = str(references[i].extract()).replace("\n", " ")
+                references[i] = ref_xml
 
             self.base_metadata["references"] = references
 
@@ -175,6 +162,8 @@ class CopernicusParser(BaseBeautifulSoupParser):
 
     def parse(self, text):
         """
+        Parser for Copernicus Publishing
+
         Parse Copernicus XML into standard JSON format
         :param text: string, contents of XML file
         :return: parsed file contents in JSON format
