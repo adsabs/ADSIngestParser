@@ -334,7 +334,6 @@ class ElsevierParser(BaseBeautifulSoupParser):
 
         self.base_metadata["esources"] = links
 
-        
     def parse(self, text):
         """
         Parse Elsevier XML into standard JSON format

@@ -847,7 +847,7 @@ class JATSParser(BaseBeautifulSoupParser):
                 s = str(r.extract()).replace("\n", " ").replace("\xa0", " ")
                 ref_list_text.append(s)
             self.base_metadata["references"] = ref_list_text
-            
+
     def _parse_esources(self):
         links = []
         rawlinks = self.article_meta.find_all("self-uri")

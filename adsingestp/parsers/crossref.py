@@ -8,6 +8,7 @@ from adsingestp.ingest_exceptions import (
     XmlLoadException,
 )
 from adsingestp.parsers.base import BaseBeautifulSoupParser
+
 logger = logging.getLogger(__name__)
 
 # compile outside of the class definition -- it only needs to be compiled once
