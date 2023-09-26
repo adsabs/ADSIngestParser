@@ -850,7 +850,7 @@ class JATSParser(BaseBeautifulSoupParser):
             
     def _parse_esources(self):
         links = []
-        rawlinks = self.article_meta.find_all('self-uri')
+        rawlinks = self.article_meta.find_all("self-uri")
 
         if rawlinks:
             for l in rawlinks:
