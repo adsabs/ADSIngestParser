@@ -9,7 +9,7 @@ from adsingestp.ingest_exceptions import (
     XmlLoadException,
 )
 from adsingestp.parsers.base import BaseBeautifulSoupParser
-import pdb
+
 logger = logging.getLogger(__name__)
 
 
@@ -72,7 +72,7 @@ class CopernicusParser(BaseBeautifulSoupParser):
             title = title_temp.get_text().title()
 
             self.base_metadata["title"] = title
-            
+
         else:
             raise MissingTitleException("No title found")
 
