@@ -3,7 +3,6 @@ import re
 from collections import OrderedDict
 from copy import copy
 
-from bs4 import BeautifulSoup
 from ordered_set import OrderedSet
 
 from adsingestp import utils
@@ -190,45 +189,63 @@ class JATSAffils(object):
 
         # JATS puts author data in <contrib-group>, giving individual authors in each <contrib>
         for art_group in art_contrib_groups:
+
             art_contrib_group = art_group.extract()
 
-            # extract <contrib> from each <contrib-group>
-            contribs_raw_init = []
-            if art_contrib_group.find_all("contrib", recursive=False):
-                contribs_raw_init = art_contrib_group.find_all("contrib", recursive=False)
+            contribs_raw = art_contrib_group.find_all("contrib", recursive=False)
 
             default_key = "ALLAUTH"
-
-            # cycle through <contrib> to check if a <collab> is listed in the same level as an author an has multiple authors nested under it; targeted for Springer
-            contribs_raw = []
-            collabflag = None
-            for i in range(len(contribs_raw_init)):
-                if contribs_raw_init[i].find("collab"):
-                    # find nested collab authors and unnest them
-                    if contribs_raw_init[i].find("collab").find("institution"):
-                        # save the author position of collab to add collab as an author later
-                        collabflag = i
-                        collab_authors = contribs_raw_init[i].find_all("contrib")
-                        # add new collab tag to each unnested author
-                        for ca in collab_authors:
-                            collabtag = copy(
-                                contribs_raw_init[collabflag].find("collab").find("institution")
-                            )
-                            ca.append(collabtag)
-                            contribs_raw.append(ca)
-                    else:
-                        contribs_raw.append(contribs_raw_init[i])
-
-                else:
-                    contribs_raw.append(contribs_raw_init[i])
-
+                               
             num_contribs = len(contribs_raw)
-            count = 0
-            for contrib in contribs_raw:
+
+            # extract <contrib> from each <contrib-group>
+            for idx, contrib in enumerate(contribs_raw):
                 # note: IOP, APS get affil data within each contrib block,
                 #       OUP, AIP, Springer, etc get them via xrefs.
                 auth = {}
-                count += 1
+                # cycle through <contrib> to check if a <collab> is listed in the same level as an author an has multiple authors nested under it; targeted for Springer
+
+                if contrib.find('collab'):
+
+                    # Springer collab info for nested authors is given as <institution>
+                    if contrib.find("collab").find("institution"):
+                        collab = contrib.find("collab").find("institution")
+                    else:
+                        collab = contrib.find("collab")
+
+                    collab_affil = ""
+                    collab_name = collab.get_text()
+                    if collab.find("address"):
+                        collab_affil = collab.find("address").get_text()
+
+                    self.collab = {
+                        "collab": collab_name,
+                        "aff": collab_affil,
+                        "xaff": [],
+                        "xemail": [],
+                        "email": [],
+                        "corresp": False,
+                    }
+                    if self.collab:
+                        # add collab in the correct author position
+                        if self.collab not in authors_out:
+                            authors_out.append(self.collab)
+                        
+                    # find nested collab authors and unnest them
+                    nested_contribs = contrib.find_all('contrib')
+
+                    nested_idx = idx+1
+                    for nested_contrib in nested_contribs:
+                       # add new collab tag to each unnested author
+                        collabtag = copy(
+                            contrib.find("collab").find("institution")
+                            )
+                        nested_contrib.append(collabtag)
+                        contribs_raw.insert(nested_idx, nested_contrib.extract()) 
+                        nested_idx+=1
+                    
+                    continue
+                    
                 collab = contrib.find("collab")
 
                 # Springer collab info for nested authors is given as <institution>
@@ -344,11 +361,12 @@ class JATSAffils(object):
                 auth["xemail"] = xref_email
                 auth["orcid"] = orcid_out
                 auth["email"] = email_list
-                if collab:
-                    auth["collab"] = collab_name
-
+                
                 # this is a list of author dicts
                 if auth:
+                    if collab:
+                        auth["collab"] = collab_name
+
                     if contrib.get("contrib-type", "author") == "author":
                         authors_out.append(auth)
                         default_key = "ALLAUTH"
@@ -363,9 +381,8 @@ class JATSAffils(object):
                 contrib.decompose()
 
             if self.collab:
-                # add collab in the correct author position
-                if collabflag:
-                    authors_out.insert(collabflag, self.collab)
+                if self.collab not in authors_out:
+                    authors_out.append(self.collab)
 
             # special case: affs defined in contrib-group, but not in individual contrib
             if art_contrib_group:
@@ -484,7 +501,7 @@ class JATSParser(BaseBeautifulSoupParser):
         """
         # note that parser=lxml is recommended here - if the more stringent lxml-xml is used,
         # the output is slightly different and the code will need to be modified
-        newr = BeautifulSoup(str(r), "lxml")
+        newr = self.bsstrtodict(str(r), "lxml")
         if newr.find_all():
             tag_list = list(set([x.name for x in newr.find_all()]))
         else:
