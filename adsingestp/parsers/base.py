@@ -153,8 +153,7 @@ class IngestBase(object):
                      'edhist_acc': string
                      'edhist_rec': [string],
                      'edhist_rev': [string],
-                     'esources': [{'source': string,
-                                   'location': string}],
+                     'esources': [(sourcestring, locationstring)],
                      'electronic_id': string,
                      'ids': {'doi': string,
                              'preprint': {'source': string,

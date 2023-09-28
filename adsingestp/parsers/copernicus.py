@@ -101,7 +101,7 @@ class CopernicusParser(BaseBeautifulSoupParser):
                 author_temp["email"] = a.find("email").get_text()
             if a.find("contrib-id"):
                 orcid = a.find("contrib-id").get_text()
-                orcid = orcid.replace("http://orcid.org/", "").replace("https://orcid.org/", "")
+                orcid = orcid.replace("http://orcid.org/", "")
                 author_temp["orcid"] = orcid
 
             if a["affiliations"]:
@@ -144,10 +144,10 @@ class CopernicusParser(BaseBeautifulSoupParser):
             "reference"
         ):
             references = self.input_metadata.find("references").find_all("reference")
-            for i in range(len(references)):
+            for idx, ref in enumerate(references):
                 # output raw XML for reference service to parse later
-                ref_xml = str(references[i].extract()).replace("\n", " ")
-                references[i] = ref_xml
+                ref_xml = str(ref.extract()).replace("\n", " ")
+                references[idx] = ref_xml
 
             self.base_metadata["references"] = references
 
