@@ -7,12 +7,7 @@ from adsingestschema import ads_schema_validator
 
 from adsingestp.parsers import jats
 
-import pdb
-import pprint
-
-from bs4 import BeautifulSoup
-
-#import logging
+# import logging
 # proj_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, "adsingestp"))
 # logging.basicConfig(
 #     format="%(levelname)s %(asctime)s %(message)s",
