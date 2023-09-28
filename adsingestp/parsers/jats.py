@@ -189,13 +189,12 @@ class JATSAffils(object):
 
         # JATS puts author data in <contrib-group>, giving individual authors in each <contrib>
         for art_group in art_contrib_groups:
-
             art_contrib_group = art_group.extract()
 
             contribs_raw = art_contrib_group.find_all("contrib", recursive=False)
 
             default_key = "ALLAUTH"
-                               
+
             num_contribs = len(contribs_raw)
 
             # extract <contrib> from each <contrib-group>
@@ -205,7 +204,7 @@ class JATSAffils(object):
                 auth = {}
                 # cycle through <contrib> to check if a <collab> is listed in the same level as an author an has multiple authors nested under it; targeted for Springer
 
-                if contrib.find('collab'):
+                if contrib.find("collab"):
 
                     # Springer collab info for nested authors is given as <institution>
                     if contrib.find("collab").find("institution"):
@@ -232,20 +231,18 @@ class JATSAffils(object):
                             authors_out.append(self.collab)
                         
                     # find nested collab authors and unnest them
-                    nested_contribs = contrib.find_all('contrib')
+                    nested_contribs = contrib.find_all("contrib")
 
-                    nested_idx = idx+1
+                    nested_idx = idx + 1
                     for nested_contrib in nested_contribs:
                        # add new collab tag to each unnested author
-                        collabtag = copy(
-                            contrib.find("collab").find("institution")
-                            )
+                        collabtag = copy(contrib.find("collab").find("institution"))
                         nested_contrib.append(collabtag)
-                        contribs_raw.insert(nested_idx, nested_contrib.extract()) 
-                        nested_idx+=1
-                    
+                        contribs_raw.insert(nested_idx, nested_contrib.extract())
+                        nested_idx += 1
+
                     continue
-                    
+
                 collab = contrib.find("collab")
 
                 # Springer collab info for nested authors is given as <institution>
