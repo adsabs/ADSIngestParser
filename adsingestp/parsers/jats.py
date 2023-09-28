@@ -229,13 +229,13 @@ class JATSAffils(object):
                         # add collab in the correct author position
                         if self.collab not in authors_out:
                             authors_out.append(self.collab)
-                        
+
                     # find nested collab authors and unnest them
                     nested_contribs = contrib.find_all("contrib")
 
                     nested_idx = idx + 1
                     for nested_contrib in nested_contribs:
-                       # add new collab tag to each unnested author
+                        # add new collab tag to each unnested author
                         collabtag = copy(contrib.find("collab").find("institution"))
                         nested_contrib.append(collabtag)
                         contribs_raw.insert(nested_idx, nested_contrib.extract())
@@ -358,7 +358,7 @@ class JATSAffils(object):
                 auth["xemail"] = xref_email
                 auth["orcid"] = orcid_out
                 auth["email"] = email_list
-                
+
                 # this is a list of author dicts
                 if auth:
                     if collab:
