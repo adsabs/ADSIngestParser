@@ -205,7 +205,6 @@ class JATSAffils(object):
                 # cycle through <contrib> to check if a <collab> is listed in the same level as an author an has multiple authors nested under it; targeted for Springer
 
                 if contrib.find("collab"):
-
                     # Springer collab info for nested authors is given as <institution>
                     if contrib.find("collab").find("institution"):
                         collab = contrib.find("collab").find("institution")
