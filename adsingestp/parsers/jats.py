@@ -852,18 +852,17 @@ class JATSParser(BaseBeautifulSoupParser):
         links = []
         rawlinks = self.article_meta.find_all("self-uri")
 
-        if rawlinks:
-            for link in rawlinks:
-                if link.get("content-type") == "full_html":
-                    links.append(("pub_html", link.get("xlink:href")))
+        for link in rawlinks:
+            if link.get("content-type", "") == "full_html":
+                links.append(("pub_html", link.get("xlink:href")))
 
-                if link.get("content-type") == "pdf":
-                    links.append(("pub_pdf", link.get("xlink:href")))
+            if link.get("content-type", "") == "pdf":
+                links.append(("pub_pdf", link.get("xlink:href")))
 
             # add a check to see if pub_html exists in links. if not, search for abstract link
             if "pub_html" not in dict(links).keys():
                 for link in rawlinks:
-                    if link.get("content-type") == "abstract":
+                    if link.get("content-type", "") == "abstract":
                         links.append(("pub_html", link.get("xlink:href")))
 
         self.base_metadata["esources"] = links
