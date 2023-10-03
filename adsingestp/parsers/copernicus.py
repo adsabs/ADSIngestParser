@@ -143,11 +143,11 @@ class CopernicusParser(BaseBeautifulSoupParser):
         if self.input_metadata.find("references") and self.input_metadata.find("references").find(
             "reference"
         ):
-            references = self.input_metadata.find("references").find_all("reference")
-            for idx, ref in enumerate(references):
+            references = []
+            for ref in self.input_metadata.find("references").find_all("reference"):
                 # output raw XML for reference service to parse later
                 ref_xml = str(ref.extract()).replace("\n", " ")
-                references[idx] = ref_xml
+                references.append(ref_xml)
 
             self.base_metadata["references"] = references
 
