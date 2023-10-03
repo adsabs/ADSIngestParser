@@ -115,8 +115,8 @@
 			</permissions>
 			<abstract id="Abs1" xml:lang="en">
 				<title>Abstract</title>
-				<p>Linear temporal instability analysis of a liquid jet emerging into a stationary gas environment under a radial thermal field is carried out in this work. The basic temperature profiles are obtained by solving the heat conduction problem between the liquid jet and the surrounding gas. The normal mode method is utilized to solve the temporal evolution of small disturbance, and an analytical dispersion relation on the growth of disturbance is derived. The inviscid asymptotic solution for the liquid jet is further obtained, which shows the explicit form of disturbance growth rate and also decouples the contribution of surface tension and Marangoni stress on the jet instability. The effects of various controlling parameters on the growth of disturbance for an inviscid liquid jet are investigated through a parametric study. Theoretical results show that the jet instability can be suppressed by increasing the temperature ratio between the liquid jet and the surrounding gas, enhancing the Marangoni stress on the surface, weakening the thermal conduction and decreasing the surface tension. The physical mechanisms of Rayleigh-Plateau instability and Marangoni instability which are responsible for the growth of disturbance are distinguished. Through comparing the inviscid asymptotic solution to the disturbance growth of the viscous jet, the applicable situation for the inviscid asymptotic solution is identified, which gives the Reynolds number ranges of 
-					<italic>Re</italic> ≥ 
+				<p>Linear temporal instability analysis of a liquid jet emerging into a stationary gas environment under a radial thermal field is carried out in this work. The basic temperature profiles are obtained by solving the heat conduction problem between the liquid jet and the surrounding gas. The normal mode method is utilized to solve the temporal evolution of small disturbance, and an analytical dispersion relation on the growth of disturbance is derived. The inviscid asymptotic solution for the liquid jet is further obtained, which shows the explicit form of disturbance growth rate and also decouples the contribution of surface tension and Marangoni stress on the jet instability. The effects of various controlling parameters on the growth of disturbance for an inviscid liquid jet are investigated through a parametric study. Theoretical results show that the jet instability can be suppressed by increasing the temperature ratio between the liquid jet and the surrounding gas, enhancing the Marangoni stress on the surface, weakening the thermal conduction and decreasing the surface tension. The physical mechanisms of Rayleigh-Plateau instability and Marangoni instability which are responsible for the growth of disturbance are distinguished. Through comparing the inviscid asymptotic solution to the disturbance growth of the viscous jet, the applicable situation for the inviscid asymptotic solution is identified, which gives the Reynolds number ranges of
+					<italic>Re</italic> ≥
 					<italic>O</italic>(10
 					<sup>2</sup>).
 
@@ -130,7 +130,7 @@
 			<trans-abstract xml:lang="zh" id="Abs2">
 				<title>摘要</title>
 				<p>本文研究了径向热场作用下静止气体环境内液体射流的线性时间不稳定性问题. 通过求解射流与周围气体之间的热传导问题, 得到基本温度分布. 通过正则模方法求解小扰动随时间的演化, 推导得到扰动增长的解析色散关系, 并得到该解析色散关系的无粘渐近解. 该无粘渐近解解耦了表面张力和Marangoni应力对射流失稳的贡献. 通过参数研究, 探究了不同控制参数对无粘液体射流扰动增长率的影响. 结果表明, 提高射流与周围气体的温度比、增强表面的Marangoni应力、减弱热传导效应或降低表面张力均可抑制射流不稳定性. 此外, 本工作对比了Rayleigh-Plateau不稳定性与Marangoni不稳定性对射流失稳过程的贡献. 通过对比粘性射流扰动增长率与其无粘渐近解, 确定了无粘渐近解的适用范围为雷诺数
-					<italic>Re</italic> ≥ 
+					<italic>Re</italic> ≥
 					<italic>O</italic>(10
 					<sup>2</sup>).
 				</p>

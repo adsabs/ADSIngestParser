@@ -321,19 +321,19 @@
 			<p>
 				<bold>
 					<italic>Xinyi He</italic>
-				</bold>: 
-				<italic>Writing–original draft, Investigation, Validation</italic>. 
+				</bold>:
+				<italic>Writing–original draft, Investigation, Validation</italic>.
 				<bold>
 					<italic>Yi Liu</italic>
-				</bold>: 
-				<italic>Formal analysis, Software</italic>. 
+				</bold>:
+				<italic>Formal analysis, Software</italic>.
 				<bold>
 					<italic>Yixin Chen</italic>
-				</bold>: 
-				<italic>Visualization, Data curation</italic>. 
+				</bold>:
+				<italic>Visualization, Data curation</italic>.
 				<bold>
 					<italic>Shizhao Wang</italic>
-				</bold>: 
+				</bold>:
 				<italic>Conceptualization, Writing–review &amp; editing, Supervision, Funding acquisition</italic>.
 			</p>
 		</sec>
@@ -523,7 +523,7 @@
 								<given-names>S Y</given-names>
 							</name>
 						</person-group>
-						<article-title xml:lang="en">Study of 3D self-propulsive fish swimming using the 
+						<article-title xml:lang="en">Study of 3D self-propulsive fish swimming using the
 							<italic>δ</italic>
 							<sup>+</sup>-SPH model
 						</article-title>
@@ -604,7 +604,7 @@
 				</ref>
 				<ref id="CR11">
 					<label>11</label>
-					<mixed-citation publication-type="other">D. Majumdar, S. Ravi, and S. Sarkar, Passive dynamics regulates aperiodic transitions in flapping wing systems, PNAS Nexus, 2023, doi: 
+					<mixed-citation publication-type="other">D. Majumdar, S. Ravi, and S. Sarkar, Passive dynamics regulates aperiodic transitions in flapping wing systems, PNAS Nexus, 2023, doi:
 						<ext-link xlink:href="https://doi.org/10.1093/pnasnexus/pgad086" ext-link-type="doi">https://doi.org/10.1093/pnasnexus/pgad086</ext-link>.
 					</mixed-citation>
 				</ref>
@@ -1785,7 +1785,7 @@
 								<given-names>S</given-names>
 							</name>
 						</person-group>
-						<article-title xml:lang="en">Dependence of wake structure on pitching frequency behind a thin panel at 
+						<article-title xml:lang="en">Dependence of wake structure on pitching frequency behind a thin panel at
 							<italic>Re</italic> = 1000
 						</article-title>
 						<source>J. Fluid Mech.</source>
