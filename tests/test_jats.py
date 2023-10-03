@@ -28,13 +28,13 @@ class TestJATS(unittest.TestCase):
 
     def test_jats(self):
         filenames = [
+            "jats_springer_AcMSn_s10409-023-23061-x",
+            "jats_springer_AcMSn_s10409-023-23086-x",
             "jats_springerEarly_ExA_s10686-023-09907-7",
             "jats_springer_EPJC_s10052-023-11699-1",
             "jats_springer_Natur_s41598-023-38673-x",
-            # "jats_springer_AcMSn_s10409-023-23061-x",
             "jats_springer_EPJC_s10052-023-11733-2",
             "jats_springer_ZaMP_s00033-023-02064-z",
-            # "jats_springer_AcMSn_s10409-023-23086-x",
             "jats_springer_JHEP_JHEP07_2023_200",
             "jats_springer_AcMSn_s10409-023-23108-x",
             "jats_springer_NatCo_s41467-023-40272-3",
@@ -62,10 +62,6 @@ class TestJATS(unittest.TestCase):
 
             parsed = parser.parse(input_data)
 
-            with open(test_outfile, "w") as fp:
-                parsed["recordData"]["parsedTime"] = ""
-                json.dump(parsed, fp, indent=2, sort_keys=True)
-
             with open(test_outfile, "rb") as fp:
                 output_text = fp.read()
                 output_data = json.loads(output_text)
@@ -77,11 +73,11 @@ class TestJATS(unittest.TestCase):
                 self.fail("Schema validation failed")
 
             # this field won't match the test data, so check and then discard
-            # time_difference = (
-            #     datetime.datetime.strptime(parsed["recordData"]["parsedTime"], TIMESTAMP_FMT)
-            #     - datetime.datetime.utcnow()
-            # )
-            # self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
+            time_difference = (
+                datetime.datetime.strptime(parsed["recordData"]["parsedTime"], TIMESTAMP_FMT)
+                - datetime.datetime.utcnow()
+            )
+            self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
             parsed["recordData"]["parsedTime"] = ""
 
             self.assertEqual(parsed, output_data)
