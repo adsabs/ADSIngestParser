@@ -647,6 +647,8 @@ class JATSParser(BaseBeautifulSoupParser):
             for k in keys_misc:
                 keys_out.append({"system": "misc", "string": k})
 
+        #need to add ID
+        
         if keys_out:
             self.base_metadata["keywords"] = keys_out
 
