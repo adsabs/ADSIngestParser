@@ -1,6 +1,8 @@
 import logging
 import re
 
+import validators
+
 from adsingestp import utils
 from adsingestp.ingest_exceptions import XmlLoadException
 from adsingestp.parsers.base import BaseBeautifulSoupParser
@@ -330,7 +332,8 @@ class ElsevierParser(BaseBeautifulSoupParser):
     def _parse_esources(self):
         links = []
         if self.record_header.find("prism:url"):
-            links.append(("pub_html", self.record_header.find("prism:url").get_text()))
+            if validators.url(self.record_header.find("prism:url").get_text()):
+                links.append(("pub_html", self.record_header.find("prism:url").get_text()))
 
         self.base_metadata["esources"] = links
 
