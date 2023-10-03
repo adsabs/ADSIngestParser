@@ -64,7 +64,7 @@ class TestJATS(unittest.TestCase):
 
             with open(test_outfile, "w") as fp:
                 parsed["recordData"]["parsedTime"] = ""
-                json.dump(parsed,fp, indent = 2, sort_keys=True)
+                json.dump(parsed, fp, indent=2, sort_keys=True)
 
             with open(test_outfile, "rb") as fp:
                 output_text = fp.read()
