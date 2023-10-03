@@ -1,627 +1,642 @@
 {
-  "recordData": {
-    "createdTime": "",
-    "parsedTime": "",
-    "loadType": "fromFile",
-    "loadFormat": "JATS",
-    "loadLocation": "",
-    "recordOrigin": ""
+  "abstract": {
+    "textEnglish": "We present optical light curves, redshifts, and classifications for <inline-formula> <tex-math> <?CDATA $365$?> </tex-math> <!-- <mml:math> <mml:mn>365</mml:mn> </mml:math> --> </inline-formula>spectroscopically confirmed Type Ia supernovae (SNe Ia) discovered by the Pan-STARRS1 (PS1) Medium Deep Survey. We detail improvements to the PS1 SN photometry, astrometry, and calibration that reduce the systematic uncertainties in the PS1 SN Ia distances. We combine the subset of <inline-formula> <tex-math> <?CDATA $279$?> </tex-math> <!-- <mml:math> <mml:mn>279</mml:mn> </mml:math> --> </inline-formula>PS1 SNe Ia (0.03<z<0.68) with useful distance estimates of SNe Ia from the Sloan Digital Sky Survey (SDSS), SNLS, and various low-z and Hubble Space Telescope samples to form the largest combined sample of SNe Ia, consisting of a total of <inline-formula> <tex-math> <?CDATA $1048$?> </tex-math> <!-- <mml:math> <mml:mn>1048</mml:mn> </mml:math> --> </inline-formula>SNe Ia in the range of 0.01<z<2.3, which we call the Pantheon Sample. When combining Planck 2015 cosmic microwave background (CMB) measurements with the Pantheon SN sample, we find <inline-formula> <tex-math> <?CDATA ${{\\rm{\\Omega }}}_{m}=0.307\\pm 0.012$?> </tex-math> <!-- <mml:math> <mml:msub> <mml:mrow> <mml:mi mathvariant=\"normal\">&OHgr;</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>m</mml:mi> </mml:mrow> </mml:msub> <mml:mo>=</mml:mo> <mml:mn>0.307</mml:mn> <mml:mo>\u00b1</mml:mo> <mml:mn>0.012</mml:mn> </mml:math> --> </inline-formula> and <inline-formula> <tex-math> <?CDATA $w=-1.026\\pm 0.041$?> </tex-math> <!-- <mml:math> <mml:mi>w</mml:mi> <mml:mo>=</mml:mo> <mml:mo>\u2212</mml:mo> <mml:mn>1.026</mml:mn> <mml:mo>\u00b1</mml:mo> <mml:mn>0.041</mml:mn> </mml:math> --> </inline-formula> for the wCDMmodel. When the SN and CMB constraints are combined with constraints from BAO and local H<sub>0</sub> measurements, the analysis yields the most precise measurement of dark energy to date: <inline-formula> <tex-math> <?CDATA ${w}_{0}=-1.007\\pm 0.089$?> </tex-math> <!-- <mml:math> <mml:msub> <mml:mrow> <mml:mi>w</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>0</mml:mn> </mml:mrow> </mml:msub> <mml:mo>=</mml:mo> <mml:mo>\u2212</mml:mo> <mml:mn>1.007</mml:mn> <mml:mo>\u00b1</mml:mo> <mml:mn>0.089</mml:mn> </mml:math> --> </inline-formula> and <inline-formula> <tex-math> <?CDATA ${w}_{a}=-0.222\\pm 0.407$?> </tex-math> <!-- <mml:math> <mml:msub> <mml:mrow> <mml:mi>w</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>a</mml:mi> </mml:mrow> </mml:msub> <mml:mo>=</mml:mo> <mml:mo>\u2212</mml:mo> <mml:mn>0.222</mml:mn> <mml:mo>\u00b1</mml:mo> <mml:mn>0.407</mml:mn> </mml:math> --> </inline-formula> for the <inline-formula> <tex-math> <?CDATA ${w}_{0}{w}_{a}$?> </tex-math> <!-- <mml:math> <mml:msub> <mml:mrow> <mml:mi>w</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>0</mml:mn> </mml:mrow> </mml:msub> <mml:msub> <mml:mrow> <mml:mi>w</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>a</mml:mi> </mml:mrow> </mml:msub> </mml:math> --> </inline-formula>CDMmodel. Tension with a cosmological constant previously seen in an analysis of PS1 and low-z SNe has diminished after an increase of 2in the statistics of the PS1 sample, improved calibration and photometry, and stricter light-curve quality cuts. We find that the systematic uncertainties in our measurements of dark energy are almost as large as the statistical uncertainties, primarily due to limitations of modeling the low-redshift sample. This must be addressed for future progress in using SNe Ia to measure dark energy."
+  },
+  "authors": [
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf1",
+          "affPubRaw": "Kavli Institute for Cosmological Physics, The University of Chicago, Chicago, IL 60637, USA"
+        }
+      ],
+      "attrib": {
+        "email": "dscolnic@kicp.uchicago.edu"
+      },
+      "name": {
+        "given_name": "D. M.",
+        "surname": "Scolnic"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf2",
+          "affPubRaw": "Department of Physics and Astronomy, Johns Hopkins University, 3400 North Charles Street, Baltimore, MD 21218, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0002-6230-0151"
+      },
+      "name": {
+        "given_name": "D. O.",
+        "surname": "Jones"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf2",
+          "affPubRaw": "Department of Physics and Astronomy, Johns Hopkins University, 3400 North Charles Street, Baltimore, MD 21218, USA"
+        },
+        {
+          "affPubID": "apjaab9bbaf3",
+          "affPubRaw": "Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, MD 21218, USA"
+        }
+      ],
+      "name": {
+        "given_name": "A.",
+        "surname": "Rest"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf4",
+          "affPubRaw": "Department of Astronomy and Astrophysics, University of California, Santa Cruz, CA 92064, USA"
+        }
+      ],
+      "name": {
+        "given_name": "Y. C.",
+        "surname": "Pan"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf5",
+          "affPubRaw": "Astrophysical Institute, Department of Physics and Astronomy, 251B Clippinger Lab, Ohio University, Athens, OH 45701, USA"
+        }
+      ],
+      "name": {
+        "given_name": "R.",
+        "surname": "Chornock"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf4",
+          "affPubRaw": "Department of Astronomy and Astrophysics, University of California, Santa Cruz, CA 92064, USA"
+        }
+      ],
+      "name": {
+        "given_name": "R. J.",
+        "surname": "Foley"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf6",
+          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+        }
+      ],
+      "name": {
+        "given_name": "M. E.",
+        "surname": "Huber"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf1",
+          "affPubRaw": "Kavli Institute for Cosmological Physics, The University of Chicago, Chicago, IL 60637, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0003-3221-0419"
+      },
+      "name": {
+        "given_name": "R.",
+        "surname": "Kessler"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf3",
+          "affPubRaw": "Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, MD 21218, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0001-6022-0484"
+      },
+      "name": {
+        "given_name": "G.",
+        "surname": "Narayan"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf3",
+          "affPubRaw": "Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, MD 21218, USA"
+        },
+        {
+          "affPubID": "apjaab9bbaf2",
+          "affPubRaw": "Department of Physics and Astronomy, Johns Hopkins University, 3400 North Charles Street, Baltimore, MD 21218, USA"
+        }
+      ],
+      "name": {
+        "given_name": "A. G.",
+        "surname": "Riess"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf7",
+          "affPubRaw": "Department of Physics and Astronomy, University of South Carolina, 712 Main St., Columbia, SC 29208, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0003-1947-687X"
+      },
+      "name": {
+        "given_name": "S.",
+        "surname": "Rodney"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf8",
+          "affPubRaw": "Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0002-9392-9681"
+      },
+      "name": {
+        "given_name": "E.",
+        "surname": "Berger"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf9",
+          "affPubRaw": "Department of Physics and Astronomy, University of Pennsylvania, Philadelphia, PA 19104, USA"
+        }
+      ],
+      "name": {
+        "given_name": "D. J.",
+        "surname": "Brout"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf8",
+          "affPubRaw": "Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA"
+        }
+      ],
+      "name": {
+        "given_name": "P. J.",
+        "surname": "Challis"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf10",
+          "affPubRaw": "The Observatories of the Carnegie Institution for Science, 813 Santa Barbara St., Pasadena, CA 91101, USA"
+        }
+      ],
+      "name": {
+        "given_name": "M.",
+        "surname": "Drout"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf11",
+          "affPubRaw": "Department of Physics, Harvard University, 17 Oxford Street, Cambridge, MA 02138, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0003-2808-275X"
+      },
+      "name": {
+        "given_name": "D.",
+        "surname": "Finkbeiner"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf12",
+          "affPubRaw": "Department of Astronomy, Stockholm University, SE, Sweden"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0001-9454-4639"
+      },
+      "name": {
+        "given_name": "R.",
+        "surname": "Lunnan"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf8",
+          "affPubRaw": "Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA"
+        }
+      ],
+      "name": {
+        "given_name": "R. P.",
+        "surname": "Kirshner"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf13",
+          "affPubRaw": "Private Researcher"
+        }
+      ],
+      "name": {
+        "given_name": "N. E.",
+        "surname": "Sanders"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf14",
+          "affPubRaw": "Lawrence Berkeley National Laboratory, One Cyclotron Road, Berkeley, CA 94720, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0002-3569-7421"
+      },
+      "name": {
+        "given_name": "E.",
+        "surname": "Schlafly"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf15",
+          "affPubRaw": "Astrophysics Research Centre, School of Mathematics and Physics, Queens University Belfast, Belfast, BT71NN, UK"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0002-8229-1731"
+      },
+      "name": {
+        "given_name": "S.",
+        "surname": "Smartt"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf11",
+          "affPubRaw": "Department of Physics, Harvard University, 17 Oxford Street, Cambridge, MA 02138, USA"
+        },
+        {
+          "affPubID": "apjaab9bbaf8",
+          "affPubRaw": "Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0003-0347-1724"
+      },
+      "name": {
+        "given_name": "C. W.",
+        "surname": "Stubbs"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf6",
+          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0003-2858-9657"
+      },
+      "name": {
+        "given_name": "J.",
+        "surname": "Tonry"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf16",
+          "affPubRaw": "PITT PACC, Department of Physics and Astronomy, University of Pittsburgh, Pittsburgh, PA 15260, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0001-7113-1233"
+      },
+      "name": {
+        "given_name": "W. M.",
+        "surname": "Wood-Vasey"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf17",
+          "affPubRaw": "Department of Physics, University of Notre Dame, 225 Nieuwland Science Hall, Notre Dame, IN, 46556-5670, USA"
+        }
+      ],
+      "name": {
+        "given_name": "M.",
+        "surname": "Foley"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf16",
+          "affPubRaw": "PITT PACC, Department of Physics and Astronomy, University of Pittsburgh, Pittsburgh, PA 15260, USA"
+        }
+      ],
+      "name": {
+        "given_name": "J.",
+        "surname": "Hand"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf18",
+          "affPubRaw": "Department of Astrophysics and Planetary Science, Villanova University, Villanova, PA 19085, USA"
+        }
+      ],
+      "name": {
+        "given_name": "E.",
+        "surname": "Johnson"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf19",
+          "affPubRaw": "GMTO Corporation, 251 S. Lake Ave., Suite 300, Pasadena, CA 91101, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0003-4401-9582"
+      },
+      "name": {
+        "given_name": "W. S.",
+        "surname": "Burgett"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf6",
+          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0001-6965-7789"
+      },
+      "name": {
+        "given_name": "K. C.",
+        "surname": "Chambers"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf20",
+          "affPubRaw": "Department of Physics, University of Durham Science Laboratories, South Road Durham DH1 3LE, UK"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0002-7204-9802"
+      },
+      "name": {
+        "given_name": "P. W.",
+        "surname": "Draper"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf6",
+          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0003-0786-2140"
+      },
+      "name": {
+        "given_name": "K. W.",
+        "surname": "Hodapp"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf6",
+          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0001-6511-4306"
+      },
+      "name": {
+        "given_name": "N.",
+        "surname": "Kaiser"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf6",
+          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+        }
+      ],
+      "name": {
+        "given_name": "R. P.",
+        "surname": "Kudritzki"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf6",
+          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0002-7965-2815"
+      },
+      "name": {
+        "given_name": "E. A.",
+        "surname": "Magnier"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf20",
+          "affPubRaw": "Department of Physics, University of Durham Science Laboratories, South Road Durham DH1 3LE, UK"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0001-9034-4402"
+      },
+      "name": {
+        "given_name": "N.",
+        "surname": "Metcalfe"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf6",
+          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+        }
+      ],
+      "name": {
+        "given_name": "F.",
+        "surname": "Bresolin"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf15",
+          "affPubRaw": "Astrophysics Research Centre, School of Mathematics and Physics, Queens University Belfast, Belfast, BT71NN, UK"
+        }
+      ],
+      "name": {
+        "given_name": "E.",
+        "surname": "Gall"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf15",
+          "affPubRaw": "Astrophysics Research Centre, School of Mathematics and Physics, Queens University Belfast, Belfast, BT71NN, UK"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0001-5455-3653"
+      },
+      "name": {
+        "given_name": "R.",
+        "surname": "Kotak"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf15",
+          "affPubRaw": "Astrophysics Research Centre, School of Mathematics and Physics, Queens University Belfast, Belfast, BT71NN, UK"
+        }
+      ],
+      "name": {
+        "given_name": "M.",
+        "surname": "McCrum"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": "apjaab9bbaf15",
+          "affPubRaw": "Astrophysics Research Centre, School of Mathematics and Physics, Queens University Belfast, Belfast, BT71NN, UK"
+        }
+      ],
+      "name": {
+        "given_name": "K. W.",
+        "surname": "Smith"
+      }
+    }
+  ],
+  "copyright": {
+    "statement": "2018. The American Astronomical Society. All rights reserved.",
+    "status": true
   },
   "editorialHistory": {
+    "acceptedDate": "2018-03-14",
     "receivedDates": [
       "2017-10-01"
     ],
     "revisedDates": [
       "2018-03-13"
-    ],
-    "acceptedDate": "2018-03-14"
-  },
-  "pubDate": {
-    "electrDate": "2018-05-29",
-    "printDate": "2018-06-01"
-  },
-  "publication": {
-    "pubName": "The Astrophysical Journal",
-    "publisher": "The American Astronomical Society",
-    "issueNum": "2",
-    "volumeNum": "859",
-    "pubYear": "2018",
-    "ISSN": [
-      {
-        "pubtype": "ppub",
-        "issnString": "0004-637X"
-      },
-      {
-        "pubtype": "epub",
-        "issnString": "1538-4357"
-      }
     ]
+  },
+  "keywords": [
+    {
+      "keyString": "cosmology: observations",
+      "keySystem": "AAS"
+    },
+    {
+      "keyString": "dark energy",
+      "keySystem": "AAS"
+    },
+    {
+      "keyString": "supernovae: general",
+      "keySystem": "AAS"
+    }
+  ],
+  "pagination": {
+    "electronicID": "101",
+    "pageCount": "28"
   },
   "persistentIDs": [
     {
       "DOI": "10.3847/1538-4357/aab9bb"
     }
   ],
+  "pubDate": {
+    "electrDate": "2018-05-29",
+    "printDate": "2018-06-01"
+  },
+  "publication": {
+    "ISSN": [
+      {
+        "issnString": "0004-637X",
+        "pubtype": "ppub"
+      },
+      {
+        "issnString": "1538-4357",
+        "pubtype": "epub"
+      }
+    ],
+    "issueNum": "2",
+    "pubName": "The Astrophysical Journal",
+    "pubYear": "2018",
+    "publisher": "The American Astronomical Society",
+    "volumeNum": "859"
+  },
   "publisherIDs": [
     {
-      "attribute": "publisher-id",
-      "Identifier": "apjaab9bb"
+      "Identifier": "apjaab9bb",
+      "attribute": "publisher-id"
     },
     {
-      "attribute": "manuscript",
-      "Identifier": "aab9bb"
+      "Identifier": "aab9bb",
+      "attribute": "manuscript"
     },
     {
-      "attribute": "other",
-      "Identifier": "AAS07560"
+      "Identifier": "AAS07560",
+      "attribute": "other"
     }
   ],
-  "pagination": {
-    "pageCount": "28",
-    "electronicID": "101"
-  },
-  "authors": [
-    {
-      "name": {
-        "surname": "Scolnic",
-        "given_name": "D. M."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Kavli Institute for Cosmological Physics, The University of Chicago, Chicago, IL 60637, USA",
-          "affPubID": "apjaab9bbaf1"
-        }
-      ],
-      "attrib": {
-        "email": "dscolnic@kicp.uchicago.edu"
-      }
-    },
-    {
-      "name": {
-        "surname": "Jones",
-        "given_name": "D. O."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Physics and Astronomy, Johns Hopkins University, 3400 North Charles Street, Baltimore, MD 21218, USA",
-          "affPubID": "apjaab9bbaf2"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0002-6230-0151"
-      }
-    },
-    {
-      "name": {
-        "surname": "Rest",
-        "given_name": "A."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Physics and Astronomy, Johns Hopkins University, 3400 North Charles Street, Baltimore, MD 21218, USA",
-          "affPubID": "apjaab9bbaf2"
-        },
-        {
-          "affPubRaw": "Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, MD 21218, USA",
-          "affPubID": "apjaab9bbaf3"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Pan",
-        "given_name": "Y. C."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Astronomy and Astrophysics, University of California, Santa Cruz, CA 92064, USA",
-          "affPubID": "apjaab9bbaf4"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Chornock",
-        "given_name": "R."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Astrophysical Institute, Department of Physics and Astronomy, 251B Clippinger Lab, Ohio University, Athens, OH 45701, USA",
-          "affPubID": "apjaab9bbaf5"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Foley",
-        "given_name": "R. J."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Astronomy and Astrophysics, University of California, Santa Cruz, CA 92064, USA",
-          "affPubID": "apjaab9bbaf4"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Huber",
-        "given_name": "M. E."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA",
-          "affPubID": "apjaab9bbaf6"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Kessler",
-        "given_name": "R."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Kavli Institute for Cosmological Physics, The University of Chicago, Chicago, IL 60637, USA",
-          "affPubID": "apjaab9bbaf1"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0003-3221-0419"
-      }
-    },
-    {
-      "name": {
-        "surname": "Narayan",
-        "given_name": "G."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, MD 21218, USA",
-          "affPubID": "apjaab9bbaf3"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0001-6022-0484"
-      }
-    },
-    {
-      "name": {
-        "surname": "Riess",
-        "given_name": "A. G."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, MD 21218, USA",
-          "affPubID": "apjaab9bbaf3"
-        },
-        {
-          "affPubRaw": "Department of Physics and Astronomy, Johns Hopkins University, 3400 North Charles Street, Baltimore, MD 21218, USA",
-          "affPubID": "apjaab9bbaf2"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Rodney",
-        "given_name": "S."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Physics and Astronomy, University of South Carolina, 712 Main St., Columbia, SC 29208, USA",
-          "affPubID": "apjaab9bbaf7"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0003-1947-687X"
-      }
-    },
-    {
-      "name": {
-        "surname": "Berger",
-        "given_name": "E."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA",
-          "affPubID": "apjaab9bbaf8"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0002-9392-9681"
-      }
-    },
-    {
-      "name": {
-        "surname": "Brout",
-        "given_name": "D. J."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Physics and Astronomy, University of Pennsylvania, Philadelphia, PA 19104, USA",
-          "affPubID": "apjaab9bbaf9"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Challis",
-        "given_name": "P. J."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA",
-          "affPubID": "apjaab9bbaf8"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Drout",
-        "given_name": "M."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "The Observatories of the Carnegie Institution for Science, 813 Santa Barbara St., Pasadena, CA 91101, USA",
-          "affPubID": "apjaab9bbaf10"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Finkbeiner",
-        "given_name": "D."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Physics, Harvard University, 17 Oxford Street, Cambridge, MA 02138, USA",
-          "affPubID": "apjaab9bbaf11"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0003-2808-275X"
-      }
-    },
-    {
-      "name": {
-        "surname": "Lunnan",
-        "given_name": "R."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Astronomy, Stockholm University, SE, Sweden",
-          "affPubID": "apjaab9bbaf12"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0001-9454-4639"
-      }
-    },
-    {
-      "name": {
-        "surname": "Kirshner",
-        "given_name": "R. P."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA",
-          "affPubID": "apjaab9bbaf8"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Sanders",
-        "given_name": "N. E."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Private Researcher",
-          "affPubID": "apjaab9bbaf13"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Schlafly",
-        "given_name": "E."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Lawrence Berkeley National Laboratory, One Cyclotron Road, Berkeley, CA 94720, USA",
-          "affPubID": "apjaab9bbaf14"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0002-3569-7421"
-      }
-    },
-    {
-      "name": {
-        "surname": "Smartt",
-        "given_name": "S."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Astrophysics Research Centre, School of Mathematics and Physics, Queens University Belfast, Belfast, BT71NN, UK",
-          "affPubID": "apjaab9bbaf15"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0002-8229-1731"
-      }
-    },
-    {
-      "name": {
-        "surname": "Stubbs",
-        "given_name": "C. W."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Physics, Harvard University, 17 Oxford Street, Cambridge, MA 02138, USA",
-          "affPubID": "apjaab9bbaf11"
-        },
-        {
-          "affPubRaw": "Harvard-Smithsonian Center for Astrophysics, 60 Garden Street, Cambridge, MA 02138, USA",
-          "affPubID": "apjaab9bbaf8"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0003-0347-1724"
-      }
-    },
-    {
-      "name": {
-        "surname": "Tonry",
-        "given_name": "J."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA",
-          "affPubID": "apjaab9bbaf6"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0003-2858-9657"
-      }
-    },
-    {
-      "name": {
-        "surname": "Wood-Vasey",
-        "given_name": "W. M."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "PITT PACC, Department of Physics and Astronomy, University of Pittsburgh, Pittsburgh, PA 15260, USA",
-          "affPubID": "apjaab9bbaf16"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0001-7113-1233"
-      }
-    },
-    {
-      "name": {
-        "surname": "Foley",
-        "given_name": "M."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Physics, University of Notre Dame, 225 Nieuwland Science Hall, Notre Dame, IN, 46556-5670, USA",
-          "affPubID": "apjaab9bbaf17"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Hand",
-        "given_name": "J."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "PITT PACC, Department of Physics and Astronomy, University of Pittsburgh, Pittsburgh, PA 15260, USA",
-          "affPubID": "apjaab9bbaf16"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Johnson",
-        "given_name": "E."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Astrophysics and Planetary Science, Villanova University, Villanova, PA 19085, USA",
-          "affPubID": "apjaab9bbaf18"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Burgett",
-        "given_name": "W. S."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "GMTO Corporation, 251 S. Lake Ave., Suite 300, Pasadena, CA 91101, USA",
-          "affPubID": "apjaab9bbaf19"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0003-4401-9582"
-      }
-    },
-    {
-      "name": {
-        "surname": "Chambers",
-        "given_name": "K. C."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA",
-          "affPubID": "apjaab9bbaf6"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0001-6965-7789"
-      }
-    },
-    {
-      "name": {
-        "surname": "Draper",
-        "given_name": "P. W."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Physics, University of Durham Science Laboratories, South Road Durham DH1 3LE, UK",
-          "affPubID": "apjaab9bbaf20"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0002-7204-9802"
-      }
-    },
-    {
-      "name": {
-        "surname": "Hodapp",
-        "given_name": "K. W."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA",
-          "affPubID": "apjaab9bbaf6"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0003-0786-2140"
-      }
-    },
-    {
-      "name": {
-        "surname": "Kaiser",
-        "given_name": "N."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA",
-          "affPubID": "apjaab9bbaf6"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0001-6511-4306"
-      }
-    },
-    {
-      "name": {
-        "surname": "Kudritzki",
-        "given_name": "R. P."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA",
-          "affPubID": "apjaab9bbaf6"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Magnier",
-        "given_name": "E. A."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA",
-          "affPubID": "apjaab9bbaf6"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0002-7965-2815"
-      }
-    },
-    {
-      "name": {
-        "surname": "Metcalfe",
-        "given_name": "N."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Department of Physics, University of Durham Science Laboratories, South Road Durham DH1 3LE, UK",
-          "affPubID": "apjaab9bbaf20"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0001-9034-4402"
-      }
-    },
-    {
-      "name": {
-        "surname": "Bresolin",
-        "given_name": "F."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA",
-          "affPubID": "apjaab9bbaf6"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Gall",
-        "given_name": "E."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Astrophysics Research Centre, School of Mathematics and Physics, Queens University Belfast, Belfast, BT71NN, UK",
-          "affPubID": "apjaab9bbaf15"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Kotak",
-        "given_name": "R."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Astrophysics Research Centre, School of Mathematics and Physics, Queens University Belfast, Belfast, BT71NN, UK",
-          "affPubID": "apjaab9bbaf15"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0001-5455-3653"
-      }
-    },
-    {
-      "name": {
-        "surname": "McCrum",
-        "given_name": "M."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Astrophysics Research Centre, School of Mathematics and Physics, Queens University Belfast, Belfast, BT71NN, UK",
-          "affPubID": "apjaab9bbaf15"
-        }
-      ]
-    },
-    {
-      "name": {
-        "surname": "Smith",
-        "given_name": "K. W."
-      },
-      "affiliation": [
-        {
-          "affPubRaw": "Astrophysics Research Centre, School of Mathematics and Physics, Queens University Belfast, Belfast, BT71NN, UK",
-          "affPubID": "apjaab9bbaf15"
-        }
-      ]
-    }
-  ],
-  "title": {
-    "textEnglish": "The Complete Light-curve Sample of Spectroscopically Confirmed SNe Ia from Pan-STARRS1 and Cosmological Constraints from the Combined Pantheon Sample"
-  },
-  "abstract": {
-    "textEnglish": "We present optical light curves, redshifts, and classifications for <inline-formula> <tex-math> <?CDATA $365$?> </tex-math> <!-- <mml:math> <mml:mn>365</mml:mn> </mml:math> --> </inline-formula>spectroscopically confirmed Type Ia supernovae (SNe Ia) discovered by the Pan-STARRS1 (PS1) Medium Deep Survey. We detail improvements to the PS1 SN photometry, astrometry, and calibration that reduce the systematic uncertainties in the PS1 SN Ia distances. We combine the subset of <inline-formula> <tex-math> <?CDATA $279$?> </tex-math> <!-- <mml:math> <mml:mn>279</mml:mn> </mml:math> --> </inline-formula>PS1 SNe Ia (0.03<z<0.68) with useful distance estimates of SNe Ia from the Sloan Digital Sky Survey (SDSS), SNLS, and various low-z and Hubble Space Telescope samples to form the largest combined sample of SNe Ia, consisting of a total of <inline-formula> <tex-math> <?CDATA $1048$?> </tex-math> <!-- <mml:math> <mml:mn>1048</mml:mn> </mml:math> --> </inline-formula>SNe Ia in the range of 0.01<z<2.3, which we call the Pantheon Sample. When combining Planck 2015 cosmic microwave background (CMB) measurements with the Pantheon SN sample, we find <inline-formula> <tex-math> <?CDATA ${{\\rm{\\Omega }}}_{m}=0.307\\pm 0.012$?> </tex-math> <!-- <mml:math> <mml:msub> <mml:mrow> <mml:mi mathvariant=\"normal\">&OHgr;</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>m</mml:mi> </mml:mrow> </mml:msub> <mml:mo>=</mml:mo> <mml:mn>0.307</mml:mn> <mml:mo>\u00b1</mml:mo> <mml:mn>0.012</mml:mn> </mml:math> --> </inline-formula> and <inline-formula> <tex-math> <?CDATA $w=-1.026\\pm 0.041$?> </tex-math> <!-- <mml:math> <mml:mi>w</mml:mi> <mml:mo>=</mml:mo> <mml:mo>\u2212</mml:mo> <mml:mn>1.026</mml:mn> <mml:mo>\u00b1</mml:mo> <mml:mn>0.041</mml:mn> </mml:math> --> </inline-formula> for the wCDMmodel. When the SN and CMB constraints are combined with constraints from BAO and local H<sub>0</sub> measurements, the analysis yields the most precise measurement of dark energy to date: <inline-formula> <tex-math> <?CDATA ${w}_{0}=-1.007\\pm 0.089$?> </tex-math> <!-- <mml:math> <mml:msub> <mml:mrow> <mml:mi>w</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>0</mml:mn> </mml:mrow> </mml:msub> <mml:mo>=</mml:mo> <mml:mo>\u2212</mml:mo> <mml:mn>1.007</mml:mn> <mml:mo>\u00b1</mml:mo> <mml:mn>0.089</mml:mn> </mml:math> --> </inline-formula> and <inline-formula> <tex-math> <?CDATA ${w}_{a}=-0.222\\pm 0.407$?> </tex-math> <!-- <mml:math> <mml:msub> <mml:mrow> <mml:mi>w</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>a</mml:mi> </mml:mrow> </mml:msub> <mml:mo>=</mml:mo> <mml:mo>\u2212</mml:mo> <mml:mn>0.222</mml:mn> <mml:mo>\u00b1</mml:mo> <mml:mn>0.407</mml:mn> </mml:math> --> </inline-formula> for the <inline-formula> <tex-math> <?CDATA ${w}_{0}{w}_{a}$?> </tex-math> <!-- <mml:math> <mml:msub> <mml:mrow> <mml:mi>w</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>0</mml:mn> </mml:mrow> </mml:msub> <mml:msub> <mml:mrow> <mml:mi>w</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>a</mml:mi> </mml:mrow> </mml:msub> </mml:math> --> </inline-formula>CDMmodel. Tension with a cosmological constant previously seen in an analysis of PS1 and low-z SNe has diminished after an increase of 2in the statistics of the PS1 sample, improved calibration and photometry, and stricter light-curve quality cuts. We find that the systematic uncertainties in our measurements of dark energy are almost as large as the statistical uncertainties, primarily due to limitations of modeling the low-redshift sample. This must be addressed for future progress in using SNe Ia to measure dark energy."
+  "recordData": {
+    "createdTime": "",
+    "loadFormat": "JATS",
+    "loadLocation": "",
+    "loadType": "fromFile",
+    "parsedTime": "",
+    "recordOrigin": ""
   },
   "references": [
     "<ref id=\"apjaab9bbbib1\"> <element-citation publication-type=\"journal\"> <person-group person-group-type=\"author\"> <name> <surname>Alam</surname> <given-names>S.</given-names> </name> <name> <surname>Albareti</surname> <given-names>F. D.</given-names> </name> <name> <surname>Allende Prieto</surname> <given-names>C.</given-names> </name> <etal/> </person-group> <year>2015</year> <source>ApJS</source> <volume>219</volume> <fpage>12</fpage> <ext-link ext-link-type=\"bibcode\">2015ApJS..219...12A</ext-link> <pub-id pub-id-type=\"doi\">10.1088/0067-0049/219/1/12</pub-id> </element-citation> </ref>",
@@ -749,22 +764,7 @@
     "<ref id=\"apjaab9bbbib123\"> <element-citation publication-type=\"journal\"> <person-group person-group-type=\"author\"> <name> <surname>Wood-Vasey</surname> <given-names>W. M.</given-names> </name> <name> <surname>Miknaitis</surname> <given-names>G.</given-names> </name> <name> <surname>Stubbs</surname> <given-names>C. W.</given-names> </name> <etal/> </person-group> <year>2007</year> <source>ApJ</source> <volume>666</volume> <fpage>694</fpage> <ext-link ext-link-type=\"bibcode\">2007ApJ...666..694W</ext-link> <pub-id pub-id-type=\"doi\">10.1086/518642</pub-id> </element-citation> </ref>",
     "<ref id=\"apjaab9bbbib124\"> <element-citation publication-type=\"preprint\"> <person-group person-group-type=\"author\"> <name> <surname>Zhang</surname> <given-names>B. R.</given-names> </name> <name> <surname>Childress</surname> <given-names>M. J.</given-names> </name> <name> <surname>Davis</surname> <given-names>T. M.</given-names> </name> <etal/> </person-group> <year>2017</year> <source>MNRAS</source> <volume>471</volume> <fpage>2254</fpage> <ext-link ext-link-type=\"bibcode\">2017MNRAS.471.2254Z</ext-link> <pub-id pub-id-type=\"doi\">10.1093/mnras/stx1600</pub-id> </element-citation> </ref>"
   ],
-  "keywords": [
-    {
-      "keyString": "cosmology: observations",
-      "keySystem": "AAS"
-    },
-    {
-      "keyString": "dark energy",
-      "keySystem": "AAS"
-    },
-    {
-      "keyString": "supernovae: general",
-      "keySystem": "AAS"
-    }
-  ],
-  "copyright": {
-    "status": true,
-    "statement": "2018. The American Astronomical Society. All rights reserved."
+  "title": {
+    "textEnglish": "The Complete Light-curve Sample of Spectroscopically Confirmed SNe Ia from Pan-STARRS1 and Cosmological Constraints from the Combined Pantheon Sample"
   }
 }
