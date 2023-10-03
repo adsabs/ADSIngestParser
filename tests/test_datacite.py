@@ -46,6 +46,10 @@ class TestDatacite(unittest.TestCase):
 
             parsed = parser.parse(input_data)
 
+            # with open('temp.json', "w") as fp:
+            #     parsed["recordData"]["parsedTime"] = ""
+            #     json.dump(parsed,fp, indent = 2, sort_keys=True)
+
             # make sure this is valid schema
             try:
                 ads_schema_validator().validate(parsed)
@@ -58,7 +62,7 @@ class TestDatacite(unittest.TestCase):
                 datetime.datetime.strptime(parsed["recordData"]["parsedTime"], TIMESTAMP_FMT)
                 - datetime.datetime.utcnow()
             )
-            self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
             parsed["recordData"]["parsedTime"] = ""
+            self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
 
             self.assertEqual(parsed, output_data)
