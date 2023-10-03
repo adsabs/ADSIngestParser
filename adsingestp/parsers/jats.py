@@ -2,6 +2,7 @@ import logging
 import re
 from collections import OrderedDict
 
+import validators
 from bs4 import BeautifulSoup
 from ordered_set import OrderedSet
 
@@ -854,15 +855,18 @@ class JATSParser(BaseBeautifulSoupParser):
 
         for link in rawlinks:
             if link.get("content-type", "") == "full_html":
-                links.append(("pub_html", link.get("xlink:href")))
+                if validators.url(link.get("xlink:href")):
+                    links.append(("pub_html", link.get("xlink:href")))
 
             if link.get("content-type", "") == "pdf":
-                links.append(("pub_pdf", link.get("xlink:href")))
+                if validators.url(link.get("xlink:href")):
+                    links.append(("pub_pdf", link.get("xlink:href")))
 
-            # add a check to see if pub_html exists in links. if not, search for abstract link
-            if "pub_html" not in dict(links).keys():
-                for link in rawlinks:
-                    if link.get("content-type", "") == "abstract":
+        # add a check to see if pub_html exists in links. if not, search for abstract link
+        if "pub_html" not in dict(links).keys():
+            for link in rawlinks:
+                if link.get("content-type", "") == "abstract":
+                    if validators.url(link.get("xlink:href")):
                         links.append(("pub_html", link.get("xlink:href")))
 
         self.base_metadata["esources"] = links
