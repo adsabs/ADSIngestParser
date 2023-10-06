@@ -251,62 +251,32 @@
   ],
   "keywords": [
     {
-      "keyIdent": {
-        "keyID": "1636",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "1636",
       "keyString": "Stellar winds",
       "keySystem": "UAT"
     },
     {
-      "keyIdent": {
-        "keyID": "1599",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "1599",
       "keyString": "Stellar evolution",
       "keySystem": "UAT"
     },
     {
-      "keyIdent": {
-        "keyID": "1616",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "1616",
       "keyString": "Stellar nucleosynthesis",
       "keySystem": "UAT"
     },
     {
-      "keyIdent": {
-        "keyID": "1528",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "1528",
       "keyString": "Solar system",
       "keySystem": "UAT"
     },
     {
-      "keyIdent": {
-        "keyID": "732",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "732",
       "keyString": "Massive stars",
       "keySystem": "UAT"
     },
     {
-      "keyIdent": {
-        "keyID": "1629",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "1629",
       "keyString": "Stellar rotation",
       "keySystem": "UAT"
     }

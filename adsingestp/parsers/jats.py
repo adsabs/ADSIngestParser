@@ -613,31 +613,8 @@ class JATSParser(BaseBeautifulSoupParser):
         keys_aas = []
         keys_out = []
         keyword_groups = self.article_meta.find_all("kwd-group")
-        # for kg in keyword_groups:
-        #     # Check for UAT first:
-        #     if kg.get("kwd-group-type", "") == "author":
-        #         keys_uat_test = kg.find_all("compound-kwd-part")
-        #         for kk in keys_uat_test:
-        #             if kk["content-type"] == "uat-code":
-        #                 keys_uat.append(self._detag(kk, self.JATS_TAGSET["keywords"]))
-        #         if not keys_uat:
-        #             keys_misc_test = kg.find_all("kwd")
-        #             for kk in keys_misc_test:
-        #                 keys_misc.append(self._detag(kk, self.JATS_TAGSET["keywords"]))
-        #     # Then check for AAS:
-        #     elif kg.get("kwd-group-type", "") == "AAS":
-        #         keys_aas_test = kg.find_all("kwd")
-        #         for kk in keys_aas_test:
-        #             keys_aas.append(self._detag(kk, self.JATS_TAGSET["keywords"]))
-        #     # If all else fails, just search for 'kwd'
-        #     else:
-        #         keys_misc_test = kg.find_all("kwd")
-        #         for kk in keys_misc_test:
-        #             keys_misc.append(self._detag(kk, self.JATS_TAGSET["keywords"]))
 
         for kg in keyword_groups:
-            # pdb.set_trace()
-
             if kg.get("kwd-group-type", "") == "author":
                 keywords_uat_test = kg.find_all("compound-kwd")
                 for kw in keywords_uat_test:
@@ -645,9 +622,9 @@ class JATSParser(BaseBeautifulSoupParser):
                     for kk in keys_uat_test:
                         # Check for UAT first:
                         if kk["content-type"] == "uat-code":
-                            keyid = kk.get_text()
+                            keyid = self._detag(kk, self.JATS_TAGSET["keywords"])
                         if kk["content-type"] == "term":
-                            keystring = kk.get_text()
+                            keystring = self._detag(kk, self.JATS_TAGSET["keywords"])
 
                     if keyid or keystring:
                         keys_uat.append({"string": keystring, "system": "UAT", "id": keyid})

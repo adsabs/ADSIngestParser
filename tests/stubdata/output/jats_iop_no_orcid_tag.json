@@ -5869,42 +5869,22 @@
   ],
   "keywords": [
     {
-      "keyIdent": {
-        "keyID": "1733",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "1733",
       "keyString": "Ultra-high-energy cosmic radiation",
       "keySystem": "UAT"
     },
     {
-      "keyIdent": {
-        "keyID": "327",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "327",
       "keyString": "Cosmic ray showers",
       "keySystem": "UAT"
     },
     {
-      "keyIdent": {
-        "keyID": "2371",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "2371",
       "keyString": "Experimental data",
       "keySystem": "UAT"
     },
     {
-      "keyIdent": {
-        "keyID": "205",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "205",
       "keyString": "Catalogs",
       "keySystem": "UAT"
     }

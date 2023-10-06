@@ -425,10 +425,7 @@ class IngestBase(object):
             {
                 "keyString": i.get("string", ""),
                 "keySystem": i.get("system", ""),
-                "keyIdent": {
-                    "properties": {"system": i.get("system", "") if i.get("id", "") else ""},
-                    "keyID": i.get("id", "") if i.get("id", "") else "",
-                },
+                "keyID": i.get("id", "") if i.get("id", "") and i.get("system", "") else "",
             }
             for i in input_dict.get("keywords", [])
         ]
