@@ -96,12 +96,7 @@
   "doctype": "misc",
   "keywords": [
     {
-      "keyIdent": {
-        "keyID": "72",
-        "properties": {
-          "system": "UAT"
-        }
-      },
+      "keyID": "72",
       "keyString": "Asteroids",
       "keySystem": "UAT"
     }
