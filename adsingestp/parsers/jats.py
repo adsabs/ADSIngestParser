@@ -636,7 +636,6 @@ class JATSParser(BaseBeautifulSoupParser):
 
             # Then check for AAS:
             if kg.get("kwd-group-type", "") == "AAS":
-                # pdb.set_trace()
                 keys_aas_test = kg.find_all("kwd")
                 for kk in keys_aas_test:
                     keys_aas.append(self._detag(kk, self.JATS_TAGSET["keywords"]))
@@ -649,7 +648,6 @@ class JATSParser(BaseBeautifulSoupParser):
 
         if keys_uat:
             for k in keys_uat:
-                # keys_out.append({"system": "UAT", "string": k})
                 keys_out.append(k)
 
         if keys_aas:

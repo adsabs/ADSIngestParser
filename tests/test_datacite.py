@@ -46,10 +46,6 @@ class TestDatacite(unittest.TestCase):
 
             parsed = parser.parse(input_data)
 
-            # with open('temp.json', "w") as fp:
-            #     parsed["recordData"]["parsedTime"] = ""
-            #     json.dump(parsed,fp, indent = 2, sort_keys=True)
-
             # make sure this is valid schema
             try:
                 ads_schema_validator().validate(parsed)
