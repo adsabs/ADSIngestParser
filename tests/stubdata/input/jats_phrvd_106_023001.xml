@@ -231,7 +231,7 @@
 				<xref ref-type="bibr" rid="c2 c3">[2,3]</xref> as well as stronger evidence for GW200129_065458
 				<xref ref-type="bibr" rid="c4">[4]</xref> and the entire population
 				<xref ref-type="bibr" rid="c5">[5]</xref>. Parameter inference of gravitational wave detections returns the spin angles, notably the misalignments with respect to the binary’s Newtonian orbital angular momentum, or
-				<italic>tilts</italic>, at some fixed frequency (20 Hz for almost all the events in GWTC-2
+				<italic>tilts</italic>, at some fixed frequency (20 Hz for almost all the events in GWTC-2
 				<xref ref-type="bibr" rid="c6">[6]</xref>).
 				<fn id="fn1">
 					<label>
@@ -240,7 +240,7 @@
 					<p>For the new events in GWTC-3
 						<xref ref-type="bibr" rid="c7">[7]</xref>, the tilts are quoted at infinite separation using the code introduced in this paper.
 					</p>
-				</fn> However, in order to make contact with astrophysical formation scenarios, e.g., spin misalignments with the orbital angular momentum due to supernova kicks in the isolated binary channel (see, e.g., Refs.
+				</fn> However, in order to make contact with astrophysical formation scenarios, e.g., spin misalignments with the orbital angular momentum due to supernova kicks in the isolated binary channel (see, e.g., Refs. 
 				<xref ref-type="bibr" rid="c8 c9 c10">[8–10]</xref>), one wants to know the spin tilts at formation, which are fairly well approximated by the tilts at formally infinite separation for most binaries. The differences between the values at infinity and a finite semimajor axis
 				<inline-formula>
 					<mml:math display="inline">
@@ -308,7 +308,7 @@
 						<mml:mtext></mml:mtext>
 						<mml:mi>rad</mml:mi>
 					</mml:math>
-				</inline-formula>. As we show in Sec.
+				</inline-formula>. As we show in Sec. 
 				<xref ref-type="sec" rid="s6">VI</xref>, the uncertainties are (
 				<italic>ceteris paribus</italic>) larger for close to equal-mass binaries, with mass ratios differing from equal mass by
 				<inline-formula>
@@ -321,8 +321,8 @@
 				<xref ref-type="bibr" rid="c11">[11]</xref>). Thus, for most of the binary black holes we expect to detect with ground-based gravitational wave detectors, the tilts at infinity are a good approximation to those at formation. Nevertheless, this is a theoretical statement: Observationally, when analyzing a close-to-equal-mass binary, one will find samples that are very close to equal mass, for which the approximation of the tilts at formation by those at infinity will be much less accurate. However, this will only be relevant for constraining formation scenarios that predict non-negligible numbers of binaries with such close-to-equal mass ratios.
 			</p>
 			<p>Additionally, quoting the tilts at infinity allows one to make direct comparisons for different binaries, while the fixed reference frequency used in LIGO-Virgo analyses corresponds to different points in the evolution of the binary, depending on the binary’s parameters, particularly its total mass. Studies of the distribution of tilts for the entire population will thus also benefit from considering the tilts at infinity, as in
-				<xref ref-type="bibr" rid="c12">[12]</xref>. The distribution of tilts is particularly important since it allows one to distinguish between different formation channels, most notably between the isotropic distribution expected for dynamical formation and the distribution favoring aligned spins expected for isolated formation (see, e.g., Refs.
-				<xref ref-type="bibr" rid="c13 c14 c15 c16">[13–16]</xref>). While current measurements of the tilts are still not very well constrained, Ref.
+				<xref ref-type="bibr" rid="c12">[12]</xref>. The distribution of tilts is particularly important since it allows one to distinguish between different formation channels, most notably between the isotropic distribution expected for dynamical formation and the distribution favoring aligned spins expected for isolated formation (see, e.g., Refs. 
+				<xref ref-type="bibr" rid="c13 c14 c15 c16">[13–16]</xref>). While current measurements of the tilts are still not very well constrained, Ref. 
 				<xref ref-type="bibr" rid="c17">[17]</xref> shows that we can expect to measure them (at the reference frequency) with a 90% credible interval width of
 				<inline-formula>
 					<mml:math display="inline">
@@ -333,7 +333,7 @@
 						<mml:mi>rad</mml:mi>
 					</mml:math>
 				</inline-formula> in some cases in the plus-detector era
-				<xref ref-type="bibr" rid="c18">[18]</xref> (see Fig. 3 in Ref.
+				<xref ref-type="bibr" rid="c18">[18]</xref> (see Fig. 3 in Ref. 
 				<xref ref-type="bibr" rid="c17">[17]</xref> in particular). While we are not aware of similar predictions for third-generation gravitational wave detectors (Cosmic Explorer
 				<xref ref-type="bibr" rid="c19 c20">[19,20]</xref> and Einstein Telescope
 				<xref ref-type="bibr" rid="c21">[21]</xref>), a naïve scaling based on their noise curves, which are a factor of
@@ -356,7 +356,7 @@
 			<p>The precession-averaged post-Newtonian (PN) evolution introduced in
 				<xref ref-type="bibr" rid="c22 c23">[22,23]</xref> (building on work in
 				<xref ref-type="bibr" rid="c24">[24]</xref>) and further developed in
-				<xref ref-type="bibr" rid="c25">[25]</xref> provides an efficient way to compute the spin tilts at infinity. However, it is only accurate when the binary is sufficiently well separated, particularly since it is currently restricted to relatively low-order PN expressions for the precessional dynamics [2PN, which is next-to-leading order, in the conservative dynamics and only 1PN in the dissipative dynamics, as discussed below Eq. (38) in
+				<xref ref-type="bibr" rid="c25">[25]</xref> provides an efficient way to compute the spin tilts at infinity. However, it is only accurate when the binary is sufficiently well separated, particularly since it is currently restricted to relatively low-order PN expressions for the precessional dynamics [2PN, which is next-to-leading order, in the conservative dynamics and only 1PN in the dissipative dynamics, as discussed below Eq. (38) in
 				<xref ref-type="bibr" rid="c23">[23]</xref>].
 				<fn id="fn2">
 					<label>
@@ -441,13 +441,13 @@
 							</mml:mrow>
 						</mml:msup>
 					</mml:math>
-				</inline-formula> (see, e.g., Ref.
+				</inline-formula> (see, e.g., Ref. 
 				<xref ref-type="bibr" rid="c22">[22]</xref>), where
 				<inline-formula>
 					<mml:math display="inline">
 						<mml:mi>r</mml:mi>
 					</mml:math>
-				</inline-formula> is the binary’s orbital separation. Thus, to obtain a good accuracy, one first needs to evolve the binary backwards in time to some transition point using orbit-averaged evolution (see, e.g., Refs.
+				</inline-formula> is the binary’s orbital separation. Thus, to obtain a good accuracy, one first needs to evolve the binary backwards in time to some transition point using orbit-averaged evolution (see, e.g., Refs. 
 				<xref ref-type="bibr" rid="c26 c27">[26,27]</xref>; the derivation of the precession-averaged evolution starts from the orbit-averaged equations), and then apply the precession-averaged evolution, which will now be sufficiently accurate, since the binary is sufficiently well separated. This was first appreciated in
 				<xref ref-type="bibr" rid="c28">[28]</xref> in the context of evolving forward in time. However, the accuracy of the precession-averaged evolution in obtaining the tilts at infinity has not been quantified, and thus it is not clear what transition point from orbit-averaged to precession-averaged evolution should be chosen to ensure a given accuracy in this calculation. Here we determine this transition point, as discussed below.
 			</p>
@@ -468,7 +468,7 @@
 				</fn> Specifically, the 3PN expressions include the first post-Newtonian corrections to the leading spin-orbit and spin-spin terms as well as the tail terms from the leading spin-orbit effects, while the 2PN expressions used in the
 				<sc>precession</sc> code
 				<xref ref-type="bibr" rid="c28">[28]</xref> are only the leading spin-orbit and spin-spin effects. All these expressions assume quasicircular orbits, but we will see that the precession-averaged evolution does not need to be modified in eccentric cases for this application. The orbit-averaged evolution in eccentric cases can be carried out as in
-				<xref ref-type="bibr" rid="c34">[34]</xref>—we will consider this in the future, since most current analyses of LIGO-Virgo data do not include eccentricity (see Refs.
+				<xref ref-type="bibr" rid="c34">[34]</xref>—we will consider this in the future, since most current analyses of LIGO-Virgo data do not include eccentricity (see Refs. 
 				<xref ref-type="bibr" rid="c35 c36 c37">[35–37]</xref> for analyses that measure eccentricity for binary black hole signals by reweighting analyses with a quasicircular waveform model, but only consider aligned spins, and
 				<xref ref-type="bibr" rid="c38">[38]</xref> for analyses with a nonspinning, inspiral-only eccentric waveform model).
 			</p>
@@ -498,7 +498,7 @@
 						<xref ref-type="bibr" rid="c41">[41]</xref>, which instead changes variables. Additionally, our motivation for the regularization is slightly different, since we are particularly interested in regularizing a numerator in the expression for the tilts at infinity that vanishes in the equal-mass limit.
 					</p>
 				</fn> We also derive rigorous error bounds for simplifications that can be applied during various portions of the evolution to improve the robustness and speed of the method. We have implemented our method as part of the publicly available LALSuite package
-				<xref ref-type="bibr" rid="c30">[30]</xref>; see Ref.
+				<xref ref-type="bibr" rid="c30">[30]</xref>; see Ref. 
 				<xref ref-type="bibr" rid="c42">[42]</xref>.
 			</p>
 			<p>The aforementioned regularization is important for applications to LIGO-Virgo detections, where the parameter estimation produces samples with mass ratios quite close to 1. For instance, one has mass ratios
@@ -618,21 +618,21 @@
 							</mml:mrow>
 						</mml:msup>
 					</mml:math>
-				</inline-formula> (we plot the distribution in Sec.
+				</inline-formula> (we plot the distribution in Sec. 
 				<xref ref-type="sec" rid="s6">VI</xref>). While these close to equal mass ratio cases lead to the largest intrinsic uncertainties in the tilts at formation, as discussed above, it is still important to be able to calculate the tilts at infinity accurately for such cases, in order to use the tilts at infinity for comparisons between different binaries, also as discussed above.
 			</p>
 			<p>As an example, we apply our hybrid orbit-averaged and precession-averaged evolution code to compute the distribution of tilts at infinity for some of the binaries with non-negligible spins detected during O3, including GW190521. We also use the regularized evolution to investigate the singular equal-mass limit of the precession-averaged evolution.</p>
-			<p>In Sec.
-				<xref ref-type="sec" rid="s2">II</xref>, we introduce the standard precession-averaged evolution and computation of the spin tilts at infinity. We also discuss why these expressions are also applicable to most eccentric binaries when approximating the tilts at formation. We derive the regularized expressions in Sec.
-				<xref ref-type="sec" rid="s3">III</xref> and discuss their numerical implementation in Sec.
-				<xref ref-type="sec" rid="s4">IV</xref>. We then discuss the interface with the orbit-averaged evolution in Sec.
-				<xref ref-type="sec" rid="s5">V</xref>, while in Sec.
-				<xref ref-type="sec" rid="s6">VI</xref> we discuss the uncertainties involved in approximating the tilts at formation by those at infinity. We apply the method to some of the binary black holes detected by LIGO and Virgo in Sec.
-				<xref ref-type="sec" rid="s7">VII</xref>. We summarize and conclude in Sec.
-				<xref ref-type="sec" rid="s8">VIII</xref>. In Appendices
+			<p>In Sec. 
+				<xref ref-type="sec" rid="s2">II</xref>, we introduce the standard precession-averaged evolution and computation of the spin tilts at infinity. We also discuss why these expressions are also applicable to most eccentric binaries when approximating the tilts at formation. We derive the regularized expressions in Sec. 
+				<xref ref-type="sec" rid="s3">III</xref> and discuss their numerical implementation in Sec. 
+				<xref ref-type="sec" rid="s4">IV</xref>. We then discuss the interface with the orbit-averaged evolution in Sec. 
+				<xref ref-type="sec" rid="s5">V</xref>, while in Sec. 
+				<xref ref-type="sec" rid="s6">VI</xref> we discuss the uncertainties involved in approximating the tilts at formation by those at infinity. We apply the method to some of the binary black holes detected by LIGO and Virgo in Sec. 
+				<xref ref-type="sec" rid="s7">VII</xref>. We summarize and conclude in Sec. 
+				<xref ref-type="sec" rid="s8">VIII</xref>. In Appendices 
 				<xref ref-type="app" rid="app1">A</xref> and
-				<xref ref-type="app" rid="app2">B</xref> we derive the error bounds for the simplifications to the precession-averaged evolution. In Appendix
-				<xref ref-type="app" rid="app3">C</xref> we provide details about the internal checks in the precession-averaged evolution. Finally, in Appendix
+				<xref ref-type="app" rid="app2">B</xref> we derive the error bounds for the simplifications to the precession-averaged evolution. In Appendix 
+				<xref ref-type="app" rid="app3">C</xref> we provide details about the internal checks in the precession-averaged evolution. Finally, in Appendix 
 				<xref ref-type="app" rid="app4">D</xref> we give example uses of the code. We use
 				<inline-formula>
 					<mml:math display="inline">
@@ -654,9 +654,9 @@
 				<xref ref-type="bibr" rid="c22 c23">[22,23]</xref> are only applicable to quasicircular binaries, it turns out that they can be applied to eccentric binaries almost verbatim, as discussed below.
 			</p>
 			<p>As pointed out by Gerosa
-				<italic>et al.</italic>
+				<italic>et al.</italic>
 				<xref ref-type="bibr" rid="c23">[23]</xref>, the tilt angles at infinity are well defined, except for the case of an exactly equal-mass binary, where there is a qualitatively different behavior, as discussed in
-				<xref ref-type="bibr" rid="c40">[40]</xref> and Sec.
+				<xref ref-type="bibr" rid="c40">[40]</xref> and Sec. 
 				<xref ref-type="sec" rid="s3a">III A</xref>. We now outline the computation of the tilts at infinity, which we refer to as
 				<inline-formula>
 					<mml:math display="inline">
@@ -680,9 +680,9 @@
 						</mml:msub>
 					</mml:math>
 				</inline-formula>, following the formulation of precession-averaged evolution from Chatziioannou
-				<italic>et al.</italic>
+				<italic>et al.</italic>
 				<xref ref-type="bibr" rid="c25">[25]</xref>. As in Chatziioannou
-				<italic>et al.</italic>
+				<italic>et al.</italic>
 				<xref ref-type="bibr" rid="c25">[25]</xref>, we work in
 				<inline-formula>
 					<mml:math display="inline">
@@ -754,8 +754,8 @@
 					</mml:math>
 				</inline-formula> is its orbital angular momentum. The nonboldface versions of all of these quantities denote their magnitudes, as usual.
 			</p>
-			<p>Specifically, we want to compute [Eq. (45) in Gerosa
-				<italic>et al.</italic>
+			<p>Specifically, we want to compute [Eq. (45) in Gerosa
+				<italic>et al.</italic>
 				<xref ref-type="bibr" rid="c23">[23]</xref>]
 				<disp-formula-group id="d1">
 					<label>(1)</label>
@@ -860,8 +860,8 @@
 						</mml:math>
 						<label>(1b)</label>
 					</disp-formula>
-				</disp-formula-group>Here [Eq. (12) in Gerosa
-				<italic>et al.</italic>
+				</disp-formula-group>Here [Eq. (12) in Gerosa
+				<italic>et al.</italic>
 				<xref ref-type="bibr" rid="c23">[23]</xref>]
 				<disp-formula id="d2">
 					<mml:math display="block">
@@ -909,8 +909,8 @@
 							<mml:mi>∞</mml:mi>
 						</mml:msub>
 					</mml:math>
-				</inline-formula> is the value of [Eq. (40) in Gerosa
-				<italic>et al.</italic>
+				</inline-formula> is the value of [Eq. (40) in Gerosa
+				<italic>et al.</italic>
 				<xref ref-type="bibr" rid="c23">[23]</xref>]
 				<disp-formula id="d3">
 					<mml:math display="block">
@@ -1003,9 +1003,9 @@
 						<mml:mo>.</mml:mo>
 					</mml:math>
 					<label>(4)</label>
-				</disp-formula>This is an inline equation below Eq. (44) in Gerosa
-				<italic>et al.</italic>
-				<xref ref-type="bibr" rid="c23">[23]</xref>, which comes from that paper’s Eq. (41). Here
+				</disp-formula>This is an inline equation below Eq. (44) in Gerosa
+				<italic>et al.</italic>
+				<xref ref-type="bibr" rid="c23">[23]</xref>, which comes from that paper’s Eq. (41). Here
 				<inline-formula>
 					<mml:math display="inline">
 						<mml:mo stretchy="false">⟨</mml:mo>
@@ -1048,8 +1048,8 @@
 					</mml:math>
 				</inline-formula>.
 			</p>
-			<p>Now, from Eq. (42) in Chatziioannou
-				<italic>et al.</italic>
+			<p>Now, from Eq. (42) in Chatziioannou
+				<italic>et al.</italic>
 				<xref ref-type="bibr" rid="c25">[25]</xref> (rewritten slightly using the definition of
 				<inline-formula>
 					<mml:math display="inline">
@@ -1191,8 +1191,8 @@
 						<mml:mo>,</mml:mo>
 					</mml:math>
 					<label>(6)</label>
-				</disp-formula>whose coefficients are given in Eqs. (B2)–(B4) in Chatziioannou
-				<italic>et al.</italic>
+				</disp-formula>whose coefficients are given in Eqs. (B2)–(B4) in Chatziioannou
+				<italic>et al.</italic>
 				<xref ref-type="bibr" rid="c25">[25]</xref>,
 				<inline-formula>
 					<mml:math display="inline">
@@ -1203,9 +1203,9 @@
 					<mml:math display="inline">
 						<mml:mi>K</mml:mi>
 					</mml:math>
-				</inline-formula> are complete elliptic integrals [whose definitions are given in Eq.
-				<xref ref-type="disp-formula" rid="da2">(A2)</xref>], and [Eq. (25) in Chatziioannou
-				<italic>et al.</italic>
+				</inline-formula> are complete elliptic integrals [whose definitions are given in Eq. 
+				<xref ref-type="disp-formula" rid="da2">(A2)</xref>], and [Eq. (25) in Chatziioannou
+				<italic>et al.</italic>
 				<xref ref-type="bibr" rid="c25">[25]</xref>]
 				<disp-formula id="d7">
 					<mml:math display="block">
@@ -1417,7 +1417,7 @@
 					<mml:math display="inline">
 						<mml:mi>q</mml:mi>
 					</mml:math>
-				</inline-formula> close to 1. In Appendix
+				</inline-formula> close to 1. In Appendix 
 				<xref ref-type="app" rid="app1">A</xref>, we derive a bound on the error made in linearizing to obtain
 				<inline-formula>
 					<mml:math display="inline">
@@ -1462,7 +1462,7 @@
 						<mml:mo>·</mml:mo>
 						<mml:mn>0</mml:mn>
 					</mml:math>
-				</inline-formula> indeterminate form—see Eq.
+				</inline-formula> indeterminate form—see Eq. 
 				<xref ref-type="disp-formula" rid="da15">(A15)</xref> for the restriction on
 				<inline-formula>
 					<mml:math display="inline">
@@ -1487,9 +1487,9 @@
 				<label>A.</label>
 				<title>The eccentric case</title>
 				<p>As noted in Gerosa
-					<italic>et al.</italic>
+					<italic>et al.</italic>
 					<xref ref-type="bibr" rid="c23">[23]</xref>, the generalization of the precession-averaged evolution to eccentric binaries is quite straightforward—this generalization was carried out by Yu
-					<italic>et al.</italic>
+					<italic>et al.</italic>
 					<xref ref-type="bibr" rid="c44">[44]</xref>. They found that the eccentricity only affects
 					<inline-formula>
 						<mml:math display="inline">
@@ -1499,7 +1499,7 @@
 							<mml:mi>d</mml:mi>
 							<mml:mi>t</mml:mi>
 						</mml:math>
-					</inline-formula> by an overall eccentricity-dependent factor—see their Eq. (57). Thus,
+					</inline-formula> by an overall eccentricity-dependent factor—see their Eq. (57). Thus,
 					<inline-formula>
 						<mml:math display="inline">
 							<mml:mo stretchy="false">⟨</mml:mo>
@@ -1513,7 +1513,7 @@
 								<mml:mi>pr</mml:mi>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> [their Eq. (59), with our notation for the precession average] does not depend on eccentricity, since the contribution from the explicit appearance of
+					</inline-formula> [their Eq. (59), with our notation for the precession average] does not depend on eccentricity, since the contribution from the explicit appearance of
 					<inline-formula>
 						<mml:math display="inline">
 							<mml:mi>d</mml:mi>
@@ -1530,7 +1530,7 @@
 								<mml:mi>pre</mml:mi>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> [their Eq. (58)]. Therefore, the expression for
+					</inline-formula> [their Eq. (58)]. Therefore, the expression for
 					<inline-formula>
 						<mml:math display="inline">
 							<mml:mi>d</mml:mi>
@@ -1539,9 +1539,9 @@
 							<mml:mi>d</mml:mi>
 							<mml:mi>u</mml:mi>
 						</mml:math>
-					</inline-formula> does not change in the eccentric case. The remainder of the calculation is purely geometric relations (see, e.g., the discussion in Sec. III A of Yu
-					<italic>et al.</italic>
-					<xref ref-type="bibr" rid="c44">[44]</xref>). Therefore, when approximating the tilts at formation, the quasicircular expressions are equally applicable to eccentric binaries. Of course, the orbital angular momentum does not diverge at infinite separation for eccentric binaries like it does for quasicircular binaries—see Eq. (5.11) in Peters
+					</inline-formula> does not change in the eccentric case. The remainder of the calculation is purely geometric relations (see, e.g., the discussion in Sec. III A of Yu
+					<italic>et al.</italic>
+					<xref ref-type="bibr" rid="c44">[44]</xref>). Therefore, when approximating the tilts at formation, the quasicircular expressions are equally applicable to eccentric binaries. Of course, the orbital angular momentum does not diverge at infinite separation for eccentric binaries like it does for quasicircular binaries—see Eq. (5.11) in Peters
 					<xref ref-type="bibr" rid="c45">[45]</xref>, noting that
 					<inline-formula>
 						<mml:math display="inline">
@@ -1571,7 +1571,7 @@
 							<mml:mo>↗</mml:mo>
 							<mml:mn>1</mml:mn>
 						</mml:math>
-					</inline-formula>. Thus, the tilts at infinite separation themselves are not well defined for eccentric binaries—they do not approach a single value. However, the tilts at infinite orbital angular momentum are still a good approximation to the tilts at formation in most eccentric cases, since this approximation only relies on the orbital angular momentum at formation being sufficiently large, as it is in standard formation scenarios (as discussed in Sec.
+					</inline-formula>. Thus, the tilts at infinite separation themselves are not well defined for eccentric binaries—they do not approach a single value. However, the tilts at infinite orbital angular momentum are still a good approximation to the tilts at formation in most eccentric cases, since this approximation only relies on the orbital angular momentum at formation being sufficiently large, as it is in standard formation scenarios (as discussed in Sec. 
 					<xref ref-type="sec" rid="s6">VI</xref>).
 				</p>
 			</sec>
@@ -1580,7 +1580,7 @@
 			<label>III.</label>
 			<title>REGULARIZING THE PRECESSION-AVERAGED EQUATIONS FOR CLOSE-TO-EQUAL MASSES</title>
 			<p>For exactly equal masses, the total spin is also conserved by the 2PN orbit-averaged evolution, as discussed in
-				<xref ref-type="bibr" rid="c40">[40]</xref>. Thus, from Eq. (2.6) in that paper, which says that
+				<xref ref-type="bibr" rid="c40">[40]</xref>. Thus, from Eq. (2.6) in that paper, which says that
 				<disp-formula id="d9">
 					<mml:math display="block">
 						<mml:mrow>
@@ -1734,7 +1734,7 @@
 								<mml:mo>↘</mml:mo>
 								<mml:mn>0</mml:mn>
 							</mml:math>
-						</inline-formula>. In particular, as discussed in Sec.
+						</inline-formula>. In particular, as discussed in Sec. 
 						<xref ref-type="sec" rid="s3a">III A</xref>, the tilts at infinity are not well defined in the
 						<inline-formula>
 							<mml:math display="inline">
@@ -2027,7 +2027,7 @@
 					<mml:math display="inline">
 						<mml:mi>ξ</mml:mi>
 					</mml:math>
-				</inline-formula> [Eq.
+				</inline-formula> [Eq. 
 				<xref ref-type="disp-formula" rid="d2">(2)</xref>] to obtain
 				<disp-formula id="d13">
 					<mml:math display="block">
@@ -2124,7 +2124,7 @@
 							<mml:mn>0</mml:mn>
 						</mml:msub>
 					</mml:math>
-				</inline-formula> contribution from Eq.
+				</inline-formula> contribution from Eq. 
 				<xref ref-type="disp-formula" rid="d11">(11)</xref>, which vanishes as
 				<inline-formula>
 					<mml:math display="inline">
@@ -2221,7 +2221,7 @@
 						<mml:mo>,</mml:mo>
 					</mml:math>
 					<label>(14)</label>
-				</disp-formula>where the second equality comes from the second equality in Eq.
+				</disp-formula>where the second equality comes from the second equality in Eq. 
 				<xref ref-type="disp-formula" rid="d3">(3)</xref>. Here we write
 				<inline-formula>
 					<mml:math display="inline">
@@ -2233,7 +2233,7 @@
 							<mml:mn>1</mml:mn>
 						</mml:msub>
 					</mml:math>
-				</inline-formula> to distinguish this tilt angle with respect to the direction of the full orbital angular momentum, including contributions from the black holes’ spins [see, e.g., Eq. (4.7) in Ref.
+				</inline-formula> to distinguish this tilt angle with respect to the direction of the full orbital angular momentum, including contributions from the black holes’ spins [see, e.g., Eq. (4.7) in Ref. 
 				<xref ref-type="bibr" rid="c32">[32]</xref>], with the tilt angles with respect to the direction of the binary’s Newtonian orbital angular momentum (i.e., the normal to the orbital plane) used in gravitational wave data analysis
 				<xref ref-type="bibr" rid="c46">[46]</xref>. This distinction is only necessary when initializing the evolution, since the spin contributions to
 				<inline-formula>
@@ -2279,7 +2279,7 @@
 						<mml:mi>ε</mml:mi>
 						<mml:mo stretchy="false">)</mml:mo>
 					</mml:math>
-				</inline-formula> [see, e.g., Eq. (8) in Ref.
+				</inline-formula> [see, e.g., Eq. (8) in Ref. 
 				<xref ref-type="bibr" rid="c22">[22]</xref>], hence
 				<inline-formula>
 					<mml:math display="inline">
@@ -2382,7 +2382,7 @@
 						<mml:mo>/</mml:mo>
 						<mml:mn>4</mml:mn>
 					</mml:math>
-				</inline-formula> compared to Eqs.
+				</inline-formula> compared to Eqs. 
 				<xref ref-type="disp-formula" rid="d12">(12)</xref> is because we have
 				<inline-formula>
 					<mml:math display="inline">
@@ -2442,7 +2442,7 @@
 							</mml:mrow>
 						</mml:msub>
 					</mml:math>
-				</inline-formula> (e.g., the value at the reference frequency, in the application to gravitational wave observations) can be obtained from the second equality in Eq.
+				</inline-formula> (e.g., the value at the reference frequency, in the application to gravitational wave observations) can be obtained from the second equality in Eq. 
 				<xref ref-type="disp-formula" rid="d14">(14)</xref>, which gives
 				<disp-formula id="d16">
 					<mml:math display="block">
@@ -2804,7 +2804,7 @@
 							<mml:mn>2</mml:mn>
 						</mml:msubsup>
 					</mml:math>
-				</inline-formula> in Eq.
+				</inline-formula> in Eq. 
 				<xref ref-type="disp-formula" rid="d6">(6)</xref>.
 				<fn id="fn7">
 					<label>
@@ -3423,8 +3423,8 @@
 						</mml:msup>
 					</mml:math>
 				</inline-formula>, except for some very fine-tuned corner cases at or close to the endpoint of the up-down instability spin angles obtained in
-				<xref ref-type="bibr" rid="c47">[47]</xref> (see Ref.
-				<xref ref-type="bibr" rid="c48">[48]</xref> for more information about this instability), where the maximum mass ratio that can be evolved successfully is considerably smaller, as shown in Sec.
+				<xref ref-type="bibr" rid="c47">[47]</xref> (see Ref. 
+				<xref ref-type="bibr" rid="c48">[48]</xref> for more information about this instability), where the maximum mass ratio that can be evolved successfully is considerably smaller, as shown in Sec. 
 				<xref ref-type="sec" rid="s4">IV</xref>.
 				<fn id="fn8">
 					<label>
@@ -3442,9 +3442,9 @@
 				<sc>precession</sc>
 				<xref ref-type="bibr" rid="c28">[28]</xref> runs in to difficulties in some of these corner cases for smaller mass ratios than the regularized evolution does, even in its updated development version
 				<xref ref-type="bibr" rid="c49">[49]</xref> that implements the method from Chatziioannou
-				<italic>et al.</italic>
+				<italic>et al.</italic>
 				<xref ref-type="bibr" rid="c25">[25]</xref>. We only compare with the more accurate development version in this paper. However,
-				<sc>precession</sc> is able to evolve the up-down instability case for some mass ratios where the regularized evolution fails, though it loses accuracy for mass ratios close to 1, as we illustrate in Sec.
+				<sc>precession</sc> is able to evolve the up-down instability case for some mass ratios where the regularized evolution fails, though it loses accuracy for mass ratios close to 1, as we illustrate in Sec. 
 				<xref ref-type="sec" rid="s4">IV</xref>. It would be interesting to explore whether one can obtain more robust evolutions in this case using the alternative regularization in
 				<xref ref-type="bibr" rid="c41">[41]</xref>, which replaces
 				<inline-formula>
@@ -3458,7 +3458,7 @@
 					<mml:math display="inline">
 						<mml:mi>m</mml:mi>
 					</mml:math>
-				</inline-formula> obtained in Appendix
+				</inline-formula> obtained in Appendix 
 				<xref ref-type="app" rid="app1">A</xref> still applies here with the substitution
 				<inline-formula>
 					<mml:math display="inline">
@@ -3498,7 +3498,7 @@
 							<mml:mn>6</mml:mn>
 						</mml:msup>
 					</mml:math>
-				</inline-formula> in Eq.
+				</inline-formula> in Eq. 
 				<xref ref-type="disp-formula" rid="d20">(20)</xref> becomes quite small, and
 				<inline-formula>
 					<mml:math display="inline">
@@ -3590,10 +3590,10 @@
 							<mml:mn>6</mml:mn>
 						</mml:msup>
 					</mml:math>
-				</inline-formula> to 0). We quantify the errors in this approximation in Appendix
+				</inline-formula> to 0). We quantify the errors in this approximation in Appendix 
 				<xref ref-type="app" rid="app2">B</xref>, specializing to the case where the coefficients of the cubic are all positive, which simplifies the analysis and is also the case encountered in practice.
 			</p>
-			<p>One can also use the regularized expressions to obtain the range of tilt angles at some separation other than infinity. These are not a single value like they are at infinity, since the second term in Eq.
+			<p>One can also use the regularized expressions to obtain the range of tilt angles at some separation other than infinity. These are not a single value like they are at infinity, since the second term in Eq. 
 				<xref ref-type="disp-formula" rid="d14">(14)</xref> does not vanish for finite
 				<inline-formula>
 					<mml:math display="inline">
@@ -3658,7 +3658,7 @@
 					<mml:math display="inline">
 						<mml:mi>L</mml:mi>
 					</mml:math>
-				</inline-formula>-dependent term directly in terms of the barred quantities in Eq.
+				</inline-formula>-dependent term directly in terms of the barred quantities in Eq. 
 				<xref ref-type="disp-formula" rid="d18">(18)</xref>, so one has
 				<disp-formula-group id="d23">
 					<label>(23)</label>
@@ -3919,7 +3919,7 @@
 					<mml:math display="inline">
 						<mml:mi>L</mml:mi>
 					</mml:math>
-				</inline-formula>). We use these expressions to assess the uncertainties in approximating the tilts at formation by those at infinity in Sec.
+				</inline-formula>). We use these expressions to assess the uncertainties in approximating the tilts at formation by those at infinity in Sec. 
 				<xref ref-type="sec" rid="s6">VI</xref>.
 			</p>
 			<sec id="s3a">
@@ -3963,7 +3963,7 @@
 								<mml:mn>1</mml:mn>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> orthogonal to the total spin and a reference direction, and obtains [Eqs. (2.15) and (2.16) in
+					</inline-formula> orthogonal to the total spin and a reference direction, and obtains [Eqs. (2.15) and (2.16) in
 					<xref ref-type="bibr" rid="c40">[40]</xref>]
 					<disp-formula-group id="d24">
 						<label>(24)</label>
@@ -4221,8 +4221,8 @@
 							</mml:msub>
 							<mml:mi>L</mml:mi>
 						</mml:math>
-					</inline-formula> (at leading PN order), from Eq. (2.9) in
-					<xref ref-type="bibr" rid="c40">[40]</xref> and Eq. (36) in
+					</inline-formula> (at leading PN order), from Eq. (2.9) in
+					<xref ref-type="bibr" rid="c40">[40]</xref> and Eq. (36) in
 					<xref ref-type="bibr" rid="c23">[23]</xref>, recalling that
 					<inline-formula>
 						<mml:math display="inline">
@@ -4267,8 +4267,8 @@
 							<mml:mo>±</mml:mo>
 							<mml:mn>1</mml:mn>
 						</mml:math>
-					</inline-formula> in Eqs.
-					<xref ref-type="disp-formula" rid="d24">(24)</xref> [given explicitly in Eqs. (2.19) and (2.20) of
+					</inline-formula> in Eqs. 
+					<xref ref-type="disp-formula" rid="d24">(24)</xref> [given explicitly in Eqs. (2.19) and (2.20) of
 					<xref ref-type="bibr" rid="c40">[40]</xref>] as
 					<inline-formula>
 						<mml:math display="inline">
@@ -4278,7 +4278,7 @@
 						</mml:math>
 					</inline-formula> without approaching a limit.
 				</p>
-				<p>Nevertheless, the regularized expressions in Sec.
+				<p>Nevertheless, the regularized expressions in Sec. 
 					<xref ref-type="sec" rid="s3">III</xref> are well behaved for
 					<inline-formula>
 						<mml:math display="inline">
@@ -4286,7 +4286,7 @@
 							<mml:mo>↗</mml:mo>
 							<mml:mn>1</mml:mn>
 						</mml:math>
-					</inline-formula>, so it is interesting to see what they give in this case. Noting that the cubic equation
+					</inline-formula>, so it is interesting to see what they give in this case. Noting that the cubic equation 
 					<xref ref-type="disp-formula" rid="d20">(20)</xref> degenerates into a quadratic in this case and
 					<inline-formula>
 						<mml:math display="inline">
@@ -4549,7 +4549,7 @@
 						<mml:math display="inline">
 							<mml:mi>α</mml:mi>
 						</mml:math>
-					</inline-formula> is a constant that is fixed by the initial conditions [cf. Eq.
+					</inline-formula> is a constant that is fixed by the initial conditions [cf. Eq. 
 					<xref ref-type="disp-formula" rid="d16">(16)</xref>] and we thus have
 					<disp-formula id="d28">
 						<mml:math display="block">
@@ -4596,7 +4596,7 @@
 							<mml:mo>,</mml:mo>
 						</mml:math>
 						<label>(28)</label>
-					</disp-formula>so, from Eq.
+					</disp-formula>so, from Eq. 
 					<xref ref-type="disp-formula" rid="d15">(15)</xref>,
 					<disp-formula-group id="d29">
 						<label>(29)</label>
@@ -4721,7 +4721,7 @@
 							<mml:mo>=</mml:mo>
 							<mml:mn>0</mml:mn>
 						</mml:math>
-					</inline-formula>) from Eqs.
+					</inline-formula>) from Eqs. 
 					<xref ref-type="disp-formula" rid="d24">(24)</xref>.
 				</p>
 				<p>Numerical experiments indicate that these are not the
@@ -4738,19 +4738,19 @@
 							<mml:mo>&lt;</mml:mo>
 							<mml:mn>1</mml:mn>
 						</mml:math>
-					</inline-formula> tilts at infinity. This is expected, since that limit is singular. As illustrated in Fig.
+					</inline-formula> tilts at infinity. This is expected, since that limit is singular. As illustrated in Fig. 
 					<xref ref-type="fig" rid="f1">1</xref>, for
 					<inline-formula>
 						<mml:math display="inline">
 							<mml:mi>q</mml:mi>
 						</mml:math>
-					</inline-formula> close to 1 but not exactly equal to it, these tilts agree well with the average tilts obtained from Eqs.
+					</inline-formula> close to 1 but not exactly equal to it, these tilts agree well with the average tilts obtained from Eqs. 
 					<xref ref-type="disp-formula" rid="d23">(23)</xref> for small
 					<inline-formula>
 						<mml:math display="inline">
 							<mml:mi>L</mml:mi>
 						</mml:math>
-					</inline-formula> values, where the maximum and minimum tilts [also obtained from Eqs.
+					</inline-formula> values, where the maximum and minimum tilts [also obtained from Eqs. 
 					<xref ref-type="disp-formula" rid="d23">(23)</xref>] are also very close to those one obtains for
 					<inline-formula>
 						<mml:math display="inline">
@@ -4758,7 +4758,7 @@
 							<mml:mo>=</mml:mo>
 							<mml:mn>1</mml:mn>
 						</mml:math>
-					</inline-formula> from Eqs.
+					</inline-formula> from Eqs. 
 					<xref ref-type="disp-formula" rid="d24">(24)</xref> when substituting
 					<inline-formula>
 						<mml:math display="inline">
@@ -4820,7 +4820,7 @@
 						<mml:math display="inline">
 							<mml:mi>q</mml:mi>
 						</mml:math>
-					</inline-formula> close to 1, as illustrated in Fig.
+					</inline-formula> close to 1, as illustrated in Fig. 
 					<xref ref-type="fig" rid="f1">1</xref>.
 				</p>
 				<fig id="f1">
@@ -4912,7 +4912,7 @@
 					</caption>
 					<graphic xlink:href="e023001_1.eps"/>
 				</fig>
-				<p>The binary considered in Fig.
+				<p>The binary considered in Fig. 
 					<xref ref-type="fig" rid="f1">1</xref> was chosen to be significantly precessing, to provide a good illustration, but otherwise had its parameters selected quasirandomly; all the other binaries we tried had qualitatively similar behavior for the scaling with
 					<inline-formula>
 						<mml:math display="inline">
@@ -5044,7 +5044,7 @@
 							</mml:msub>
 						</mml:math>
 					</inline-formula> in
-					<xref ref-type="bibr" rid="c46">[46]</xref> is a bit confusing, referring to the angle of the difference of spin vectors in the text below their Eq. (2.10), when the associated footnote makes it clear that the difference of azimuthal spin angles is intended].
+					<xref ref-type="bibr" rid="c46">[46]</xref> is a bit confusing, referring to the angle of the difference of spin vectors in the text below their Eq. (2.10), when the associated footnote makes it clear that the difference of azimuthal spin angles is intended].
 				</p>
 			</sec>
 		</sec>
@@ -5129,7 +5129,7 @@
 			</p>
 			<p>Following the initial implementation of the precession-averaged evolution in the
 				<sc>precession</sc> code
-				<xref ref-type="bibr" rid="c28">[28]</xref>, we solve Eq.
+				<xref ref-type="bibr" rid="c28">[28]</xref>, we solve Eq. 
 				<xref ref-type="disp-formula" rid="d17">(17)</xref> using the LSODA integrator
 				<xref ref-type="bibr" rid="c53 c54">[53,54]</xref>. However, we use the implementation in
 				<monospace>scipy.integrate.ode</monospace> rather than the one in
@@ -5263,7 +5263,7 @@
 							</mml:mrow>
 						</mml:msup>
 					</mml:math>
-				</inline-formula>. By default, we set the linearization tolerance (see Appendix
+				</inline-formula>. By default, we set the linearization tolerance (see Appendix 
 				<xref ref-type="app" rid="app1">A</xref>) to be the same as the integrator’s absolute tolerance, i.e.,
 				<inline-formula>
 					<mml:math display="inline">
@@ -5307,7 +5307,7 @@
 					</mml:math>
 				</inline-formula>.
 			</p>
-			<p>We also provide a fallback evolution (enabled by default) for cases where the primary evolution fails, e.g., if it encounters complex roots of the cubic equation
+			<p>We also provide a fallback evolution (enabled by default) for cases where the primary evolution fails, e.g., if it encounters complex roots of the cubic equation 
 				<xref ref-type="disp-formula" rid="d6">(6)</xref>, since for corner cases where this occurs, the evolution can often succeed with more stringent (and thus more time-consuming) settings. The default fallback settings are
 				<inline-formula>
 					<mml:math display="inline">
@@ -5398,13 +5398,13 @@
 						</mml:math>
 						<label>(30b)</label>
 					</disp-formula>
-				</disp-formula-group>Binaries with these angles are the most difficult cases to evolve that we have encountered. For instance, for the up-down instability endpoint case considered in Fig.
+				</disp-formula-group>Binaries with these angles are the most difficult cases to evolve that we have encountered. For instance, for the up-down instability endpoint case considered in Fig. 
 				<xref ref-type="fig" rid="f2">2</xref>, one is not able to evolve some mass ratios greater than 0.997 with any evolution method we have tried.
 				<fn id="fn10">
 					<label>
 						<sup>10</sup>
 					</label>
-					<p>Perturbing the tilts slightly makes this case much easier to evolve. For instance, if one uses the default 2PN computation for the initial orbital angular momentum instead of the 0PN computation used in Fig.
+					<p>Perturbing the tilts slightly makes this case much easier to evolve. For instance, if one uses the default 2PN computation for the initial orbital angular momentum instead of the 0PN computation used in Fig. 
 						<xref ref-type="fig" rid="f2">2</xref> for comparison with the
 						<sc>precession</sc> code, so that the orbital angular momentum receives contributions from the spins and is thus no longer parallel to the Newtonian orbital angular momentum used to define the tilts, then one can evolve this case with
 						<inline-formula>
@@ -5486,7 +5486,7 @@
 				<sc>s</sc>ci
 				<sc>p</sc>y’s (as well as the final arccosines used to obtain the tilts instead of
 				<sc>n</sc>um
-				<sc>p</sc>y’s). This is necessary to evolve particularly difficult cases (mostly close to equal mass cases near the up-down instability endpoint) without errors, but is much slower than the LSODA integration. See the bottom two panels in Fig.
+				<sc>p</sc>y’s). This is necessary to evolve particularly difficult cases (mostly close to equal mass cases near the up-down instability endpoint) without errors, but is much slower than the LSODA integration. See the bottom two panels in Fig. 
 				<xref ref-type="fig" rid="f2">2</xref> for some cases where this fallback evolution is triggered. The default fallback settings are 30 digits, an integrator tolerance of
 				<inline-formula>
 					<mml:math display="inline">
@@ -5500,8 +5500,8 @@
 					</mml:math>
 				</inline-formula>, and 50 digits of extra precision in the root finder; we otherwise use the default settings for the integrator and root finder. However, this second fallback evolution is optional and the code will work without
 				<sc>mpmath</sc> being installed, though the second fallback evolution is enabled by default if
-				<sc>mpmath</sc> is present. The code also has several internal checks that the evolution is proceeding well and the roots of the cubic equation
-				<xref ref-type="disp-formula" rid="d6">(6)</xref> are being obtained accurately, as discussed in Appendix
+				<sc>mpmath</sc> is present. The code also has several internal checks that the evolution is proceeding well and the roots of the cubic equation 
+				<xref ref-type="disp-formula" rid="d6">(6)</xref> are being obtained accurately, as discussed in Appendix 
 				<xref ref-type="app" rid="app3">C</xref>.
 			</p>
 			<p>To initialize the evolution, the code needs to convert the reference frequency
@@ -5512,16 +5512,16 @@
 							<mml:mn>0</mml:mn>
 						</mml:msub>
 					</mml:math>
-				</inline-formula> into the binary’s initial orbital angular momentum. It does this using the same PN expression used in the orbit-averaged evolution, viz., Eq. (4.7) in
-				<xref ref-type="bibr" rid="c32">[32]</xref> [see also Eq. (4) in Ref.
-				<xref ref-type="bibr" rid="c33">[33]</xref>], with the orbit averaging discussed in, e.g., Sec. II of
-				<xref ref-type="bibr" rid="c33">[33]</xref>. This expression contains orbit-averaged contributions from the black holes’ spins by default. To allow evolutions to a given final separation, the code also provides the ability to convert an orbital separation and eccentricity to a magnitude of the orbital angular momentum. Since there are several different PN eccentricity parameters, the code only implements the Newtonian expression, for simplicity—see, e.g., Refs.
+				</inline-formula> into the binary’s initial orbital angular momentum. It does this using the same PN expression used in the orbit-averaged evolution, viz., Eq. (4.7) in
+				<xref ref-type="bibr" rid="c32">[32]</xref> [see also Eq. (4) in Ref. 
+				<xref ref-type="bibr" rid="c33">[33]</xref>], with the orbit averaging discussed in, e.g., Sec. II of
+				<xref ref-type="bibr" rid="c33">[33]</xref>. This expression contains orbit-averaged contributions from the black holes’ spins by default. To allow evolutions to a given final separation, the code also provides the ability to convert an orbital separation and eccentricity to a magnitude of the orbital angular momentum. Since there are several different PN eccentricity parameters, the code only implements the Newtonian expression, for simplicity—see, e.g., Refs. 
 				<xref ref-type="bibr" rid="c55 c56">[55,56]</xref> for PN corrections.
 			</p>
 			<sec id="s4a">
 				<label>A.</label>
 				<title>Illustrations of accuracy</title>
-				<p>We illustrate the accuracy of the method as a function of mass ratio for four binary configurations in Fig.
+				<p>We illustrate the accuracy of the method as a function of mass ratio for four binary configurations in Fig. 
 					<xref ref-type="fig" rid="f2">2</xref>, all with
 					<inline-formula>
 						<mml:math display="inline">
@@ -5535,7 +5535,7 @@
 							<mml:mtext></mml:mtext>
 							<mml:mi>Hz</mml:mi>
 						</mml:math>
-					</inline-formula>: The first configuration is the same one used in Fig.
+					</inline-formula>: The first configuration is the same one used in Fig. 
 					<xref ref-type="fig" rid="f1">1</xref>, and the magnitude of the initial orbital angular momentum,
 					<inline-formula>
 						<mml:math display="inline">
@@ -5952,10 +5952,10 @@
 						</mml:math>
 					</inline-formula> case, none of the evolutions we consider is able to evolve all the mass ratios we consider.
 					<sc>precession</sc> is able to evolve the most mass ratios, since it implements a case to deal with systems close to resonances. However, it is not able to evolve mass ratios too close to 1. The regularized evolution with the
-					<sc>mpmath</sc> integration is also not able to evolve many cases with mass ratios close to 1, just isolated cases, as illustrated in Fig.
+					<sc>mpmath</sc> integration is also not able to evolve many cases with mass ratios close to 1, just isolated cases, as illustrated in Fig. 
 					<xref ref-type="fig" rid="f2">2</xref>.
 				</p>
-				<p>The following accuracy results are plotted in Fig.
+				<p>The following accuracy results are plotted in Fig. 
 					<xref ref-type="fig" rid="f2">2</xref>, all comparing with the
 					<sc>mpmath</sc> evolution with the largest number of digits we consider, except the final two, and always using the development version of
 					<sc>precession</sc>. All but the final two of these are plotted with symbols with the same color as the lines in the lower right-hand panel, due to the issues with the
@@ -6264,9 +6264,9 @@
 						</p>
 					</fn>
 				</p>
-				<p>In Fig.
+				<p>In Fig. 
 					<xref ref-type="fig" rid="f3">3</xref>, we compare the accuracy of the development version of
-					<sc>precession</sc> and the regularized evolution with the default settings for the 500 random binaries (starting from the spin tilts and transition frequencies from the orbit-averaged evolution determined there) used in Sec.
+					<sc>precession</sc> and the regularized evolution with the default settings for the 500 random binaries (starting from the spin tilts and transition frequencies from the orbit-averaged evolution determined there) used in Sec. 
 					<xref ref-type="sec" rid="s5b">V B</xref> to validate the expression for the transition frequencies. We augment this set by 150 additional binaries sampled from those 500 but with the spins scaled randomly to extend to smaller values, to check the accuracy of the evolution in such cases. There are spin magnitudes as small as
 					<inline-formula>
 						<mml:math display="inline">
@@ -6393,8 +6393,8 @@
 					<graphic xlink:href="e023001_3.eps"/>
 				</fig>
 				<p>We find that the development version of
-					<sc>precession</sc> with default settings gives better accuracy for many systems than the regularized evolution with its default accuracy or even the much tighter tolerance. This is presumably because the right-hand side of the differential equation for the regularized evolution [Eq.
-					<xref ref-type="disp-formula" rid="d17">(17)</xref>] becomes orders of magnitude smaller than the non-regularized version [Eq.
+					<sc>precession</sc> with default settings gives better accuracy for many systems than the regularized evolution with its default accuracy or even the much tighter tolerance. This is presumably because the right-hand side of the differential equation for the regularized evolution [Eq. 
+					<xref ref-type="disp-formula" rid="d17">(17)</xref>] becomes orders of magnitude smaller than the non-regularized version [Eq. 
 					<xref ref-type="disp-formula" rid="d4">(4)</xref>] that
 					<sc>precession</sc> uses as
 					<inline-formula>
@@ -6823,7 +6823,7 @@
 						</mml:math>
 					</inline-formula>.
 				</p>
-				<p>Figure
+				<p>Figure 
 					<xref ref-type="fig" rid="f4">4</xref> shows the
 					<inline-formula>
 						<mml:math display="inline">
@@ -6946,7 +6946,7 @@
 								<mml:mtext>trans</mml:mtext>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> that is considerably lower than the one given by curve fitting. However, these cases are not computationally expensive to evolve, so that is not a significant concern (see Sec.
+					</inline-formula> that is considerably lower than the one given by curve fitting. However, these cases are not computationally expensive to evolve, so that is not a significant concern (see Sec. 
 					<xref ref-type="sec" rid="s5c">V C</xref>).
 				</p>
 				<fig id="f4">
@@ -7020,11 +7020,11 @@
 					</caption>
 					<graphic xlink:href="e023001_4.eps"/>
 				</fig>
-				<p>For the simulations performed for Fig.
-					<xref ref-type="fig" rid="f4">4</xref>, we used the orbit-averaged evolution with the 3.5PN accurate binding energy and flux, the 2.5PN orbit-averaged precession equations including the leading order spin contributions to the orbital angular momentum, and the SpinTaylorT5 approximant (see Ref.
-					<xref ref-type="bibr" rid="c33">[33]</xref> for details). At the time when we performed the calculations for Fig.
-					<xref ref-type="fig" rid="f4">4</xref> the 3PN spin-spin terms in the orbit-averaged precession equations were not available in the LALSimulation SpinTaylor code. We also only had the less accurate v1 evolution, which performed the orbit-averaged evolution stepwise in order to use the existing SpinTaylor code. (We updated the SpinTaylor code in v2.) Since the calculations to obtain the purple crosses in Fig.
-					<xref ref-type="fig" rid="f4">4</xref> are rather computationally expensive, we thus chose to verify that the final expression in Eq.
+				<p>For the simulations performed for Fig. 
+					<xref ref-type="fig" rid="f4">4</xref>, we used the orbit-averaged evolution with the 3.5PN accurate binding energy and flux, the 2.5PN orbit-averaged precession equations including the leading order spin contributions to the orbital angular momentum, and the SpinTaylorT5 approximant (see Ref. 
+					<xref ref-type="bibr" rid="c33">[33]</xref> for details). At the time when we performed the calculations for Fig. 
+					<xref ref-type="fig" rid="f4">4</xref> the 3PN spin-spin terms in the orbit-averaged precession equations were not available in the LALSimulation SpinTaylor code. We also only had the less accurate v1 evolution, which performed the orbit-averaged evolution stepwise in order to use the existing SpinTaylor code. (We updated the SpinTaylor code in v2.) Since the calculations to obtain the purple crosses in Fig. 
+					<xref ref-type="fig" rid="f4">4</xref> are rather computationally expensive, we thus chose to verify that the final expression in Eq. 
 					<xref ref-type="disp-formula" rid="d31">(31)</xref> is also appropriate for the 3PN equations and with v2 of the evolution, as well, rather than redoing these calculations with the 3PN equations and v2 of the evolution. In fact, we have verified that the
 					<inline-formula>
 						<mml:math display="inline">
@@ -7033,11 +7033,11 @@
 								<mml:mtext>trans</mml:mtext>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> expression given in Eq.
-					<xref ref-type="disp-formula" rid="d31">(31)</xref> is robust for other orders of the precession equations and different SpinTaylor approximants, as discussed in Sec.
+					</inline-formula> expression given in Eq. 
+					<xref ref-type="disp-formula" rid="d31">(31)</xref> is robust for other orders of the precession equations and different SpinTaylor approximants, as discussed in Sec. 
 					<xref ref-type="sec" rid="s5b">V B</xref>. We also find that the v2 evolution gives results that easily satisfy the accuracy requirements we placed. Thus, all the hybrid evolution results we present henceforth were obtained using the 3PN order SpinTaylorT5 orbit-averaged precession equations, unless specified otherwise, and all use v2 of the evolution.
 				</p>
-				<p>Figure
+				<p>Figure 
 					<xref ref-type="fig" rid="f5">5</xref> shows the cosines of the tilt angles computed at infinity as well as intermediate transition orbital speeds (
 					<inline-formula>
 						<mml:math display="inline">
@@ -7054,7 +7054,7 @@
 								<mml:mtext>trans</mml:mtext>
 							</mml:msub>
 						</mml:math>
-					</inline-formula>, for the same binary parameters as in Fig.
+					</inline-formula>, for the same binary parameters as in Fig. 
 					<xref ref-type="fig" rid="f1">1</xref> with
 					<inline-formula>
 						<mml:math display="inline">
@@ -7170,7 +7170,7 @@
 								<mml:mtext>trans</mml:mtext>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> for this binary is 0.03 [from Eq.
+					</inline-formula> for this binary is 0.03 [from Eq. 
 					<xref ref-type="disp-formula" rid="d31">(31)</xref>], and it is evident that the tilts at infinity computed using the hybrid evolution with this value of
 					<inline-formula>
 						<mml:math display="inline">
@@ -7212,7 +7212,7 @@
 										<mml:mtext>trans</mml:mtext>
 									</mml:msub>
 								</mml:math>
-							</inline-formula> value in the hybrid evolution. This is illustrated for the same binary parameters as in Fig.
+							</inline-formula> value in the hybrid evolution. This is illustrated for the same binary parameters as in Fig. 
 							<xref ref-type="fig" rid="f1">1</xref> with
 							<inline-formula>
 								<mml:math display="inline">
@@ -7228,7 +7228,7 @@
 										<mml:mtext>trans</mml:mtext>
 									</mml:msub>
 								</mml:math>
-							</inline-formula> for this binary given by Eq.
+							</inline-formula> for this binary given by Eq. 
 							<xref ref-type="disp-formula" rid="d31">(31)</xref>, while the dashed vertical lines display the value of
 							<inline-formula>
 								<mml:math display="inline">
@@ -7237,7 +7237,7 @@
 										<mml:mtext>trans</mml:mtext>
 									</mml:msub>
 								</mml:math>
-							</inline-formula> given by the purple curve fitting our data in Fig.
+							</inline-formula> given by the purple curve fitting our data in Fig. 
 							<xref ref-type="fig" rid="f4">4</xref>.
 						</p>
 					</caption>
@@ -7264,7 +7264,7 @@
 								<mml:mtext>trans</mml:mtext>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> given in Eq.
+					</inline-formula> given in Eq. 
 					<xref ref-type="disp-formula" rid="d31">(31)</xref> gives satisfactory results for binaries outside the training dataset, we employ a population of 500 random binaries with the following parameters:
 					<inline-formula>
 						<mml:math display="inline">
@@ -7396,7 +7396,7 @@
 								<mml:mtext>trans</mml:mtext>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> given by Eq.
+					</inline-formula> given by Eq. 
 					<xref ref-type="disp-formula" rid="d31">(31)</xref> and
 					<inline-formula>
 						<mml:math display="inline">
@@ -7417,7 +7417,7 @@
 						</mml:math>
 					</inline-formula> since it is significantly more computationally expensive for the close-to-equal-mass binaries.
 				</p>
-				<p>Figure
+				<p>Figure 
 					<xref ref-type="fig" rid="f6">6</xref> shows the estimated errors in
 					<inline-formula>
 						<mml:math display="inline">
@@ -7449,8 +7449,8 @@
 								<mml:mtext>trans</mml:mtext>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> in Eq.
-					<xref ref-type="disp-formula" rid="d31">(31)</xref>. The results shown in Fig.
+					</inline-formula> in Eq. 
+					<xref ref-type="disp-formula" rid="d31">(31)</xref>. The results shown in Fig. 
 					<xref ref-type="fig" rid="f6">6</xref> were obtained with the 3PN order SpinTaylorT5 orbit-averaged precession equations. The same upper bound on the errors holds with SpinTaylorT1 and SpinTaylorT4. If one instead considers the 2PN and 2.5PN orbit-averaged precession equations with SpinTaylorT5, the upper bound on the estimated errors is also less than
 					<inline-formula>
 						<mml:math display="inline">
@@ -7470,7 +7470,7 @@
 								<mml:mtext>trans</mml:mtext>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> given by Eq.
+					</inline-formula> given by Eq. 
 					<xref ref-type="disp-formula" rid="d31">(31)</xref>, is valid for all PN orders of the orbit-averaged precession equations and SpinTaylor approximants. Moreover, as expected, we found the estimated errors for 2PN orbit-averaged precession equations to be in general smaller compared to those for the 3PN order equations, particularly for smaller mass ratios and
 					<inline-formula>
 						<mml:math display="inline">
@@ -7524,7 +7524,7 @@
 										</mml:mrow>
 									</mml:msub>
 								</mml:math>
-							</inline-formula> (computed as discussed in the text) for a random dataset of 500 binaries using a transition orbital speed given by Eq.
+							</inline-formula> (computed as discussed in the text) for a random dataset of 500 binaries using a transition orbital speed given by Eq. 
 							<xref ref-type="disp-formula" rid="d31">(31)</xref> and a lower transition speed value of
 							<inline-formula>
 								<mml:math display="inline">
@@ -7539,7 +7539,7 @@
 					</caption>
 					<graphic xlink:href="e023001_6.eps"/>
 				</fig>
-				<p>We also compare the results using different PN orders directly. In Fig.
+				<p>We also compare the results using different PN orders directly. In Fig. 
 					<xref ref-type="fig" rid="f7">7</xref>, we compare
 					<inline-formula>
 						<mml:math display="inline">
@@ -7552,7 +7552,7 @@
 								</mml:mrow>
 							</mml:msub>
 						</mml:math>
-					</inline-formula>, for the same 500 binaries as in Fig.
+					</inline-formula>, for the same 500 binaries as in Fig. 
 					<xref ref-type="fig" rid="f6">6</xref>, using different PN orders for the orbit-averaged precession equations in the hybrid evolution code. Specifically, we compare the results between 2PN, 2.5PN, and 3PN accurate orbit-averaged precession equations. We find that the absolute differences in
 					<inline-formula>
 						<mml:math display="inline">
@@ -7577,7 +7577,7 @@
 							</mml:msup>
 						</mml:math>
 					</inline-formula>). However, the differences between the 2.5PN and 3PN results are smaller than those between the 2PN and 2.5PN results. This gives us confidence that the 3PN results we are using give good accuracy, particularly since comparisons of PN precessional dynamics with numerical relativity in
-					<xref ref-type="bibr" rid="c57">[57]</xref> (particularly Sec. III C) find the 3PN results to be more accurate than lower orders.
+					<xref ref-type="bibr" rid="c57">[57]</xref> (particularly Sec. III C) find the 3PN results to be more accurate than lower orders.
 				</p>
 				<fig id="f7">
 					<object-id>7</object-id>
@@ -7588,7 +7588,7 @@
 					</caption>
 					<graphic xlink:href="e023001_7.eps"/>
 				</fig>
-				<p>In Fig.
+				<p>In Fig. 
 					<xref ref-type="fig" rid="f8">8</xref> we compare the tilts at infinity computed with the hybrid evolution with those computed using only precession-averaged evolution. Here we consider the same 500 binaries as before. In the only precession-averaged case, we initialize the precession-averaged evolution using the 2PN expression for the orbital angular momentum without the spin contributions, so it is parallel to the Newtonian orbital angular momentum which is used to define the tilt angles in the LIGO-Virgo analysis
 					<xref ref-type="bibr" rid="c46">[46]</xref>. This is the recommended setup for obtaining quick results for the tilts at infinity. We find that there are relatively significant differences in the cosine tilts at infinity in many cases, though there are still a significant fraction of binaries for which the difference is less than
 					<inline-formula>
@@ -7615,7 +7615,7 @@
 				<p>We also find that there are certain parts of parameter space that lead to even larger differences between the two evolutions, in particular if we initialize the purely precession-averaged evolution with the Newtonian expression for the orbital angular momentum, as is done in
 					<sc>precession</sc>. While we reserve a complete exploration of the portions of parameter space that lead to the largest to differences to future work, we found that certain parameters lead to much larger differences in the tilts at infinity than found in our set of 500 random binaries. We obtained these parameters by considering the sample from the analysis of GW190521 with the
 					<sc>seobnr</sc>v4
-					<sc>phm</sc> waveform model (as discussed in Sec.
+					<sc>phm</sc> waveform model (as discussed in Sec. 
 					<xref ref-type="sec" rid="s7a">VII A</xref>) that gives the largest difference in
 					<inline-formula>
 						<mml:math display="inline">
@@ -7636,7 +7636,7 @@
 								<mml:mn>1</mml:mn>
 							</mml:msub>
 						</mml:math>
-					</inline-formula>. We also scaled the masses to a reference frequency of 20 Hz, to illustrate that this case is included in the range of parameters used to construct the 500 random binaries.
+					</inline-formula>. We also scaled the masses to a reference frequency of 20 Hz, to illustrate that this case is included in the range of parameters used to construct the 500 random binaries.
 				</p>
 				<p>Specifically, we found that for
 					<inline-formula>
@@ -7800,7 +7800,7 @@
 							<mml:mo>∼</mml:mo>
 							<mml:mn>0.10</mml:mn>
 						</mml:math>
-					</inline-formula>) for the two comparisons. We illustrate the difference in the tilts at infinity calculated with the hybrid evolution and purely precession-averaged evolution for this binary in Fig.
+					</inline-formula>) for the two comparisons. We illustrate the difference in the tilts at infinity calculated with the hybrid evolution and purely precession-averaged evolution for this binary in Fig. 
 					<xref ref-type="fig" rid="f9">9</xref>, showing qualitatively different behavior in how the results depend on tilt 1 at the reference frequency.
 				</p>
 				<fig id="f9">
@@ -7829,15 +7829,15 @@
 			<sec id="s5c">
 				<label>C.</label>
 				<title>Code runtimes</title>
-				<p>Figure
-					<xref ref-type="fig" rid="f10">10</xref> shows the run times of the hybrid evolution code for the same dataset of 500 random binaries. The run times are higher for close-to-equal-mass binaries, taking about 40 seconds to complete. These timing results were obtained using a 2.6 GHz Intel Xeon E5-2680-v3 (12C) with 256 GB RAM.
+				<p>Figure 
+					<xref ref-type="fig" rid="f10">10</xref> shows the run times of the hybrid evolution code for the same dataset of 500 random binaries. The run times are higher for close-to-equal-mass binaries, taking about 40 seconds to complete. These timing results were obtained using a 2.6 GHz Intel Xeon E5-2680-v3 (12C) with 256 GB RAM.
 				</p>
 				<fig id="f10">
 					<object-id>10</object-id>
 					<object-id pub-id-type="doi">10.1103/PhysRevD.106.023001.f10</object-id>
 					<label>FIG. 10.</label>
 					<caption>
-						<p>Run time of hybrid evolution for binaries having different mass ratios. These are the same 500 binaries as in Figs.
+						<p>Run time of hybrid evolution for binaries having different mass ratios. These are the same 500 binaries as in Figs. 
 							<xref ref-type="fig" rid="f6">6</xref> and
 							<xref ref-type="fig" rid="f7">7</xref>.
 						</p>
@@ -7918,7 +7918,7 @@
 							</mml:mrow>
 						</mml:math>
 					</inline-formula> for the regularized evolution with the scipy ode, scipy solve_ivp, and
-					<sc>mpmath</sc> integrators, respectively. From 20 Hz, the default regularized evolution has an average speed of
+					<sc>mpmath</sc> integrators, respectively. From 20 Hz, the default regularized evolution has an average speed of
 					<inline-formula>
 						<mml:math display="inline">
 							<mml:mo>∼</mml:mo>
@@ -7929,15 +7929,15 @@
 							<mml:mo>/</mml:mo>
 							<mml:mtext>binary</mml:mtext>
 						</mml:math>
-					</inline-formula>. These timing results were obtained using a 2.2 GHz Intel Core i7.
+					</inline-formula>. These timing results were obtained using a 2.2 GHz Intel Core i7.
 				</p>
 			</sec>
 		</sec>
 		<sec id="s6">
 			<label>VI.</label>
 			<title>UNCERTAINTIES IN APPROXIMATING THE TILTS AT FORMATION BY THOSE AT INFINITY</title>
-			<p>Here we assess the uncertainties in approximating the tilts at formation by those at infinity. We first note that the orbital angular momentum at formation is relatively large in most cases. For instance, in the isolated binary and dynamical formation scenarios for GW150914 given in Fig. 1 of both
-				<xref ref-type="bibr" rid="c58 c59">[58,59]</xref>, respectively, and the isolated binary formation scenario for GW170104 given in Fig. 8 of
+			<p>Here we assess the uncertainties in approximating the tilts at formation by those at infinity. We first note that the orbital angular momentum at formation is relatively large in most cases. For instance, in the isolated binary and dynamical formation scenarios for GW150914 given in Fig. 1 of both
+				<xref ref-type="bibr" rid="c58 c59">[58,59]</xref>, respectively, and the isolated binary formation scenario for GW170104 given in Fig. 8 of
 				<xref ref-type="bibr" rid="c11">[11]</xref>, the orbital angular momentum at the time of the formation of a black hole binary is
 				<inline-formula>
 					<mml:math display="inline">
@@ -7958,9 +7958,9 @@
 							<mml:mn>2</mml:mn>
 						</mml:msup>
 					</mml:math>
-				</inline-formula> in the isolated binary formation scenarios for GW170729, GW190412, and GW190521 given in Fig. 9 of
-				<xref ref-type="bibr" rid="c11">[11]</xref>, Fig. 1 of
-				<xref ref-type="bibr" rid="c60">[60]</xref>, and Fig. 2 of
+				</inline-formula> in the isolated binary formation scenarios for GW170729, GW190412, and GW190521 given in Fig. 9 of
+				<xref ref-type="bibr" rid="c11">[11]</xref>, Fig. 1 of
+				<xref ref-type="bibr" rid="c60">[60]</xref>, and Fig. 2 of
 				<xref ref-type="bibr" rid="c61">[61]</xref>, respectively. Additionally, it is
 				<inline-formula>
 					<mml:math display="inline">
@@ -7970,8 +7970,8 @@
 							<mml:mn>2</mml:mn>
 						</mml:msup>
 					</mml:math>
-				</inline-formula> for the dynamical formation scenario for GW190814 shown in Fig. 2 of
-				<xref ref-type="bibr" rid="c62">[62]</xref>, due to its high eccentricity (0.97) and unequal mass ratio. Nevertheless, even in those cases the accuracy of the approximation is still expected to be a few percent. In fact, for the analyses of GW190521 considered in Sec.
+				</inline-formula> for the dynamical formation scenario for GW190814 shown in Fig. 2 of
+				<xref ref-type="bibr" rid="c62">[62]</xref>, due to its high eccentricity (0.97) and unequal mass ratio. Nevertheless, even in those cases the accuracy of the approximation is still expected to be a few percent. In fact, for the analyses of GW190521 considered in Sec. 
 				<xref ref-type="sec" rid="s7">VII</xref>, the uncertainties in the distributions of the cosines of the tilts at an orbital angular momentum of
 				<inline-formula>
 					<mml:math display="inline">
@@ -7999,7 +7999,7 @@
 						</mml:msup>
 					</mml:math>
 				</inline-formula> seems to be a reasonable lower bound on the expected orbital angular momentum at formation for isolated binary formation: Considering the precessing, unequal-mass binary black holes in the detectable systems of the synthesized population with 2019 standard input physics (M30) from
-				<xref ref-type="bibr" rid="c11">[11]</xref> (also considered in the mass ratio discussion in Sec.
+				<xref ref-type="bibr" rid="c11">[11]</xref> (also considered in the mass ratio discussion in Sec. 
 				<xref ref-type="sec" rid="s1">I</xref>), only 9 systems out of
 				<inline-formula>
 					<mml:math display="inline">
@@ -8031,7 +8031,7 @@
 					</mml:math>
 				</inline-formula>.
 			</p>
-			<p>The orbital angular momentum at formation is relatively large for other formation scenarios, e.g., the smallest orbital angular momentum for the hierarchical second-generation merger scenario for GW190814 with parameters given in Fig. 3 of
+			<p>The orbital angular momentum at formation is relatively large for other formation scenarios, e.g., the smallest orbital angular momentum for the hierarchical second-generation merger scenario for GW190814 with parameters given in Fig. 3 of
 				<xref ref-type="bibr" rid="c63">[63]</xref> is
 				<inline-formula>
 					<mml:math display="inline">
@@ -8043,7 +8043,7 @@
 						</mml:msup>
 					</mml:math>
 				</inline-formula>. The situation for formation in the disks of active galactic nuclei (e.g.,
-				<xref ref-type="bibr" rid="c64 c65 c66">[64–66]</xref>) is more complicated, since the binary interacts with the disk during much of its evolution (see, e.g., Ref.
+				<xref ref-type="bibr" rid="c64 c65 c66">[64–66]</xref>) is more complicated, since the binary interacts with the disk during much of its evolution (see, e.g., Ref. 
 				<xref ref-type="bibr" rid="c67">[67]</xref>). Thus, our results are not applicable to this case.
 			</p>
 			<p>The only exception to the accuracy estimates given above is for very close to equal mass cases, with
@@ -8077,9 +8077,9 @@
 						<mml:mi>q</mml:mi>
 						<mml:mo stretchy="false">)</mml:mo>
 					</mml:math>
-				</inline-formula> until they reach 2—see the illustration in Fig.
+				</inline-formula> until they reach 2—see the illustration in Fig. 
 				<xref ref-type="fig" rid="f11">11</xref>. However, while such close-to-equal-mass systems are predicted by population synthesis calculations, they are relatively uncommon. For instance, considering the same selection from the synthesized population from
-				<xref ref-type="bibr" rid="c11">[11]</xref> plotted in the histograms in Fig.
+				<xref ref-type="bibr" rid="c11">[11]</xref> plotted in the histograms in Fig. 
 				<xref ref-type="fig" rid="f11">11</xref>, the uncertainty in either of the cosines of the tilts at formation is
 				<inline-formula>
 					<mml:math display="inline">
@@ -8124,7 +8124,7 @@
 				<object-id pub-id-type="doi">10.1103/PhysRevD.106.023001.f11</object-id>
 				<label>FIG. 11.</label>
 				<caption>
-					<p>The uncertainties in inferring the cosines of the tilts at formation due to the amplitude of precession at that point in the binary’s evolution. This plots the difference between the cosines of the maximum and minimum tilts given in Eq.
+					<p>The uncertainties in inferring the cosines of the tilts at formation due to the amplitude of precession at that point in the binary’s evolution. This plots the difference between the cosines of the maximum and minimum tilts given in Eq. 
 						<xref ref-type="disp-formula" rid="d23">(23)</xref> for a selection of the binary black hole mergers from the M30 population synthesis model from
 						<xref ref-type="bibr" rid="c11">[11]</xref> that are detectable by LIGO and Virgo by that paper’s criterion, neglecting aligned-spin cases or binaries that are equal mass to the accuracy of the data provided. The value of
 						<inline-formula>
@@ -8201,8 +8201,8 @@
 				</caption>
 				<graphic xlink:href="e023001_11.eps"/>
 			</fig>
-			<p>This estimate only accounts for the intrinsic uncertainty in the tilts due to the amplitude of spin precession at a finite separation, not the added uncertainty in approximating the tilts at finite separation by those at infinity if the tilts at infinity are not contained between the bounds on the tilts at finite separation. Such a scenario can occur, particularly near the up-down instability parameters (see, e.g., Ref.
-				<xref ref-type="bibr" rid="c47">[47]</xref>), though it is not generic—see Fig. 11 in
+			<p>This estimate only accounts for the intrinsic uncertainty in the tilts due to the amplitude of spin precession at a finite separation, not the added uncertainty in approximating the tilts at finite separation by those at infinity if the tilts at infinity are not contained between the bounds on the tilts at finite separation. Such a scenario can occur, particularly near the up-down instability parameters (see, e.g., Ref. 
+				<xref ref-type="bibr" rid="c47">[47]</xref>), though it is not generic—see Fig. 11 in
 				<xref ref-type="bibr" rid="c23">[23]</xref>—and just occurs for much smaller separations than one expects for most formation scenarios, except for quite close to equal mass binaries,
 				<inline-formula>
 					<mml:math display="inline">
@@ -8219,7 +8219,7 @@
 						</mml:msup>
 					</mml:math>
 				</inline-formula>. In particular, of the selection of the population of binary black holes from
-				<xref ref-type="bibr" rid="c11">[11]</xref> plotted in the histograms in Fig.
+				<xref ref-type="bibr" rid="c11">[11]</xref> plotted in the histograms in Fig. 
 				<xref ref-type="fig" rid="f11">11</xref>, only
 				<inline-formula>
 					<mml:math display="inline">
@@ -8282,7 +8282,7 @@
 						<mml:mo>-</mml:mo>
 						<mml:mn>0.97</mml:mn>
 					</mml:math>
-				</inline-formula> (the smallest cosines of tilts in the selection of binary black holes plotted in the histograms in Fig.
+				</inline-formula> (the smallest cosines of tilts in the selection of binary black holes plotted in the histograms in Fig. 
 				<xref ref-type="fig" rid="f11">11</xref> are
 				<inline-formula>
 					<mml:math display="inline">
@@ -8302,7 +8302,7 @@
 				<xref ref-type="bibr" rid="c7">[7]</xref> using the publicly available posterior samples
 				<xref ref-type="bibr" rid="c43 c68">[43,68]</xref>. Specifically, we considered the events that had evidence for misaligned spins and found the three events that show the largest differences between the tilts at the reference frequency and at infinity: GW190521, GW191109_010717, and GW200129_065458.
 			</p>
-			<p>Figure
+			<p>Figure 
 				<xref ref-type="fig" rid="f12">12</xref> shows the posterior distributions of the cosines of the tilts at
 				<inline-formula>
 					<mml:math display="inline">
@@ -8329,12 +8329,12 @@
 					<label>
 						<sup>12</sup>
 					</label>
-					<p>For GW200129_065458, Ref.
+					<p>For GW200129_065458, Ref. 
 						<xref ref-type="bibr" rid="c4">[4]</xref> points out that both of these waveform models are not sufficiently accurate to analyze the signal and instead carry out an analysis with the numerical relativity surrogate model
 						<sc>nrs</sc>ur7dq4
-						<xref ref-type="bibr" rid="c73">[73]</xref>. Unfortunately neither they nor Ref.
+						<xref ref-type="bibr" rid="c73">[73]</xref>. Unfortunately neither they nor Ref. 
 						<xref ref-type="bibr" rid="c74">[74]</xref>, which also carries out an analysis of this signal with
-						<sc>nrs</sc>ur7dq4, have released their samples publicly. However, Ref.
+						<sc>nrs</sc>ur7dq4, have released their samples publicly. However, Ref. 
 						<xref ref-type="bibr" rid="c4">[4]</xref> finds that
 						<sc>imrp</sc>henom
 						<sc>xphm</sc> agrees better with
@@ -8445,7 +8445,7 @@
 			<sec id="s7a">
 				<label>A.</label>
 				<title>GW190521</title>
-				<p>We now focus on GW190521, since we have results with a variety of waveform models and it is an intrinsically interesting event, due to its very high mass. Figure
+				<p>We now focus on GW190521, since we have results with a variety of waveform models and it is an intrinsically interesting event, due to its very high mass. Figure 
 					<xref ref-type="fig" rid="f13">13</xref> shows the posterior distributions for tilts at
 					<inline-formula>
 						<mml:math display="inline">
@@ -8466,7 +8466,7 @@
 					<sc>hm</sc>
 					<xref ref-type="bibr" rid="c75">[75]</xref>, and
 					<sc>nrs</sc>ur7dq4
-					<xref ref-type="bibr" rid="c73">[73]</xref> (see Sec. V A of
+					<xref ref-type="bibr" rid="c73">[73]</xref> (see Sec. V A of
 					<xref ref-type="bibr" rid="c6">[6]</xref> for details about these waveform models). We also consider the results obtained with
 					<sc>imrp</sc>henom
 					<sc>tphm</sc> in
@@ -8529,7 +8529,7 @@
 						</mml:math>
 					</inline-formula> for
 					<sc>imrp</sc>henom
-					<sc>tphm</sc> and 11 Hz for the other models. Table
+					<sc>tphm</sc> and 11 Hz for the other models. Table 
 					<xref ref-type="table" rid="t1">I</xref> gives the
 					<inline-formula>
 						<mml:math display="inline">
@@ -8554,9 +8554,9 @@
 										</mml:mrow>
 									</mml:msub>
 								</mml:math>
-							</inline-formula> (4.4 Hz for
+							</inline-formula> (4.4 Hz for
 							<sc>imrp</sc>henom
-							<sc>tphm</sc> and 11 Hz for other cases) and at infinite separation for GW190521 computed using the hybrid evolution code starting from the results obtained using different waveform models.
+							<sc>tphm</sc> and 11 Hz for other cases) and at infinite separation for GW190521 computed using the hybrid evolution code starting from the results obtained using different waveform models.
 						</p>
 					</caption>
 					<graphic xlink:href="e023001_13.eps"/>
@@ -8675,7 +8675,7 @@
 					</inline-formula> before the peak of the waveform (close to the start of the surrogate model
 					<xref ref-type="bibr" rid="c73">[73]</xref>) using the
 					<sc>nrs</sc>ur7dq4 surrogate’s spin evolution before applying the hybrid evolution. Here we compute the reference frequency for each sample at that time using the
-					<sc>nrs</sc>ur7dq4 orbital frequency. We found that the distributions of tilts at infinity we obtain starting from the reference frequencies obtained this way and from a reference frequency of 11 Hz are quite similar, with
+					<sc>nrs</sc>ur7dq4 orbital frequency. We found that the distributions of tilts at infinity we obtain starting from the reference frequencies obtained this way and from a reference frequency of 11 Hz are quite similar, with
 					<inline-formula>
 						<mml:math display="inline">
 							<mml:mi>max</mml:mi>
@@ -8717,7 +8717,7 @@
 								</mml:mrow>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> when evolved from the reference frequency of 11 Hz and a time of
+					</inline-formula> when evolved from the reference frequency of 11 Hz and a time of
 					<inline-formula>
 						<mml:math display="inline">
 							<mml:mo>-</mml:mo>
@@ -8744,7 +8744,7 @@
 						</mml:math>
 					</inline-formula>, respectively.
 				</p>
-				<p>Additionally, it is useful to see how much difference the hybrid evolution makes in computing these distributions. Figure
+				<p>Additionally, it is useful to see how much difference the hybrid evolution makes in computing these distributions. Figure 
 					<xref ref-type="fig" rid="f14">14</xref> shows a comparison of tilts at
 					<inline-formula>
 						<mml:math display="inline">
@@ -8757,7 +8757,7 @@
 						</mml:math>
 					</inline-formula> and infinity computed using only precession-averaged evolution and the hybrid orbit-averaged and precession-averaged evolution, for GW190521 using
 					<sc>seobnr</sc>v4
-					<sc>phm</sc> samples. We initialize the precession-averaged evolution the same way as in Fig.
+					<sc>phm</sc> samples. We initialize the precession-averaged evolution the same way as in Fig. 
 					<xref ref-type="fig" rid="f8">8</xref>. Comparing the tilts at infinity computed using the hybrid evolution and purely precession-averaged evolution, we see no significant differences, with a
 					<inline-formula>
 						<mml:math display="inline">
@@ -8831,7 +8831,7 @@
 						<mml:math display="inline">
 							<mml:mi>ξ</mml:mi>
 						</mml:math>
-					</inline-formula> [defined in Eq.
+					</inline-formula> [defined in Eq. 
 					<xref ref-type="disp-formula" rid="d2">(2)</xref> and often denoted
 					<inline-formula>
 						<mml:math display="inline">
@@ -8930,7 +8930,7 @@
 							<mml:mi>χ</mml:mi>
 							<mml:mi mathvariant="normal">p</mml:mi>
 						</mml:msub>
-					</mml:math> depends on the projection of the component spin vectors into the orbital plane [see Eq. (3.4) in Ref.
+					</mml:math> depends on the projection of the component spin vectors into the orbital plane [see Eq. (3.4) in Ref. 
 					<xref ref-type="bibr" rid="c82">[82]</xref> for the definition]. It is used to assess the evidence for precession both for individual events (e.g.,
 					<xref ref-type="bibr" rid="c6">[6]</xref>) and the population as a whole (e.g.,
 					<xref ref-type="bibr" rid="c83">[83]</xref>). There is a recently introduced improved version of
@@ -8960,7 +8960,7 @@
 								</mml:mrow>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> and infinity. Figure
+					</inline-formula> and infinity. Figure 
 					<xref ref-type="fig" rid="f15">15</xref> shows the posterior distribution for GW190521 using all four waveform models. As expected, the largest difference is for
 					<sc>seobnr</sc>v4
 					<sc>phm</sc> and
@@ -9073,7 +9073,7 @@
 					</caption>
 					<graphic xlink:href="e023001_15.eps"/>
 				</fig>
-				<p>In Fig.
+				<p>In Fig. 
 					<xref ref-type="fig" rid="f15">15</xref>, we also show the prior distribution of
 					<inline-formula>
 						<mml:math display="inline">
@@ -9124,7 +9124,7 @@
 							<mml:mi>ξ</mml:mi>
 						</mml:math>
 					</inline-formula> with the standard spin prior choices and helps us identify events for which the data are informative about precession, as in
-					<xref ref-type="bibr" rid="c6 c7">[6,7]</xref> (see in particular Figs. 11 and 10, respectively). Since this prior comes from isotropic priors on the individual spins, we find that it is the same at the reference frequency and at infinity, in agreement with the finding that an isotropic distribution evolves to an isotropic distribution for both the precession-averaged
+					<xref ref-type="bibr" rid="c6 c7">[6,7]</xref> (see in particular Figs. 11 and 10, respectively). Since this prior comes from isotropic priors on the individual spins, we find that it is the same at the reference frequency and at infinity, in agreement with the finding that an isotropic distribution evolves to an isotropic distribution for both the precession-averaged
 					<xref ref-type="bibr" rid="c23">[23]</xref> and orbit-averaged
 					<xref ref-type="bibr" rid="c85">[85]</xref> evolution (though
 					<xref ref-type="bibr" rid="c85">[85]</xref> only uses the 2PN precession equations without the contribution of the black holes’ spin-induced quadrupoles).
@@ -9217,7 +9217,7 @@
 			</p>
 			<p>It may also be possible to make the orbit-averaged evolution more efficient through code optimization and/or through using, e.g., the techniques introduced in
 				<xref ref-type="bibr" rid="c88">[88]</xref>, though creating a surrogate model for this mapping, similar to the surrogate models for the final state of precessing binaries in
-				<xref ref-type="bibr" rid="c73 c89">[73,89]</xref>, is likely to provide the largest speed-up. The results in Fig.
+				<xref ref-type="bibr" rid="c73 c89">[73,89]</xref>, is likely to provide the largest speed-up. The results in Fig. 
 				<xref ref-type="fig" rid="f5">5</xref> also suggest that it might be possible to obtain the hybrid evolution results to good accuracy by averaging the tilts at infinity over a cycle of the oscillations in terms of
 				<inline-formula>
 					<mml:math display="inline">
@@ -9255,8 +9255,8 @@
 		<ack>
 			<title>ACKNOWLEDGMENTS</title>
 			<p>We thank Christopher Berry and Richard O’Shaughnessy for suggesting this project and Hang Yu for useful discussions. We also thank Charlie Hoy for the implementation in
-				<sc>pes</sc>ummary and Sylvain Marsat, Marta Colleoni, Lucy Thomas, and Eleanor Hamilton for reviewing the implementation in LALSuite and providing many useful comments on the code. Additionally, we thank Riccardo Sturani for implementing the 3PN SpinTaylor precession equations and Frank Ohme and Serguei Ossokine for useful suggestions. Finally, we thank Davide Gerosa and Sylvain Marsat for a careful reading of the paper and the anonymous referee and Leo Stein for useful comments. N. K. J.-M. acknowledges support from STFC Consolidator Grant No. ST/L000636/1. Also, this work has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 690904. This research was supported in part by Perimeter Institute for Theoretical Physics. Research at Perimeter Institute is supported by the Government of Canada through Industry Canada and by the Province of Ontario through the Ministry of Economic Development &amp; Innovation. N. K. J.-M. also acknowledges support from the AIRBUS Group Corporate Foundation through a chair in “Mathematics of Complex Systems” at the International Centre for Theoretical Sciences, Tata Institute of Fundamental Research during initial work on this project. This material is based upon work supported by NSF’s LIGO Laboratory which is a major facility fully funded by the National Science Foundation. This research has made use of data obtained from the Gravitational Wave Open Science Center (
-				<ext-link ext-link-type="uri" xlink:href="www.gw-openscience.org">www.gw-openscience.org</ext-link>), a service of LIGO Laboratory, the LIGO Scientific Collaboration and the Virgo Collaboration. LIGO is funded by the US National Science Foundation (NSF). Virgo is funded by the French Centre National de Recherche Scientifique (CNRS), the Italian Istituto Nazionale della Fisica Nucleare (INFN) and the Dutch Nikhef, with contributions by Polish and Hungarian institutes. The authors are grateful for computational resources provided by the Leonard E Parker Center for Gravitation, Cosmology and Astrophysics at the University of Wisconsin-Milwaukee and the LIGO Laboratory and supported by National Science Foundation Grants No. PHY-1626190, No. PHY-1700765, No. PHY-0757058, and No. PHY-0823459. Additionally, we acknowledge the use of IUCAA LDG cluster Sarathi for the computational/numerical work. This study used the
+				<sc>pes</sc>ummary and Sylvain Marsat, Marta Colleoni, Lucy Thomas, and Eleanor Hamilton for reviewing the implementation in LALSuite and providing many useful comments on the code. Additionally, we thank Riccardo Sturani for implementing the 3PN SpinTaylor precession equations and Frank Ohme and Serguei Ossokine for useful suggestions. Finally, we thank Davide Gerosa and Sylvain Marsat for a careful reading of the paper and the anonymous referee and Leo Stein for useful comments. N. K. J.-M. acknowledges support from STFC Consolidator Grant No. ST/L000636/1. Also, this work has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 690904. This research was supported in part by Perimeter Institute for Theoretical Physics. Research at Perimeter Institute is supported by the Government of Canada through Industry Canada and by the Province of Ontario through the Ministry of Economic Development &amp; Innovation. N. K. J.-M. also acknowledges support from the AIRBUS Group Corporate Foundation through a chair in “Mathematics of Complex Systems” at the International Centre for Theoretical Sciences, Tata Institute of Fundamental Research during initial work on this project. This material is based upon work supported by NSF’s LIGO Laboratory which is a major facility fully funded by the National Science Foundation. This research has made use of data obtained from the Gravitational Wave Open Science Center (
+				<ext-link ext-link-type="uri" xlink:href="www.gw-openscience.org">www.gw-openscience.org</ext-link>), a service of LIGO Laboratory, the LIGO Scientific Collaboration and the Virgo Collaboration. LIGO is funded by the US National Science Foundation (NSF). Virgo is funded by the French Centre National de Recherche Scientifique (CNRS), the Italian Istituto Nazionale della Fisica Nucleare (INFN) and the Dutch Nikhef, with contributions by Polish and Hungarian institutes. The authors are grateful for computational resources provided by the Leonard E Parker Center for Gravitation, Cosmology and Astrophysics at the University of Wisconsin-Milwaukee and the LIGO Laboratory and supported by National Science Foundation Grants No. PHY-1626190, No. PHY-1700765, No. PHY-0757058, and No. PHY-0823459. Additionally, we acknowledge the use of IUCAA LDG cluster Sarathi for the computational/numerical work. This study used the
 				<sc>Python</sc> software packages
 				<sc>Matplotlib</sc>
 				<xref ref-type="bibr" rid="c90">[90]</xref>,
@@ -9271,7 +9271,7 @@
 				<xref ref-type="bibr" rid="c28 c49">[28,49]</xref>, and
 				<sc>s</sc>ci
 				<sc>p</sc>y
-				<xref ref-type="bibr" rid="c51">[51]</xref>. This is LIGO document number P2100029.
+				<xref ref-type="bibr" rid="c51">[51]</xref>. This is LIGO document number P2100029.
 			</p>
 		</ack>
 		<app-group>
@@ -9310,7 +9310,7 @@
 								<mml:mi>pr</mml:mi>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> [Eq.
+					</inline-formula> [Eq. 
 					<xref ref-type="disp-formula" rid="d5">(5)</xref>] in
 					<inline-formula>
 						<mml:math display="inline">
@@ -9378,7 +9378,7 @@
 						<mml:math display="inline">
 							<mml:mi>K</mml:mi>
 						</mml:math>
-					</inline-formula>. These functions are defined by the following integrals (see, e.g., Sec. 17.3 in Ref.
+					</inline-formula>. These functions are defined by the following integrals (see, e.g., Sec. 17.3 in Ref. 
 					<xref ref-type="bibr" rid="c91">[91]</xref>)
 					<disp-formula-group id="da2">
 						<label>(A2)</label>
@@ -10468,7 +10468,7 @@
 							<mml:mo>.</mml:mo>
 						</mml:math>
 						<label>(A11)</label>
-					</disp-formula>Now, from the above and Eq.
+					</disp-formula>Now, from the above and Eq. 
 					<xref ref-type="disp-formula" rid="da6">(A6)</xref>, we have
 					<disp-formula id="da12">
 						<mml:math display="block">
@@ -11098,7 +11098,7 @@
 							</mml:mrow>
 						</mml:math>
 						<label>(A14)</label>
-					</disp-formula>This translates immediately into a bound in terms of the barred quantities introduced in Sec.
+					</disp-formula>This translates immediately into a bound in terms of the barred quantities introduced in Sec. 
 					<xref ref-type="sec" rid="s3">III</xref>, which is what is implemented in the code. Specifically, we linearize in
 					<inline-formula>
 						<mml:math display="inline">
@@ -11168,7 +11168,7 @@
 								<mml:mi>lin</mml:mi>
 							</mml:msub>
 						</mml:math>
-					</inline-formula> is roughly the relative tolerance in Eq.
+					</inline-formula> is roughly the relative tolerance in Eq. 
 					<xref ref-type="disp-formula" rid="d17">(17)</xref> when
 					<inline-formula>
 						<mml:math display="inline">
@@ -11227,7 +11227,7 @@
 								<mml:mn>2</mml:mn>
 							</mml:msubsup>
 						</mml:math>
-					</inline-formula> by solving Eq.
+					</inline-formula> by solving Eq. 
 					<xref ref-type="disp-formula" rid="d20">(20)</xref>. The default value of
 					<inline-formula>
 						<mml:math display="inline">
@@ -11252,7 +11252,7 @@
 						<mml:math display="inline">
 							<mml:mi>u</mml:mi>
 						</mml:math>
-					</inline-formula> is small, the coefficient of the highest power in the cubic [Eq.
+					</inline-formula> is small, the coefficient of the highest power in the cubic [Eq. 
 					<xref ref-type="disp-formula" rid="d20">(20)</xref>] is small, and one can obtain some solutions to the cubic to a good approximation by setting that coefficient to zero and solving a quadratic. Here we derive a strict error bound for this approximation. In this case, we need only to consider the error bound for the approximation
 					<inline-formula>
 						<mml:math display="inline">
@@ -11304,7 +11304,7 @@
 						<mml:math display="inline">
 							<mml:mi>m</mml:mi>
 						</mml:math>
-					</inline-formula> will be small and thus satisfy the requirement for linearization being a good approximation given in Appendix
+					</inline-formula> will be small and thus satisfy the requirement for linearization being a good approximation given in Appendix 
 					<xref ref-type="app" rid="app1">A</xref>.
 				</p>
 				<p>We only consider the case
@@ -11341,7 +11341,7 @@
 							</mml:msubsup>
 							<mml:mo stretchy="false">|</mml:mo>
 						</mml:math>
-					</inline-formula>, for which we rewrite Eq.
+					</inline-formula>, for which we rewrite Eq. 
 					<xref ref-type="disp-formula" rid="d20">(20)</xref> in terms of
 					<inline-formula>
 						<mml:math display="inline">
@@ -12635,7 +12635,7 @@
 										<mml:mn>2</mml:mn>
 									</mml:msubsup>
 								</mml:math>
-							</inline-formula> are negative in this case, the associated unbarred versions [obtained from Eq.
+							</inline-formula> are negative in this case, the associated unbarred versions [obtained from Eq. 
 							<xref ref-type="disp-formula" rid="d18">(18)</xref>] are positive, as expected.
 						</p>
 					</fn> We assume that
@@ -13131,7 +13131,7 @@
 						<mml:math display="inline">
 							<mml:mi>m</mml:mi>
 						</mml:math>
-					</inline-formula> satisfies Eq.
+					</inline-formula> satisfies Eq. 
 					<xref ref-type="disp-formula" rid="da15">(A15)</xref> with
 					<inline-formula>
 						<mml:math display="inline">
@@ -13184,7 +13184,7 @@
 							<mml:mo>/</mml:mo>
 							<mml:mn>2</mml:mn>
 						</mml:math>
-					</inline-formula> in Eq.
+					</inline-formula> in Eq. 
 					<xref ref-type="disp-formula" rid="da1">(A1)</xref>], choosing to divide the total allowed error equally between the two cases. We also replace
 					<inline-formula>
 						<mml:math display="inline">
@@ -13274,7 +13274,7 @@
 							</mml:msubsup>
 							<mml:mo stretchy="false">)</mml:mo>
 						</mml:math>
-					</inline-formula> in Eq.
+					</inline-formula> in Eq. 
 					<xref ref-type="disp-formula" rid="da15">(A15)</xref>.
 				</p>
 			</app>
@@ -13309,7 +13309,7 @@
 								<mml:mn>2</mml:mn>
 							</mml:msup>
 						</mml:math>
-					</inline-formula>; see the discussion below Eq. (21) in
+					</inline-formula>; see the discussion below Eq. (21) in
 					<xref ref-type="bibr" rid="c25">[25]</xref>]. Additionally, it checks that the evolution reached the desired final value of
 					<inline-formula>
 						<mml:math display="inline">
@@ -13604,7 +13604,7 @@
 			<app id="app4">
 				<label>APPENDIX D:</label>
 				<title>EXAMPLE CODE USAGE</title>
-				<p>In Table
+				<p>In Table 
 					<xref ref-type="table" rid="t2">II</xref>, we give examples of the use of the code to compute the tilts at infinity and bounds on the tilts at a finite separation using both purely precession-averaged and hybrid evolution. We do this for a binary with masses
 					<inline-formula>
 						<mml:math display="inline">
@@ -14424,7 +14424,7 @@
 					<person-group person-group-type="author">
 						<string-name>R. Sturani</string-name>
 					</person-group>,
-					<article-title>Note on the derivation of the angular momentum and spin precessing equations in SpinTaylor codes</article-title>, Technical Report No.
+					<article-title>Note on the derivation of the angular momentum and spin precessing equations in SpinTaylor codes</article-title>, Technical Report No. 
 					<pub-id pub-id-type="other">LIGO-T1500554</pub-id>, LIGO Project,
 					<year>2021</year>,
 					<ext-link ext-link-type="uri" xlink:href="https://dcc.ligo.org/T1500554/public">https://dcc.ligo.org/T1500554/public</ext-link>.
@@ -14745,14 +14745,14 @@
 						<string-name>A. C. Hindmarsh</string-name>
 					</person-group>, in
 					<source>Scientific Computing</source>,
-					<series>IMACS Transactions on Scientific Computation</series> Vol.
+					<series>IMACS Transactions on Scientific Computation</series> Vol. 
 					<volume>1</volume>, edited by
 					<person-group person-group-type="editor">
 						<string-name>R. S. Stepleman</string-name>
 						<etal/>
 					</person-group> (
 					<publisher-name>North-Holland</publisher-name>, Amsterdam,
-					<year>1983</year>), pp.
+					<year>1983</year>), pp. 
 					<page-range>55–64</page-range>,
 					<ext-link ext-link-type="uri" xlink:href="https://computing.llnl.gov/sites/default/files/ODEPACK_pub1_u88007.pdf">​​https://computing.llnl.gov/sites/default/files/ODEPACK_pub1_u88007.pdf</ext-link>.
 				</mixed-citation>
@@ -15490,7 +15490,7 @@
 						<string-name>I. A. Stegun</string-name>, eds.
 					</person-group>,
 					<source>Handbook of Mathematical Functions With Formulas, Graphs, and Mathematical Tables</source>,
-					<series>Applied Mathematics Series</series> No. 55 (
+					<series>Applied Mathematics Series</series> No. 55 (
 					<publisher-name>National Bureau of Standards</publisher-name>, Washington, D.C.,
 					<year>1964</year>).
 				</mixed-citation>
