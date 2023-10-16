@@ -4,7 +4,6 @@ from collections import OrderedDict
 from copy import copy
 
 import validators
-from bs4 import BeautifulSoup
 from ordered_set import OrderedSet
 
 from adsingestp import utils
