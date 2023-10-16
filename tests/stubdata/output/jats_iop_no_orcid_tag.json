@@ -5759,9 +5759,9 @@
     }
   ],
   "copyright": {
-    "statement": "\u00a9 2023. The Author(s). Published by the American Astronomical Society.",
-    "status": true
-  },
+    "status": true,
+    "statement": "\u00a9 2023. The Author(s). Published by the American Astronomical Society."
+  },  
   "editorialHistory": {
     "acceptedDate": "2022-11-21",
     "receivedDates": [
@@ -5773,25 +5773,29 @@
   },
   "keywords": [
     {
-      "keyString": "1733",
+      "keyID": "1733",
+      "keyString": "Ultra-high-energy cosmic radiation",
       "keySystem": "UAT"
     },
     {
-      "keyString": "327",
+      "keyID": "327",
+      "keyString": "Cosmic ray showers",
       "keySystem": "UAT"
     },
     {
-      "keyString": "2371",
+      "keyID": "2371",
+      "keyString": "Experimental data",
       "keySystem": "UAT"
     },
     {
-      "keyString": "205",
+      "keyID": "205",
+      "keyString": "Catalogs",
       "keySystem": "UAT"
     }
   ],
   "openAccess": {
     "open": true
-  },
+  }
   "pagination": {
     "electronicID": "50",
     "pageCount": "24"

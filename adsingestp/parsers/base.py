@@ -153,6 +153,7 @@ class IngestBase(object):
                      'edhist_acc': string
                      'edhist_rec': [string],
                      'edhist_rev': [string],
+                     'esources': [(sourcestring, locationstring)],
                      'electronic_id': string,
                      'ids': {'doi': string,
                              'preprint': {'source': string,
@@ -423,10 +424,7 @@ class IngestBase(object):
             {
                 "keyString": i.get("string", ""),
                 "keySystem": i.get("system", ""),
-                # "keyIdent": {
-                #     "system": "XXX",
-                #     "keyID": "XXX"
-                # }
+                "keyID": i.get("id", "") if i.get("id", "") and i.get("system", "") else "",
             }
             for i in input_dict.get("keywords", [])
         ]
