@@ -3,6 +3,8 @@ import re
 from collections import OrderedDict
 from copy import copy
 
+import validators
+from bs4 import BeautifulSoup
 from ordered_set import OrderedSet
 
 from adsingestp import utils
@@ -910,6 +912,28 @@ class JATSParser(BaseBeautifulSoupParser):
                 ref_list_text.append(s)
             self.base_metadata["references"] = ref_list_text
 
+    def _parse_esources(self):
+        links = []
+        rawlinks = self.article_meta.find_all("self-uri")
+
+        for link in rawlinks:
+            if link.get("content-type", "") == "full_html":
+                if validators.url(link.get("xlink:href", "")):
+                    links.append(("pub_html", link.get("xlink:href", "")))
+
+            if link.get("content-type", "") == "pdf":
+                if validators.url(link.get("xlink:href", "")):
+                    links.append(("pub_pdf", link.get("xlink:href", "")))
+
+        # add a check to see if pub_html exists in links. if not, search for abstract link
+        if "pub_html" not in dict(links).keys():
+            for link in rawlinks:
+                if link.get("content-type", "") == "abstract":
+                    if validators.url(link.get("xlink:href", "")):
+                        links.append(("pub_html", link.get("xlink:href", "")))
+
+        self.base_metadata["esources"] = links
+
     def parse(self, text, bsparser="lxml-xml"):
         """
         Parse JATS XML into standard JSON format
@@ -952,6 +976,7 @@ class JATSParser(BaseBeautifulSoupParser):
         self._parse_edhistory()
         self._parse_permissions()
         self._parse_page()
+        self._parse_esources()
 
         self._parse_references()
 

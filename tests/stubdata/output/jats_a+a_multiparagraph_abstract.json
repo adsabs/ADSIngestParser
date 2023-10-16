@@ -260,6 +260,16 @@
       "2021-12-20"
     ]
   },
+  "esources": [
+    {
+      "location": "https://www.aanda.org/articles/aa/full_html/2023/02/aa42959-21/aa42959-21.html",
+      "source": "pub_html"
+    },
+    {
+      "location": "https://www.aanda.org/articles/aa/pdf/2023/02/aa42959-21.pdf",
+      "source": "pub_pdf"
+    }
+  ],
   "keywords": [
     {
       "keyString": "stars: individual: V838 Mon",
