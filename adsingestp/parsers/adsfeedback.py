@@ -8,10 +8,13 @@ logger = logging.getLogger(__name__)
 
 
 class ADSFeedbackParser(BaseBeautifulSoupParser):
-    def __init__(self, json_string):
-        self.data = json.loads(json_string)
+    def __init__(self, json_string=None):
+        if json_string:
+            self.data = json.loads(json_string)
 
-    def parse(self, **kwargs):
+    def parse(self, json_string=None, **kwargs):
+        if json_string:
+            self.data = json.loads(json_string)
         output_metadata = dict()
 
         simple_fields = [
