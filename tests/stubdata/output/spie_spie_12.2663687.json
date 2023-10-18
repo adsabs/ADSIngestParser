@@ -1,0 +1,203 @@
+{
+  "abstract": {
+    "textEnglish": "Highly-sensitive broadly-tunable detectors are needed for future multi-domain sensing and quantum-information systems. Layered graphene with \u201cmagic\u201d twist-angle between 2 - 4 sheets is superconducting below 2 K. Demonstrated Josephson junctions in this material feature very high dynamic resistance at the maximum zero-voltage current. Biased at this current, a small microwave voltage across the junction shifts the voltage-current step, which results in a large DC output voltage. A suitable antenna driven by external radiation can source the desired AC voltage across the junction. As a non-thermal mechanism, such detectors may in principle be fast, as well as sensitive. Additionally, there is a bolometric response, whose temperature coefficient of resistance we estimate to be 300%/K. Design, fabrication, response, and twist-angle tolerance for antenna-coupled, superconducting-graphene, Josephson-junction detectors of mm-wave and THz radiation are discussed."
+  },
+  "authors": [
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Univ. of Central Florida (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Peale",
+        "middle_name": "Robert",
+        "pubraw": "Peale\nRobert E.",
+        "surname": "E."
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Univ. of Central Florida (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Lodge",
+        "middle_name": "Michael",
+        "pubraw": "Lodge\nMichael S.",
+        "surname": "S."
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Univ. of Central Florida (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Rathod",
+        "pubraw": "Rathod\nAmi",
+        "surname": "Ami"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Univ. of Central Florida (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Lina",
+        "middle_name": "Kirsten",
+        "pubraw": "Lina\nKirsten L.",
+        "surname": "L."
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Univ. of Central Florida (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Bowman",
+        "middle_name": "Anna",
+        "pubraw": "Bowman\nAnna C.",
+        "surname": "C."
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Univ. of Central Florida (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Klemm",
+        "middle_name": "Richard",
+        "pubraw": "Klemm\nRichard A.",
+        "surname": "A."
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Univ. of Central Florida (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Ishigami",
+        "pubraw": "Ishigami\nMasahiro",
+        "surname": "Masahiro"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Truventic LLC (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Cariker",
+        "pubraw": "Cariker\nColeman",
+        "surname": "Coleman"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Truventic LLC (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Fredricksen",
+        "middle_name": "Christopher",
+        "pubraw": "Fredricksen\nChristopher J.",
+        "surname": "J."
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Truventic LLC (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Gonzalez",
+        "middle_name": "F.",
+        "pubraw": "Gonzalez\nF. Javier",
+        "surname": "Javier"
+      }
+    }
+  ],
+  "otherContributor": [
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "Argo AI, LLC (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "Itzler",
+          "middle_name": "Mark",
+          "pubraw": "Itzler\nMark A.",
+          "surname": "A."
+        }
+      }
+    },
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "National Institute of Standards and Technology (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "Bienfang",
+          "middle_name": "Joshua",
+          "pubraw": "Bienfang\nJoshua C.",
+          "surname": "C."
+        }
+      }
+    },
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "MIT Lincoln Lab. (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "McIntosh",
+          "middle_name": "K.",
+          "pubraw": "McIntosh\nK. Alex",
+          "surname": "Alex"
+        }
+      }
+    }
+  ],
+  "persistentIDs": [
+    {
+      "DOI": "10.1117/12.2663687"
+    }
+  ],
+  "pubDate": {
+    "electrDate": "2023-06-15"
+  },
+  "publication": {
+    "pubYear": "2023"
+  },
+  "recordData": {
+    "createdTime": "",
+    "loadFormat": "OtherXML",
+    "loadLocation": "",
+    "loadType": "fromFile",
+    "parsedTime": "",
+    "recordOrigin": ""
+  },
+  "title": {
+    "textEnglish": "\nAntenna-Coupled Graphene Josephson-Junction Thz/Mm-Wave Detector\n"
+  }
+}

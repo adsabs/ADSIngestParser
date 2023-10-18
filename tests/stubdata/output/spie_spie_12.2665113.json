@@ -1,0 +1,198 @@
+{
+  "abstract": {
+    "textEnglish": "NASA\u2019s ICESat-2 mission launched in September 2018 carrying a single instrument, the Advanced Topographic Laser Altimeter System (ATLAS). ATLAS uses a high-repetition-rate, low-pulse-energy laser with its output split into six beams and a photon-counting receiver to measure Earth surface elevation with centimeter-level precision, repeating its ground track every 91 days. During more than four years of on-orbit operation, ATLAS has met or exceeded its lifetime and performance requirements. We present performance measurements, trends and projections for several instrument parameter, including transmitted laser pulse energy, receiver sensitivity, the instrument\u2019s impulse response, transmitter/receiver alignment, dead-time behavior, and elevation measurement performance. The laser energy setting was increased in September 2023, for the first time, to maintain ranging performance at its earlymission level. The trends in instrument parameters indicate capability to continue on-orbit operation of ATLAS for many years into the future."
+  },
+  "authors": [
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "NASA Goddard Space Flight Ctr. (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Martino",
+        "middle_name": "Anthony",
+        "pubraw": "Martino\nAnthony J.",
+        "surname": "J."
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "NASA Goddard Space Flight Ctr. (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Cavanaugh",
+        "pubraw": "Cavanaugh\nJohn",
+        "surname": "John"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "KBRwyle (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Gibbons",
+        "pubraw": "Gibbons\nAimee",
+        "surname": "Aimee"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Emergent Space Technologies (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Golder",
+        "middle_name": "James",
+        "pubraw": "Golder\nJames E.",
+        "surname": "E."
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "ADNET Systems, Inc. (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Ivanoff",
+        "pubraw": "Ivanoff\nAlvaro",
+        "surname": "Alvaro"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "KBRwyle (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Jester",
+        "pubraw": "Jester\nPeggy",
+        "surname": "Peggy"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "NASA Goddard Space Flight Ctr. (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Kurtz",
+        "pubraw": "Kurtz\nNathan",
+        "surname": "Nathan"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "NASA Goddard Space Flight Ctr. (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Neumann",
+        "pubraw": "Neumann\nThomas",
+        "surname": "Thomas"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Science Systems and Applications, Inc. (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Pingel",
+        "pubraw": "Pingel\nAlmut",
+        "surname": "Almut"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Science Systems and Applications, Inc. (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Swenson",
+        "pubraw": "Swenson\nCraig",
+        "surname": "Craig"
+      }
+    }
+  ],
+  "otherContributor": [
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "Argo AI, LLC (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "Itzler",
+          "middle_name": "Mark",
+          "pubraw": "Itzler\nMark A.",
+          "surname": "A."
+        }
+      }
+    },
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "National Institute of Standards and Technology (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "Bienfang",
+          "middle_name": "Joshua",
+          "pubraw": "Bienfang\nJoshua C.",
+          "surname": "C."
+        }
+      }
+    },
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "MIT Lincoln Lab. (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "McIntosh",
+          "middle_name": "K.",
+          "pubraw": "McIntosh\nK. Alex",
+          "surname": "Alex"
+        }
+      }
+    }
+  ],
+  "persistentIDs": [
+    {
+      "DOI": "10.1117/12.2665113"
+    }
+  ],
+  "pubDate": {
+    "electrDate": "2023-06-15"
+  },
+  "publication": {
+    "pubYear": "2023"
+  },
+  "recordData": {
+    "createdTime": "",
+    "loadFormat": "OtherXML",
+    "loadLocation": "",
+    "loadType": "fromFile",
+    "parsedTime": "",
+    "recordOrigin": ""
+  },
+  "title": {
+    "textEnglish": "\nIcesat-2/Atlas At 4 Years: Instrument Performance And Projected Life\n"
+  }
+}

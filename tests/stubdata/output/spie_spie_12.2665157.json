@@ -1,0 +1,100 @@
+{
+  "abstract": {
+    "textEnglish": "Effects of radiation on the dark count rate (DCR) of CMOS single photon avalanche diodes (SPADs) is reviewed. Both total ionizing and non ionizing dose effects are investigated using a test SPAD chip fabricated in a 180 nm CMOS technology as a case study. Models predicting the probability of damage, estimated through the measurement of DCR increase, are also presented. Emphasis is set on the damage dependence on radiation dose and device geometry. Particular attention is paid to the stochastic phenomena taking place in the sensitive volume of SPADs when they are exposed to relatively low fluences (micro-doses) of neutrons."
+  },
+  "authors": [
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Univ. degli Studi di Pavia (Italy)"
+        }
+      ],
+      "name": {
+        "given_name": "Ratti",
+        "pubraw": "Ratti\nL.",
+        "surname": "L."
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Univ. degli Studi di Pavia (Italy)"
+        }
+      ],
+      "name": {
+        "given_name": "Torilla",
+        "pubraw": "Torilla\nG.",
+        "surname": "G."
+      }
+    }
+  ],
+  "otherContributor": [
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "Argo AI, LLC (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "Itzler",
+          "middle_name": "Mark",
+          "pubraw": "Itzler\nMark A.",
+          "surname": "A."
+        }
+      }
+    },
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "National Institute of Standards and Technology (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "Bienfang",
+          "middle_name": "Joshua",
+          "pubraw": "Bienfang\nJoshua C.",
+          "surname": "C."
+        }
+      }
+    },
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "MIT Lincoln Lab. (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "McIntosh",
+          "middle_name": "K.",
+          "pubraw": "McIntosh\nK. Alex",
+          "surname": "Alex"
+        }
+      }
+    }
+  ],
+  "persistentIDs": [
+    {
+      "DOI": "10.1117/12.2665157"
+    }
+  ],
+  "pubDate": {
+    "electrDate": "2023-06-15"
+  },
+  "publication": {
+    "pubYear": "2023"
+  },
+  "recordData": {
+    "createdTime": "",
+    "loadFormat": "OtherXML",
+    "loadLocation": "",
+    "loadType": "fromFile",
+    "parsedTime": "",
+    "recordOrigin": ""
+  },
+  "title": {
+    "textEnglish": "\nRadiation Effects And Underlying Damage Mechanisms In Cmos Spads\n"
+  }
+}

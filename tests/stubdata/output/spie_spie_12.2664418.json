@@ -1,0 +1,292 @@
+{
+  "abstract": {
+    "textEnglish": "Many Lidar system applications are best implemented with photon-counting sensors such as Geiger-mode avalanche photo diode arrays (GmAPD). To meet this emerging need, SRI has become a merchant supplier for custom GmAPD sensor arrays. SRI is currently building several different custom sensor chip assembly (SCA) designs for our customers. These entirely new sensors are based on our extensive GmAPD design and camera sensor manufacturing experience and designed to address lessons learned in the field. Our objective is to build GmAPD arrays that are truly ready for use in fielded mission critical systems. We report on our development of new ROICS and both planar and mesa type detectors at 1.0um and 1.5um and our packaging, assembly, and testing approach for these new single photon sensitive sensors."
+  },
+  "authors": [
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Griggs",
+        "pubraw": "Griggs\nSteve",
+        "surname": "Steve"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Zhu",
+        "pubraw": "Zhu\nJudy",
+        "surname": "Judy"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Chan",
+        "pubraw": "Chan\nWinston",
+        "surname": "Winston"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Chodelka",
+        "pubraw": "Chodelka\nDavid",
+        "surname": "David"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Zalud",
+        "pubraw": "Zalud\nPeter",
+        "surname": "Peter"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Senko",
+        "pubraw": "Senko\nTom",
+        "surname": "Tom"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Hill",
+        "pubraw": "Hill\nDavid",
+        "surname": "David"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Zhang",
+        "pubraw": "Zhang\nWei",
+        "surname": "Wei"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Haber",
+        "pubraw": "Haber\nLewis",
+        "surname": "Lewis"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Shellenbarger",
+        "pubraw": "Shellenbarger\nZane",
+        "surname": "Zane"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Wang",
+        "pubraw": "Wang\nXiaohui",
+        "surname": "Xiaohui"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Parks",
+        "pubraw": "Parks\nChris",
+        "surname": "Chris"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Kim",
+        "pubraw": "Kim\nJames",
+        "surname": "James"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Andrews",
+        "pubraw": "Andrews\nJim",
+        "surname": "Jim"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Farkas",
+        "pubraw": "Farkas\nRob",
+        "surname": "Rob"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Battaglia",
+        "pubraw": "Battaglia\nJesse",
+        "surname": "Jesse"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Tower",
+        "pubraw": "Tower\nJohn",
+        "surname": "John"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "SRI International (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Paik",
+        "pubraw": "Paik\nNamwoong",
+        "surname": "Namwoong"
+      }
+    }
+  ],
+  "otherContributor": [
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "Argo AI, LLC (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "Itzler",
+          "middle_name": "Mark",
+          "pubraw": "Itzler\nMark A.",
+          "surname": "A."
+        }
+      }
+    },
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "National Institute of Standards and Technology (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "Bienfang",
+          "middle_name": "Joshua",
+          "pubraw": "Bienfang\nJoshua C.",
+          "surname": "C."
+        }
+      }
+    },
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "MIT Lincoln Lab. (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "McIntosh",
+          "middle_name": "K.",
+          "pubraw": "McIntosh\nK. Alex",
+          "surname": "Alex"
+        }
+      }
+    }
+  ],
+  "persistentIDs": [
+    {
+      "DOI": "10.1117/12.2664418"
+    }
+  ],
+  "pubDate": {
+    "electrDate": "2023-06-15"
+  },
+  "publication": {
+    "pubYear": "2023"
+  },
+  "recordData": {
+    "createdTime": "",
+    "loadFormat": "OtherXML",
+    "loadLocation": "",
+    "loadType": "fromFile",
+    "parsedTime": "",
+    "recordOrigin": ""
+  },
+  "title": {
+    "textEnglish": "\nGeiger-Mode Avalanche Ingaasinp Photodiode Focal Plane Arrays For 1.0Um And 1.5Um Lidar Imaging\n"
+  }
+}

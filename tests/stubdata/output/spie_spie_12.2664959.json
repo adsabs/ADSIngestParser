@@ -1,0 +1,173 @@
+{
+  "abstract": {
+    "textEnglish": "In this paper we report on recent advancements in the development of linear-mode photon-counting (LMPC) electron-initiated avalanche photodiodes (e-APDs) at Leonardo DRS. The Hg1-xCdxTe linear-mode e-APD fills a gap in single-photon detectors from near- to mid-infrared wavelengths and enables several new space lidar and laser communication applications. The combination of high e-APD gain and near unity excess noise factor enables robust, single-photon detection. Another important feature of the Hg1-xCdxTe e-APD is that there is no dead time or latency between successive photon detection events. Since the inception of the device, Leonardo DRS has sought to improve the performance of these e-APDs by: increasing linear gains to greater than 1000; decreasing single photon jitter; reducing ROIC glow contributions to dark counts; and decreasing intrinsic detector dark currents. To these ends, we begin by showing that ROIC glow contributions to the false-event rate (FER) can be significantly reduced using an improved, photon blocking shield. We continue by examining the performance of focal-plane arrays (FPAs) with two differing material cutoff wavelengths, demonstrating record low FERs at high photon detection efficiencies (PDEs); this improvement in performance is assisted in part to the successful integration of micro-lens arrays (MLAs) onto the detectors. We conclude our study by integrating one detector unit into a tactical, Integrated Dewar Cooler Assembly (IDCA) and comparing performance prior and following this integration."
+  },
+  "authors": [
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Leonardo DRS-EOIS (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Anderson",
+        "middle_name": "P.",
+        "pubraw": "Anderson\nP. Duke",
+        "surname": "Duke"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Leonardo DRS-EOIS (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "McCurdy",
+        "pubraw": "McCurdy\nJames",
+        "surname": "James"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Leonardo DRS-EOIS (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Huebner",
+        "pubraw": "Huebner\nAdam",
+        "surname": "Adam"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Leonardo DRS-EOIS (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Sawatsky",
+        "pubraw": "Sawatsky\nAustin",
+        "surname": "Austin"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Leonardo DRS-EOIS (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Schaake",
+        "pubraw": "Schaake\nChristopher",
+        "surname": "Christopher"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Leonardo DRS-EOIS (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Cook",
+        "pubraw": "Cook\nGrady",
+        "surname": "Grady"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "NASA Goddard Space Flight Ctr. (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Sun",
+        "pubraw": "Sun\nXiaoli",
+        "surname": "Xiaoli"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubRaw": "Leonardo DRS-EOIS (United States)"
+        }
+      ],
+      "name": {
+        "given_name": "Mitra",
+        "pubraw": "Mitra\nPradip",
+        "surname": "Pradip"
+      }
+    }
+  ],
+  "otherContributor": [
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "Argo AI, LLC (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "Itzler",
+          "middle_name": "Mark",
+          "pubraw": "Itzler\nMark A.",
+          "surname": "A."
+        }
+      }
+    },
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "National Institute of Standards and Technology (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "Bienfang",
+          "middle_name": "Joshua",
+          "pubraw": "Bienfang\nJoshua C.",
+          "surname": "C."
+        }
+      }
+    },
+    {
+      "contrib": {
+        "affiliation": [
+          {
+            "affPubRaw": "MIT Lincoln Lab. (United States)"
+          }
+        ],
+        "name": {
+          "given_name": "McIntosh",
+          "middle_name": "K.",
+          "pubraw": "McIntosh\nK. Alex",
+          "surname": "Alex"
+        }
+      }
+    }
+  ],
+  "persistentIDs": [
+    {
+      "DOI": "10.1117/12.2664959"
+    }
+  ],
+  "pubDate": {
+    "electrDate": "2023-06-15"
+  },
+  "publication": {
+    "pubYear": "2023"
+  },
+  "recordData": {
+    "createdTime": "",
+    "loadFormat": "OtherXML",
+    "loadLocation": "",
+    "loadType": "fromFile",
+    "parsedTime": "",
+    "recordOrigin": ""
+  },
+  "title": {
+    "textEnglish": "\nAdvancements In Linear-Mode Photon-Counting Hgcdte E-Apds For Space And Defense Applications\n"
+  }
+}
