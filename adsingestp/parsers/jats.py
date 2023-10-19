@@ -848,6 +848,7 @@ class JATSParser(BaseBeautifulSoupParser):
 
     def _parse_pubdate(self):
         pub_dates = self.article_meta.find_all("pub-date")
+
         for d in pub_dates:
             pub_format = d.get("publication-format", "")
             pub_type = d.get("pub-type", "")
@@ -856,10 +857,14 @@ class JATSParser(BaseBeautifulSoupParser):
                 pub_format == "print"
                 or pub_type == "ppub"
                 or pub_type == "cover"
-                or pub_type == ""
+                or (pub_type == "" and pub_format == "")
             ):
                 self.base_metadata["pubdate_print"] = pubdate
-            if pub_format == "electronic" or pub_type == "epub" or pub_type == "":
+            if (
+                pub_format == "electronic"
+                or pub_type == "epub"
+                or (pub_type == "" and pub_format == "")
+            ):
                 self.base_metadata["pubdate_electronic"] = pubdate
 
             if pub_type == "open-access":
