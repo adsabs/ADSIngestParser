@@ -6,119 +6,138 @@
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "ONERA, Univ. of Toulouse (France)"
         }
       ],
       "name": {
-        "given_name": "Viala",
-        "pubraw": "Viala\nErwan",
-        "surname": "Erwan"
+        "given_name": "Erwan",
+        "surname": "Viala"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "ONERA, Univ. of Toulouse (France)"
         }
       ],
       "name": {
-        "given_name": "Dupouy",
-        "pubraw": "Dupouy\nPaul-Edouard",
-        "surname": "Paul-Edouard"
+        "given_name": "Paul-Edouard",
+        "surname": "Dupouy"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "ONERA, Univ. of Toulouse (France)"
         }
       ],
       "name": {
-        "given_name": "Riviere",
-        "pubraw": "Riviere\nNicolas",
-        "surname": "Nicolas"
+        "given_name": "Nicolas",
+        "surname": "Riviere"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff2",
           "affPubRaw": "Institut de Math\u00e9matiques de Toulouse CNRS, Univ. of Toulouse (France)"
         }
       ],
       "name": {
-        "given_name": "Risser",
-        "pubraw": "Risser\nLaurent",
-        "surname": "Laurent"
+        "given_name": "Laurent",
+        "surname": "Risser"
       }
     }
   ],
+  "copyright": {
+    "statement": "COPYRIGHT SPIE. Downloading of the abstract is permitted for personal use only.",
+    "status": true
+  },
   "otherContributor": [
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff3",
             "affPubRaw": "Argo AI, LLC (United States)"
           }
         ],
         "name": {
-          "given_name": "Itzler",
-          "middle_name": "Mark",
-          "pubraw": "Itzler\nMark A.",
-          "surname": "A."
+          "given_name": "Mark A.",
+          "surname": "Itzler"
         }
-      }
+      },
+      "role": "editor"
     },
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff4",
             "affPubRaw": "National Institute of Standards and Technology (United States)"
           }
         ],
         "name": {
-          "given_name": "Bienfang",
-          "middle_name": "Joshua",
-          "pubraw": "Bienfang\nJoshua C.",
-          "surname": "C."
+          "given_name": "Joshua C.",
+          "surname": "Bienfang"
         }
-      }
+      },
+      "role": "editor"
     },
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff5",
             "affPubRaw": "MIT Lincoln Lab. (United States)"
           }
         ],
         "name": {
-          "given_name": "McIntosh",
-          "middle_name": "K.",
-          "pubraw": "McIntosh\nK. Alex",
-          "surname": "Alex"
+          "given_name": "K. Alex",
+          "surname": "McIntosh"
         }
-      }
+      },
+      "role": "editor"
     }
   ],
+  "pagination": {
+    "firstPage": "125120B",
+    "lastPage": "125120B-6",
+    "pageRange": "125120B-125120B-6"
+  },
   "persistentIDs": [
     {
       "DOI": "10.1117/12.2663472"
     }
   ],
   "pubDate": {
-    "electrDate": "2023-06-15"
+    "electrDate": "2023-06-15",
+    "printDate": "2023-06-15"
   },
   "publication": {
-    "pubYear": "2023"
+    "ISSN": [
+      {
+        "issnString": "0277-786X"
+      }
+    ],
+    "confName": "Defense + Commercial Sensing",
+    "issueNum": "None",
+    "pubYear": "2023",
+    "publisher": "SPIE",
+    "volumeNum": "12512"
   },
   "recordData": {
     "createdTime": "",
-    "loadFormat": "OtherXML",
+    "loadFormat": "JATS",
     "loadLocation": "",
     "loadType": "fromFile",
     "parsedTime": "",
     "recordOrigin": ""
   },
   "title": {
-    "textEnglish": "\nLateral-Resolution Enhancement Of Low-Photon 3D-Lidar By Compressive Sensing\n"
+    "textEnglish": "Lateral-resolution enhancement of low-photon 3D-LiDAR by compressive sensing"
   }
 }

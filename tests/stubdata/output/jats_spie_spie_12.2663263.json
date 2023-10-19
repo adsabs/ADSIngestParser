@@ -6,119 +6,138 @@
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Politecnico di Milano (Italy)"
         }
       ],
       "name": {
-        "given_name": "Farina",
-        "pubraw": "Farina\nSerena",
-        "surname": "Serena"
+        "given_name": "Serena",
+        "surname": "Farina"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Politecnico di Milano (Italy)"
         }
       ],
       "name": {
-        "given_name": "Labanca",
-        "pubraw": "Labanca\nIvan",
-        "surname": "Ivan"
+        "given_name": "Ivan",
+        "surname": "Labanca"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Politecnico di Milano (Italy)"
         }
       ],
       "name": {
-        "given_name": "Acconcia",
-        "pubraw": "Acconcia\nGiulia",
-        "surname": "Giulia"
+        "given_name": "Giulia",
+        "surname": "Acconcia"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Politecnico di Milano (Italy)"
         }
       ],
       "name": {
-        "given_name": "Rech",
-        "pubraw": "Rech\nIvan",
-        "surname": "Ivan"
+        "given_name": "Ivan",
+        "surname": "Rech"
       }
     }
   ],
+  "copyright": {
+    "statement": "COPYRIGHT SPIE. Downloading of the abstract is permitted for personal use only.",
+    "status": true
+  },
   "otherContributor": [
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff2",
             "affPubRaw": "Argo AI, LLC (United States)"
           }
         ],
         "name": {
-          "given_name": "Itzler",
-          "middle_name": "Mark",
-          "pubraw": "Itzler\nMark A.",
-          "surname": "A."
+          "given_name": "Mark A.",
+          "surname": "Itzler"
         }
-      }
+      },
+      "role": "editor"
     },
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff3",
             "affPubRaw": "National Institute of Standards and Technology (United States)"
           }
         ],
         "name": {
-          "given_name": "Bienfang",
-          "middle_name": "Joshua",
-          "pubraw": "Bienfang\nJoshua C.",
-          "surname": "C."
+          "given_name": "Joshua C.",
+          "surname": "Bienfang"
         }
-      }
+      },
+      "role": "editor"
     },
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff4",
             "affPubRaw": "MIT Lincoln Lab. (United States)"
           }
         ],
         "name": {
-          "given_name": "McIntosh",
-          "middle_name": "K.",
-          "pubraw": "McIntosh\nK. Alex",
-          "surname": "Alex"
+          "given_name": "K. Alex",
+          "surname": "McIntosh"
         }
-      }
+      },
+      "role": "editor"
     }
   ],
+  "pagination": {
+    "firstPage": "1251204",
+    "lastPage": "1251204-4",
+    "pageRange": "1251204-1251204-4"
+  },
   "persistentIDs": [
     {
       "DOI": "10.1117/12.2663263"
     }
   ],
   "pubDate": {
-    "electrDate": "2023-06-15"
+    "electrDate": "2023-06-15",
+    "printDate": "2023-06-15"
   },
   "publication": {
-    "pubYear": "2023"
+    "ISSN": [
+      {
+        "issnString": "0277-786X"
+      }
+    ],
+    "confName": "Defense + Commercial Sensing",
+    "issueNum": "None",
+    "pubYear": "2023",
+    "publisher": "SPIE",
+    "volumeNum": "12512"
   },
   "recordData": {
     "createdTime": "",
-    "loadFormat": "OtherXML",
+    "loadFormat": "JATS",
     "loadLocation": "",
     "loadType": "fromFile",
     "parsedTime": "",
     "recordOrigin": ""
   },
   "title": {
-    "textEnglish": "\nA Hardware Approach To Overcome Pile-Up In Tcspc: From Principles To Field Verification\n"
+    "textEnglish": "A hardware approach to overcome pile-up in TCSPC: from principles to field verification"
   }
 }

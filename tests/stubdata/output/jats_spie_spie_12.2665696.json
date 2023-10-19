@@ -6,119 +6,138 @@
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Politecnico di Milano (Italy)"
         }
       ],
       "name": {
-        "given_name": "Bonzi",
-        "pubraw": "Bonzi\nAndrea",
-        "surname": "Andrea"
+        "given_name": "Andrea",
+        "surname": "Bonzi"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Politecnico di Milano (Italy)"
         }
       ],
       "name": {
-        "given_name": "Laita",
-        "pubraw": "Laita\nGabriele",
-        "surname": "Gabriele"
+        "given_name": "Gabriele",
+        "surname": "Laita"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Politecnico di Milano (Italy)"
         }
       ],
       "name": {
-        "given_name": "Rech",
-        "pubraw": "Rech\nIvan",
-        "surname": "Ivan"
+        "given_name": "Ivan",
+        "surname": "Rech"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Politecnico di Milano (Italy)"
         }
       ],
       "name": {
-        "given_name": "Gulinatti",
-        "pubraw": "Gulinatti\nAngelo",
-        "surname": "Angelo"
+        "given_name": "Angelo",
+        "surname": "Gulinatti"
       }
     }
   ],
+  "copyright": {
+    "statement": "COPYRIGHT SPIE. Downloading of the abstract is permitted for personal use only.",
+    "status": true
+  },
   "otherContributor": [
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff2",
             "affPubRaw": "Argo AI, LLC (United States)"
           }
         ],
         "name": {
-          "given_name": "Itzler",
-          "middle_name": "Mark",
-          "pubraw": "Itzler\nMark A.",
-          "surname": "A."
+          "given_name": "Mark A.",
+          "surname": "Itzler"
         }
-      }
+      },
+      "role": "editor"
     },
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff3",
             "affPubRaw": "National Institute of Standards and Technology (United States)"
           }
         ],
         "name": {
-          "given_name": "Bienfang",
-          "middle_name": "Joshua",
-          "pubraw": "Bienfang\nJoshua C.",
-          "surname": "C."
+          "given_name": "Joshua C.",
+          "surname": "Bienfang"
         }
-      }
+      },
+      "role": "editor"
     },
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff4",
             "affPubRaw": "MIT Lincoln Lab. (United States)"
           }
         ],
         "name": {
-          "given_name": "McIntosh",
-          "middle_name": "K.",
-          "pubraw": "McIntosh\nK. Alex",
-          "surname": "Alex"
+          "given_name": "K. Alex",
+          "surname": "McIntosh"
         }
-      }
+      },
+      "role": "editor"
     }
   ],
+  "pagination": {
+    "firstPage": "1251207",
+    "lastPage": "1251207-5",
+    "pageRange": "1251207-1251207-5"
+  },
   "persistentIDs": [
     {
       "DOI": "10.1117/12.2665696"
     }
   ],
   "pubDate": {
-    "electrDate": "2023-06-15"
+    "electrDate": "2023-06-15",
+    "printDate": "2023-06-15"
   },
   "publication": {
-    "pubYear": "2023"
+    "ISSN": [
+      {
+        "issnString": "0277-786X"
+      }
+    ],
+    "confName": "Defense + Commercial Sensing",
+    "issueNum": "None",
+    "pubYear": "2023",
+    "publisher": "SPIE",
+    "volumeNum": "12512"
   },
   "recordData": {
     "createdTime": "",
-    "loadFormat": "OtherXML",
+    "loadFormat": "JATS",
     "loadLocation": "",
     "loadType": "fromFile",
     "parsedTime": "",
     "recordOrigin": ""
   },
   "title": {
-    "textEnglish": "\nInverse Doping Profile Extraction As An Enabling Tool For Accurate Spad Modeling\n"
+    "textEnglish": "Inverse doping profile extraction as an enabling tool for accurate SPAD modeling"
   }
 }

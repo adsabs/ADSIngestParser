@@ -6,143 +6,162 @@
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Institut Franco-Allemand de Recherches de Saint-Louis (France)"
         }
       ],
       "name": {
-        "given_name": "Laurenzis",
-        "pubraw": "Laurenzis\nMartin",
-        "surname": "Martin"
+        "given_name": "Martin",
+        "surname": "Laurenzis"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Institut Franco-Allemand de Recherches de Saint-Louis (France)"
         }
       ],
       "name": {
-        "given_name": "Bacher",
-        "pubraw": "Bacher\nEmmanuel",
-        "surname": "Emmanuel"
+        "given_name": "Emmanuel",
+        "surname": "Bacher"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff2",
           "affPubRaw": "Univ. of Wisconsin-Madison (United States)"
         }
       ],
       "name": {
-        "given_name": "Seets",
-        "pubraw": "Seets\nTrevor",
-        "surname": "Trevor"
+        "given_name": "Trevor",
+        "surname": "Seets"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff3",
           "affPubRaw": "Portland State Univ. (United States)"
         }
       ],
       "name": {
-        "given_name": "Ingle",
-        "pubraw": "Ingle\nAtul",
-        "surname": "Atul"
+        "given_name": "Atul",
+        "surname": "Ingle"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff2",
           "affPubRaw": "Univ. of Wisconsin-Madison (United States)"
         }
       ],
       "name": {
-        "given_name": "Velten",
-        "pubraw": "Velten\nAndreas",
-        "surname": "Andreas"
+        "given_name": "Andreas",
+        "surname": "Velten"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Institut Franco-Allemand de Recherches de Saint-Louis (France)"
         }
       ],
       "name": {
-        "given_name": "Christnacher",
-        "pubraw": "Christnacher\nFrank",
-        "surname": "Frank"
+        "given_name": "Frank",
+        "surname": "Christnacher"
       }
     }
   ],
+  "copyright": {
+    "statement": "COPYRIGHT SPIE. Downloading of the abstract is permitted for personal use only.",
+    "status": true
+  },
   "otherContributor": [
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff4",
             "affPubRaw": "Argo AI, LLC (United States)"
           }
         ],
         "name": {
-          "given_name": "Itzler",
-          "middle_name": "Mark",
-          "pubraw": "Itzler\nMark A.",
-          "surname": "A."
+          "given_name": "Mark A.",
+          "surname": "Itzler"
         }
-      }
+      },
+      "role": "editor"
     },
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff5",
             "affPubRaw": "National Institute of Standards and Technology (United States)"
           }
         ],
         "name": {
-          "given_name": "Bienfang",
-          "middle_name": "Joshua",
-          "pubraw": "Bienfang\nJoshua C.",
-          "surname": "C."
+          "given_name": "Joshua C.",
+          "surname": "Bienfang"
         }
-      }
+      },
+      "role": "editor"
     },
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff6",
             "affPubRaw": "MIT Lincoln Lab. (United States)"
           }
         ],
         "name": {
-          "given_name": "McIntosh",
-          "middle_name": "K.",
-          "pubraw": "McIntosh\nK. Alex",
-          "surname": "Alex"
+          "given_name": "K. Alex",
+          "surname": "McIntosh"
         }
-      }
+      },
+      "role": "editor"
     }
   ],
+  "pagination": {
+    "firstPage": "125120E",
+    "lastPage": "125120E-9",
+    "pageRange": "125120E-125120E-9"
+  },
   "persistentIDs": [
     {
       "DOI": "10.1117/12.2663029"
     }
   ],
   "pubDate": {
-    "electrDate": "2023-06-15"
+    "electrDate": "2023-06-15",
+    "printDate": "2023-06-15"
   },
   "publication": {
-    "pubYear": "2023"
+    "ISSN": [
+      {
+        "issnString": "0277-786X"
+      }
+    ],
+    "confName": "Defense + Commercial Sensing",
+    "issueNum": "None",
+    "pubYear": "2023",
+    "publisher": "SPIE",
+    "volumeNum": "12512"
   },
   "recordData": {
     "createdTime": "",
-    "loadFormat": "OtherXML",
+    "loadFormat": "JATS",
     "loadLocation": "",
     "loadType": "fromFile",
     "parsedTime": "",
     "recordOrigin": ""
   },
   "title": {
-    "textEnglish": "\nSingle Photon Flux Imaging With Sub-Pixel Resolution By Motion Compensation\n"
+    "textEnglish": "Single photon flux imaging with sub-pixel resolution by motion compensation"
   }
 }

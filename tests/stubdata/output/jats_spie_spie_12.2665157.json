@@ -6,95 +6,114 @@
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Univ. degli Studi di Pavia (Italy)"
         }
       ],
       "name": {
-        "given_name": "Ratti",
-        "pubraw": "Ratti\nL.",
-        "surname": "L."
+        "given_name": "L.",
+        "surname": "Ratti"
       }
     },
     {
       "affiliation": [
         {
+          "affPubID": "aff1",
           "affPubRaw": "Univ. degli Studi di Pavia (Italy)"
         }
       ],
       "name": {
-        "given_name": "Torilla",
-        "pubraw": "Torilla\nG.",
-        "surname": "G."
+        "given_name": "G.",
+        "surname": "Torilla"
       }
     }
   ],
+  "copyright": {
+    "statement": "COPYRIGHT SPIE. Downloading of the abstract is permitted for personal use only.",
+    "status": true
+  },
   "otherContributor": [
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff2",
             "affPubRaw": "Argo AI, LLC (United States)"
           }
         ],
         "name": {
-          "given_name": "Itzler",
-          "middle_name": "Mark",
-          "pubraw": "Itzler\nMark A.",
-          "surname": "A."
+          "given_name": "Mark A.",
+          "surname": "Itzler"
         }
-      }
+      },
+      "role": "editor"
     },
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff3",
             "affPubRaw": "National Institute of Standards and Technology (United States)"
           }
         ],
         "name": {
-          "given_name": "Bienfang",
-          "middle_name": "Joshua",
-          "pubraw": "Bienfang\nJoshua C.",
-          "surname": "C."
+          "given_name": "Joshua C.",
+          "surname": "Bienfang"
         }
-      }
+      },
+      "role": "editor"
     },
     {
       "contrib": {
         "affiliation": [
           {
+            "affPubID": "aff4",
             "affPubRaw": "MIT Lincoln Lab. (United States)"
           }
         ],
         "name": {
-          "given_name": "McIntosh",
-          "middle_name": "K.",
-          "pubraw": "McIntosh\nK. Alex",
-          "surname": "Alex"
+          "given_name": "K. Alex",
+          "surname": "McIntosh"
         }
-      }
+      },
+      "role": "editor"
     }
   ],
+  "pagination": {
+    "firstPage": "1251209",
+    "lastPage": "1251209-10",
+    "pageRange": "1251209-1251209-10"
+  },
   "persistentIDs": [
     {
       "DOI": "10.1117/12.2665157"
     }
   ],
   "pubDate": {
-    "electrDate": "2023-06-15"
+    "electrDate": "2023-06-15",
+    "printDate": "2023-06-15"
   },
   "publication": {
-    "pubYear": "2023"
+    "ISSN": [
+      {
+        "issnString": "0277-786X"
+      }
+    ],
+    "confName": "Defense + Commercial Sensing",
+    "issueNum": "None",
+    "pubYear": "2023",
+    "publisher": "SPIE",
+    "volumeNum": "12512"
   },
   "recordData": {
     "createdTime": "",
-    "loadFormat": "OtherXML",
+    "loadFormat": "JATS",
     "loadLocation": "",
     "loadType": "fromFile",
     "parsedTime": "",
     "recordOrigin": ""
   },
   "title": {
-    "textEnglish": "\nRadiation Effects And Underlying Damage Mechanisms In Cmos Spads\n"
+    "textEnglish": "Radiation effects and underlying damage mechanisms in CMOS SPADs"
   }
 }
