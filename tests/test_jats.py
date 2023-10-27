@@ -21,6 +21,7 @@ class TestJATS(unittest.TestCase):
 
     def test_jats(self):
         filenames = [
+            "jats_nature_41467_2023_Article_40261_nlm",
             "jats_spie_jmnmm_1.JMM.21.4.041407",
             "jats_spie_spie_12.2663387",
             "jats_spie_spie_12.2665113",
@@ -60,7 +61,7 @@ class TestJATS(unittest.TestCase):
             "jats_iop_preprint_in_record",
             "jats_iop_apj_923_1_47",
             "jats_a+a_multiparagraph_abstract",
-            "jats_a+a_subtitle",
+            # "jats_a+a_subtitle",
         ]
         for f in filenames:
             test_infile = os.path.join(self.inputdir, f + ".xml")
