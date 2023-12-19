@@ -459,6 +459,7 @@ class JATSParser(BaseBeautifulSoupParser):
         self.back_meta = None
         self.article_meta = None
         self.journal_meta = None
+        self.body = None
         self.isErratum = False
 
     def _get_date(self, d):
@@ -896,6 +897,12 @@ class JATSParser(BaseBeautifulSoupParser):
                     self.article_meta.find("counts").find("page-count").get("count", "")
                 )
 
+    def _parse_fulltext(self):
+        if self.body is not None:
+            body_text = str(self.body.extract())
+            self.base_metadata["fulltext"] = {"body": body_text, "language": None}
+
+
     def _parse_references(self):
         if self.back_meta is not None:
             ref_list_text = []
@@ -1002,6 +1009,7 @@ class JATSParser(BaseBeautifulSoupParser):
 
         self.article_meta = front_meta.find("article-meta")
         self.journal_meta = front_meta.find("journal-meta")
+        self.body = document.find("body")
 
         # parse individual pieces
         self._parse_title_abstract()
@@ -1030,6 +1038,7 @@ class JATSParser(BaseBeautifulSoupParser):
         self._parse_esources()
         self._parse_funding()
 
+        self._parse_fulltext()
         self._parse_references()
 
         self.base_metadata = self._entity_convert(self.base_metadata)
@@ -1037,9 +1046,6 @@ class JATSParser(BaseBeautifulSoupParser):
         output = self.format(self.base_metadata, format="JATS")
 
         return output
-
-    def add_fulltext(self):
-        pass
 
     def citation_context(
         self,

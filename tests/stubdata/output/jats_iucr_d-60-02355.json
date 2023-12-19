@@ -1,242 +1,219 @@
 {
-  "abstract": {
-    "textEnglish": "An active form of parasporin-2, a B. thuringiensis crystal protein toxic to particular human cells, has been crystallized. Native data have been collected to 2.75 \u00c5 resolution."
-  },
-  "authors": [
-    {
-      "affiliation": [
-        {
-          "affPubID": "a",
-          "affPubRaw": "Biological Information Research Center, AIST, Tsukuba, Ibaraki 305-8566, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Toshihiko",
-        "surname": "Akiba"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "b",
-          "affPubRaw": "Department of Chemistry, Faculty of Science, Kyushu University, Fukuoka 812-8581, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Yuichi",
-        "surname": "Abe"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "b",
-          "affPubRaw": "Department of Chemistry, Faculty of Science, Kyushu University, Fukuoka 812-8581, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Sakae",
-        "surname": "Kitada"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "b",
-          "affPubRaw": "Department of Chemistry, Faculty of Science, Kyushu University, Fukuoka 812-8581, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Yoshitomo",
-        "surname": "Kusaka"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "b",
-          "affPubRaw": "Department of Chemistry, Faculty of Science, Kyushu University, Fukuoka 812-8581, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Akio",
-        "surname": "Ito"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "c",
-          "affPubRaw": "Biotechnology and Food Research Institute, Fukuoka Industrial Technology Center, Kurume, Fukuoka 839-0861, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Tokio",
-        "surname": "Ichimatsu"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "c",
-          "affPubRaw": "Biotechnology and Food Research Institute, Fukuoka Industrial Technology Center, Kurume, Fukuoka 839-0861, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Hideki",
-        "surname": "Katayama"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "c",
-          "affPubRaw": "Biotechnology and Food Research Institute, Fukuoka Industrial Technology Center, Kurume, Fukuoka 839-0861, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Tetsuyuki",
-        "surname": "Akao"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "c",
-          "affPubRaw": "Biotechnology and Food Research Institute, Fukuoka Industrial Technology Center, Kurume, Fukuoka 839-0861, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Kazuhiko",
-        "surname": "Higuchi"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "c",
-          "affPubRaw": "Biotechnology and Food Research Institute, Fukuoka Industrial Technology Center, Kurume, Fukuoka 839-0861, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Eiichi",
-        "surname": "Mizuki"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "d",
-          "affPubRaw": "Department of Applied Genetics and Pest Management, Faculty of Agriculture, Kyushu University, Fukuoka 812-8581, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Michio",
-        "surname": "Ohba"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "a",
-          "affPubRaw": "Biological Information Research Center, AIST, Tsukuba, Ibaraki 305-8566, Japan"
-        }
-      ],
-      "name": {
-        "given_name": "Ryuta",
-        "surname": "Kanai"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "a",
-          "affPubRaw": "Biological Information Research Center, AIST, Tsukuba, Ibaraki 305-8566, Japan"
-        }
-      ],
-      "attrib": {
-        "email": "k-harata@aist.go.jp"
-      },
-      "name": {
-        "given_name": "Kazuaki",
-        "surname": "Harata"
-      }
-    }
-  ],
-  "copyright": {
-    "statement": "\u00a9 International Union of Crystallography 2004",
-    "status": true
+  "recordData": {
+    "createdTime": "",
+    "parsedTime": "",
+    "loadType": "fromFile",
+    "loadFormat": "JATS",
+    "loadLocation": "",
+    "recordOrigin": ""
   },
   "editorialHistory": {
-    "acceptedDate": "2004-10-18",
     "receivedDates": [
       "2004-08-10"
+    ],
+    "acceptedDate": "2004-10-18"
+  },
+  "pubDate": {
+    "electrDate": "2004-11-26"
+  },
+  "publication": {
+    "pubName": "Acta Crystallographica Section D",
+    "publisher": "International Union of Crystallography",
+    "issueNum": "Pt 12",
+    "volumeNum": "60",
+    "pubYear": "2004",
+    "ISSN": [
+      {
+        "pubtype": "epub",
+        "issnString": "0907-4449"
+      }
     ]
-  },
-  "keywords": [
-    {
-      "keyString": "Bacillus thuringiensis",
-      "keySystem": "misc"
-    },
-    {
-      "keyString": "crystal proteins",
-      "keySystem": "misc"
-    },
-    {
-      "keyString": "bacterial toxins",
-      "keySystem": "misc"
-    },
-    {
-      "keyString": "cytotoxicity",
-      "keySystem": "misc"
-    },
-    {
-      "keyString": "parasporins",
-      "keySystem": "misc"
-    }
-  ],
-  "openAccess": {
-    "license": "Prior permission is not required to reproduce short quotations, tables and figures from this article, provided the original authors and\n                                                    source are cited. For more information, see http://journals.iucr.org/services/copyrightpolicy.html."
-  },
-  "pagination": {
-    "firstPage": "2355",
-    "lastPage": "2357",
-    "pageRange": "2355-2357"
   },
   "persistentIDs": [
     {
       "DOI": "10.1107/S0907444904026307"
     }
   ],
-  "pubDate": {
-    "electrDate": "2004-11-26"
-  },
-  "publication": {
-    "ISSN": [
-      {
-        "issnString": "0907-4449",
-        "pubtype": "epub"
-      }
-    ],
-    "issueNum": "Pt 12",
-    "pubName": "Acta Crystallographica Section D",
-    "pubYear": "2004",
-    "publisher": "International Union of Crystallography",
-    "volumeNum": "60"
-  },
   "publisherIDs": [
     {
-      "Identifier": "ts5037",
-      "attribute": "publisher-id"
+      "attribute": "publisher-id",
+      "Identifier": "ts5037"
     }
   ],
-  "recordData": {
-    "createdTime": "",
-    "loadFormat": "JATS",
-    "loadLocation": "",
-    "loadType": "fromFile",
-    "parsedTime": "",
-    "recordOrigin": ""
+  "pagination": {
+    "firstPage": "2355",
+    "lastPage": "2357",
+    "pageRange": "2355-2357"
+  },
+  "authors": [
+    {
+      "name": {
+        "surname": "Akiba",
+        "given_name": "Toshihiko"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Biological Information Research Center, AIST, Tsukuba, Ibaraki 305-8566, Japan",
+          "affPubID": "a"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Abe",
+        "given_name": "Yuichi"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Chemistry, Faculty of Science, Kyushu University, Fukuoka 812-8581, Japan",
+          "affPubID": "b"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Kitada",
+        "given_name": "Sakae"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Chemistry, Faculty of Science, Kyushu University, Fukuoka 812-8581, Japan",
+          "affPubID": "b"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Kusaka",
+        "given_name": "Yoshitomo"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Chemistry, Faculty of Science, Kyushu University, Fukuoka 812-8581, Japan",
+          "affPubID": "b"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Ito",
+        "given_name": "Akio"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Chemistry, Faculty of Science, Kyushu University, Fukuoka 812-8581, Japan",
+          "affPubID": "b"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Ichimatsu",
+        "given_name": "Tokio"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Biotechnology and Food Research Institute, Fukuoka Industrial Technology Center, Kurume, Fukuoka 839-0861, Japan",
+          "affPubID": "c"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Katayama",
+        "given_name": "Hideki"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Biotechnology and Food Research Institute, Fukuoka Industrial Technology Center, Kurume, Fukuoka 839-0861, Japan",
+          "affPubID": "c"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Akao",
+        "given_name": "Tetsuyuki"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Biotechnology and Food Research Institute, Fukuoka Industrial Technology Center, Kurume, Fukuoka 839-0861, Japan",
+          "affPubID": "c"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Higuchi",
+        "given_name": "Kazuhiko"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Biotechnology and Food Research Institute, Fukuoka Industrial Technology Center, Kurume, Fukuoka 839-0861, Japan",
+          "affPubID": "c"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Mizuki",
+        "given_name": "Eiichi"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Biotechnology and Food Research Institute, Fukuoka Industrial Technology Center, Kurume, Fukuoka 839-0861, Japan",
+          "affPubID": "c"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Ohba",
+        "given_name": "Michio"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Applied Genetics and Pest Management, Faculty of Agriculture, Kyushu University, Fukuoka 812-8581, Japan",
+          "affPubID": "d"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Kanai",
+        "given_name": "Ryuta"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Biological Information Research Center, AIST, Tsukuba, Ibaraki 305-8566, Japan",
+          "affPubID": "a"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Harata",
+        "given_name": "Kazuaki"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Biological Information Research Center, AIST, Tsukuba, Ibaraki 305-8566, Japan",
+          "affPubID": "a"
+        }
+      ],
+      "attrib": {
+        "email": "k-harata@aist.go.jp"
+      }
+    }
+  ],
+  "title": {
+    "textEnglish": "Crystallization of parasporin-2, a Bacillus thuringiensis crystal protein with selective cytocidal activity against human cells"
+  },
+  "abstract": {
+    "textEnglish": "An active form of parasporin-2, a B. thuringiensis crystal protein toxic to particular human cells, has been crystallized. Native data have been collected to 2.75 \u00c5 resolution."
+  },
+  "fulltext": {
+    "body": "<body>\n<sec id=\"sec1\" sec-type=\"introduction\">\n<label>1</label>\n<title>Introduction \u00a0 </title>\n<p>The common soil bacterium <italic toggle=\"yes\">Bacillus thuringiensis</italic> (Bt) has been successfully utilized as a biological insecticide for several decades (de Maagd <italic toggle=\"yes\">et al.</italic>, 1999<xref ref-type=\"bibr\" rid=\"bb13\"/>). The bacteria owe this value to a parasporal crystalline inclusion that they produce during sporulation; the inclusion, which is composed of one or more proteins with a large variety in size and composition among Bt strains, often contains proteins that are toxins against insects. Cyt and Cry proteins are two major families of these toxins (Schnepf <italic toggle=\"yes\">et al.</italic>, 1998<xref ref-type=\"bibr\" rid=\"bb21\"/>; de Maagd <italic toggle=\"yes\">et al.</italic>, 2003<xref ref-type=\"bibr\" rid=\"bb14\"/>). The Cyt proteins have a broad cytolytic activity against invertebrate and vertebrate cells including insect cells and mammalian erythrocytes. The Cry protein category consists of phylogenetically heterogeneous proteins. Historically, the Cry proteins have been regarded as toxins that are specifically effective against certain insect species of orders that include Lepidoptera, Diptera and Coleoptera, but the current classification of Bt parasporal proteins groups several non-insecticidal proteins into the Cry proteins based on sequence homology (<ext-link ext-link-type=\"uri\" xlink:href=\"http://www.biols.susx.ac.uk/Home/Neil_Crickmore/Bt/index.html\">http://www.biols.susx.ac.uk/Home/Neil_Crickmore/Bt/index.html</ext-link>; Crickmore <italic toggle=\"yes\">et al.</italic>, 1998<xref ref-type=\"bibr\" rid=\"bb2\"/>). Identification of these insecticidal proteins and cloning of their genes have led to the production of genetically modified crop plants expressing these toxins and thereby presenting resistance to harmful insects. Research efforts devoted to these toxins include the crystal structure determination of four Cry proteins (Li <italic toggle=\"yes\">et al.</italic>, 1991<xref ref-type=\"bibr\" rid=\"bb11\"/>; Grochulski <italic toggle=\"yes\">et al.</italic>, 1995<xref ref-type=\"bibr\" rid=\"bb5\"/>; Galitsky <italic toggle=\"yes\">et al.</italic>, 2001<xref ref-type=\"bibr\" rid=\"bb4\"/>; Morse <italic toggle=\"yes\">et al.</italic>, 2001<xref ref-type=\"bibr\" rid=\"bb18\"/>) and one Cyt protein (Li <italic toggle=\"yes\">et al.</italic>, 1996<xref ref-type=\"bibr\" rid=\"bb12\"/>).</p>\n<p>Recent screening of non-insecticidal Bt strains for cytocidal activity has identified several strains that produce a group of unique Cry proteins, designated parasporins, with preferential cytotoxicity against particular human carcinoma cells (Mizuki <italic toggle=\"yes\">et al.</italic>, 1999<xref ref-type=\"bibr\" rid=\"bb16\"/>, 2000<xref ref-type=\"bibr\" rid=\"bb17\"/>; Lee <italic toggle=\"yes\">et al.</italic>, 2000<xref ref-type=\"bibr\" rid=\"bb9\"/>, 2001<xref ref-type=\"bibr\" rid=\"bb10\"/>; Kim <italic toggle=\"yes\">et al.</italic>, 2003<xref ref-type=\"bibr\" rid=\"bb8\"/>). Parasporins are distinguished from other Cry proteins by their lack of insecticidal activity and also from Cyt proteins by their lack of broad cytolytic activity such as haemolytic activity. This novel group of protein toxins may have potential for medical applications such as cancer treatment.</p>\n<p>Bt strain A1547 (previously designated as strain 90-F-45-14) has been isolated from Japanese soil as one of the strains that are neither insecticidal nor haemolytic but highly cytocidal against human MOLT-4 leukaemia T cells (Mizuki <italic toggle=\"yes\">et al.</italic>, 1999<xref ref-type=\"bibr\" rid=\"bb16\"/>). A protein responsible for the toxicity has been identified and its gene cloned (Ito <italic toggle=\"yes\">et al.</italic>, 2004<xref ref-type=\"bibr\" rid=\"bb7\"/>). The full-length recombinant protein (37\u00a0kDa) is not cytocidal and requires proteolytic activation to develop toxicity, as do Cry and Cyt proteins; a 30\u2005kDa active toxin is produced by the removal of 51 amino-acid residues from the N-terminus and a short segment from the C-terminus of the inactive protoxin. The activated form of the protein is strongly cytocidal against human cells with markedly divergent target specificity and preferentially kills liver and colon cancer cells without damaging normal cells in the tumour tissue slices. When exposed to the toxin, susceptible cells swell and finally burst into fragments. Hereafter, we will call the protein parasporin-2.</p>\n<p>Compared with the three-domain Cry proteins, which make up the largest and the best-characterized subgroup of the insecticidal Cry proteins (de Maagd <italic toggle=\"yes\">et al.</italic>, 2003<xref ref-type=\"bibr\" rid=\"bb14\"/>), parasporin-2 is half their size and lacks the block sequences that are conserved in them (H\u00f6fte &amp; Whiteley, 1989<xref ref-type=\"bibr\" rid=\"bb6\"/>). Moreover, the protein does not have an appreciable sequence homology to most of the established Bt toxins. An exception is Cry 15Aa1, which has 23.5% sequence identity to parasporin-2. From the view of sequence homology Cry 15Aa1 itself is an outlier among the Bt toxins, but it is significantly homologous to the mosquitocidal Mtx2 and Mtx3 toxins of <italic toggle=\"yes\">B.\u00a0sphaericus</italic> (de Maagd <italic toggle=\"yes\">et al.</italic>, 2003<xref ref-type=\"bibr\" rid=\"bb14\"/>). These mosquitocidal toxins show homology to aerolysin from <italic toggle=\"yes\">Aeromonas hydorophyla</italic>, which forms \u03b2-barrel-lined membrane pores (Parker <italic toggle=\"yes\">et al.</italic>, 1994<xref ref-type=\"bibr\" rid=\"bb20\"/>).</p>\n<p>These comparisons of sequence homology and the observed actions of parasporin-2 on susceptible cells suggest that the protein should be a pore-forming toxin with a novel structure distinct from the known structures of Cry and Cyt proteins. Here, we describe the crystallization of the activated form of parasporin-2 and the crystallographic characterization of the crystals.</p>\n</sec>\n<sec id=\"sec2\" sec-type=\"materials|methods\">\n<label>2</label>\n<title>Materials and methods \u00a0 </title>\n<sec id=\"sec2.1\">\n<label>2.1</label>\n<title>Preparation of an activated form of recombinant parasporin-2 \u00a0 </title>\n<p>The active toxin protein was prepared from a recombinant form of N-terminal truncated parasporin-2, which consists of the N-terminal methionine, Asp52\u2013Asn338 of the protoxin and a hexahistidine tag at the C-terminus (Ito <italic toggle=\"yes\">et al.</italic>, 2004<xref ref-type=\"bibr\" rid=\"bb7\"/>). The recombinant protein was expressed in <italic toggle=\"yes\">Escherichia coli</italic> and purified by metal-chelating chromatography. Purified protein (1\u2005mg\u2005ml<sup>\u22121</sup>) was activated by partial proteolysis with proteinase-K (Merck, Darmstadt, Germany; final concentration 0.1\u2005mg\u2005ml<sup>\u22121</sup>) at 310\u2005K for 30\u2005min; the reaction was stopped by the addition of 1\u2005m<italic toggle=\"yes\">M</italic> phenylmethylsulfonyl fluoride. The activated protein was separated from the mixture by anion-exchange chromatography using a Q-Sepharose Fast Flow column (Amersham Biosciences, Piscataway, USA). After dialysis against storage solution (20\u2005m<italic toggle=\"yes\">M</italic> Tris\u2013HCl pH 8.0, 50\u2005m<italic toggle=\"yes\">M</italic> Na<sub>2</sub>CO<sub>3</sub>, 500\u2005m<italic toggle=\"yes\">M</italic> NaCl), the protein was concentrated by ultrafiltration and stored at 277\u2005K until use.</p>\n</sec>\n<sec id=\"sec2.2\">\n<label>2.2</label>\n<title>MALDI\u2013TOF mass spectrometry of activated parasporin-2 \u00a0 </title>\n<p>The activated parasporin-2 solution was mixed with a matrix solution of sinapinic acid saturated in a 1:2 mixture of acetonitrile and water with a TFA content of 0.1%(<italic toggle=\"yes\">v</italic>/<italic toggle=\"yes\">v</italic>). The mixture was analyzed with an Autoflex mass spectrometer (Bruker Daltonics, Billerica, USA). The spectrometer was calibrated using ubiquitin, myoglobin, trypsin\u00adogen and bovine serum albumin as molecular-weight standards.</p>\n</sec>\n<sec id=\"sec2.3\">\n<label>2.3</label>\n<title>Crystallization \u00a0 </title>\n<p>An aliquot of the protein solution was dialyzed against 100\u2005m<italic toggle=\"yes\">M</italic> 3-(cyclohexylamino)propanesulfonic acid\u2013NaOH (CAPS\u2013NaOH) pH 12.0, 4\u2005m<italic toggle=\"yes\">M</italic> \u03b2-mercaptoethanol (\u03b2-ME) for 5\u2005h and then against 10\u2005m<italic toggle=\"yes\">M</italic> CAPS\u2013NaOH pH 12.0, 4\u2005m<italic toggle=\"yes\">M</italic> \u03b2-ME for more than 5\u2005h. After dialysis, the collected sample solution was filtered through a 0.22\u2005\u00b5m Ultrafree-MC filter (Millipore, Billerica, USA).</p>\n<p>Initial screening for crystallization conditions was carried out at 298\u2005K by the sitting-drop vapour-diffusion method using standard solutions from commercial kits: Crystal Screen, Crystal Screen 2, Crystal Screen Lite and MembFac (Hampton Research, Laguna Niguel, USA). Drops were prepared by mixing 2\u2005\u00b5l protein solution (7.5\u201310.0\u2005mg\u2005ml<sup>\u22121</sup>) with an equal volume of reservoir solution and were equilibrated against 100\u2005\u00b5l reservoir solution. Similar procedures were used in the optimization of conditions.</p>\n</sec>\n<sec id=\"sec2.4\">\n<label>2.4</label>\n<title>Data collection \u00a0 </title>\n<p>The crystals were mounted in a nylon-fibre loop, dipped briefly into reservoir solution supplemented with 15% glycerol and flash-frozen in a nitrogen-gas stream at 95\u2005K. X-ray diffraction data from the frozen crystals were collected on beamline NW12 at PF-AR (KEK, Tsukuba) using a Quantum-210 CCD detector (Area Detector Systems Corporation, Poway, USA). The data were processed with <italic toggle=\"yes\">HKL</italic>2000 (Otwinowski &amp; Minor, 1997<xref ref-type=\"bibr\" rid=\"bb19\"/>) and reduced to structure-factor amplitudes with <italic toggle=\"yes\">TRUNCATE</italic> (French &amp; Wilson, 1978<xref ref-type=\"bibr\" rid=\"bb3\"/>; Collaborative Computational Project, Number 4, 1994<xref ref-type=\"bibr\" rid=\"bb1\"/>).</p>\n</sec>\n</sec>\n<sec id=\"sec3\" sec-type=\"discussion|interpretation\">\n<label>3</label>\n<title>Results and discussion \u00a0 </title>\n<p>The final purification status of activated parasporin-2 was characterized by MALDI\u2013TOF mass spectrometry (Fig. 1<xref ref-type=\"fig\" rid=\"fig1\"/>). The spectrum showed two major peaks. The peak at <italic toggle=\"yes\">m</italic>/<italic toggle=\"yes\">z</italic>\u00a0=\u00a027\u2005505.3 corresponds to the calculated molecular weight of a polypeptide composed of the N-terminal methionine and Asp52\u2013Gln302 of the protoxin (27\u2005516.7\u2005Da); the second peak at <italic toggle=\"yes\">m</italic>/<italic toggle=\"yes\">z</italic> = 27\u2005021.0 corresponds to the weight of another derivative containing the N-terminal methionine and Asp52\u2013Leu299 (27\u2005031.2\u2005Da). The low peak at <italic toggle=\"yes\">m</italic>/<italic toggle=\"yes\">z</italic> = 13\u2005759.2 is assigned to a doubly charged species with a molecular mass of 27\u2005516.7. Thus, the preparation of activated parasporin-2 contained two major molecular species that differ by three residues in length at the C-terminus; we consider it to be suitable for crystallization. The results also demonstrate that during the activation of the parasporin-2 protoxin proteinase-K removes 36 or 40 residues from the C-\u00adterminus of the protoxin in addition to the N-terminal 51 residues.</p>\n<p>The initial crystallization lead was obtained using solution No. 37 of Crystal Screen [10%(<italic toggle=\"yes\">w</italic>/<italic toggle=\"yes\">v</italic>) polyethylene glycol (PEG) 8000, 8%(<italic toggle=\"yes\">v</italic>/<italic toggle=\"yes\">v</italic>) ethylene glycol, 100\u2005m<italic toggle=\"yes\">M</italic> HEPES\u2013NaOH pH\u00a07.5] as a reservoir solution; dodecahedral crystals with sharp edges appeared in 3\u2005d and grew to 0.1\u2005mm in the maximum dimension after a month. The reservoir solution was optimized by changing several parameters including the molecular weight and concentration of the PEG, the concentration and substitution of the ethylene glycol, the use of additives and the variation of the pH.</p>\n<p>Crystals suitable for data collection were obtained with reservoir solution containing 16%(<italic toggle=\"yes\">v</italic>/<italic toggle=\"yes\">v</italic>) ethylene glycol, 8%(<italic toggle=\"yes\">w</italic>/<italic toggle=\"yes\">v</italic>) PEG 3350, 1\u2005m<italic toggle=\"yes\">M</italic> CaCl<sub>2</sub>, 50\u2005m<italic toggle=\"yes\">M</italic> HEPES\u2013NaOH pH 7.0. The incubation temperature was set to 277\u2005K for the first 12\u2005h, 288\u2005K for the next 6\u2005h and then 298\u2005K. Dodecahedral crystals appeared within three weeks and grew slowly over three months to reach 0.3\u2005mm in the maximum dimension (Fig. 2<xref ref-type=\"fig\" rid=\"fig2\"/>).</p>\n<p>Preparative dialysis against a highly alkaline buffer was necessary prior to crystallization; crystallization setups without this step led to a swarm of microcrystals. A tendency for parasporin-2 to form large aggregates is suggested by the observation that the protein formed heavy precipitates two or three weeks after concentration to more than 4\u2005mg\u2005ml<sup>\u22121</sup> at pH 8.0. Therefore, the highly alkaline conditions presumably dissolve residual aggregates that are probably formed during storage and prepare a monodisperse solution suitable for crystallization. The initial incubation at low temperature was also necessary to reduce excess nucleation.</p>\n<p>X-ray diffraction data from a native crystal were collected to 2.75\u2005\u00c5 resolution (Table 1<xref ref-type=\"table\" rid=\"table1\"/>). The crystals belong to the hexagonal space group <italic toggle=\"yes\">P</italic>6<sub>1</sub> or <italic toggle=\"yes\">P</italic>6<sub>5</sub>, with unit-cell parameters <italic toggle=\"yes\">a</italic> = <italic toggle=\"yes\">b</italic> = 134.37, <italic toggle=\"yes\">c</italic> = 121.24\u2005\u00c5. To examine the presence of non-crystallographic symmetry, a self-rotation function was calculated. The \u03c7 = 180\u00b0 section of a map (Fig. 3<xref ref-type=\"fig\" rid=\"fig3\"/>) shows a clear peak of height 5.2\u03c3 at polar angles \u03b8 = 90\u00b0, \u03c6 = 22.7\u00b0, which corresponds to a non-crystallographic dyad lying perpendicular to the crystallographic sixfold axis. No distinct peak was found in the \u03c7 = 120, 90 or 60\u00b0 sections. Assuming two, four or six protein molecules each with a molecular weight of 27.5\u2005kDa in the asymmetric unit, the Matthews coefficient (<italic toggle=\"yes\">V</italic>\n<sub>M</sub>) was 5.7, 2.9 and 1.9\u2005\u00c5<sup>3</sup>\u2005Da<sup>\u22121</sup>, respectively (Matthews, 1968<xref ref-type=\"bibr\" rid=\"bb15\"/>). The first value is higher than the normal <italic toggle=\"yes\">V</italic>\n<sub>M</sub> range (1.7\u20133.5\u2005\u00c5<sup>3</sup>\u2005Da<sup>\u22121</sup>) but is still acceptable, while the others are within the normal range. Thus, the asymmetric unit contains two, four or six molecules with one non-crystallographic twofold axis. A search for suitable heavy-atom derivatives is in progress.</p>\n</sec>\n</body>"
   },
   "references": [
     "<ref id=\"bb1\"> <mixed-citation publication-type=\"journal\">Collaborative Computational Project, Number 4 (1994). <italic toggle=\"yes\">Acta Cryst.</italic> D<bold>50</bold>, 760\u2013763.</mixed-citation> </ref>",
@@ -262,7 +239,33 @@
     "<ref id=\"bb21\"> <mixed-citation publication-type=\"journal\">Schnepf, E., Crickmore, N., Van Rie, J., Lereclus, D., Baum, J., Feitelson, J., Zeigler, D. R. & Dean, D. H. (1998). <italic toggle=\"yes\">Microbiol. Mol. Biol. Rev.</italic> <bold>62</bold>, 775\u2013806.</mixed-citation> </ref>",
     "<ref id=\"bb22\"> <mixed-citation publication-type=\"journal\">Vagin, A. & Teplyakov, A. (1997). <italic toggle=\"yes\">J. Appl. Cryst.</italic> <bold>30</bold>, 1022\u20131025.</mixed-citation> </ref>"
   ],
-  "title": {
-    "textEnglish": "Crystallization of parasporin-2, a Bacillus thuringiensis crystal protein with selective cytocidal activity against human cells"
+  "keywords": [
+    {
+      "keyString": "Bacillus thuringiensis",
+      "keySystem": "misc"
+    },
+    {
+      "keyString": "crystal proteins",
+      "keySystem": "misc"
+    },
+    {
+      "keyString": "bacterial toxins",
+      "keySystem": "misc"
+    },
+    {
+      "keyString": "cytotoxicity",
+      "keySystem": "misc"
+    },
+    {
+      "keyString": "parasporins",
+      "keySystem": "misc"
+    }
+  ],
+  "copyright": {
+    "status": true,
+    "statement": "\u00a9 International Union of Crystallography 2004"
+  },
+  "openAccess": {
+    "license": "Prior permission is not required to reproduce short quotations, tables and figures from this article, provided the original authors and\n                                                    source are cited. For more information, see http://journals.iucr.org/services/copyrightpolicy.html."
   }
 }

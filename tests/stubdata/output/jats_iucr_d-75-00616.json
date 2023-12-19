@@ -1,6 +1,51 @@
 {
+  "recordData": {
+    "createdTime": "",
+    "parsedTime": "",
+    "loadType": "fromFile",
+    "loadFormat": "JATS",
+    "loadLocation": "",
+    "recordOrigin": ""
+  },
+  "pubDate": {
+    "electrDate": "2019-05-28"
+  },
+  "publication": {
+    "pubName": "Acta Crystallographica Section D",
+    "publisher": "International Union of Crystallography",
+    "issueNum": "Pt 6",
+    "volumeNum": "75",
+    "pubYear": "2019",
+    "ISSN": [
+      {
+        "pubtype": "epub",
+        "issnString": "2059-7983"
+      }
+    ]
+  },
+  "persistentIDs": [
+    {
+      "DOI": "10.1107/S2059798319006272"
+    }
+  ],
+  "publisherIDs": [
+    {
+      "attribute": "publisher-id",
+      "Identifier": "xo0141"
+    }
+  ],
+  "pagination": {
+    "firstPage": "616",
+    "lastPage": "617",
+    "pageCount": "2",
+    "pageRange": "616-617"
+  },
   "authors": [
     {
+      "name": {
+        "surname": "Jacquot",
+        "given_name": "Jean-Pierre"
+      },
       "affiliation": [
         {
           "affPubRaw": "Universit\u00e9 de Lorraine, INRA, Laboratoire Interaction Arbres Microorganismes , Nancy,  France"
@@ -8,16 +53,14 @@
       ],
       "attrib": {
         "email": "j2p@univ-lorraine.fr"
-      },
-      "name": {
-        "given_name": "Jean-Pierre",
-        "surname": "Jacquot"
       }
     }
   ],
-  "copyright": {
-    "statement": "\u00a9 International Union of Crystallography 2019",
-    "status": true
+  "title": {
+    "textEnglish": "Phospho\u00adrus Chemistry. The Role of Phospho\u00adrus in Prebiotic Chemistry"
+  },
+  "fulltext": {
+    "body": "<body>\n<p>\n<italic toggle=\"yes\">Phospho\u00adrus Chemistry</italic> has been published jointly by de Gruyter in Europe and Xiamen Universi\nty press in China, but it is the subtitle <italic toggle=\"yes\">The role of phospho\u00adrus in prebiotic chemistry</italic> that gives a\n good indication of the content and context of the book. Written by Professor Yufen Zhao and her colleagues, this book of 166 pages is v\nery thin as far as the number of pages is concerned but its chemical, biological and finally philosophical implications are remarkable.\nBeing highly interested in the relationship between chemistry and biology, philosophy and the creation of life (<italic toggle=\"yes\">e.g\n.</italic> see the following article in <italic toggle=\"yes\">The Conversation</italic>, <ext-link ext-link-type=\"uri\" xlink:href=\"https: //theconversation.com/conversation-between-a-biologist-and-a-philosopher-has-man-become-a-semi-god-3-88911\">https://theconversation.com/\nconversation-between-a-biologist-and-a-philosopher-has-man-become-a-semi-god-3-88911</ext-link>), I have been totally fascinated by the\nstory that unfolds therein. In the book, the authors constantly and rightly refer to the famous Miller\u2013Urey (or more simply Miller\n) lightning experiment, which was published 66 years ago and where they created the basic molecules of life (bases of the nucleotides, a\nmino acids) from chemicals (mainly ammonia, methane, hydrogen and water). This has led to prebiotic chemistry, and the work of the Zhao\nlaboratory in Xiamen is part of that international effort. More specifically Zhao and her colleagues have contributed to revealing the i\nmportance of including phospho\u00adrus in the prebiotic soup. For example the Miller experiment leads to the production of ten amino ac\nids but if PH<sub>3</sub> is added as a catalyst, then 19 different amino acids are detected. \u2018Simple\u2019 chemical reactions ex\nplain how the NH<sub>2</sub> of the amino acids can react with phospho\u00adrus to become phospho\u00adrylated (they then become N-phosp\nho\u00adrylated amino acids, designated as NPAAs) and how this modification via the formation of a transitory cyclic CAPA2 molecule in t\nurn favors the creation of dipeptides, tripeptides <italic toggle=\"yes\">etc.</italic>, leading to the possibility of creating small and\nincreasingly complex proteins. They also propose convincing scenarios where NPAAs can serve as catalysts for the formation of nucleoside\ns from the nitro\u00adgen-containing bases A, C, G and T, and also of lipids, the constituents of membranes. A very interesting section\nis devoted to the early genetic code where the information that may have first been encoded by a single base evolves into a system where\n two bases were needed and finally three in the current genetic code. Chemistry also suggests that in the original conditions where life\n appeared, minerals such as hy\u00addroxy\u00adapatite (a polymer of phosphate) have probably been used for heterogeneous catalysis. It\nseems that the group of Professor Zhao has been heavily involved in prebiotic chemistry (see for example a list of their publications at\n <ext-link ext-link-type=\"uri\" xlink:href=\"https://scholar.google.ca/citations?user=upCz5CEAAAAJ&amp;hl=en\">https://scholar.google.ca/ci\ntations?user=upCz5CEAAAAJhl=en</ext-link>) contributing in particular to the identification of the dipeptide Ser-His as being one o\nf the early biocatalysts (it can cleave DNA and proteins), but also to various chemical aspects of prebiotic chemistry. In particular, t\nhey have published a number of papers where they studied the inclusion of iron or copper in synthetic reactions. This is actually one li\nmitation of the current book, of course phosphate is essential, massive amounts are needed for biological systems to operate, but on the\n other hand as plant nutrition tells us, many other metals like copper, iron, manganese, selenium, nickel, zinc <italic toggle=\"yes\">etc\n.</italic> are needed in small quantities . It would have been nice to discuss this to some extent, especially as this group has obvious\nly experience and interest concerning the inclusion of metals in chemistry.</p>\n<p>Of course the book has strengths and weaknesses; on the weak side the command of English is not always perfect (for example the\ny relate to the Miller\u2013Urey experiment as Miler\u2013Yuri) but it remains understandable although there are numerous bugs present\n. Something that is also missing is an index, which would have been very useful for the reader, and a list of abbreviations. The figures\n are of good quality but the legends are very often on the minimal side. These imperfections aside, I strongly recommend reading this bo\nok if you are interested in prebiotic chemistry. It is a short read but it will, in ten successive chapters, explain to you how life has\n originated on Earth either in small ponds or in the dark chimneys in the ocean ridges with high temperature and high pressure. Obviousl\ny the chemical nature of phosphate has been essential to drive the creation of amino acids and proteins, nucleotides and nucleic acids,\nlipids and membranes, in short, the major constituents of life. To me, life is a natural consequence of matter and thought is a natural\nconsequence of life. Thus, given the time that it took to elaborate living and thinking systems I believe there is no mystery, it had to\n happen over the 3.5 to 4 billion years. I will end on a personal note; I was born in the exact year that the Miller experiment was publ\nished, and when I was 15, I was lucky enough to receive as a gift a book in French about biology in which the Stanley Miller experiment\nwas explained, and it struck me at the time as being a very important step in biology. I actually regard it to be as important as the th\neory of Darwin on evolution or the deciphering of the genetic code. As a consequence I was extremely happy to read this book which highl\nights some refinements to the initial Miller experiment. So thank you to the Zhao team, and we can also congratulate Zhao for her enviro\nnmental commitment (see references to this in her Wikipedia page at <ext-link ext-link-type=\"uri\" xlink:href=\"https://en.wikipedia.org/w iki/Zhao_Yufen\">https://en.wikipedia.org/wiki/Zhao_Yufen</ext-link>).</p>\n</body>"
   },
   "keywords": [
     {
@@ -33,51 +76,11 @@
       "keySystem": "misc"
     }
   ],
+  "copyright": {
+    "status": true,
+    "statement": "\u00a9 International Union of Crystallography 2019"
+  },
   "openAccess": {
     "license": "Prior permission is not required to reproduce short quotations, tables and figures from this article, provided\n the original authors and source are cited. For more information, see https://journals.iucr.org/services/copyrightpolicy.html."
-  },
-  "pagination": {
-    "firstPage": "616",
-    "lastPage": "617",
-    "pageCount": "2",
-    "pageRange": "616-617"
-  },
-  "persistentIDs": [
-    {
-      "DOI": "10.1107/S2059798319006272"
-    }
-  ],
-  "pubDate": {
-    "electrDate": "2019-05-28"
-  },
-  "publication": {
-    "ISSN": [
-      {
-        "issnString": "2059-7983",
-        "pubtype": "epub"
-      }
-    ],
-    "issueNum": "Pt 6",
-    "pubName": "Acta Crystallographica Section D",
-    "pubYear": "2019",
-    "publisher": "International Union of Crystallography",
-    "volumeNum": "75"
-  },
-  "publisherIDs": [
-    {
-      "Identifier": "xo0141",
-      "attribute": "publisher-id"
-    }
-  ],
-  "recordData": {
-    "createdTime": "",
-    "loadFormat": "JATS",
-    "loadLocation": "",
-    "loadType": "fromFile",
-    "parsedTime": "",
-    "recordOrigin": ""
-  },
-  "title": {
-    "textEnglish": "Phospho\u00adrus Chemistry. The Role of Phospho\u00adrus in Prebiotic Chemistry"
   }
 }

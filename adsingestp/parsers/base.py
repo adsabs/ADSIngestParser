@@ -384,10 +384,10 @@ class IngestBase(object):
             for i in input_dict.get("comments", [])
         ]
 
-        # output["fulltext"] = {
-        #     "language": "XXX",
-        #     "body": "XXX"
-        # } # TODO this is from fulltext
+        output["fulltext"] = {
+            "language": input_dict.get("fulltext", {}).get("language", ""),
+            "body": input_dict.get("fulltext", {}).get("body", "")
+        } 
 
         # output["acknowledgements"] = "XXX" # TODO this is from fulltext
 

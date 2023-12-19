@@ -1,237 +1,240 @@
 {
-  "authors": [
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff1",
-          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "attrib": {
-        "email": "t.wallis@uq.edu.au",
-        "orcid": "0000-0002-6515-9157"
-      },
-      "name": {
-        "given_name": "Tristan P.",
-        "surname": "Wallis"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff1",
-          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "name": {
-        "given_name": "Anmin",
-        "surname": "Jiang"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff2",
-          "affPubRaw": "School of Mathematics and Physics The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "name": {
-        "given_name": "Kyle",
-        "surname": "Young"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff1",
-          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "name": {
-        "given_name": "Huiyi",
-        "surname": "Hou"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff1",
-          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0003-3094-438X"
-      },
-      "name": {
-        "given_name": "Kye",
-        "surname": "Kudo"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff1",
-          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "name": {
-        "given_name": "Alex J.",
-        "surname": "McCann"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff3",
-          "affPubRaw": "Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "name": {
-        "given_name": "Nela",
-        "surname": "Durisic"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff1",
-          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia"
-        },
-        {
-          "affPubID": "Aff5",
-          "affPubRaw": "Australian Institute for Bioengineering and Nanotechnology The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0002-4533-0455"
-      },
-      "name": {
-        "given_name": "Merja",
-        "surname": "Joensuu"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff2",
-          "affPubRaw": "School of Mathematics and Physics The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "attrib": {
-        "orcid": "0000-0001-6981-4350"
-      },
-      "name": {
-        "given_name": "Dietmar",
-        "surname": "Oelz"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff2",
-          "affPubRaw": "School of Mathematics and Physics The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "name": {
-        "given_name": "Hien",
-        "surname": "Nguyen"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff1",
-          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "attrib": {
-        "email": "r.gormal@uq.edu.au",
-        "orcid": "0000-0003-1604-0253"
-      },
-      "name": {
-        "given_name": "Rachel S.",
-        "surname": "Gormal"
-      }
-    },
-    {
-      "affiliation": [
-        {
-          "affPubID": "Aff1",
-          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia"
-        },
-        {
-          "affPubID": "Aff4",
-          "affPubRaw": "School of Biomedical Sciences The University of Queensland 4072 Brisbane QLD Australia"
-        }
-      ],
-      "attrib": {
-        "email": "f.meunier@uq.edu.au",
-        "orcid": "0000-0001-6400-1107"
-      },
-      "name": {
-        "given_name": "Fr\u00e9d\u00e9ric A.",
-        "surname": "Meunier"
-      }
-    }
-  ],
-  "copyright": {
-    "statement": "\u00a9 The Author(s) 2023",
-    "status": true
+  "recordData": {
+    "createdTime": "",
+    "parsedTime": "",
+    "loadType": "fromFile",
+    "loadFormat": "JATS",
+    "loadLocation": "",
+    "recordOrigin": ""
   },
-  "openAccess": {
-    "license": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article\u2019s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article\u2019s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.",
-    "licenseURL": "http://creativecommons.org/licenses/by/4.0/",
-    "open": true
-  },
-  "pagination": {
-    "electronicID": "4468"
-  },
-  "persistentIDs": [
+  "relatedTo": [
     {
-      "DOI": "10.1038/s41467-023-40261-6"
+      "relationship": "errata",
+      "relatedDocID": "10.1038/s41467-023-38866-y"
     }
   ],
   "pubDate": {
     "electrDate": "2023-12-00"
   },
   "publication": {
+    "pubName": "Nature Communications",
+    "publisher": "Nature Publishing Group UK",
+    "issueNum": "1",
+    "volumeNum": "14",
+    "pubYear": "2023",
     "ISSN": [
       {
-        "issnString": "2041-1723",
-        "pubtype": "epub"
+        "pubtype": "epub",
+        "issnString": "2041-1723"
       }
-    ],
-    "issueNum": "1",
-    "pubName": "Nature Communications",
-    "pubYear": "2023",
-    "publisher": "Nature Publishing Group UK",
-    "volumeNum": "14"
+    ]
   },
-  "publisherIDs": [
+  "persistentIDs": [
     {
-      "Identifier": "s41467-023-40261-6",
-      "attribute": "publisher-id"
-    },
-    {
-      "Identifier": "40261",
-      "attribute": "manuscript"
+      "DOI": "10.1038/s41467-023-40261-6"
     }
   ],
-  "recordData": {
-    "createdTime": "",
-    "loadFormat": "JATS",
-    "loadLocation": "",
-    "loadType": "fromFile",
-    "parsedTime": "",
-    "recordOrigin": ""
-  },
-  "relatedTo": [
+  "publisherIDs": [
     {
-      "relatedDocID": "10.1038/s41467-023-38866-y",
-      "relationship": "errata"
+      "attribute": "publisher-id",
+      "Identifier": "s41467-023-40261-6"
+    },
+    {
+      "attribute": "manuscript",
+      "Identifier": "40261"
+    }
+  ],
+  "pagination": {
+    "electronicID": "4468"
+  },
+  "authors": [
+    {
+      "name": {
+        "surname": "Wallis",
+        "given_name": "Tristan P."
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff1"
+        }
+      ],
+      "attrib": {
+        "email": "t.wallis@uq.edu.au",
+        "orcid": "0000-0002-6515-9157"
+      }
+    },
+    {
+      "name": {
+        "surname": "Jiang",
+        "given_name": "Anmin"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff1"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Young",
+        "given_name": "Kyle"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Mathematics and Physics The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff2"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Hou",
+        "given_name": "Huiyi"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff1"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Kudo",
+        "given_name": "Kye"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff1"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0003-3094-438X"
+      }
+    },
+    {
+      "name": {
+        "surname": "McCann",
+        "given_name": "Alex J."
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff1"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Durisic",
+        "given_name": "Nela"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff3"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Joensuu",
+        "given_name": "Merja"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff1"
+        },
+        {
+          "affPubRaw": "Australian Institute for Bioengineering and Nanotechnology The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff5"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0002-4533-0455"
+      }
+    },
+    {
+      "name": {
+        "surname": "Oelz",
+        "given_name": "Dietmar"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Mathematics and Physics The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff2"
+        }
+      ],
+      "attrib": {
+        "orcid": "0000-0001-6981-4350"
+      }
+    },
+    {
+      "name": {
+        "surname": "Nguyen",
+        "given_name": "Hien"
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Mathematics and Physics The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff2"
+        }
+      ]
+    },
+    {
+      "name": {
+        "surname": "Gormal",
+        "given_name": "Rachel S."
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff1"
+        }
+      ],
+      "attrib": {
+        "email": "r.gormal@uq.edu.au",
+        "orcid": "0000-0003-1604-0253"
+      }
+    },
+    {
+      "name": {
+        "surname": "Meunier",
+        "given_name": "Fr\u00e9d\u00e9ric A."
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff1"
+        },
+        {
+          "affPubRaw": "School of Biomedical Sciences The University of Queensland 4072 Brisbane QLD Australia",
+          "affPubID": "Aff4"
+        }
+      ],
+      "attrib": {
+        "email": "f.meunier@uq.edu.au",
+        "orcid": "0000-0001-6400-1107"
+      }
     }
   ],
   "title": {
     "textEnglish": "Author Correction: Super-resolved trajectory-derived nanoclustering analysis using spatiotemporal indexing"
+  },
+  "fulltext": {
+    "body": "<body><p id=\"Par1\">Correction to: <italic>Nature Communications</italic><ext-link ext-link-type=\"doi\" xlink:href=\"https://doi.org/10.1038/s41467-023-38866-y\">https://doi.org/10.1038/s41467-023-38866-y</ext-link>, published online 08 June 2023</p><p id=\"Par2\">In this article the grant number R21AG080435 relating to the National Institute on Aging of the National Institutes of Health for Fr\u00e9d\u00e9ric A. Meunier was omitted. The original article has been corrected.</p></body>"
+  },
+  "copyright": {
+    "status": true,
+    "statement": "\u00a9 The Author(s) 2023"
+  },
+  "openAccess": {
+    "open": true,
+    "license": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article\u2019s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article\u2019s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.",
+    "licenseURL": "http://creativecommons.org/licenses/by/4.0/"
   }
 }
