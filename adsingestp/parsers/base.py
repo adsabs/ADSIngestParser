@@ -386,8 +386,8 @@ class IngestBase(object):
 
         output["fulltext"] = {
             "language": input_dict.get("fulltext", {}).get("language", ""),
-            "body": input_dict.get("fulltext", {}).get("body", "")
-        } 
+            "body": input_dict.get("fulltext", {}).get("body", ""),
+        }
 
         # output["acknowledgements"] = "XXX" # TODO this is from fulltext
 

@@ -902,7 +902,6 @@ class JATSParser(BaseBeautifulSoupParser):
             body_text = str(self.body.extract())
             self.base_metadata["fulltext"] = {"body": body_text, "language": None}
 
-
     def _parse_references(self):
         if self.back_meta is not None:
             ref_list_text = []
