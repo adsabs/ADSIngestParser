@@ -135,14 +135,22 @@ class ElsevierParser(BaseBeautifulSoupParser):
 
     def _parse_title_abstract(self):
         if self.record_meta.find("ce:title"):
-            self.base_metadata["title"] = self.record_meta.find("ce:title").get_text()
+            self.base_metadata["title"] = self._clean_output(
+                self.record_meta.find("ce:title").get_text()
+            )
         elif self.record_header.find("dct:title"):
-            self.base_metadata["title"] = self.record_header.find("dct:title").get_text()
+            self.base_metadata["title"] = self._clean_output(
+                self.record_header.find("dct:title").get_text()
+            )
         elif self.record_meta.find("cd:textfn"):
-            self.base_metadata["title"] = self.record_meta.find("cd:textfn").get_text()
+            self.base_metadata["title"] = self._clean_output(
+                self.record_meta.find("cd:textfn").get_text()
+            )
 
         if self.record_meta.find("ce:subtitle"):
-            self.base_metadata["subtitle"] = self.record_meta.find("ce:subtitle").get_text()
+            self.base_metadata["subtitle"] = self._clean_output(
+                self.record_meta.find("ce:subtitle").get_text()
+            )
 
         if self.record_meta.find("ce:abstract"):
             abstract = ""
@@ -356,6 +364,9 @@ class ElsevierParser(BaseBeautifulSoupParser):
 
         self.record_header = d.find("rdf:Description")
         self.record_meta = d.find("ja:article")
+
+        if not self.record_meta:
+            self.record_meta = d.find("ja:simple-article")
 
         self._parse_pub()
         self._parse_issue()

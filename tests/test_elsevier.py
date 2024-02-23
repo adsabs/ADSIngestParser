@@ -31,6 +31,11 @@ class TestElsevier(unittest.TestCase):
             "els_icar_382_115019",
             "els_missing_keywords_tag",
             "els_mononym",
+            "els_simple_article_1",
+            "els_simple_article_2",
+            "els_simple_article_3",
+            "els_simple_article_4",
+            "els_simple_article_5",
         ]
         for f in filenames:
             test_infile = os.path.join(self.inputdir, f + ".xml")
