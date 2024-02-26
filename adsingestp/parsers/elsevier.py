@@ -4,7 +4,7 @@ import re
 import validators
 
 from adsingestp import utils
-from adsingestp.ingest_exceptions import XmlLoadException
+from adsingestp.ingest_exceptions import NoSchemaException, XmlLoadException
 from adsingestp.parsers.base import BaseBeautifulSoupParser
 
 logger = logging.getLogger(__name__)
@@ -363,10 +363,13 @@ class ElsevierParser(BaseBeautifulSoupParser):
             raise XmlLoadException(err)
 
         self.record_header = d.find("rdf:Description")
-        self.record_meta = d.find("ja:article")
 
-        if not self.record_meta:
-            self.record_meta = d.find("ja:simple-article")
+        try:
+            self.record_meta = d.find("ja:article")
+            if not self.record_meta:
+                self.record_meta = d.find("ja:simple-article")
+        except:
+            raise NoSchemaException("No Schema Found")
 
         self._parse_pub()
         self._parse_issue()
