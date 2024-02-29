@@ -367,7 +367,7 @@ class ElsevierParser(BaseBeautifulSoupParser):
         self.record_meta = d.find("ja:article")
         if not self.record_meta:
             self.record_meta = d.find("ja:simple-article")
-        elif self.record_meta is None:
+        if self.record_meta is None:
             raise NoSchemaException("No Schema Found")
 
         self._parse_pub()
