@@ -351,6 +351,27 @@ class ElsevierParser(BaseBeautifulSoupParser):
 
         self.base_metadata["esources"] = links
 
+    def _find_article_type(self, d):
+        article_types = {
+            "cja:converted-article": "article",
+            "ja:article": "article",
+            "ja:simple-article": "article",
+            "ja:book-review": "book",
+            "ja:exam": "nonarticle",
+            "bk:book": "book",
+            "bk:chapter": "inbook",
+            "bk:simple-chapter": "inbook",
+            "bk:examination": "nonarticle",
+            "bk:fb-non-chapter": "inbook",
+            "bk:glossary": "inbook",
+            "bk:index": "inbook",
+            "bk:introduction": "inbook",
+            "bk:bibliography": "inbook",
+        }
+        for art_type in article_types.keys():
+            if d.find(art_type, None):
+                return art_type, article_types[art_type]
+
     def parse(self, text):
         """
         Parse Elsevier XML into standard JSON format
@@ -364,9 +385,10 @@ class ElsevierParser(BaseBeautifulSoupParser):
 
         self.record_header = d.find("rdf:Description")
 
-        self.record_meta = d.find("ja:article")
-        if not self.record_meta:
-            self.record_meta = d.find("ja:simple-article")
+        article_type, document_enum = self._find_article_type(d)
+        self.base_metadata["doctype"] = document_enum
+        self.record_meta = d.find(article_type)
+
         if self.record_meta is None:
             raise NoSchemaException("No Schema Found")
 
