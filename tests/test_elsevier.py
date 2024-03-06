@@ -36,6 +36,9 @@ class TestElsevier(unittest.TestCase):
             "els_simple_article_3",
             "els_simple_article_4",
             "els_simple_article_5",
+            "els_book_chapter",
+            "els_book_review",
+            "els_converted_article",
         ]
         for f in filenames:
             test_infile = os.path.join(self.inputdir, f + ".xml")
@@ -66,5 +69,4 @@ class TestElsevier(unittest.TestCase):
             self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
             parsed["recordData"]["parsedTime"] = ""
 
-            self.maxDiff = None
             self.assertEqual(parsed, output_data)
