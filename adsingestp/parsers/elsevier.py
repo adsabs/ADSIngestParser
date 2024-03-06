@@ -356,7 +356,7 @@ class ElsevierParser(BaseBeautifulSoupParser):
             "cja:converted-article": "article",
             "ja:article": "article",
             "ja:simple-article": "article",
-            "ja:book-review": "book",
+            "ja:book-review": "article",
             "ja:exam": "nonarticle",
             "bk:book": "book",
             "bk:chapter": "inbook",
