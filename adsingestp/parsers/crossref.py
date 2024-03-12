@@ -14,7 +14,6 @@ logger = logging.getLogger(__name__)
 # compile outside of the class definition -- it only needs to be compiled once
 re_issn = re.compile(r"^\d{4}-?\d{3}[0-9X]$")  # XXXX-XXXX
 
-
 class CrossrefParser(BaseBeautifulSoupParser):
     def __init__(self):
         self.base_metadata = {}
@@ -266,13 +265,10 @@ class CrossrefParser(BaseBeautifulSoupParser):
                 if affil:
                     contrib_tmp["aff"] = affil
             elif c.find("affiliations"):
-                print("YAY AFFILIATIONS")
                 affil = []
                 institutions = c.find("affiliations").find_all("institution")
                 if institutions:
-                    print("YAY INSTITUTIONS")
                     for inst in institutions:
-                        print("YAY INST")
                         name = inst.find("institution_name")
                         dept = inst.find("institution_department")
                         acro = inst.find("institution_acronym")
@@ -288,7 +284,9 @@ class CrossrefParser(BaseBeautifulSoupParser):
                         if place:
                             taglist.append(place.get_text())
                         if taglist:
-                            affil.append(", ".join(taglist))
+                            affstring = ", ".join(taglist)
+                            affstring = re.sub(r"\s+,", ",", affstring)
+                            affil.append(affstring)
                 if affil:
                     contrib_tmp["aff"] = affil
 

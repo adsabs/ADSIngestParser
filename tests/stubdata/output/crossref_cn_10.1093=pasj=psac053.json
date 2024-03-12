@@ -42,6 +42,11 @@
         "surname": "Shimoda",
         "given_name": "Jiro"
       },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Physics, Graduate School of Science, Nagoya University, Furo-cho, Chikusa-ku, Nagoya, Aichi 464-8602, Japan"
+        }
+      ],
       "attrib": {
         "orcid": "0000-0003-3383-2279"
       }
@@ -50,37 +55,76 @@
       "name": {
         "surname": "Ohira",
         "given_name": "Yutaka"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Earth and Planetary Science, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan"
+        }
+      ]
     },
     {
       "name": {
         "surname": "Bamba",
         "given_name": "Aya"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Physics, Graduate School of Science, the University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan"
+        },
+        {
+          "affPubRaw": "Research Center for the Early Universe, School of Science, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan"
+        }
+      ]
     },
     {
       "name": {
         "surname": "Terada",
         "given_name": "Yukikatsu"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Graduate School of Science and Engineering, Saitama University, 255 Shimo-Ohkubo, Saitama, Saitama 338-8570, Japan"
+        },
+        {
+          "affPubRaw": "Institute of Space and Astronautical Science, Japan Aerospace Exploration Agency, 3-1-1 Yoshinodai, Chuo, Sagamihara, Kanagawa 252-5210, Japan"
+        }
+      ]
     },
     {
       "name": {
         "surname": "Yamazaki",
         "given_name": "Ryo"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Physical Sciences, Aoyama Gakuin University, 5-10-1 Fuchinobe, Chuo, Sagamihara, Kanagawa 252-5258, Japan"
+        },
+        {
+          "affPubRaw": "Institute of Laser Engineering, Osaka University, 2-6 Yamadaoka, Suita, Osaka 565-0871, Japan"
+        }
+      ]
     },
     {
       "name": {
         "surname": "Inoue",
         "given_name": "Tsuyoshi"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Physics, Konan University, 8-9-1 Okamoto, Higashinada-ku, Kobe, Hyogo 658-8501, Japan"
+        }
+      ]
     },
     {
       "name": {
         "surname": "Tanaka",
         "given_name": "Shuta J"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "Department of Physical Sciences, Aoyama Gakuin University, 5-10-1 Fuchinobe, Chuo, Sagamihara, Kanagawa 252-5258, Japan"
+        }
+      ]
     }
   ],
   "title": {
