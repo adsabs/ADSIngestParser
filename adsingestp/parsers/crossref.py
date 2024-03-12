@@ -265,6 +265,32 @@ class CrossrefParser(BaseBeautifulSoupParser):
                 affil = [a.get_text() for a in c.find_all("affiliation")]
                 if affil:
                     contrib_tmp["aff"] = affil
+            elif c.find("affiliations"):
+                print("YAY AFFILIATIONS")
+                affil = []
+                institutions = c.find("affiliations").find_all("institution")
+                if institutions:
+                    print("YAY INSTITUTIONS")
+                    for inst in institutions:
+                        print("YAY INST")
+                        name = inst.find("institution_name")
+                        dept = inst.find("institution_department")
+                        acro = inst.find("institution_acronym")
+                        place = inst.find("institution_place")
+                        ident = inst.find("institution_id")
+                        taglist = []
+                        if dept:
+                            taglist.append(dept.get_text())
+                        if name:
+                            taglist.append(name.get_text())
+                        if acro:
+                            taglist.append(acro.get_text())
+                        if place:
+                            taglist.append(place.get_text())
+                        if taglist:
+                            affil.append(", ".join(taglist))
+                if affil:
+                    contrib_tmp["aff"] = affil
 
             role = c.get("contributor_role", "unknown")
 
