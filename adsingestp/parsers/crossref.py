@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 # compile outside of the class definition -- it only needs to be compiled once
 re_issn = re.compile(r"^\d{4}-?\d{3}[0-9X]$")  # XXXX-XXXX
 
+
 class CrossrefParser(BaseBeautifulSoupParser):
     def __init__(self):
         self.base_metadata = {}
@@ -273,7 +274,6 @@ class CrossrefParser(BaseBeautifulSoupParser):
                         dept = inst.find("institution_department")
                         acro = inst.find("institution_acronym")
                         place = inst.find("institution_place")
-                        ident = inst.find("institution_id")
                         taglist = []
                         if dept:
                             taglist.append(dept.get_text())
