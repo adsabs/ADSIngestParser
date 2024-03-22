@@ -41,19 +41,37 @@
       "name": {
         "surname": "Yang",
         "given_name": "Haifeng"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Computer Science and Technology, Taiyuan University of Science and Technology, Taiyuan 030024, China"
+        }
+      ]
     },
     {
       "name": {
         "surname": "Shi",
         "given_name": "Chenhui"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Computer Science and Technology, Taiyuan University of Science and Technology, Taiyuan 030024, China"
+        }
+      ]
     },
     {
       "name": {
         "surname": "Cai",
         "given_name": "Jianghui"
       },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Computer Science and Technology, Taiyuan University of Science and Technology, Taiyuan 030024, China"
+        },
+        {
+          "affPubRaw": "School of Computer Science and Technology, North University of China, Taiyuan 030051, China"
+        }
+      ],
       "attrib": {
         "orcid": "0000-0001-6945-8093"
       }
@@ -62,31 +80,56 @@
       "name": {
         "surname": "Zhou",
         "given_name": "Lichan"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Computer Science and Technology, Taiyuan University of Science and Technology, Taiyuan 030024, China"
+        }
+      ]
     },
     {
       "name": {
         "surname": "Yang",
         "given_name": "Yuqing"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Computer Science and Technology, Taiyuan University of Science and Technology, Taiyuan 030024, China"
+        }
+      ]
     },
     {
       "name": {
         "surname": "Zhao",
         "given_name": "Xujun"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Computer Science and Technology, Taiyuan University of Science and Technology, Taiyuan 030024, China"
+        }
+      ]
     },
     {
       "name": {
         "surname": "He",
         "given_name": "Yanting"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Computer Science and Technology, Taiyuan University of Science and Technology, Taiyuan 030024, China"
+        }
+      ]
     },
     {
       "name": {
         "surname": "Hao",
         "given_name": "Jing"
-      }
+      },
+      "affiliation": [
+        {
+          "affPubRaw": "School of Computer Science and Technology, Taiyuan University of Science and Technology, Taiyuan 030024, China"
+        }
+      ]
     }
   ],
   "title": {
