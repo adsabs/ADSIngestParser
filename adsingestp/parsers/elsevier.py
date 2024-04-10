@@ -2,6 +2,7 @@ import logging
 import re
 
 import validators
+from lxml import etree
 
 from adsingestp import utils
 from adsingestp.ingest_exceptions import NoSchemaException, XmlLoadException
@@ -283,9 +284,9 @@ class ElsevierParser(BaseBeautifulSoupParser):
                     and author.find("ce:e-address").get("type", "") == "email"
                 ):
                     author_tmp["email"] = author.find("ce:e-address").get_text()
-                if author.find("ce:cross-ref") and author.find("ce:cross-ref").find("ce:sup"):
+                if author.find("ce:cross-ref") and author.find("ce:cross-ref").find("sup"):
                     affs = []
-                    for i in author.find("ce:cross-ref").find_all("ce:sup"):
+                    for i in author.find("ce:cross-ref").find_all("sup"):
                         aff_label = i.get_text()
                         # don't append an empty aff
                         if affs_xref.get(aff_label):
@@ -371,6 +372,32 @@ class ElsevierParser(BaseBeautifulSoupParser):
             if d.find(art_type, None):
                 return art_type, article_types[art_type]
 
+    def _remove_namespaces(self, text):
+        convert = {
+            "italics": "i",
+            "italic": "i",
+            "bold": "b",
+            "sup": "sup",
+            "inf": "sub",
+        }
+
+        root = etree.fromstring(text)
+
+        # Iterate through all XML elements
+        for elem in root.getiterator():
+            # Skip comments and processing instructions,
+            # because they do not have names
+            if not (
+                isinstance(elem, etree._Comment) or isinstance(elem, etree._ProcessingInstruction)
+            ):
+                # Remove a namespace URI in the element's name if element is specified in convert
+                if etree.QName(elem).localname in convert.keys():
+                    elem.tag = convert[etree.QName(elem).localname]
+
+        # Remove unused namespace declarations
+        etree.cleanup_namespaces(root)
+        return etree.tostring(root)
+
     def parse(self, text):
         """
         Parse Elsevier XML into standard JSON format
@@ -378,11 +405,12 @@ class ElsevierParser(BaseBeautifulSoupParser):
         :return: parsed file contents in JSON format
         """
         try:
-            d = self.bsstrtodict(text, parser="lxml-xml")
+            detagged_text = self._remove_namespaces(text)
+            d = self.bsstrtodict(detagged_text, parser="lxml-xml")
         except Exception as err:
             raise XmlLoadException(err)
 
-        self.record_header = d.find("rdf:Description")
+        self.record_header = d.find("Description")
 
         article_type, document_enum = self._find_article_type(d)
         self.base_metadata["doctype"] = document_enum

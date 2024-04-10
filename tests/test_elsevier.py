@@ -71,4 +71,6 @@ class TestElsevier(unittest.TestCase):
             self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
             parsed["recordData"]["parsedTime"] = ""
 
+            print(test_infile)
+            self.maxDiff = None
             self.assertEqual(parsed, output_data)
