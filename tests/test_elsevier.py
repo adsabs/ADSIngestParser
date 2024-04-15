@@ -2,7 +2,7 @@ import datetime
 import json
 import os
 import unittest
-import pdb
+
 from adsingestschema import ads_schema_validator
 
 from adsingestp.parsers import elsevier

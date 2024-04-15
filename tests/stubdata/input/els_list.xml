@@ -317,21 +317,21 @@
 						<ce:cross-ref id="crf0012" refid="bib0005">COSPAR,&#160;2021</ce:cross-ref>) for crewed missions to Mars, is based on the text originally added to the policy in 2008, and is qualitative, lacking clear parameters that would help engineers design COSPAR compliant systems for human missions to the Red Planet. To develop quantitative requirements for a human mission to Mars, COSPAR, together with participating space agencies, has sponsored a series of interdisciplinary meetings to consider next steps in addressing knowledge gaps in the planetary protection discipline, ahead of future human missions to Mars and beyond. The objective is to incrementally move from the current qualitative COSPAR Planetary Protection &#x201c;Principles and Guidelines&#x201d; toward the development of quantitative Planetary Protection requirements for future human missions to deep space destinations like Mars. The workshops and meetings in this series have involved participants from COSPAR, the U.S. National Aeronautics and Space Administration (NASA), the European Space Agency (ESA), the Japan Aerospace Exploration Agency (JAXA), other international space agencies, the scientific and technical community, and commercial and private stakeholders (
 						<ce:cross-ref id="crf0013" refid="bib0013">Race&#160;et&#160;al., 2019</ce:cross-ref>).
 					</ce:para>
-					<ce:para id="para0008" view="all">As a follow-on to previous work e.g., 
-						<ce:cross-ref id="crf0014" refid="bib0006">Criswell&#160;et&#160;al., 2005</ce:cross-ref>; 
-						<ce:cross-ref id="crf0015" refid="bib0007">Hogan&#160;et&#160;al., 2006</ce:cross-ref>; 
-						<ce:cross-ref id="crf0016" refid="bib0014">Rummel&#160;et&#160;al., 2008</ce:cross-ref> and the 2015 NASA workshop, and 2016, 2018&#160;and 2019 COSPAR workshops (and resulting 
-						<ce:cross-ref id="crf0017" refid="bib0011">Race&#160;et&#160;al., 2015</ce:cross-ref>, 
-						<ce:cross-ref id="crf0018" refid="bib0008">Kminek&#160;et&#160;al., 2016</ce:cross-ref>, 
-						<ce:cross-ref id="crf0019" refid="bib0012">Race&#160;et&#160;al., 2018</ce:cross-ref> and 
+					<ce:para id="para0008" view="all">As a follow-on to previous work e.g.,
+						<ce:cross-ref id="crf0014" refid="bib0006">Criswell&#160;et&#160;al., 2005</ce:cross-ref>;
+						<ce:cross-ref id="crf0015" refid="bib0007">Hogan&#160;et&#160;al., 2006</ce:cross-ref>;
+						<ce:cross-ref id="crf0016" refid="bib0014">Rummel&#160;et&#160;al., 2008</ce:cross-ref> and the 2015 NASA workshop, and 2016, 2018&#160;and 2019 COSPAR workshops (and resulting
+						<ce:cross-ref id="crf0017" refid="bib0011">Race&#160;et&#160;al., 2015</ce:cross-ref>,
+						<ce:cross-ref id="crf0018" refid="bib0008">Kminek&#160;et&#160;al., 2016</ce:cross-ref>,
+						<ce:cross-ref id="crf0019" refid="bib0012">Race&#160;et&#160;al., 2018</ce:cross-ref> and
 						<ce:cross-ref id="crf0020" refid="bib0013">Race&#160;et&#160;al., 2019</ce:cross-ref> reports) in planetary protection for human missions to Mars, COSPAR supported three virtual meetings &#x2014; two in 2020 one in 2022 (
 						<ce:cross-ref id="optqfRkDrSvBp" refid="bib0015">Spry&#160;et&#160;al., 2020</ce:cross-ref>). The earlier meetings first identified and then prioritized important knowledge gaps in science and technology areas related to planetary protection for crewed missions, including developing a timeline to assist in ensuring timely closure of the knowledge gaps. Subsequent meetings had considered implementation of strategies to close these knowledge gaps in the areas of &#x201c;Microbial and human health monitoring&#x201d;, the &#x201c;Natural transport of contamination on Mars&#x201d; and &#x201c;Technology and operations for contamination control&#x201d;, to determine potential strategies in managing the contamination in- and outflow of crewed systems on the surface of Mars. Following these workshops, NASA conducted an internal study on methods to prevent backward contamination from Mars and developed assumptions and guidelines concerning management of crew health and possible need for quarantine upon their return to Earth.
 					</ce:para>
 					<ce:para id="para0009" view="all">NASA used the results from the COSPAR meetings to develop a roadmap to define proper engineering requirements and assess technical solutions for future human-rated flight systems. As stated earlier, Artemis missions to the Moon will occur before human missions to Mars. Even though the COSPAR policy for the Moon is much simpler than for Mars, NASA's architecture philosophy and investment strategy is, to the extent possible, to develop lunar systems with the intent to demonstrate and validate their capabilities for Mars. The roadmap is a tool for identifying early opportunities to close planetary protection knowledge gaps and helps guide NASA's investments on Earth, in low-Earth orbit, at the Moon, and at Mars.</ce:para>
 					<ce:para id="para0010" view="all">High level knowledge gaps were organized by their priority and where they could be studied, for example if they could be studied on the ground, aboard the International Space Station (ISS), Gateway, the lunar surface, in Mars transit or the Martian surface. Within NASA, a timeline was developed using the knowledge gaps, and including g technology gaps and policy gaps as well. These became part of the agency's capability gaps which are integrated across the human exploration activity of the Moon to Mars program. The capability gaps cover all aspects that we need to know in order to safely get a crewed mission to the Mars surface and back. The Planetary Protection capability gaps were then organized to form the roadmap and ordered as a timeline from left to right. When these steps were taken, overlaps with other roadmaps were identified, such as with Environmental Control and Life Support Systems (ECLSS), Crew Health &amp; Microbial Monitoring and Biological &amp; Physical Sciences. This assists with optimizing activities and funding to support closing the capability gaps in the most efficient way.</ce:para>
-					<ce:para id="para0011" view="all">Groups of planetary protection Capability Gaps related to crewed exploration were organized into four discipline areas. 
+					<ce:para id="para0011" view="all">Groups of planetary protection Capability Gaps related to crewed exploration were organized into four discipline areas.
 						<ce:cross-ref id="crf0021" refid="fig0002">Fig.&#160;2</ce:cross-ref>
-						<ce:float-anchor refid="fig0002"/> shows the first three roadmap categories: Management and Coordination, Microbial Monitoring, and Assessment of Microbial Management on Mars. 
+						<ce:float-anchor refid="fig0002"/> shows the first three roadmap categories: Management and Coordination, Microbial Monitoring, and Assessment of Microbial Management on Mars.
 						<ce:cross-ref id="crf0022" refid="fig0003">Fig.&#160;3</ce:cross-ref>
 						<ce:float-anchor refid="fig0003"/> shows the final Mitigation techniques category. The different colors relate to where the research to close the gaps can be done, i.e., on the ground, aboard ISS, aboard Gateway (
 						<ce:cross-ref id="crf0023" refid="bib0009">NASA,&#160;2022a</ce:cross-ref>), on the lunar surface or in transit to Mars.
@@ -371,15 +371,15 @@
 				<ce:section id="sec0003" view="all">
 					<ce:label>3</ce:label>
 					<ce:section-title id="cesectitle0005">NASA use cases</ce:section-title>
-					<ce:para id="para0023" view="all">Use Cases that address overlapping discipline roadmaps have been developed by the agency. Examples of how the roadmap can address multiple capability needs are described in the following three Use Case examples and are identified in 
-						<ce:cross-ref id="crf0026" refid="fig0002">Figs.&#160;2</ce:cross-ref> and 
+					<ce:para id="para0023" view="all">Use Cases that address overlapping discipline roadmaps have been developed by the agency. Examples of how the roadmap can address multiple capability needs are described in the following three Use Case examples and are identified in
+						<ce:cross-ref id="crf0026" refid="fig0002">Figs.&#160;2</ce:cross-ref> and
 						<ce:cross-ref id="crf0027" refid="fig0003">3</ce:cross-ref>.
 					</ce:para>
 					<ce:para id="para0024" view="all">The three Use Case topics identified in the roadmaps are:
 						<ce:list id="celist0003">
 							<ce:list-item id="celistitem0008">
 								<ce:label>1</ce:label>
-								<ce:para id="para0025" view="all">A capability to monitor microbial contamination. We know that microorganisms are ubiquitous in crewed systems with a changing population over time, both in terms of the abundance and occurrence of different microbial species (e.g., 
+								<ce:para id="para0025" view="all">A capability to monitor microbial contamination. We know that microorganisms are ubiquitous in crewed systems with a changing population over time, both in terms of the abundance and occurrence of different microbial species (e.g.,
 									<ce:cross-ref id="crf0028" refid="bib0016">Stahl-Rommel&#160;et&#160;al., 2021</ce:cross-ref>). Microbial monitoring technology has been developed over time for crew health and spacecraft environmental monitoring purposes. This work needs to be further expanded to address planetary protection concerns as part of a Use Case, with generated data being used to develop the capability to detect changes in the spacecraft microbiome resulting from exposure to the Martian environment and/or Martian microorganisms, to inform planetary protection decision-making during human expeditions on the surface of Mars.
 								</ce:para>
 							</ce:list-item>
@@ -399,15 +399,15 @@
 						<ce:section-title id="cesectitle0006">Use case 1 &#x2013; microbial monitoring for crew health</ce:section-title>
 						<ce:para id="para0029" view="all">
 							<ce:bold>Why:</ce:bold> The crew health requirements to perform in-flight microbial monitoring of ISS water, air, and surfaces reside within the ISS Medical Operations Requirements Document (MORD). As such, this monitoring has been performed routinely since the habitation of the first ISS module (
-							<ce:cross-ref id="crf0029" refid="bib0003">Castro&#160;et&#160;al., &#160;2004</ce:cross-ref>; 
+							<ce:cross-ref id="crf0029" refid="bib0003">Castro&#160;et&#160;al., &#160;2004</ce:cross-ref>;
 							<ce:cross-ref id="crf0030" refid="bib0018">Yamaguchi&#160;et&#160;al., 2014</ce:cross-ref>). The monitoring can be viewed as an assessment of microbial controls that are in place: are the HEPA filters clear and functioning, is the Water Processor Assembly (WPA) performing as designed, and are housekeeping operations being followed? The current monitoring practice relies on the crew collecting samples onto microbial growth media, five days of ambient temperature incubation, and performing a high-level quantification through comparison to a density chart. The slides or culture plates must then be returned to the ground for microbial identification. Following Earth-based analysis, this monitoring strategy provides approximate levels and identities of the cultured microorganisms, which are then used to assess overall risk. This data guides remediation based on both the overall levels as well as the medical significance of the organisms isolated. The ISS microbial monitoring practice has resulted in an overall healthy vehicle and crew, but the significant limitation is the requirement of sample return. Additionally, the reliance on culture produces both a bias to those organisms that can be cultured and a substantial delay between sample collection and analytical results. It is critical to establish and validate a means of near real-time environmental and human health diagnostics for exploration missions.
 						</ce:para>
 						<ce:para id="para0030" view="all">
-							<ce:bold>What:</ce:bold> Nanopore sequencing has become commonplace onboard the ISS, where continuous operations have occurred since 2016. 
-							<ce:italic>In situ</ce:italic> analysis was made possible by the emergence of portable molecular biology tools, such as miniPCR bio's 
-							<ce:italic>miniPCR</ce:italic> thermal cycler and Oxford Nanopore Technologies&#x2019; 
+							<ce:bold>What:</ce:bold> Nanopore sequencing has become commonplace onboard the ISS, where continuous operations have occurred since 2016.
+							<ce:italic>In situ</ce:italic> analysis was made possible by the emergence of portable molecular biology tools, such as miniPCR bio's
+							<ce:italic>miniPCR</ce:italic> thermal cycler and Oxford Nanopore Technologies&#x2019;
 							<ce:italic>MinION</ce:italic> nucleic acid sequencer. Both platforms were tested onboard the ISS in 2016, marking the first PCR (polymerase chain reaction) and sequencing to take place beyond the bounds of Earth (
-							<ce:cross-ref id="crf0031" refid="bib0004">Castro-Wallace&#160;et&#160;al., 2017</ce:cross-ref>; 
+							<ce:cross-ref id="crf0031" refid="bib0004">Castro-Wallace&#160;et&#160;al., 2017</ce:cross-ref>;
 							<ce:cross-ref id="crf0032" refid="bib0001">Boguraev&#160;et&#160;al., 2017</ce:cross-ref>). Following these initial demonstrations, a method was developed around these technologies to aid in microbial identifications aboard the ISS. In 2017, a crewmember collected cells from a culture slide used for nominal microbial monitoring, extracted and amplified DNA, generated sequencing libraries, and sequenced the resulting DNA with the MinION (
 							<ce:cross-ref id="crf0033" refid="bib0002">Burton&#160;et&#160;al., 2020</ce:cross-ref>) . From three colonies, two identifications were obtained. Following return of the culture slide to Earth and analysis following standard laboratory operating procedures, the two identifications obtained aboard the ISS were validated for the three colonies; two colonies were the same organism. This was the first-time that microbes had been collected, cultured, and identified off-Earth. To move beyond the need to culture potentially harmful microbes, a culture-independent, swab-to-sequencer process was developed and tested for the first-time aboard ISS in 2018. During this testing, two crewmembers performed four independent swab-to-sequencer experiments. The data revealed a high similarity with the human microbiome as well as previous culture-based ISS data (
 							<ce:cross-ref id="crf0034" refid="bib0016">Stahl-Rommel&#160;et&#160;al., 2021</ce:cross-ref>). Not surprisingly, much higher diversity was noted with the swab-to-sequencer method in comparison to the historical culture-based data, as a significant number of difficult-to-culture microorganisms were present (
@@ -420,7 +420,7 @@
 							<ce:bold>Where:</ce:bold> Currently, this work is being routinely performed onboard the ISS, but the process has been baselined for Gateway, known as the Microbial Surface Monitor (MSM). Moreover, the method and consumables (including shelf life) are suitable for the lunar surface. Based on the methods developed and tested, a high-fidelity concept of operations for in situ microbial profiling exists for these exploration destinations (see &#x201c;How&#x201d;).
 						</ce:para>
 						<ce:para id="para0033" view="all">
-							<ce:bold>When:</ce:bold> Due to the decades of data and understanding of the Environmental Control and Life Support Systems (ECLSS), microbial monitoring now occurs quarterly onboard the ISS Yamaguchi, 20,14 
+							<ce:bold>When:</ce:bold> Due to the decades of data and understanding of the Environmental Control and Life Support Systems (ECLSS), microbial monitoring now occurs quarterly onboard the ISS Yamaguchi, 20,14
 							<ce:cross-ref id="crf0036" refid="bib0016">Stahl-Rommel&#160;et&#160;al., 2021</ce:cross-ref>. For new exploration modules and vehicles, a pre-flight baseline of the air and surface microbiome should be established. For short-duration Gateway missions, sampling should occur at least once per mission. With the addition of new/changing architecture of systems (air and water revitalization), sampling should be performed as frequently as crew time allows, with monthly monitoring being ideal. With the routine use of a completed Gateway or lunar base, sampling could be reduced over time as insight is gained (similar to ISS). However, it is critical to monitor to understand the impact of additions of new biological payloads such as plants or animals.
 						</ce:para>
 						<ce:para id="para0034" view="all">
@@ -504,7 +504,7 @@
 				</ce:section>
 				<ce:section id="sec0008" view="all">
 					<ce:section-title id="cesectitle0010">Funding</ce:section-title>
-					<ce:para id="para0053" view="all">The work for this paper was funded by 
+					<ce:para id="para0053" view="all">The work for this paper was funded by
 						<ce:grant-sponsor id="gs0001" xlink:type="simple" xlink:role="http://www.elsevier.com/xml/linking-roles/grant-sponsor">NASA Exploration Systems Mission Development</ce:grant-sponsor>.
 					</ce:para>
 				</ce:section>
@@ -793,7 +793,7 @@
 					<ce:bib-reference id="bib0005">
 						<ce:label>COSPAR 2021</ce:label>
 						<ce:other-ref id="sbref0005">
-							<ce:textref>COSPAR (2021) COSPAR policy on planetary protection 
+							<ce:textref>COSPAR (2021) COSPAR policy on planetary protection
 								<ce:inter-ref id="interref0001" xlink:href="https://cosparhq.cnes.fr/assets/uploads/2021/07/PPPolicy_2021_3-June.pdf" xlink:type="simple">https://cosparhq.cnes.fr/assets/uploads/2021/07/PPPolicy_2021_3-June.pdf</ce:inter-ref>.
 							</ce:textref>
 						</ce:other-ref>
@@ -881,7 +881,7 @@
 					<ce:bib-reference id="bib0008">
 						<ce:label>Kminek et&#160;al., 2016</ce:label>
 						<ce:other-ref id="sbref0008">
-							<ce:textref>Kminek, G. et&#160;al., (2016) Report of the 1st COSPAR workshop on refining planetary protection requirements for human missions. Retrieved from: 
+							<ce:textref>Kminek, G. et&#160;al., (2016) Report of the 1st COSPAR workshop on refining planetary protection requirements for human missions. Retrieved from:
 								<ce:inter-ref id="interref0002" xlink:href="https://sma.nasa.gov/docs/default-source/sma-disciplines-and-programs/planetary-protection/report-cospar-workshop-refining-planetary-protection-requirements-for-human-missions-final20180424.pdf?sfvrsn=a3fcfff8_2" xlink:type="simple">https://sma.nasa.gov/docs/default-source/sma-disciplines-and-programs/planetary-protection/report-cospar-workshop-refining-planetary-protection-requirements-for-human-missions-final20180424.pdf?sfvrsn=a3fcfff8_2</ce:inter-ref>.
 							</ce:textref>
 						</ce:other-ref>
@@ -889,7 +889,7 @@
 					<ce:bib-reference id="bib19">
 						<ce:label>NASA, 1971</ce:label>
 						<ce:other-ref id="tboref0001">
-							<ce:textref>NASA (1971) Apollo Quarantine Discontinued. KSC News Release KSC-96-71 p50. Available at: 
+							<ce:textref>NASA (1971) Apollo Quarantine Discontinued. KSC News Release KSC-96-71 p50. Available at:
 								<ce:inter-ref id="kutr" xlink:href="https://www.nasa.gov/centers/kennedy/pdf/744322main_1971.pdf" xlink:type="simple">https://www.nasa.gov/centers/kennedy/pdf/744322main_1971.pdf</ce:inter-ref>, accessed 3/22/2023.
 							</ce:textref>
 						</ce:other-ref>
@@ -897,7 +897,7 @@
 					<ce:bib-reference id="bib0009">
 						<ce:label>NASA 2022a</ce:label>
 						<ce:other-ref id="sbref0009">
-							<ce:textref>NASA (2022a) Gateway integrated spacecraft configuration (downloadable at 
+							<ce:textref>NASA (2022a) Gateway integrated spacecraft configuration (downloadable at
 								<ce:inter-ref id="interref0003" xlink:href="https://www.nasa.gov/gateway/overview" xlink:type="simple">https://www.nasa.gov/gateway/overview</ce:inter-ref>, accessed 3/22/2023.
 							</ce:textref>
 						</ce:other-ref>
@@ -905,8 +905,8 @@
 					<ce:bib-reference id="bib0010">
 						<ce:label>NASA 2022b</ce:label>
 						<ce:other-ref id="sbref0010">
-							<ce:textref>NASA (2022b) 
-								<ce:italic>Reference Surface Activities For Crewed Mars Mission Systems and Utilization HEOMD-415 NASA</ce:italic> Washington, DC 
+							<ce:textref>NASA (2022b)
+								<ce:italic>Reference Surface Activities For Crewed Mars Mission Systems and Utilization HEOMD-415 NASA</ce:italic> Washington, DC
 								<ce:inter-ref id="interref0004" xlink:href="https://ntrs.nasa.gov/citations/20220000589" xlink:type="simple">https://ntrs.nasa.gov/citations/20220000589</ce:inter-ref>.
 							</ce:textref>
 						</ce:other-ref>
@@ -914,7 +914,7 @@
 					<ce:bib-reference id="bib0011">
 						<ce:label>Race et&#160;al., 2015</ce:label>
 						<ce:other-ref id="sbref0011">
-							<ce:textref>Race, M. et&#160;al. (2015) NASA report of planetary protection knowledge gaps for human extraterrestrial missions 
+							<ce:textref>Race, M. et&#160;al. (2015) NASA report of planetary protection knowledge gaps for human extraterrestrial missions
 								<ce:inter-ref id="interref0005" xlink:href="https://sma.nasa.gov/docs/default-source/sma-disciplines-and-programs/planetary-protection/2015-report.pdf?sfvrsn=b2fcfff8_6" xlink:type="simple">https://sma.nasa.gov/docs/default-source/sma-disciplines-and-programs/planetary-protection/2015-report.pdf?sfvrsn=b2fcfff8_6</ce:inter-ref>.
 							</ce:textref>
 						</ce:other-ref>
@@ -922,7 +922,7 @@
 					<ce:bib-reference id="bib0012">
 						<ce:label>Race et&#160;al., 2018</ce:label>
 						<ce:other-ref id="sbref0012">
-							<ce:textref>Race, M. et&#160;al., (2018) Report of the 2nd COSPAR Workshop on refining planetary protection requirements for human missions, and COSPAR work meeting on developing payload requirements for addressing planetary protection gaps on natural transport of contaminants on mars. Retrieved from: 
+							<ce:textref>Race, M. et&#160;al., (2018) Report of the 2nd COSPAR Workshop on refining planetary protection requirements for human missions, and COSPAR work meeting on developing payload requirements for addressing planetary protection gaps on natural transport of contaminants on mars. Retrieved from:
 								<ce:inter-ref id="interref0006" xlink:href="https://sma.nasa.gov/docs/default-source/sma-disciplines-and-programs/planetary-protection/cospar-2019-2nd-workshop-on-refining-planetary-protection-requirements-for-human-missions-and-work-meeting-on-developing-payload-requirements-for-addressing-planetary-protection-gaps-on-nat.pdf?sfvrsn=507ff8f8_8" xlink:type="simple">https://sma.nasa.gov/docs/default-source/sma-disciplines-and-programs/planetary-protection/cospar-2019-2nd-workshop-on-refining-planetary-protection-requirements-for-human-missions-and-work-meeting-on-developing-payload-requirements-for-addressing-planetary-protection-gaps-on-nat.pdf?sfvrsn=507ff8f8_8</ce:inter-ref>.
 							</ce:textref>
 						</ce:other-ref>
@@ -930,7 +930,7 @@
 					<ce:bib-reference id="bib0013">
 						<ce:label>Race et&#160;al., 2019</ce:label>
 						<ce:other-ref id="sbref0013">
-							<ce:textref>Race, M. et&#160;al., (2019) 3rd COSPAR meeting on refining planetary protection requirements for human missions to mars 
+							<ce:textref>Race, M. et&#160;al., (2019) 3rd COSPAR meeting on refining planetary protection requirements for human missions to mars
 								<ce:inter-ref id="interref0007" xlink:href="https://sma.nasa.gov/docs/default-source/sma-disciplines-and-programs/planetary-protection/cospar-2019-report-final-20200618.pdf?sfvrsn=559bc2f8_" xlink:type="simple">https://sma.nasa.gov/docs/default-source/sma-disciplines-and-programs/planetary-protection/cospar-2019-report-final-20200618.pdf?sfvrsn=559bc2f8_</ce:inter-ref>.
 							</ce:textref>
 						</ce:other-ref>
@@ -967,7 +967,7 @@
 					<ce:bib-reference id="bib0015">
 						<ce:label>Spry et&#160;al., 2020</ce:label>
 						<ce:other-ref id="sbref0015">
-							<ce:textref>Spry, J.A. et&#160;al., (2020) 4th COSPAR (Virtual) workshop on refining planetary protection requirements for human missions 
+							<ce:textref>Spry, J.A. et&#160;al., (2020) 4th COSPAR (Virtual) workshop on refining planetary protection requirements for human missions
 								<ce:inter-ref id="interref0008" xlink:href="https://sma.nasa.gov/docs/default-source/sma-disciplines-and-programs/planetary-protection/2020-cospar-pp-for-human-missions-meeting-report-v1-0-508.pdf?sfvrsn=e855c1f8_0" xlink:type="simple">https://sma.nasa.gov/docs/default-source/sma-disciplines-and-programs/planetary-protection/2020-cospar-pp-for-human-missions-meeting-report-v1-0-508.pdf?sfvrsn=e855c1f8_0</ce:inter-ref>.
 							</ce:textref>
 						</ce:other-ref>

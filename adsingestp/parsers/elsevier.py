@@ -130,9 +130,7 @@ class ElsevierParser(BaseBeautifulSoupParser):
     def _parse_title_abstract(self):
         if self.record_meta.find("ce:title"):
             self.base_metadata["title"] = self._clean_output(
-                self._detag(
-                    self.record_meta.find("ce:title"), self.HTML_TAGSET["title"]
-                ).strip()
+                self._detag(self.record_meta.find("ce:title"), self.HTML_TAGSET["title"]).strip()
             )
         elif self.record_header.find("dct:title"):
             self.base_metadata["title"] = self._clean_output(
@@ -142,9 +140,7 @@ class ElsevierParser(BaseBeautifulSoupParser):
             )
         elif self.record_meta.find("cd:textfn"):
             self.base_metadata["title"] = self._clean_output(
-                self._detag(
-                    self.record_meta.find("ce:textfn"), self.HTML_TAGSET["title"]
-                ).strip()
+                self._detag(self.record_meta.find("ce:textfn"), self.HTML_TAGSET["title"]).strip()
             )
 
         if self.record_meta.find("ce:subtitle"):
