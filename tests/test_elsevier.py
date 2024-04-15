@@ -2,7 +2,7 @@ import datetime
 import json
 import os
 import unittest
-
+import pdb
 from adsingestschema import ads_schema_validator
 
 from adsingestp.parsers import elsevier
@@ -41,6 +41,7 @@ class TestElsevier(unittest.TestCase):
             "els_converted_article",
             "els_detag_example_1",
             "els_detag_example_2",
+            "els_list",
         ]
         for f in filenames:
             test_infile = os.path.join(self.inputdir, f + ".xml")

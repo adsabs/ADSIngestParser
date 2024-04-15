@@ -496,7 +496,7 @@ class BaseBeautifulSoupParser(IngestBase):
     HTML_TAGSET = {
         "title": HTML_TAGS_MATH + HTML_TAGS_HTML + ["a"],
         "abstract": HTML_TAGS_MATH + HTML_TAGS_HTML + ["a", "pre", "br"],
-        "comments": HTML_TAGS_MATH + HTML_TAGS_HTML + ["a", "pre", "br"],
+        "comments": HTML_TAGS_MATH + HTML_TAGS_HTML + ["a", "pre", "br", "p"],
         "affiliations": ["email", "orcid"],
         "keywords": HTML_TAGS_HTML,
     }

@@ -131,26 +131,26 @@ class ElsevierParser(BaseBeautifulSoupParser):
         if self.record_meta.find("ce:title"):
             self.base_metadata["title"] = self._clean_output(
                 self._detag(
-                    self.record_meta.find("ce:title"), self.HTML_TAGSET["abstract"]
+                    self.record_meta.find("ce:title"), self.HTML_TAGSET["title"]
                 ).strip()
             )
         elif self.record_header.find("dct:title"):
             self.base_metadata["title"] = self._clean_output(
                 self._detag(
-                    self.record_header.find("dct:title"), self.HTML_TAGSET["abstract"]
+                    self.record_header.find("dct:title"), self.HTML_TAGSET["title"]
                 ).strip()
             )
         elif self.record_meta.find("cd:textfn"):
             self.base_metadata["title"] = self._clean_output(
                 self._detag(
-                    self.record_meta.find("ce:textfn"), self.HTML_TAGSET["abstract"]
+                    self.record_meta.find("ce:textfn"), self.HTML_TAGSET["title"]
                 ).strip()
             )
 
         if self.record_meta.find("ce:subtitle"):
             self.base_metadata["subtitle"] = self._clean_output(
                 self._detag(
-                    self.record_meta.find("ce:subtitle"), self.HTML_TAGSET["abstract"]
+                    self.record_meta.find("ce:subtitle"), self.HTML_TAGSET["title"]
                 ).strip()
             )
 
@@ -172,7 +172,7 @@ class ElsevierParser(BaseBeautifulSoupParser):
                             self.base_metadata["abstract"] = abstract
                             break
                         elif abs.find("ce:section-title").get_text().lower() == "highlights":
-                            abs_text_all = abs.find_all("ce:para")
+                            abs_text_all = abs.find_all("p")
                             for abs_text in abs_text_all:
                                 abstract = (
                                     abstract
@@ -379,6 +379,9 @@ class ElsevierParser(BaseBeautifulSoupParser):
             "bold": "b",
             "sup": "sup",
             "inf": "sub",
+            "list": "ul",
+            "list-item": "li",
+            "para": "p",
         }
 
         root = etree.fromstring(text)
@@ -410,7 +413,7 @@ class ElsevierParser(BaseBeautifulSoupParser):
         except Exception as err:
             raise XmlLoadException(err)
 
-        self.record_header = d.find("Description")
+        self.record_header = d.find("rdf:Description")
 
         article_type, document_enum = self._find_article_type(d)
         self.base_metadata["doctype"] = document_enum

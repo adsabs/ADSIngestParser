@@ -92,7 +92,7 @@ class TestJATS(unittest.TestCase):
             )
             self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
             parsed["recordData"]["parsedTime"] = ""
-
+            print(test_infile)
             self.assertEqual(parsed, output_data)
 
     def test_jats_lxml(self):
@@ -127,6 +127,7 @@ class TestJATS(unittest.TestCase):
             )
             self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
             parsed["recordData"]["parsedTime"] = ""
+            print(test_infile)
 
             self.assertEqual(parsed, output_data)
 
@@ -172,4 +173,5 @@ class TestJATS(unittest.TestCase):
                 output_text = fp.read()
                 output_data_tags = json.loads(output_text)
             cite_context = parser.citation_context(input_data, text_output=False)
+            print(test_infile)
             self.assertEqual(cite_context, output_data_tags)
