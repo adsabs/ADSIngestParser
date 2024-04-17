@@ -153,28 +153,27 @@ class ElsevierParser(BaseBeautifulSoupParser):
         if self.record_meta.find("ce:abstract"):
             abstract = ""
             abs_all = self.record_meta.find_all("ce:abstract")
+            abs_text_all = ""
             for abs in abs_all:
-                if abs.find("ce:section-title"):
+                if abs.get("class", None) == "author":
+                    abs_text_all = abs.find_all("ce:simple-para")
+                elif abs.find("ce:section-title"):
                     if abs.find("ce:section-title").get_text().lower() == "abstract":
                         abs_text_all = abs.find_all("ce:simple-para")
-                        abstract = ""  # we've found the real abstract, so reset
-                        for abs_text in abs_text_all:
-                            abstract = (
-                                abstract
-                                + " "
-                                + self._detag(abs_text, self.HTML_TAGSET["abstract"]).strip()
-                            )
-                        if abstract:
-                            self.base_metadata["abstract"] = abstract
-                            break
-                        elif abs.find("ce:section-title").get_text().lower() == "highlights":
-                            abs_text_all = abs.find_all("p")
-                            for abs_text in abs_text_all:
-                                abstract = (
-                                    abstract
-                                    + " "
-                                    + self._detag(abs_text, self.HTML_TAGSET["abstract"]).strip()
-                                )
+                    elif abs.find("ce:section-title").get_text().lower() == "highlights":
+                        abs_text_all = abs.find_all("p")
+
+                abstract = ""
+                for abs_text in abs_text_all:
+                    abstract = (
+                        abstract
+                        + " "
+                        + self._detag(abs_text, self.HTML_TAGSET["abstract"]).strip()
+                    )
+
+                if abstract:
+                    self.base_metadata["abstract"] = abstract
+                    break
 
             if abstract:
                 self.base_metadata["abstract"] = self._clean_output(abstract)
