@@ -92,7 +92,6 @@ class TestJATS(unittest.TestCase):
             )
             self.assertTrue(abs(time_difference) < datetime.timedelta(seconds=10))
             parsed["recordData"]["parsedTime"] = ""
-            print(test_infile)
             self.assertEqual(parsed, output_data)
 
     def test_jats_lxml(self):
