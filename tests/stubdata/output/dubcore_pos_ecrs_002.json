@@ -26,7 +26,7 @@
   "publisherIDs": [
     {
       "Identifier": "oai:pos.sissa.it:ECRS/002",
-      "attribute": "publisher-id"
+      "attribute": "urn"
     },
     {
       "Identifier": "PoS(ECRS)002",
