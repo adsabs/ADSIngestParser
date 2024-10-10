@@ -98,6 +98,7 @@ class TestJATS(unittest.TestCase):
             "jats_versita_index_tags_3",
             "jats_springer_affil_punctuation_1",
             "jats_ees_affil_punctuation_2",
+            "jats_liebert_no_journal_title",
         ]
 
         for f in filenames:
@@ -109,6 +110,9 @@ class TestJATS(unittest.TestCase):
                 input_data = fp.read()
 
             parsed = parser.parse(input_data)
+            # with open(test_outfile, "w") as fp:
+            #     parsed["recordData"]["parsedTime"] = ""
+            #     json.dump(parsed,fp, indent = 2, sort_keys=True)
 
             with open(test_outfile, "rb") as fp:
                 output_text = fp.read()
