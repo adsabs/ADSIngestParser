@@ -23,6 +23,7 @@ class TestJATS(unittest.TestCase):
         filenames = [
             "jats_edp_jnwpu_40_96",
             "jats_edp_aa_661_70",
+            "jats_edp_null_nested_collab_aa50368-24",
             "jats_nature_41467_2023_Article_40261_nlm",
             "jats_nature_natsd_12_7375",
             "jats_nature_natas_tmp",

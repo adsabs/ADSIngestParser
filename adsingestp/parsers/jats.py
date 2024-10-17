@@ -335,9 +335,10 @@ class JATSAffils(object):
                         else:
                             # add new collab tag to each unnested author
                             collabtag = copy(contrib.find("collab").find("institution"))
-                            nested_contrib.append(collabtag)
-                            contribs_raw.insert(nested_idx, nested_contrib.extract())
-                            nested_idx += 1
+                            if collabtag:
+                                nested_contrib.append(collabtag)
+                                contribs_raw.insert(nested_idx, nested_contrib.extract())
+                                nested_idx += 1
 
                     continue
 
