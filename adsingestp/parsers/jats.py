@@ -1004,27 +1004,30 @@ class JATSParser(BaseBeautifulSoupParser):
 
     def _parse_permissions(self):
         # Check for open-access / "Permissions" field
-        permissions = self.article_meta.find("permissions").find_all("license")
-        for p in permissions:
-            if (
-                p.get("license-type", None) == "open"
-                or p.get("license-type", None) == "open-access"
-            ):
-                self.base_metadata.setdefault("openAccess", {}).setdefault("open", True)
-            if p.find("license-p"):
-                license_text = p.find("license-p")
-                if license_text:
-                    self.base_metadata.setdefault("openAccess", {}).setdefault(
-                        "license",
-                        self._detag(license_text.get_text(), self.HTML_TAGSET["license"]).strip(),
-                    )
-                    license_uri = license_text.find("ext-link")
-                    if license_uri:
-                        if license_uri.get("xlink:href", None):
-                            license_uri_value = license_uri.get("xlink:href", None)
-                            self.base_metadata.setdefault("openAccess", {}).setdefault(
-                                "licenseURL", self._detag(license_uri_value, [])
-                            )
+        if self.article_meta.find("permissions"):
+            permissions = self.article_meta.find("permissions").find_all("license")
+            for p in permissions:
+                if (
+                    p.get("license-type", None) == "open"
+                    or p.get("license-type", None) == "open-access"
+                ):
+                    self.base_metadata.setdefault("openAccess", {}).setdefault("open", True)
+                if p.find("license-p"):
+                    license_text = p.find("license-p")
+                    if license_text:
+                        self.base_metadata.setdefault("openAccess", {}).setdefault(
+                            "license",
+                            self._detag(
+                                license_text.get_text(), self.HTML_TAGSET["license"]
+                            ).strip(),
+                        )
+                        license_uri = license_text.find("ext-link")
+                        if license_uri:
+                            if license_uri.get("xlink:href", None):
+                                license_uri_value = license_uri.get("xlink:href", None)
+                                self.base_metadata.setdefault("openAccess", {}).setdefault(
+                                    "licenseURL", self._detag(license_uri_value, [])
+                                )
 
     def _parse_page(self):
         fpage = self.article_meta.find("fpage")
