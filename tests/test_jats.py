@@ -100,6 +100,7 @@ class TestJATS(unittest.TestCase):
             "jats_ees_affil_punctuation_2",
             "jats_liebert_no_journal_title",
             "jats_liebert_atypon",
+            "jats_aip_native_strip",
         ]
 
         for f in filenames:
