@@ -710,6 +710,14 @@ class JATSParser(BaseBeautifulSoupParser):
         auth_affil = JATSAffils()
         aa_output_dict = auth_affil.parse(article_metadata=self.article_meta)
         if aa_output_dict.get("authors"):
+            for auth in aa_output_dict["authors"]:
+                if auth.get("given"):
+                    auth["given"] = " ".join(auth["given"].split())
+                if auth.get("surname"):
+                    auth["surname"] = " ".join(auth["surname"].split())
+                if auth.get("middle"):
+                    auth["middle"] = " ".join(auth["middle"].split())
+
             self.base_metadata["authors"] = aa_output_dict["authors"]
 
         if aa_output_dict.get("contributors"):
