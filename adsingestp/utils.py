@@ -118,6 +118,16 @@ AIP_DISCARD_KEYWORDS = [
     "LETTERS",
 ]
 
+class AuthorNameNormalizer(object):
+    def normalize(self, parsed_metadata):
+        normalized_authors = []
+        parsed_authors = parsed_metadata.get("authors",[])
+        if parsed_authors:
+            for author in parsed_authors:
+                normalized_authors.append(str(author["surname"]+", "+str(author["given_name"][0].upper())))
+        else:
+            logger.error("Author name array does not exist or is empty")
+        return normalized_authors
 
 class AuthorNames(object):
     """
