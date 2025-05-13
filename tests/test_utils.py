@@ -150,10 +150,11 @@ class TestAuthorNames(unittest.TestCase):
 
             self.assertEqual(parsed, expected_authors[idx])
 
+
 class TestAuthorNameNormalizer(unittest.TestCase):
     def setUp(self):
         self.author_normalizer = utils.AuthorNameNormalizer()
-    
+
     def test_normalize(self):
         parsed_authors = [
             {
@@ -212,7 +213,7 @@ class TestAuthorNameNormalizer(unittest.TestCase):
                 "prefix": "",
                 "nameraw": "John",
             },
-                        {
+            {
                 "given": "john",
                 "middle": "athur",
                 "surname": "van der breggan alfonse",
@@ -222,7 +223,15 @@ class TestAuthorNameNormalizer(unittest.TestCase):
             },
         ]
 
-        expected_normalization = ['Miller, E', 'Miller, E', 'White Smith, R', 'Power, M', 'de la Paz, M', 'Bli., B', 'van der Breggan Alfonse, J']
+        expected_normalization = [
+            "Miller, E",
+            "Miller, E",
+            "White Smith, R",
+            "Power, M",
+            "de la Paz, M",
+            "Bli., B",
+            "van der Breggan Alfonse, J",
+        ]
 
         normalized_authors = self.author_normalizer._normalize(parsed_authors)
         self.assertEqual(expected_normalization, normalized_authors)
