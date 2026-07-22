@@ -20,14 +20,13 @@ class IEEEParser(BaseBeautifulSoupParser):
     def __init__(self):
         super(BaseBeautifulSoupParser, self).__init__()
         self.base_metadata = {}
-        self.confarticle = None   # Wrapper for whole XML file: <conf-article>
-        self.conffront = None     # About conference & article: <conf-article> <conf-front>
+        self.confarticle = None  # Wrapper for whole XML file: <conf-article>
+        self.conffront = None  # About conference & article: <conf-article> <conf-front>
         self.confprocmeta = None  # About conference proceedings: <conf-article> <conf-front> <conf-proc-meta>
-        self.confmeta = None      # About the physical conference event: <conf-article> <conf-front> <conf-meta>
-        self.article = None       # About the article: <conf-article> <conf-front> <conf-article-meta>
-        self.body = None          # Fulltext: <conf-article> <body>
-        self.back = None          # Acknowledgments & References: <conf-article> <back>
-
+        self.confmeta = None  # About the physical conference event: <conf-article> <conf-front> <conf-meta>
+        self.article = None  # About the article: <conf-article> <conf-front> <conf-article-meta>
+        self.body = None  # Fulltext: <conf-article> <body>
+        self.back = None  # Acknowledgments & References: <conf-article> <back>
 
     def _parse_abstract(self):
         if self.article.find("abstract"):
@@ -38,19 +37,21 @@ class IEEEParser(BaseBeautifulSoupParser):
 
         auth_affil = JATSAffils()
         aa_output_dict = auth_affil.parse(article_metadata=self.article)
+
         if aa_output_dict.get("authors"):
             for auth in aa_output_dict["authors"]:
-                if auth.get("given-names"):
-                    auth["given"] = " ".join(auth["given"].split())
-                if auth.get("surname"):
-                    auth["surname"] = " ".join(auth["surname"].split())
-                if auth.get("middle"):
-                    auth["middle"] = " ".join(auth["middle"].split())
+                given = auth.get("given") or ""
+                if given.strip():
+                    auth["given"] = " ".join(given.split())
 
+                surname = auth.get("surname") or ""
+                if surname.strip():
+                    auth["surname"] = " ".join(surname.split())
+
+                middle = auth.get("middle") or ""
+                if middle.strip():
+                    auth["middle"] = " ".join(middle.split())
             self.base_metadata["authors"] = aa_output_dict["authors"]
-
-        #if aa_output_dict.get("contributors"):
-        #    self.base_metadata["contributors"] = aa_output_dict["contributors"]
 
     def _parse_funding(self):
         funding = []
@@ -157,7 +158,9 @@ class IEEEParser(BaseBeautifulSoupParser):
             permissions = self.article.find("permissions")
 
             if permissions.find("copyright-statement"):
-                copyright_statement = permissions.find("copyright-statement", "").get_text(strip=True)
+                copyright_statement = permissions.find("copyright-statement", "").get_text(
+                    strip=True
+                )
             if permissions.find("copyright-year"):
                 copyright_year = permissions.find("copyright-year", "").get_text(strip=True)
             if permissions.find("copyright-holder"):
@@ -166,7 +169,9 @@ class IEEEParser(BaseBeautifulSoupParser):
                 license = permissions.find("license", "").get_text(strip=True)
 
             # Format copyright string
-            copyright_text = "©" + copyright_year + " " + copyright_holder # + ". " + copyright_statement
+            copyright_text = (
+                "©" + copyright_year + " " + copyright_holder
+            )  # + ". " + copyright_statement
             self.base_metadata["copyright"] = copyright_text
 
             """
@@ -181,59 +186,114 @@ class IEEEParser(BaseBeautifulSoupParser):
         # Conference title
         if self.confprocmeta.find("conf-proc-title-group"):
             if self.confprocmeta.find("conf-proc-title-group").find("conf-full-title"):
-                self.base_metadata["publication"] = (
+                conf_title = (
                     self.confprocmeta.find("conf-proc-title-group")
                     .find("conf-full-title")
                     .get_text(strip=True)
                 )
 
+        # Volume
         if self.confprocmeta.find("volume"):
             self.base_metadata["volume"] = self.confprocmeta.find("volume").get_text(strip=True)
-        #    self.base_metadata["issue"] = self.volumeinfo.find("issue").find("issuenum").get_text(strip=True)
 
+        # Conference location
         if self.confmeta.find("conf-loc"):
-            # TO DO: city, state, country
-            self.base_metadata["location"] = self.confmeta.find("conf-loc").get_text(strip=True)
+            full_loc = self.confmeta.find("conf-loc")
+            city_tag = full_loc.find("city")
+            city = city_tag.get_text(strip=True) if city_tag else ""
+            state_tag = full_loc.find("state")
+            state = state_tag.get_text(strip=True) if state_tag else ""
+            country_tag = full_loc.find("country")
+            country = country_tag.get_text(strip=True) if country_tag else ""
+
+            loc_parts = [p for p in (city, state, country) if p]
+            location = ", ".join(loc_parts)
+
+            self.base_metadata["conf_location"] = location
+
+        # Conference dates in <conf-meta> section
+        conf_start = self.confmeta.find("conf-start")
+        if conf_start:
+            startdate_info = self._parse_date(conf_start)
+            start_year = startdate_info.get("year", "")
+            start_month = startdate_info.get("month", "")
+            start_day = startdate_info.get("day", "")
+            start_date = f"{start_day} {start_month} {start_year}"
+
+        conf_end = self.confmeta.find("conf-end")
+        if conf_end:
+            enddate_info = self._parse_date(conf_end)
+            end_year = enddate_info.get("year", "")
+            end_month = enddate_info.get("month", "")
+            end_day = enddate_info.get("day", "")
+            end_date = f"{end_day} {end_month} {end_year}"
+
+        # Assemble conference dates
+        date_parts = [p for p in (start_date, end_date) if p]
+        conf_dates = " - ".join(date_parts) if date_parts else ""
+
+        self.base_metadata["conf_date"] = conf_dates
+
+        # Assemble %J
+        pub_parts = [p for p in (conf_title, conf_dates, location) if p]
+        publication = ", ".join(pub_parts) if pub_parts else ""
+
+        self.base_metadata["publication"] = publication  #conf_title
+
+    def _parse_date(self, date_tag):
+        # Helper function to _parse_pub & _parse_pubdate
+
+        # Use iso-8601-date attribute if it exists
+        iso_attr = date_tag.get("iso-8601-date")
+
+        # Original text values (as in XML)
+        year_tag = date_tag.find("year")
+        year_raw = year_tag.get_text(strip=True) if year_tag else ""
+
+        month_tag = date_tag.find("month")
+        month_raw = month_tag.get_text(strip=True) if month_tag else ""
+
+        day_tag = date_tag.find("day")
+        day_raw = day_tag.get_text(strip=True) if day_tag else ""
+
+        # Build normalized ISO date (YYYY-MM-DD)
+        # Year
+        year_norm = year_raw if year_raw.isdigit() else "0000"
+
+        # Month
+        if month_raw:
+            if month_raw.isdigit():
+                month_norm = month_raw.zfill(2)
+            else:
+                month_name = month_raw[:3].lower()
+                month_norm = utils.MONTH_TO_NUMBER.get(month_name, "00")
+        else:
+            month_norm = "00"
+
+        # Day
+        day_norm = day_raw.zfill(2) if day_raw.isdigit() else "00"
+
+        iso_norm = iso_attr or f"{year_norm}-{month_norm}-{day_norm}"
+
+        return {
+            "iso": iso_norm,
+            "year": year_raw,
+            "month": month_raw,
+            "day": day_raw,
+        }
 
     def _parse_pubdate(self):
-        # Look for publication dates in article section
+        # Publication dates in <conf-article-meta> section
         for date in self.article.find_all("pub-date"):
             date_type = date.get("pub-type", "")
 
-            # Prefer iso-8601-date attribute if present
-            iso = date.get("iso-8601-date")
-            if iso:
-                pubdate = iso
-
-            else:
-                # Get year, month, day values
-                if date.find("year"):
-                    year = date.find("year").get_text(strip=True)
-                else:
-                    year = "0000"
-
-                if date.find("month"):
-                    month_raw = date.find("month").get_text(strip=True)
-                    if month_raw.isdigit():
-                        month = month_raw.zfill(2)
-                    else:
-                        month_name = month_raw[:3].lower()
-                        month = utils.MONTH_TO_NUMBER.get(month_name, "00")
-                else:
-                    month = "00"
-
-                if date.find("day"):
-                    day = date.find("day").get_text(strip=True).zfill(2)
-                else:
-                    day = "00"
-
-                # Format date string
-                pubdate = year + "-" + month + "-" + day
+            pubdate_info = self._parse_date(date)
+            iso_date = pubdate_info.get("iso", "")
 
             if date_type == "print":
-                self.base_metadata["pubdate_print"] = pubdate
+                self.base_metadata["pubdate_print"] = iso_date
             elif date_type == "electronic":
-                self.base_metadata["pubdate_electronic"] = pubdate
+                self.base_metadata["pubdate_electronic"] = iso_date
 
     def _parse_references(self):
         if not self.back:
