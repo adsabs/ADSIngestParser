@@ -22,8 +22,12 @@ class IEEEParser(BaseBeautifulSoupParser):
         self.base_metadata = {}
         self.confarticle = None  # Wrapper for whole XML file: <conf-article>
         self.conffront = None  # About conference & article: <conf-article> <conf-front>
-        self.confprocmeta = None  # About conference proceedings: <conf-article> <conf-front> <conf-proc-meta>
-        self.confmeta = None  # About the physical conference event: <conf-article> <conf-front> <conf-meta>
+        self.confprocmeta = (
+            None  # About conference proceedings: <conf-article> <conf-front> <conf-proc-meta>
+        )
+        self.confmeta = (
+            None  # About the physical conference event: <conf-article> <conf-front> <conf-meta>
+        )
         self.article = None  # About the article: <conf-article> <conf-front> <conf-article-meta>
         self.body = None  # Fulltext: <conf-article> <body>
         self.back = None  # Acknowledgments & References: <conf-article> <back>
@@ -238,7 +242,7 @@ class IEEEParser(BaseBeautifulSoupParser):
         pub_parts = [p for p in (conf_title, conf_dates, location) if p]
         publication = ", ".join(pub_parts) if pub_parts else ""
 
-        self.base_metadata["publication"] = publication  #conf_title
+        self.base_metadata["publication"] = publication  # conf_title
 
     def _parse_date(self, date_tag):
         # Helper function to _parse_pub & _parse_pubdate
