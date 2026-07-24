@@ -1,15 +1,15 @@
 # note: because you'll be modifying a valid json object, if you add a text
 #       double quote ("), you need to escape the slash and the slashed quote
 map_quotes = {
-    "bdquo": '\\\"',
-    "rdquo": '\\\"',
-    "ldquo": '\\\"',
+    "bdquo": '\\"',
+    "rdquo": '\\"',
+    "ldquo": '\\"',
     "bsquo": "'",
     "rsquo": "'",
     "lsquo": "'",
     "sbquo": ",",
-    "OpenCurlyDoubleQuote": '\\\"',
-    "CloseCurlyDoubleQuote": '\\\"',
+    "OpenCurlyDoubleQuote": '\\"',
+    "CloseCurlyDoubleQuote": '\\"',
     "DiacriticalAcute": "'",
     "OpenCurlySingleQuote": "'",
     "CloseCurlySingleQuote": "'",
