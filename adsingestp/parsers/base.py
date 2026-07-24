@@ -1,4 +1,5 @@
 import html
+import json
 import re
 import warnings
 from datetime import datetime
@@ -7,6 +8,7 @@ import bs4
 from bs4 import MarkupResemblesLocatorWarning
 
 from adsingestp.ingest_exceptions import WrongFormatException
+from adsingestp.utils import ConvertEntities
 
 
 class IngestBase(object):
@@ -487,6 +489,11 @@ class IngestBase(object):
         output["funding"] = input_dict.get("funding", [])
         #
         # output["version"] = "XXX" # TODO need an example
+
+        # do a very quick custom entity conversion here:
+        if type(output) == dict:
+            json_output = ConvertEntities()._convert_entities_to_ascii(json.dumps(output))
+            output = json.loads(json_output)
 
         output_clean = self._clean_empty(output)
 
