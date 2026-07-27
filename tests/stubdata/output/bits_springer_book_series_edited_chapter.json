@@ -1,0 +1,244 @@
+{
+  "abstract": {
+    "textEnglish": "The modeling of dynamical systems is a pervasive concern for not only describing but also predicting and controlling natural phenomena and engineered systems. Current data-driven approaches often assume prior knowledge of the relevant state variables or result in overparameterized state spaces. Boyuan Chen and his co-authors proposed a neural network model that estimates the degrees of freedom and attempts to discover the state variables of a dynamical system. Despite its innovative approach, this baseline model lacks a connection to the physical principles governing the systems it analyzes, leading to unreliable state variables. This research proposes a method that leverages the physical characteristics of second-order Hamiltonian systems to constrain the baseline model. The proposed model outperforms the baseline model in identifying a minimal set of non-redundant and interpretable state variables."
+  },
+  "authors": [
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/01tgyzw49",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.4280.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2180 6431",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "National University of Singapore, 21 Lower Kent Ridge Road, 119077, Singapore, Singapore"
+        }
+      ],
+      "attrib": {
+        "email": "chavelli@comp.nus.edu.sg"
+      },
+      "name": {
+        "given_name": "F\u00e9lix",
+        "surname": "Chavelli"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/01tgyzw49",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.4280.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2180 6431",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "National University of Singapore, 21 Lower Kent Ridge Road, 119077, Singapore, Singapore"
+        }
+      ],
+      "attrib": {
+        "email": "khoozy@comp.nus.edu.sg"
+      },
+      "name": {
+        "given_name": "Zi-Yu",
+        "surname": "Khoo"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/01tgyzw49",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.4280.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2180 6431",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "National University of Singapore, 21 Lower Kent Ridge Road, 119077, Singapore, Singapore"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/03hjh0h14",
+              "affIDType": "ROR"
+            }
+          ],
+          "affPubRaw": "CNRS@CREATE LTD, 1 Create Way, 138602, Singapore, Singapore"
+        }
+      ],
+      "attrib": {
+        "corresp": true,
+        "email": "dawen.wu@cnrsatcreate.sg"
+      },
+      "name": {
+        "given_name": "Dawen",
+        "surname": "Wu"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/00f44np30",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.452278.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0004 0470 8348",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Singapore Institute of Manufacturing Technology, Agency for Science, Technology and Research (A*STAR), 138634, Singapore, Singapore"
+        }
+      ],
+      "attrib": {
+        "email": "sclow@simtech.a-star.edu.sg"
+      },
+      "name": {
+        "given_name": "Jonathan Sze Choong",
+        "surname": "Low"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/01tgyzw49",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.4280.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2180 6431",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "National University of Singapore, 21 Lower Kent Ridge Road, 119077, Singapore, Singapore"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/03hjh0h14",
+              "affIDType": "ROR"
+            }
+          ],
+          "affPubRaw": "CNRS@CREATE LTD, 1 Create Way, 138602, Singapore, Singapore"
+        }
+      ],
+      "attrib": {
+        "email": "steph@nus.edu.sg"
+      },
+      "name": {
+        "given_name": "St\u00e9phane",
+        "surname": "Bressan"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "commentText": "Computer Science; Artificial Intelligence; Computer Communication Networks; Database Management; Data Mining and Knowledge Discovery; Information Storage and Retrieval; Computer Applications"
+    }
+  ],
+  "copyright": {
+    "statement": "\u00a9 The Editor(s) (if applicable) and The Author(s), under exclusive license to Springer Nature Singapore Pte Ltd. 2025",
+    "status": true
+  },
+  "keywords": [
+    {
+      "keyString": "Knowledge Discovery"
+    },
+    {
+      "keyString": "Multimedia Information Extraction"
+    },
+    {
+      "keyString": "Video Information Retrieval"
+    },
+    {
+      "keyString": "Dynamical System"
+    },
+    {
+      "keyString": "Intrinsic Dimensionality"
+    },
+    {
+      "keyString": "Physics-Informed Machine Learning"
+    }
+  ],
+  "pagination": {
+    "firstPage": "3",
+    "lastPage": "15",
+    "pageRange": "3-15"
+  },
+  "persistentIDs": [
+    {
+      "DOI": "10.1007/978-981-96-6008-7_1",
+      "ISBN": [
+        {
+          "isbnString": "978-981-96-6007-0",
+          "pubtype": "ppub"
+        },
+        {
+          "isbnString": "978-981-96-6008-7",
+          "pubtype": "epub"
+        }
+      ]
+    }
+  ],
+  "pubDate": {
+    "printDate": "2025"
+  },
+  "publication": {
+    "ISSN": [
+      {
+        "issnString": "print",
+        "pubtype": "0302-9743"
+      },
+      {
+        "issnString": "electronic",
+        "pubtype": "1611-3349"
+      }
+    ],
+    "pubName": "Intelligent Information and Database Systems: 17th Asian Conference, ACIIDS 2025, Kitakyushu, Japan, April 23-25, 2025, Proceedings, Part I",
+    "pubYear": "2025",
+    "volumeNum": "15683"
+  },
+  "recordData": {
+    "createdTime": "",
+    "loadFormat": "Springer",
+    "loadLocation": "",
+    "loadType": "fromFile",
+    "parsedTime": "2026-06-03T17:27:47.802822Z",
+    "recordOrigin": ""
+  },
+  "title": {
+    "textEnglish": "Physics-Informed Discovery of\u00a0State Variables in\u00a0Second-Order and\u00a0Hamiltonian Systems"
+  }
+}

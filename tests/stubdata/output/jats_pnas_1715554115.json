@@ -133,6 +133,7 @@
         }
       ],
       "attrib": {
+        "corresp": true,
         "email": "dr.guoqihao@126.com"
       },
       "name": {
@@ -150,6 +151,7 @@
         }
       ],
       "attrib": {
+        "corresp": true,
         "email": "dr.guoqihao@126.com",
         "orcid": "0000-0002-2763-8907"
       },
@@ -254,6 +256,7 @@
       "contrib": {
         "name": {
           "given_name": "Clifford R.",
+          "suffix": "Jr.",
           "surname": "Jack"
         }
       },
@@ -1298,6 +1301,7 @@
       "contrib": {
         "name": {
           "given_name": "Daniel",
+          "suffix": "II",
           "surname": "D\u2019Agostino"
         }
       },
@@ -1451,6 +1455,7 @@
       "contrib": {
         "name": {
           "given_name": "Rob",
+          "prefix": "Dr",
           "surname": "Bartha"
         }
       },

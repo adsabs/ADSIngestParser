@@ -1,0 +1,175 @@
+{
+  "abstract": {
+    "textEnglish": "Absorption measurements of scattering samples overestimate the absorption because the transmitted light is attenuated by scattering. In order to avoid this, we placed a sample inside an integrating sphere (IS) and performed absorption spectroscopy. The absorbance measured by this method is non-linear with respect to the absorption coefficient of the sample because light can take different paths IS inside the sample. Therefore, we attempted to estimate the relationship between the absorption coefficient and the measured absorbance by simulating the behavior of photons inside the IS and sample by Monte Carlo simulation(MC method). Using an aqueous nickel nitrate solution which is a non-scattering sample and a scattering sample prepared by mixing an aqueous nickel nitrate solution and polystyrene beads, it was verified whether the measurement and the simulation results agree with each other. As a result, in the scattering sample, the measurement results could be reproduced by the MC method, while in the adjusted scattering sample, a discrepancy was observed between the simulation and the measurement results in the high absorption region. From the DLVO theory, this can be explained to be caused by particle aggregation at high concentrations because the aqueous nickel nitrate solution is an electrolyte solution."
+  },
+  "authors": [
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/05sj3n476",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.143643.7",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 0660 6861",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Department of Physics, Faculty of Science, Tokyo University of Science, 1 3 Kagurazaka, 162 8601, Shinjuku ku, Tokyo, Japan"
+        }
+      ],
+      "name": {
+        "given_name": "Ayaka",
+        "surname": "Mori"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/05sj3n476",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.143643.7",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 0660 6861",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Department of Physics, Faculty of Science, Tokyo University of Science, 1 3 Kagurazaka, 162 8601, Shinjuku ku, Tokyo, Japan"
+        }
+      ],
+      "name": {
+        "given_name": "Kyohei",
+        "surname": "Yamashita"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/05sj3n476",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.143643.7",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 0660 6861",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Department of Physics, Faculty of Science, Tokyo University of Science, 1 3 Kagurazaka, 162 8601, Shinjuku ku, Tokyo, Japan"
+        }
+      ],
+      "name": {
+        "given_name": "Keisuke",
+        "surname": "Seto"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/05sj3n476",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.143643.7",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 0660 6861",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Department of Physics, Faculty of Science, Tokyo University of Science, 1 3 Kagurazaka, 162 8601, Shinjuku ku, Tokyo, Japan"
+        }
+      ],
+      "attrib": {
+        "corresp": true,
+        "email": "eiji@rs.tus.ac.jp"
+      },
+      "name": {
+        "given_name": "Eiji",
+        "surname": "Tokunaga"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "commentText": "Physics; Plasma Physics; Classical and Quantum Gravitation, Relativity Theory; Particle and Nuclear Physics; Condensed Matter Physics; Astronomy, Astrophysics and Cosmology"
+    }
+  ],
+  "copyright": {
+    "statement": "\u00a9 The Editor(s) (if applicable) and The Author(s), under exclusive license to Springer Nature Singapore Pte Ltd. 2024",
+    "status": true
+  },
+  "keywords": [
+    {
+      "keyString": "absorption"
+    },
+    {
+      "keyString": "scattering"
+    },
+    {
+      "keyString": "integrating sphere"
+    },
+    {
+      "keyString": "Monte Carlo simulation"
+    },
+    {
+      "keyString": "absorption spectrophotometer"
+    }
+  ],
+  "pagination": {
+    "firstPage": "3",
+    "lastPage": "14",
+    "pageRange": "3-14"
+  },
+  "persistentIDs": [
+    {
+      "DOI": "10.1007/978-981-96-0191-2_1",
+      "ISBN": [
+        {
+          "isbnString": "978-981-96-0190-5",
+          "pubtype": "ppub"
+        },
+        {
+          "isbnString": "978-981-96-0191-2",
+          "pubtype": "epub"
+        }
+      ]
+    }
+  ],
+  "pubDate": {
+    "printDate": "2024"
+  },
+  "publication": {
+    "pubName": "Proceedings of the 15th Asia Pacific Physics Conference",
+    "pubYear": "2024"
+  },
+  "recordData": {
+    "createdTime": "",
+    "loadFormat": "Springer",
+    "loadLocation": "",
+    "loadType": "fromFile",
+    "parsedTime": "2026-06-03T17:21:05.530782Z",
+    "recordOrigin": ""
+  },
+  "title": {
+    "textEnglish": "Absorbance Measurement of\u00a0a\u00a0Scattering Sample Placed Inside an\u00a0Integrating Sphere and\u00a0Analysis by\u00a0Monte Carlo Simulation"
+  }
+}

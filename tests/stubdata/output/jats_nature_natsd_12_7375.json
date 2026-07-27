@@ -364,6 +364,7 @@
         }
       ],
       "attrib": {
+        "corresp": true,
         "email": "marilzarudge@gmail.com"
       },
       "name": {
@@ -378,6 +379,23 @@
       "name": {
         "collab": "The Diamater Study Group"
       }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "grid.410543.7",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2188 478X",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Postgraduate Program on Tocogynecology, Department of Gynecology and Obstetrics, Botucatu Medical School, S\u00e3o Paulo State University (UNESP), Botucatu, S\u00e3o Paulo, Brazil"
+        }
+      ]
     },
     {
       "affiliation": [

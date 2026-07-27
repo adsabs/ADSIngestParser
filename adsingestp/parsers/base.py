@@ -1,8 +1,10 @@
 import html
 import re
+import warnings
 from datetime import datetime
 
 import bs4
+from bs4 import MarkupResemblesLocatorWarning
 
 from adsingestp.ingest_exceptions import WrongFormatException
 
@@ -21,6 +23,7 @@ class IngestBase(object):
     ]
 
     def __init__(self, xml_ref=True):
+        warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning, module="bs4")
         self.xml_ref = xml_ref
 
     def _clean_empty(self, input_to_clean, keys_to_keep=required_keys):
@@ -206,7 +209,17 @@ class IngestBase(object):
         :return: serialized JSON that follows our internal data model
         """
 
-        if format not in ["JATS", "OtherXML", "HTML", "Text"]:
+        if format not in [
+            "JATS",
+            "OtherXML",
+            "HTML",
+            "Text",
+            "Copernicus",
+            "Elsevier",
+            "IEEE",
+            "Wiley",
+            "Springer",
+        ]:
             raise WrongFormatException
 
         output = {}
@@ -240,6 +253,12 @@ class IngestBase(object):
             ],
         }
 
+        # new decision tree for pubyear
+        versionOfRecordDate = ""
+        if input_dict.get("pubdate_other", []):
+            for o in input_dict["pubdate_other"]:
+                if o.get("type", "") == "version-of-record":
+                    versionOfRecordDate = o.get("date")[0:4]
         output["publication"] = {
             # "docType": "XXX",
             "pubName": input_dict.get("publication", ""),
@@ -251,10 +270,20 @@ class IngestBase(object):
             "publisher": input_dict.get("publisher", ""),
             "issueNum": input_dict.get("issue", ""),
             "volumeNum": input_dict.get("volume", ""),
-            "pubYear": input_dict["pubdate_print"][0:4]
-            if "pubdate_print" in input_dict
+            "pubYear": versionOfRecordDate
+            if versionOfRecordDate
             else (
-                input_dict["pubdate_electronic"][0:4] if "pubdate_electronic" in input_dict else ""
+                input_dict["pubdate_print"][0:4]
+                if "pubdate_print" in input_dict
+                else (
+                    input_dict["pubdate_electronic"][0:4]
+                    if "pubdate_electronic" in input_dict
+                    else (
+                        input_dict.get("pubdate_other", {})[0].get("date", "")[0:4]
+                        if "pubdate_other" in input_dict
+                        else ""
+                    )
+                )
             ),
             "bookSeries": {
                 "seriesName": input_dict.get("series_title", ""),
@@ -314,6 +343,7 @@ class IngestBase(object):
                 ],
                 "attrib": {
                     "collab": True if i.get("collab", "") else False,
+                    "corresp": True if i.get("corresp", "") else False,
                     # "deceased": True or False, # TODO need an example
                     # "coauthor": True or False, # TODO need an example
                     "email": i.get("email", ""),
@@ -572,9 +602,26 @@ class BaseBeautifulSoupParser(IngestBase):
                 if ins.previous_sibling and isinstance(ins.previous_sibling, str):
                     ins.previous_sibling.replace_with(ins.previous_sibling.rstrip())
                 ins.extract()
+
+        # Modify the semantics tag before unwrapping newr
+        if "annotation" in tag_list and "semantics" in tag_list:
+            semantics_elements = newr.find_all("semantics", None)
+            for se in semantics_elements:
+                annotation_elements = se.find_all("annotation", None)
+                if annotation_elements:
+                    se.clear()
+                    for ae in annotation_elements:
+                        # Replace the contents of <semantics> with the contents of the child <annotation> tag
+                        se.append(ae.text.strip())
+
+            # reset tag list
+            tag_list = list(set([x.name for x in newr.find_all()]))
+
         for t in tag_list:
             elements = newr.find_all(t)
             for e in elements:
+                if e.attrs:
+                    e.attrs.clear()
                 if t in self.HTML_TAGS_DANGER:
                     e.decompose()
                 elif (t == "alternatives") or (t == "inline-formula"):
@@ -589,7 +636,8 @@ class BaseBeautifulSoupParser(IngestBase):
                     continue
                 else:
                     if t.lower() == "sc":
-                        e.string = e.string.upper()
+                        if e.string:
+                            e.string = e.string.upper()
                     e.unwrap()
 
         # Note: newr is converted from a bs4 object to a string here.

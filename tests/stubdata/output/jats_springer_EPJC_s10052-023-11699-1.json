@@ -1,6 +1,6 @@
 {
   "abstract": {
-    "textEnglish": "The flavour-tagging algorithms developed by the ATLAS Collaboration and used to analyse its dataset of <inline-formula id=\"IEq1\"> <mml:math> <mml:mrow> <mml:msqrt> <mml:mi>s</mml:mi> </mml:msqrt> <mml:mo>=</mml:mo> <mml:mn>13</mml:mn> </mml:mrow> </mml:math> </inline-formula> TeV pp collisions from Run 2 of the Large Hadron Collider are presented. These new tagging algorithms are based on recurrent and deep neural networks, and their performance is evaluated in simulated collision events. These developments yield considerable improvements over previous jet-flavour identification strategies. At the 77% b-jet identification efficiency operating point, light-jet (charm-jet) rejection factors of 170 (5) are achieved in a sample of simulated Standard Model <inline-formula id=\"IEq2\"> <mml:math> <mml:mrow> <mml:mi>t</mml:mi> <mml:mover accent=\"true\"> <mml:mrow> <mml:mi>t</mml:mi> </mml:mrow> <mml:mrow> <mml:mo stretchy=\"false\">\u00af</mml:mo> </mml:mrow> </mml:mover> </mml:mrow> </mml:math> </inline-formula> events; similarly, at a c-jet identification efficiency of 30%, a light-jet ( b-jet) rejection factor of 70 (9) is obtained."
+    "textEnglish": "The flavour-tagging algorithms developed by the ATLAS Collaboration and used to analyse its dataset of <inline-formula> <mml:math> <mml:mrow> <mml:msqrt> <mml:mi>s</mml:mi> </mml:msqrt> <mml:mo>=</mml:mo> <mml:mn>13</mml:mn> </mml:mrow> </mml:math> </inline-formula> TeV pp collisions from Run 2 of the Large Hadron Collider are presented. These new tagging algorithms are based on recurrent and deep neural networks, and their performance is evaluated in simulated collision events. These developments yield considerable improvements over previous jet-flavour identification strategies. At the 77% b-jet identification efficiency operating point, light-jet (charm-jet) rejection factors of 170 (5) are achieved in a sample of simulated Standard Model <inline-formula> <mml:math> <mml:mrow> <mml:mi>t</mml:mi> <mml:mover> <mml:mrow> <mml:mi>t</mml:mi> </mml:mrow> <mml:mrow> <mml:mo>\u00af</mml:mo> </mml:mrow> </mml:mover> </mml:mrow> </mml:math> </inline-formula> events; similarly, at a c-jet identification efficiency of 30%, a light-jet ( b-jet) rejection factor of 70 (9) is obtained."
   },
   "authors": [
     {
@@ -18868,19 +18868,6 @@
             }
           ],
           "affPubRaw": "Affiliated with an Institute Covered by a Cooperation Agreement with CERN, Geneva, Switzerland"
-        },
-        {
-          "affPubID": [
-            {
-              "affID": "grid.9132.9",
-              "affIDType": "GRID"
-            },
-            {
-              "affID": "0000 0001 2156 142X",
-              "affIDType": "ISNI"
-            }
-          ],
-          "affPubRaw": "Affiliated with an Institute Covered by a Cooperation Agreement with CERN, Geneva, Switzerland"
         }
       ],
       "attrib": {
@@ -34088,19 +34075,6 @@
             }
           ],
           "affPubRaw": "Affiliated with an Institute Covered by a Cooperation Agreement with CERN, Geneva, Switzerland"
-        },
-        {
-          "affPubID": [
-            {
-              "affID": "grid.9132.9",
-              "affIDType": "GRID"
-            },
-            {
-              "affID": "0000 0001 2156 142X",
-              "affIDType": "ISNI"
-            }
-          ],
-          "affPubRaw": "Affiliated with an Institute Covered by a Cooperation Agreement with CERN, Geneva, Switzerland"
         }
       ],
       "attrib": {
@@ -44075,19 +44049,6 @@
             }
           ],
           "affPubRaw": "Affiliated with an Institute Covered by a Cooperation Agreement with CERN, Geneva, Switzerland"
-        },
-        {
-          "affPubID": [
-            {
-              "affID": "grid.9132.9",
-              "affIDType": "GRID"
-            },
-            {
-              "affID": "0000 0001 2156 142X",
-              "affIDType": "ISNI"
-            }
-          ],
-          "affPubRaw": "Affiliated with an Institute Covered by a Cooperation Agreement with CERN, Geneva, Switzerland"
         }
       ],
       "attrib": {
@@ -45329,19 +45290,6 @@
     },
     {
       "affiliation": [
-        {
-          "affPubID": [
-            {
-              "affID": "grid.9132.9",
-              "affIDType": "GRID"
-            },
-            {
-              "affID": "0000 0001 2156 142X",
-              "affIDType": "ISNI"
-            }
-          ],
-          "affPubRaw": "Affiliated with an Institute Covered by a Cooperation Agreement with CERN, Geneva, Switzerland"
-        },
         {
           "affPubID": [
             {
@@ -58827,19 +58775,6 @@
             }
           ],
           "affPubRaw": "Affiliated with an Institute Covered by a Cooperation Agreement with CERN, Geneva, Switzerland"
-        },
-        {
-          "affPubID": [
-            {
-              "affID": "grid.9132.9",
-              "affIDType": "GRID"
-            },
-            {
-              "affID": "0000 0001 2156 142X",
-              "affIDType": "ISNI"
-            }
-          ],
-          "affPubRaw": "Affiliated with an Institute Covered by a Cooperation Agreement with CERN, Geneva, Switzerland"
         }
       ],
       "attrib": {
@@ -63108,19 +63043,6 @@
     },
     {
       "affiliation": [
-        {
-          "affPubID": [
-            {
-              "affID": "grid.9132.9",
-              "affIDType": "GRID"
-            },
-            {
-              "affID": "0000 0001 2156 142X",
-              "affIDType": "ISNI"
-            }
-          ],
-          "affPubRaw": "Affiliated with an Institute Covered by a Cooperation Agreement with CERN, Geneva, Switzerland"
-        },
         {
           "affPubID": [
             {
@@ -71625,6 +71547,7 @@
       },
       "name": {
         "given_name": "D. T.",
+        "suffix": "Jr.",
         "surname": "Zenger"
       }
     },
@@ -73015,6 +72938,140 @@
       },
       "name": {
         "collab": "ATLAS Collaboration"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "grid.47840.3f",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2181 7878",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "University of California, Berkeley, CA, USA"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "grid.5100.4",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2322 497X",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Faculty of Physics, University of Bucharest, Bucharest, Romania"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "grid.462638.d",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 0696 719X",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "iThemba Labs, Western Cape, South Africa"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "grid.412801.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0004 0610 3238",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Department of Physics, University of South Africa, Pretoria, South Africa"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "grid.442325.6",
+              "affIDType": "GRID"
+            }
+          ],
+          "affPubRaw": "University of Zululand, KwaDlangezwa, South Africa"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "grid.411840.8",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 0664 9298",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Facult\u00e9 des Sciences Semlalia, Universit\u00e9 Cadi Ayyad, LPHEA-Marrakech, Marrakech, Morocco"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "grid.501615.6",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0004 6007 5493",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Institute of Applied Physics, Mohammed VI Polytechnic University, Ben Guerir, Morocco"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "grid.440573.1",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0004 1755 5934",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "New York University Abu Dhabi, Abu Dhabi, United Arab Emirates"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "grid.264978.6",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0000 9564 9822",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "University of Georgia, Tbilisi, Georgia"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "grid.9132.9",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2156 142X",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "CERN, 1211, Geneva 23, Switzerland"
+        }
+      ],
+      "attrib": {
+        "corresp": true,
+        "email": "atlas.publications@cern.ch"
       }
     }
   ],

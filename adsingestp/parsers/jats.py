@@ -3,6 +3,7 @@ import re
 from collections import OrderedDict
 from copy import copy
 
+import bs4
 import validators
 from ordered_set import OrderedSet
 
@@ -15,6 +16,7 @@ logger = logging.getLogger(__name__)
 
 class JATSAffils(object):
     regex_email = re.compile(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+")
+    regex_auth_xid = re.compile(r"^A[0-9]+$")
 
     def __init__(self):
         self.contrib_dict = {}
@@ -53,6 +55,31 @@ class JATSAffils(object):
             aff_ids.append({})
         return aff, aff_ids
 
+    def _remove_unbalanced_parentheses(self, affstr):
+        # Stack to track balanced parentheses
+        stack = []
+        to_remove = set()
+
+        for i, char in enumerate(affstr):
+            # Track the index of opening parentheses
+            if char == "(":
+                stack.append(i)
+            elif char == ")":
+                if stack:
+                    # Pop if there's a matching opening parenthesis
+                    stack.pop()
+                else:
+                    # Mark unbalanced closing parenthesis
+                    to_remove.add(i)
+
+        # Mark remaining unbalanced opening parentheses
+        to_remove.update(stack)
+
+        # Create a new string without the unbalanced parentheses
+        new_affstr = "".join([char for i, char in enumerate(affstr) if i not in to_remove])
+
+        return new_affstr
+
     def _fix_affil(self, affstring):
         """
         Separate email addresses from affiliations in a given input affiliation string
@@ -68,18 +95,22 @@ class JATSAffils(object):
             # check for empty strings with commas
             check_a = a.replace(",", "")
             if check_a:
+                a = re.sub("\\(e-*mail:\\s*,+\\s*\\)", "", a)
                 a = a.replace("\\n", ",")
                 a = a.replace(" —", "—")
                 a = a.replace(" , ", ", ")
+                a = a.replace(", .", ".")
                 a = re.sub(",+", ",", a)
                 a = re.sub("\\s+", " ", a)
                 a = re.sub("^(\\s*,+\\s*)+", "", a)
                 a = re.sub("(\\s*,\\s+)+", ", ", a)
                 a = re.sub("(,\\s*)+$", "", a)
+                a = re.sub("\\s+$", "", a)
                 if self.regex_email.match(a):
                     emails.append(a)
                 else:
                     if a:
+                        a = self._remove_unbalanced_parentheses(a)
                         new_aff.append(a)
 
         newaffstr = "; ".join(new_aff)
@@ -98,13 +129,25 @@ class JATSAffils(object):
         for em in email:
             if " " in em:
                 for e in em.strip().split():
-                    if email_format.search(e):
-                        email_new.add(email_format.search(e).group(0))
-                        email_parsed = True
+                    try:
+                        if email_format.search(e):
+                            email_new.add(email_format.search(e).group(0))
+                            email_parsed = True
+                    except Exception as err:
+                        logger.warning("Bad format in _fix_email: %s" % err)
             else:
-                if email_format.search(em):
-                    email_new.add(email_format.search(em).group(0))
-                    email_parsed = True
+                try:
+                    if type(em) == str:
+                        if email_format.search(em):
+                            email_new.add(email_format.search(em).group(0))
+                            email_parsed = True
+                    elif type(em) == list:
+                        for e in em:
+                            if email_format.search(e):
+                                email_new.add(email_format.search(e).group(0))
+                                email_parsed = True
+                except Exception as err:
+                    logger.warning("Bad format in _fix_email: %s" % err)
 
         if not email_parsed:
             logger.warning("Email not verified as valid. Input email list: %s", str(email))
@@ -135,7 +178,13 @@ class JATSAffils(object):
     def _reformat_affids(self):
         for contribs in self.contrib_dict.values():
             for auth in contribs:
-                if auth.get("affid", None):
+                if auth.get("affid", None) == [[{}]]:
+                    del auth["affid"]
+                # Initialize affid if not present
+                if not auth.get("affid"):
+                    auth["affid"] = []
+                # Process existing affids
+                if auth["affid"]:
                     affid_tmp = []
                     for ids in auth.get("affid", None):
                         ids_tmp = []
@@ -143,14 +192,16 @@ class JATSAffils(object):
                             for k, v in d.items():
                                 ids_tmp.append({"affIDType": k, "affID": v})
                         affid_tmp.append((ids_tmp))
-                    auth["affid"] = affid_tmp
+                    if affid_tmp:
+                        auth["affid"] = affid_tmp
+                    else:
+                        del auth["affid"]
 
     def _match_xref_clean(self):
         """
         Matches crossreferenced affiliations and emails; cleans emails and ORCIDs
         :return: none (updates class variable auth_list)
         """
-
         for contrib_type, contribs in self.contrib_dict.items():
             for auth in contribs:
                 # contents of xaff field aren't always properly separated - fix that here
@@ -165,10 +216,15 @@ class JATSAffils(object):
                     if item in self.email_xref:
                         auth["email"].append(self.email_xref[item])
 
+                if auth.get("xref", None):
+                    if not auth.get("affid"):
+                        auth["affid"] = []
+
                 xaff_xid_tmp = []
                 for x in xaff_list:
                     try:
-                        auth["aff"].append(self.xref_dict[x])
+                        if self.xref_dict[x] not in auth["aff"]:
+                            auth["aff"].append(self.xref_dict[x])
                     except KeyError as err:
                         logger.info("Key is missing from xaff. Missing key: %s", err)
                         pass
@@ -257,35 +313,60 @@ class JATSAffils(object):
                 # cycle through <contrib> to check if a <collab> is listed in the same level as an author an has multiple authors nested under it;
                 # targeted for Springer
 
-                if contrib.find("collab"):
+                if contrib.find("collab") or contrib.find("collab-name"):
                     # Springer collab info for nested authors is given as <institution>
-                    if contrib.find("collab").find("institution"):
-                        collab = contrib.find("collab").find("institution")
+                    if contrib.find("collab"):
+                        if contrib.find("collab").find("institution"):
+                            collab = contrib.find("collab").find("institution")
+                        else:
+                            collab = contrib.find("collab")
                     else:
-                        collab = contrib.find("collab")
+                        collab = contrib.find("collab-name")
 
-                    collab_affil = ""
-                    collab_name = collab.get_text()
-                    if collab.find("address"):
-                        collab_affil = collab.find("address").get_text()
+                    # This is checking if a collaboration is listed as an author
+                    if collab:
+                        if type(collab.contents[0].get_text()) == str:
+                            collab_name = collab.contents[0].get_text().strip()
+                        else:
+                            collab_name = collab.get_text().strip()
 
-                    self.collab = {
-                        "collab": collab_name,
-                        "aff": collab_affil,
-                        "affid": [],
-                        "xaff": [],
-                        "xemail": [],
-                        "email": [],
-                        "corresp": False,
-                        "rid": None,
-                    }
+                        if collab.find("address"):
+                            collab_affil = collab.find("address").get_text()
+                        else:
+                            collab_affil = []
+
+                        self.collab = {
+                            "collab": collab_name,
+                            "aff": collab_affil,
+                            "affid": [],
+                            "xaff": [],
+                            "xemail": [],
+                            "email": [],
+                            "corresp": False,
+                            "rid": None,
+                            "surname": "",
+                            "given": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "native_lang": "",
+                            "orcid": "",
+                        }
+
                     if self.collab:
                         # add collab in the correct author position
                         if self.collab not in authors_out:
                             authors_out.append(self.collab)
 
                     # find nested collab authors and unnest them
-                    nested_contribs = contrib.find_all("contrib")
+                    collab_contribs = collab.find_all("contrib")
+                    nested_contribs = []
+                    for ncontrib in collab_contribs:
+                        if ncontrib:
+                            nested_contribs.append(copy(ncontrib))
+                            ncontrib.decompose()
+
+                    if not nested_contribs:
+                        nested_contribs = contrib.find_all("contrib")
 
                     nested_idx = idx + 1
                     for nested_contrib in nested_contribs:
@@ -307,35 +388,59 @@ class JATSAffils(object):
                                     authors_out[rid_match[0]] = author_tmp
                         else:
                             # add new collab tag to each unnested author
-                            collabtag = copy(contrib.find("collab").find("institution"))
-                            nested_contrib.append(collabtag)
-                            contribs_raw.insert(nested_idx, nested_contrib.extract())
-                            nested_idx += 1
+                            if contrib.find("collab") and contrib.find("collab").find(
+                                "institution"
+                            ):
+                                collab_text = (
+                                    contrib.find("collab").find("institution").decode_contents()
+                                )
+                            elif collab_name:
+                                collab_text = collab_name
+                            else:
+                                collab_text = None
+                            if collab_text:
+                                collabtag_string = "<collab>" + collab_text + "</collab>"
+                                collabtag = bs4.BeautifulSoup(collabtag_string, "xml").collab
 
-                    continue
+                            if not collabtag:
+                                collabtag = "ALLAUTH"
 
+                            if collabtag:
+                                nested_contrib.insert(0, collabtag)
+                                contribs_raw.insert(nested_idx, nested_contrib.extract())
+                                nested_idx += 1
+
+                # check if collabtag is present in the author author attributes
                 collab = contrib.find("collab")
 
-                # Springer collab info for nested authors is given as <institution>
-                if not collab:
-                    collab = contrib.find("institution")
-
                 if collab:
-                    collab_affil = ""
-                    collab_name = collab.get_text()
+                    if type(collab.contents[0].get_text()) == str:
+                        collab_name = collab.contents[0].get_text().strip()
+                    else:
+                        collab_name = collab.get_text().strip()
+
                     if collab.find("address"):
                         collab_affil = collab.find("address").get_text()
+                    else:
+                        collab_affil = ""
 
-                    self.collab = {
-                        "collab": collab_name,
-                        "aff": collab_affil,
-                        "affid": [],
-                        "xaff": [],
-                        "xemail": [],
-                        "email": [],
-                        "corresp": False,
-                        "rid": None,
-                    }
+                    if not self.collab:
+                        self.collab = {
+                            "collab": collab_name,
+                            "aff": collab_affil,
+                            "affid": [],
+                            "xaff": [],
+                            "xemail": [],
+                            "email": [],
+                            "corresp": False,
+                            "rid": None,
+                            "surname": "",
+                            "given": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "native_lang": "",
+                            "orcid": "",
+                        }
 
                 l_correspondent = False
                 if contrib.get("corresp", None) == "yes":
@@ -358,9 +463,39 @@ class JATSAffils(object):
                 else:
                     given = ""
 
+                if contrib.find("name") and contrib.find("name").find("suffix"):
+                    suffix = contrib.find("name").find("suffix").get_text()
+                elif contrib.find("string-name") and contrib.find("string-name").find("suffix"):
+                    suffix = contrib.find("string-name").find("suffix").get_text()
+                else:
+                    suffix = ""
+
+                if contrib.find("name") and contrib.find("name").find("prefix"):
+                    prefix = contrib.find("name").find("prefix").get_text()
+                elif contrib.find("string-name") and contrib.find("string-name").find("prefix"):
+                    prefix = contrib.find("string-name").find("prefix").get_text()
+                else:
+                    prefix = ""
+
                 # get native language author name
                 if contrib.find("name-alternatives"):
-                    native_lang = contrib.find("name-alternatives").get_text().strip()
+                    if contrib.find("name-alternatives").find("string-name"):
+                        if (
+                            contrib.find("name-alternatives")
+                            .find("string-name")
+                            .get("name-style", "")
+                            != "western"
+                        ):
+                            native_lang = (
+                                contrib.find("name-alternatives")
+                                .find("string-name")
+                                .get_text()
+                                .strip()
+                            )
+                        else:
+                            native_lang = ""
+                    else:
+                        native_lang = contrib.find("name-alternatives").get_text().strip()
                 else:
                     native_lang = ""
 
@@ -374,26 +509,30 @@ class JATSAffils(object):
                 email_list = []
                 aff_extids = []
                 for i in affs:
-                    # special case: some pubs label affils with <sup>label</sup>, strip them
-                    i = self._decompose(soup=i, tag="sup")
-                    i, aff_extids_tmp = self._get_inst_identifiers(i)
-                    affstr = i.get_text(separator=", ").strip()
-                    (affstr, email_list) = self._fix_affil(affstr)
-                    aff_text.append(affstr)
-                    aff_extids.extend(aff_extids_tmp)
-                    i.decompose()
+                    if not i.get("specific-use", None):
+                        # special case: some pubs label affils with <sup>label</sup>, strip them
+                        i = self._decompose(soup=i, tag="sup")
+                        i, aff_extids_tmp = self._get_inst_identifiers(i)
+                        affstr = i.get_text(separator=", ").strip()
+                        (affstr, email_list) = self._fix_affil(affstr)
+                        aff_text.append(affstr)
+                        aff_extids.extend(aff_extids_tmp)
+                        i.decompose()
+                    else:
+                        i.decompose()
 
                 # special case (e.g. AIP) - one author per contrib group, aff stored at contrib group level
                 if num_contribs == 1 and art_contrib_group.find("aff"):
                     aff_list = art_contrib_group.find_all("aff")
-                    for aff in aff_list:
-                        aff, aff_extids_tmp = self._get_inst_identifiers(aff)
-                        aff_fix = aff.get_text(separator=", ").strip()
-                        (affstr, email_fix) = self._fix_affil(aff_fix)
-                        email_list.extend(email_fix)
-                        aff_text.append(affstr)
-                        aff_extids.extend(aff_extids_tmp)
-                        aff.decompose()
+                    if aff_list:
+                        for aff in aff_list:
+                            aff, aff_extids_tmp = self._get_inst_identifiers(aff)
+                            aff_fix = aff.get_text(separator=", ").strip()
+                            (affstr, email_fix) = self._fix_affil(aff_fix)
+                            email_list.extend(email_fix)
+                            aff_text.append(affstr)
+                            aff_extids.extend(aff_extids_tmp)
+                            aff.decompose()
 
                 # get xrefs...
                 xrefs = contrib.find_all("xref")
@@ -417,7 +556,7 @@ class JATSAffils(object):
                 contrib_id = contrib.find_all("contrib-id")
                 orcid = []
                 for c in contrib_id:
-                    if c.get("contrib-id-type", "") == "orcid":
+                    if (c.get("contrib-id-type", "") == "orcid") or ("orcid" in c.get_text()):
                         orcid.append(c.get_text(separator=" ").strip())
                     c.decompose()
 
@@ -433,7 +572,10 @@ class JATSAffils(object):
                 # here in case that changes to allow more than one
                 if orcid:
                     orcid_out = self._fix_orcid(orcid)
-                    orcid_out = orcid_out[0]
+                    if orcid_out:
+                        orcid_out = orcid_out[0]
+                    else:
+                        orcid_out = ""
                 else:
                     orcid_out = ""
 
@@ -441,6 +583,8 @@ class JATSAffils(object):
                 auth["corresp"] = l_correspondent
                 auth["surname"] = surname
                 auth["given"] = given
+                auth["suffix"] = suffix
+                auth["prefix"] = prefix
                 auth["native_lang"] = native_lang
                 auth["aff"] = aff_text
                 auth["affid"] = aff_extids
@@ -454,6 +598,16 @@ class JATSAffils(object):
                 if auth:
                     if collab:
                         auth["collab"] = collab_name
+
+                    # Check if author is a duplicate of a collaboration
+                    if auth.get("surname", "") == "" and auth.get("collab", ""):
+                        # delete email and correspondence info for collabs
+                        auth["email"] = []
+                        auth["xemail"] = []
+                        auth["corresp"] = False
+                        # if the collab is already in author list, skip
+                        if auth in authors_out:
+                            continue
 
                     if contrib.get("contrib-type", "author") == "author":
                         authors_out.append(auth)
@@ -475,18 +629,26 @@ class JATSAffils(object):
             # special case: affs defined in contrib-group, but not in individual contrib
             if art_contrib_group:
                 contrib_aff = art_contrib_group.find_all("aff")
+                contrib_aff_new = []
+                for a in contrib_aff:
+                    if not a.get("specific-use", None):
+                        contrib_aff_new.append(a)
+                contrib_aff = contrib_aff_new
                 for aff in contrib_aff:
                     # check and see if the publisher defined an email tag inside an affil (like IOP does)
                     nested_email_list = aff.find_all("ext-link")
+                    key = aff.get("id", default_key)
                     for e in nested_email_list:
                         if e.get("ext-link-type", None) == "email":
-                            key = e["id"]
+                            if e.get("id", None):
+                                ekey = e["id"]
+                            else:
+                                ekey = key
                             value = e.text
                             # build the cross-reference dictionary to be used later
-                            self.email_xref[key] = value
+                            self.email_xref[ekey] = value
                             e.decompose()
 
-                    key = aff.get("id", default_key)
                     # special case: get rid of <sup>...
                     aff = self._decompose(soup=aff, tag="sup")
                     aff, aff_extids_tmp = self._get_inst_identifiers(aff)
@@ -497,16 +659,35 @@ class JATSAffils(object):
 
                     affstr = aff.get_text(separator=", ").strip()
                     (affstr, email_list) = self._fix_affil(affstr)
-                    if email_list:
-                        self.email_xref[key] = email_list
+                    if not self.email_xref.get(key, None):
+                        if email_list:
+                            self.email_xref[key] = email_list
+                        else:
+                            self.email_xref[key] = ""
                     self.xref_dict[key] = affstr
                     self.xref_xid_dict[key] = aff_extids_tmp
+
+        # special case: publisher defined aff/email xrefs, but the xids aren't
+        # assigned to authors; xid is typically of the form "A\d+"
+        # publisher example: Geol. Soc. London (gsl)
+        count_auth = len(authors_out)
+        count_xref = len(self.xref_dict.keys())
+        if count_auth == count_xref:
+            for auth, xref in zip(authors_out, self.xref_dict.keys()):
+                if self.regex_auth_xid.match(xref):
+                    if not auth.get("aff", []) and not auth.get("xaff", []):
+                        auth["xaff"] = [xref]
 
         self.contrib_dict = {"authors": authors_out, "contributors": contribs_out}
 
         # now get the xref keys outside of contrib-group:
         # aff xrefs...
         aff_glob = article_metadata.find_all("aff")
+        aff_glob_new = []
+        for a in aff_glob:
+            if not a.get("specific-use", None):
+                aff_glob_new.append(a)
+        aff_glob = aff_glob_new
         for aff in aff_glob:
             try:
                 key = aff["id"]
@@ -642,14 +823,15 @@ class JATSParser(BaseBeautifulSoupParser):
 
                 if title_group.find("subtitle"):
                     subtitle = title_group.find("subtitle")
-                    # subtitle xrefs
-                    for dx in subtitle.find_all("xref"):
-                        key = dx.get("rid", None)
-                        if title_fn_dict.get(key, None):
-                            subtitle_fn_list.append(title_fn_dict.get(key, None))
-                        dx.decompose()
-                    subtitle = self._remove_latex(subtitle)
-                    sub_title = self._detag(subtitle, self.HTML_TAGSET["title"]).strip()
+                    if subtitle.get("content-type", "") != "running-title":
+                        # subtitle xrefs
+                        for dx in subtitle.find_all("xref"):
+                            key = dx.get("rid", None)
+                            if title_fn_dict.get(key, None):
+                                subtitle_fn_list.append(title_fn_dict.get(key, None))
+                            dx.decompose()
+                        subtitle = self._remove_latex(subtitle)
+                        sub_title = self._detag(subtitle, self.HTML_TAGSET["title"]).strip()
                 subtitle_notes = []
                 if subtitle_fn_list:
                     subtitle_notes.extend(subtitle_fn_list)
@@ -683,6 +865,14 @@ class JATSParser(BaseBeautifulSoupParser):
         auth_affil = JATSAffils()
         aa_output_dict = auth_affil.parse(article_metadata=self.article_meta)
         if aa_output_dict.get("authors"):
+            for auth in aa_output_dict["authors"]:
+                if auth.get("given"):
+                    auth["given"] = " ".join(auth["given"].split())
+                if auth.get("surname"):
+                    auth["surname"] = " ".join(auth["surname"].split())
+                if auth.get("middle"):
+                    auth["middle"] = " ".join(auth["middle"].split())
+
             self.base_metadata["authors"] = aa_output_dict["authors"]
 
         if aa_output_dict.get("contributors"):
@@ -724,6 +914,14 @@ class JATSParser(BaseBeautifulSoupParser):
                     revised.append(eddate)
                 elif date_type == "accepted":
                     self.base_metadata["edhist_acc"] = eddate
+                # special case: if "version-of-record" add to pubDate.otherDate
+                elif date_type == "version-of-record":
+                    pd = {"type": date_type, "date": eddate}
+                    # self.base_metadata["pubdate_other"]
+                    if self.base_metadata.get("pubdate_other", []):
+                        self.base_metadata["pubdate_other"].append(pd)
+                    else:
+                        self.base_metadata["pubdate_other"] = [pd]
                 else:
                     logger.info("Editorial history date type (%s) not recognized.", date_type)
 
@@ -838,6 +1036,19 @@ class JATSParser(BaseBeautifulSoupParser):
             "journal-title-group"
         ).find("journal-title"):
             journal = self.journal_meta.find("journal-title-group").find("journal-title")
+        elif self.journal_meta.find("journal-title-group") and self.journal_meta.find(
+            "journal-title-group"
+        ).find("abbrev-journal-title"):
+            if self.journal_meta.find("journal-title-group").find(
+                "abbrev-journal-title", {"abbrev-type": "pubmed"}
+            ):
+                journal = self.journal_meta.find("journal-title-group").find(
+                    "abbrev-journal-title", {"abbrev-type": "pubmed"}
+                )
+            else:
+                journal = self.journal_meta.find("journal-title-group").find(
+                    "abbrev-journal-title"
+                )
         elif self.journal_meta.find("journal-title"):
             journal = self.journal_meta.find("journal-title")
 
@@ -862,7 +1073,12 @@ class JATSParser(BaseBeautifulSoupParser):
         isbn_all = self.article_meta.find_all("isbn")
         isbns = []
         for i in isbn_all:
-            isbns.append({"type": i["content-type"], "isbn_str": self._detag(i, [])})
+            content_type = None
+            if i.get("content-type", ""):
+                content_type = i.get("content-type")
+            elif i.get("publication-format", ""):
+                content_type = i.get("publication-format")
+            isbns.append({"type": content_type, "isbn_str": self._detag(i, [])})
 
         self.base_metadata["isbn"] = isbns
 
@@ -917,6 +1133,10 @@ class JATSParser(BaseBeautifulSoupParser):
                 self.base_metadata["ids"]["pub-id"].append(
                     {"attribute": "manuscript", "Identifier": self._detag(d, [])}
                 )
+            elif id_type == "url":
+                self.base_metadata["ids"]["pub-id"].append(
+                    {"attribute": "url", "Identifier": self._detag(d, [])}
+                )
             elif id_type == "other":
                 self.base_metadata["ids"]["pub-id"].append(
                     {"attribute": "other", "Identifier": self._detag(d, [])}
@@ -936,55 +1156,74 @@ class JATSParser(BaseBeautifulSoupParser):
         pub_dates = self.article_meta.find_all("pub-date")
 
         for d in pub_dates:
+            d = d.extract()
             pub_format = d.get("publication-format", "")
             pub_type = d.get("pub-type", "")
             date_type = d.get("date-type", "")
-            accepted_date_types = ["pub", "", "first_release"]
+            accepted_date_types = [
+                "pub",
+                "",
+                "first_release",
+                "epub-ppub",
+                "ppub-epub",
+                "version-of-record",
+            ]
             pubdate = self._get_date(d)
             if (
                 pub_format == "print"
                 or pub_type == "ppub"
                 or pub_type == "cover"
                 or (pub_type == "" and pub_format == "")
-            ) and (date_type == "pub" or date_type == ""):
+            ) and (date_type == "pub" or date_type == "" or date_type == "version-of-record"):
                 self.base_metadata["pubdate_print"] = pubdate
 
             if (
                 pub_format == "electronic"
                 or pub_type == "epub"
+                or pub_type == "epub-ppub"
+                or pub_type == "ppub-epub"
                 or (pub_type == "" and pub_format == "")
             ) and (date_type in accepted_date_types):
                 self.base_metadata["pubdate_electronic"] = pubdate
 
             elif (date_type != "pub") and (date_type != ""):
-                self.base_metadata["pubdate_other"] = [{"type": date_type, "date": pubdate}]
-
+                # you need to check the next level to see if there's an
+                # embedded version of record date-type
+                if self.base_metadata.get("pubdate_other", []):
+                    self.base_metadata["pubdate_other"].append(
+                        {"type": date_type, "date": pubdate}
+                    )
+                else:
+                    self.base_metadata["pubdate_other"] = [{"type": date_type, "date": pubdate}]
             if pub_type == "open-access":
                 self.base_metadata.setdefault("openAccess", {}).setdefault("open", True)
 
     def _parse_permissions(self):
         # Check for open-access / "Permissions" field
-        permissions = self.article_meta.find("permissions").find_all("license")
-        for p in permissions:
-            if (
-                p.get("license-type", None) == "open"
-                or p.get("license-type", None) == "open-access"
-            ):
-                self.base_metadata.setdefault("openAccess", {}).setdefault("open", True)
-            if p.find("license-p"):
-                license_text = p.find("license-p")
-                if license_text:
-                    self.base_metadata.setdefault("openAccess", {}).setdefault(
-                        "license",
-                        self._detag(license_text.get_text(), self.HTML_TAGSET["license"]).strip(),
-                    )
-                    license_uri = license_text.find("ext-link")
-                    if license_uri:
-                        if license_uri.get("xlink:href", None):
-                            license_uri_value = license_uri.get("xlink:href", None)
-                            self.base_metadata.setdefault("openAccess", {}).setdefault(
-                                "licenseURL", self._detag(license_uri_value, [])
-                            )
+        if self.article_meta.find("permissions"):
+            permissions = self.article_meta.find("permissions").find_all("license")
+            for p in permissions:
+                if (
+                    p.get("license-type", None) == "open"
+                    or p.get("license-type", None) == "open-access"
+                ):
+                    self.base_metadata.setdefault("openAccess", {}).setdefault("open", True)
+                if p.find("license-p"):
+                    license_text = p.find("license-p")
+                    if license_text:
+                        self.base_metadata.setdefault("openAccess", {}).setdefault(
+                            "license",
+                            self._detag(
+                                license_text.get_text(), self.HTML_TAGSET["license"]
+                            ).strip(),
+                        )
+                        license_uri = license_text.find("ext-link")
+                        if license_uri:
+                            if license_uri.get("xlink:href", None):
+                                license_uri_value = license_uri.get("xlink:href", None)
+                                self.base_metadata.setdefault("openAccess", {}).setdefault(
+                                    "licenseURL", self._detag(license_uri_value, [])
+                                )
 
     def _parse_page(self):
         fpage = self.article_meta.find("fpage")
@@ -1118,12 +1357,35 @@ class JATSParser(BaseBeautifulSoupParser):
         except Exception as err:
             raise XmlLoadException(err)
 
-        document = d.article
-        front_meta = document.front
+        document = getattr(d, "article", None) or getattr(d, "conf-article", None)
+        if document is None:
+            raise XmlLoadException("No <article> or <conf-article> element found")
+
+        front_meta = getattr(document, "front", None) or getattr(document, "conf-front", None)
+        if front_meta is None:
+            raise XmlLoadException("No <front> or <conf-front> element found")
+
         self.back_meta = document.back
 
-        self.article_meta = front_meta.find("article-meta")
-        self.journal_meta = front_meta.find("journal-meta")
+        # If a journal
+        if front_meta.find("journal-meta"):
+            self.journal_meta = front_meta.find("journal-meta")
+        if front_meta.find("article-meta"):
+            self.article_meta = front_meta.find("article-meta")
+
+        # If a conference
+        # IEEE JATS for conferences contains 2 container elements about the conference:
+        # <conf-proc-meta> about the proceedings
+        # <conf-meta> about the conference itself
+        if front_meta.find("conf-proc-meta"):
+            self.journal_meta = front_meta.find("conf-proc-meta")
+        if front_meta.find("conf-meta"):
+            confm = front_meta.find("conf-meta")
+            for child in list(confm.children):
+                self.journal_meta.append(child)
+            # self.journal_meta = front_meta.find("conf-meta")
+        if front_meta.find("conf-article-meta"):
+            self.article_meta = front_meta.find("conf-article-meta")
 
         # parse individual pieces
         self._parse_title_abstract()

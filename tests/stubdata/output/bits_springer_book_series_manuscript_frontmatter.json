@@ -1,0 +1,123 @@
+{
+  "authors": [
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/04qr3zq92",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.54549.39",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0004 0369 4060",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "School of Information and Communication Engineering and Center for Information Geoscience, University of Electronic Science and Technology of China, Chengdu, China"
+        }
+      ],
+      "name": {
+        "given_name": "Feng",
+        "surname": "Qian"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/04w9fbh59",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.31880.32",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0000 8780 1230",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "School of Cyberspace Security, Beijing University of Posts and Telecommunications, Beijing, China"
+        }
+      ],
+      "name": {
+        "given_name": "Shengli",
+        "surname": "Pan"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/03h17x602",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.437806.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0004 0644 5828",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "State Key Laboratory of Oil and Gas Reservoir Geology and Exploitation and School of Geoscience and Technology, Southwest Petroleum University, Chengdu, China"
+        }
+      ],
+      "name": {
+        "given_name": "Gulan",
+        "surname": "Zhang"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "commentText": "Earth Sciences; Earth Sciences, general; Geophysics/Geodesy; Environmental Physics"
+    }
+  ],
+  "copyright": {
+    "statement": "\u00a9 The Editor(s) (if applicable) and The Author(s), under exclusive license to Springer Nature Switzerland AG 2025",
+    "status": true
+  },
+  "persistentIDs": [
+    {
+      "DOI": "10.1007/978-3-031-78900-7",
+      "ISBN": [
+        {
+          "isbnString": "978-3-031-78899-4",
+          "pubtype": "ppub"
+        },
+        {
+          "isbnString": "978-3-031-78900-7",
+          "pubtype": "epub"
+        }
+      ]
+    }
+  ],
+  "pubDate": {
+    "printDate": "2025"
+  },
+  "publication": {
+    "pubYear": "2025"
+  },
+  "recordData": {
+    "createdTime": "",
+    "loadFormat": "Springer",
+    "loadLocation": "",
+    "loadType": "fromFile",
+    "parsedTime": "2026-06-03T17:24:54.301353Z",
+    "recordOrigin": ""
+  },
+  "subtitle": {
+    "textEnglish": "Linking Theory and Practice"
+  },
+  "title": {
+    "textEnglish": "Tensor Computation for Seismic Data Processing"
+  }
+}
