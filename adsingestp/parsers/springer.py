@@ -7,16 +7,18 @@
 
 import logging
 import re
-#from collections import OrderedDict
-#from copy import copy
-
-#import bs4
-#from ordered_set import OrderedSet
 
 # from adsingestp import utils
 from adsingestp.ingest_exceptions import XmlLoadException
 from adsingestp.parsers.base import BaseBeautifulSoupParser
 from adsingestp.parsers.jats import JATSAffils
+
+# from collections import OrderedDict
+# from copy import copy
+
+# import bs4
+# from ordered_set import OrderedSet
+
 
 # import sys
 # import xml.etree.ElementTree as ET

@@ -1,9 +1,15 @@
+# Parser for IEEE conference XML
+# XML documentation: https://www.ieee.org/publications/services/services-resources
+
+# New IEEE deliveries at: /proj/ads_abstracts/sources/IEEE/ftp/[DATE]
+
 import logging
 import re
 
 from adsingestp import utils
 from adsingestp.ingest_exceptions import XmlLoadException
 from adsingestp.parsers.base import BaseBeautifulSoupParser
+from adsingestp.parsers.jats import JATSAffils
 
 logger = logging.getLogger(__name__)
 
@@ -14,182 +20,126 @@ class IEEEParser(BaseBeautifulSoupParser):
     def __init__(self):
         super(BaseBeautifulSoupParser, self).__init__()
         self.base_metadata = {}
-        self.publication = None
-        self.publicationinfo = None
-        self.volumeinfo = None
-        self.article = None
+        self.confarticle = None  # Wrapper for whole XML file: <conf-article>
+        self.conffront = None  # About conference & article: <conf-article> <conf-front>
+        self.confprocmeta = (
+            None  # About conference proceedings: <conf-article> <conf-front> <conf-proc-meta>
+        )
+        self.confmeta = (
+            None  # About the physical conference event: <conf-article> <conf-front> <conf-meta>
+        )
+        self.article = None  # About the article: <conf-article> <conf-front> <conf-article-meta>
+        self.body = None  # Fulltext: <conf-article> <body>
+        self.back = None  # Acknowledgments & References: <conf-article> <back>
+
+    def _parse_abstract(self):
+        if self.article.find("abstract"):
+            self.base_metadata["abstract"] = self.article.find("abstract").get_text(strip=True)
+
+    def _parse_authors(self):
+        # Parse authors from <contrib-group> section
+
+        auth_affil = JATSAffils()
+        aa_output_dict = auth_affil.parse(article_metadata=self.article)
+
+        if aa_output_dict.get("authors"):
+            for auth in aa_output_dict["authors"]:
+                given = auth.get("given") or ""
+                if given.strip():
+                    auth["given"] = " ".join(given.split())
+
+                surname = auth.get("surname") or ""
+                if surname.strip():
+                    auth["surname"] = " ".join(surname.split())
+
+                middle = auth.get("middle") or ""
+                if middle.strip():
+                    auth["middle"] = " ".join(middle.split())
+            self.base_metadata["authors"] = aa_output_dict["authors"]
+
+    def _parse_funding(self):
+        funding = []
+
+        # <funding-group> <award-group> <funding-source> <institution-wrap> <institution content-type="institution">
+
+        if not self.article.find("funding-group"):
+            return
+        else:
+            fg = self.article.find("funding-group")
+            funding_stmt = fg.find("funding-statement", "").get_text(strip=True)
+            award_groups = fg.find_all("award-group")
+
+            for ag in award_groups:
+                funder = {}
+
+                # Collect all institutions under this award-group
+                # <award-group> contains a single ? funding institution & all awards from that inst
+                institutions = ag.select("funding-source institution-wrap institution")
+                if institutions:
+                    agency_names = [
+                        self._clean_output(inst.get_text(strip=True))
+                        for inst in institutions
+                        if inst.get_text(strip=True)
+                    ]
+                    if agency_names:
+                        # Join multiple institutions for this award-group with "; "
+                        funder.setdefault("agencyname", "; ".join(agency_names))
+
+                # Collect all award-ids under this award-group
+                # <funding-group> <award-group> <award-id>
+                award_ids = ag.find_all("award-id")
+                if award_ids:
+                    awards = [
+                        self._clean_output(aid.get_text(strip=True))
+                        for aid in award_ids
+                        if aid.get_text(strip=True)
+                    ]
+                    if awards:
+                        # Join multiple award numbers with comma if present
+                        funder.setdefault("awardnumber", ", ".join(awards))
+
+                if funder:
+                    funding.append(funder)
+
+        if funding:
+            self.base_metadata["funding"] = funding
 
     def _parse_ids(self):
         self.base_metadata["ids"] = {}
 
-        self.base_metadata["issn"] = []
-        if self.article.find("issn"):
-            for i in self.publicationinfo.find_all("issn"):
-                self.base_metadata["issn"].append((i["mediatype"], i.get_text()))
+        isbns = []
 
-        if self.article.find("doi"):
-            self.base_metadata["ids"]["doi"] = self.article.find("doi").get_text()
+        # Handle ISBNs for both print & electronic
+        # <isbn publication-format="print" OR "electronic">
+        isbn_all = self.confprocmeta.find_all("isbn")
+        isbns = []
+        for i in isbn_all:
+            content_type = None
+            if i.get("publication-format", ""):
+                pub_format = i.get("publication-format")
+            isbns.append({"type": pub_format, "isbn_str": self._detag(i, [])})
+        self.base_metadata["isbn"] = isbns
 
-        self.base_metadata["ids"]["pub-id"] = []
-        if self.publicationinfo.find("publicationdoi"):
-            self.base_metadata["ids"]["pub-id"].append(
-                {
-                    "attribute": "doi",
-                    "Identifier": self.publicationinfo.find("publicationdoi").get_text(),
-                }
-            )
+        # Possible TO DO: Add ISSNs
+        # Conferences don't have ISSNs?
+        # IEEE XML contains ISSNs only in references
 
-    def _parse_pub(self):
-        if self.publication.find("title"):
-            t = self.publication.find("title")
-            self.base_metadata["publication"] = self._clean_output(
-                self._detag(t, self.HTML_TAGSET["title"]).strip()
-            )
+        if self.article.find("article-id", {"pub-id-type": "doi"}):
+            self.base_metadata["ids"]["doi"] = self.article.find(
+                "article-id", {"pub-id-type": "doi"}
+            ).get_text(strip=True)
 
-        if self.volumeinfo:
-            self.base_metadata["volume"] = self.volumeinfo.find("volumenum").get_text()
-            self.base_metadata["issue"] = self.volumeinfo.find("issue").find("issuenum").get_text()
-
-    def _parse_page(self):
-        n = self.article.find("artpagenums", None)
-        if n:
-            self.base_metadata["page_first"] = self.base_metadata["page_first"] = self._detag(
-                n.get("startpage", None), []
-            )
-            self.base_metadata["page_last"] = self.base_metadata["page_last"] = self._detag(
-                n.get("endpage", None), []
-            )
-
-    def _parse_pubdate(self):
-        # Look for publication dates in article section
-        for date in self.article.find_all("date"):
-            date_type = date.get("datetype", "")
-
-            # Get year, month, day values
-            if date.find("year"):
-                year = date.find("year").get_text()
-            else:
-                year = "0000"
-
-            if date.find("month"):
-                month_raw = date.find("month").get_text()
-                if month_raw.isdigit():
-                    month = month_raw
-                else:
-                    month_name = month_raw[0:3].lower()
-                    month = utils.MONTH_TO_NUMBER[month_name]
-            else:
-                month_raw == "00"
-
-            if date.find("day"):
-                day = date.find("day").get_text()
-            else:
-                day = "00"
-
-            # Format date string
-            pubdate = year + "-" + month + "-" + day
-
-            # Assign to appropriate metadata field based on date type
-            if date_type == "OriginalPub":
-                self.base_metadata["pubdate_print"] = pubdate
-            elif date_type == "ePub":
-                self.base_metadata["pubdate_electronic"] = pubdate
-
-    def _parse_title_abstract(self):
-        # Parse title from article section
-        if self.article.find("title"):
-            self.base_metadata["title"] = self._clean_output(
-                self._detag(self.article.find("title"), self.HTML_TAGSET["title"]).strip()
-            )
-
-        # Parse abstract from articleinfo section
-        if self.article.find("articleinfo"):
-            for abstract in self.article.find("articleinfo").find_all("abstract"):
-                if abstract.get("abstracttype") == "Regular":
-                    self.base_metadata["abstract"] = self._clean_output(
-                        self._detag(abstract, self.HTML_TAGSET["abstract"]).strip()
-                    )
-
-    def _parse_permissions(self):
-        # Check for open-access and permissions information
-        if self.article.find("articleinfo"):
-            articleinfo = self.article.find("articleinfo")
-
-            # Get copyright holder and year
-            if articleinfo.find("articlecopyright"):
-                copyright = articleinfo.find("articlecopyright")
-                copyright_holder = self._clean_output(copyright.get_text())
-                copyright_year = copyright.get("year", "")
-                copyright_statement = self._detag(
-                    articleinfo.find("article_copyright_statement").get_text(),
-                    self.HTML_TAGSET["license"],
-                )
-
-                # Format copyright string
-                copyright_text = (
-                    copyright_year + " " + copyright_holder + ". " + copyright_statement
-                )
-                self.base_metadata["copyright"] = copyright_text
-
-            # Check if open access is given as "T" (true)
-            if articleinfo.find("articleopenaccess"):
-                if articleinfo.find("articleopenaccess").get_text() == "T":
-                    self.base_metadata.setdefault("openAccess", {}).setdefault("open", True)
-
-    def _parse_authors(self):
-        # Parse authors from articleinfo section
-        if self.article.find("articleinfo"):
-            articleinfo = self.article.find("articleinfo")
-            author_list = []
-
-            # Get all authors from authorgroup
-            if articleinfo.find("authorgroup"):
-                for author in articleinfo.find("authorgroup").find_all("author"):
-                    author_tmp = {}
-
-                    # Get author name components
-                    if author.find("firstname"):
-                        author_tmp["given"] = self._clean_output(
-                            author.find("firstname").get_text()
-                        )
-                    if author.find("surname"):
-                        author_tmp["surname"] = self._clean_output(
-                            author.find("surname").get_text()
-                        )
-
-                    # Get author affiliation
-                    if author.find("affiliation"):
-                        author_tmp["aff"] = [
-                            self._clean_output(author.find("affiliation").get_text())
-                        ]
-                        author_tmp["xaff"] = []
-
-                    # Get author email
-                    if author.find("email"):
-                        author_tmp["email"] = self._clean_output(author.find("email").get_text())
-
-                    # Get author ORCID if present
-                    if author.find("orcid"):
-                        author_tmp["orcid"] = author.find("orcid").get_text()
-
-                    # Check if author is corresponding author
-                    if author.get("role") == "corresponding":
-                        author_tmp["corresp"] = True
-
-                    author_list.append(author_tmp)
-
-            if author_list:
-                self.base_metadata["authors"] = author_list
+        # Possible TO DO: Add publication DOIs
+        # IEEE XML old DTD has these, new version does not?
 
     def _parse_keywords(self):
-        # Parse IEEE keywords from keywordset elements
         keywords = []
 
-        # Handle both IEEE and IEEEFree keyword types
-        for keywordset in self.article.find_all("keywordset"):
-            keyword_type = keywordset.get("keywordtype", "")
+        # Handle both IEEE- and author-assigned keyword sets
+        for keywordset in self.article.find_all("kwd-group"):
+            keyword_type = keywordset.get("kwd-group-type", "")
 
-            for keyword in keywordset.find_all("keywordterm"):
+            for keyword in keywordset.find_all("kwd"):
                 if keyword.string:
                     keywords.append(
                         {
@@ -200,47 +150,178 @@ class IEEEParser(BaseBeautifulSoupParser):
         if keywords:
             self.base_metadata["keywords"] = keywords
 
+    def _parse_page(self):
+        if self.article.find("fpage"):
+            self.base_metadata["page_first"] = self.article.find("fpage").get_text(strip=True)
+        if self.article.find("lpage"):
+            self.base_metadata["page_last"] = self.article.find("lpage").get_text(strip=True)
+
+    def _parse_permissions(self):
+        # Check for open-access and permissions information
+        if self.article.find("permissions"):
+            permissions = self.article.find("permissions")
+
+            if permissions.find("copyright-statement"):
+                copyright_statement = permissions.find("copyright-statement", "").get_text(
+                    strip=True
+                )
+            if permissions.find("copyright-year"):
+                copyright_year = permissions.find("copyright-year", "").get_text(strip=True)
+            if permissions.find("copyright-holder"):
+                copyright_holder = permissions.find("copyright-holder", "").get_text(strip=True)
+            if permissions.find("license"):
+                license = permissions.find("license", "").get_text(strip=True)
+
+            # Format copyright string
+            copyright_text = (
+                "©" + copyright_year + " " + copyright_holder
+            )  # + ". " + copyright_statement
+            self.base_metadata["copyright"] = copyright_text
+
+            """
+            # TO DO: Are any IEEE conference articles OA?
+            # Check if open access is given as "T" (true)
+            if permissions.find("articleopenaccess"):
+                if permissions.find("articleopenaccess").get_text(strip=True) == "T":
+                    self.base_metadata.setdefault("openAccess", {}).setdefault("open", True)
+            """
+
+    def _parse_pub(self):
+        # Conference title
+        if self.confprocmeta.find("conf-proc-title-group"):
+            if self.confprocmeta.find("conf-proc-title-group").find("conf-full-title"):
+                conf_title = (
+                    self.confprocmeta.find("conf-proc-title-group")
+                    .find("conf-full-title")
+                    .get_text(strip=True)
+                )
+
+        # Volume
+        if self.confprocmeta.find("volume"):
+            self.base_metadata["volume"] = self.confprocmeta.find("volume").get_text(strip=True)
+
+        # Conference location
+        if self.confmeta.find("conf-loc"):
+            full_loc = self.confmeta.find("conf-loc")
+            city_tag = full_loc.find("city")
+            city = city_tag.get_text(strip=True) if city_tag else ""
+            state_tag = full_loc.find("state")
+            state = state_tag.get_text(strip=True) if state_tag else ""
+            country_tag = full_loc.find("country")
+            country = country_tag.get_text(strip=True) if country_tag else ""
+
+            loc_parts = [p for p in (city, state, country) if p]
+            location = ", ".join(loc_parts)
+
+            self.base_metadata["conf_location"] = location
+
+        # Conference dates in <conf-meta> section
+        conf_start = self.confmeta.find("conf-start")
+        if conf_start:
+            startdate_info = self._parse_date(conf_start)
+            start_year = startdate_info.get("year", "")
+            start_month = startdate_info.get("month", "")
+            start_day = startdate_info.get("day", "")
+            start_date = f"{start_day} {start_month} {start_year}"
+
+        conf_end = self.confmeta.find("conf-end")
+        if conf_end:
+            enddate_info = self._parse_date(conf_end)
+            end_year = enddate_info.get("year", "")
+            end_month = enddate_info.get("month", "")
+            end_day = enddate_info.get("day", "")
+            end_date = f"{end_day} {end_month} {end_year}"
+
+        # Assemble conference dates
+        date_parts = [p for p in (start_date, end_date) if p]
+        conf_dates = " - ".join(date_parts) if date_parts else ""
+
+        self.base_metadata["conf_date"] = conf_dates
+
+        # Assemble %J
+        pub_parts = [p for p in (conf_title, conf_dates, location) if p]
+        publication = ", ".join(pub_parts) if pub_parts else ""
+
+        self.base_metadata["publication"] = publication  # conf_title
+
+    def _parse_date(self, date_tag):
+        # Helper function to _parse_pub & _parse_pubdate
+
+        # Use iso-8601-date attribute if it exists
+        iso_attr = date_tag.get("iso-8601-date")
+
+        # Original text values (as in XML)
+        year_tag = date_tag.find("year")
+        year_raw = year_tag.get_text(strip=True) if year_tag else ""
+
+        month_tag = date_tag.find("month")
+        month_raw = month_tag.get_text(strip=True) if month_tag else ""
+
+        day_tag = date_tag.find("day")
+        day_raw = day_tag.get_text(strip=True) if day_tag else ""
+
+        # Build normalized ISO date (YYYY-MM-DD)
+        # Year
+        year_norm = year_raw if year_raw.isdigit() else "0000"
+
+        # Month
+        if month_raw:
+            if month_raw.isdigit():
+                month_norm = month_raw.zfill(2)
+            else:
+                month_name = month_raw[:3].lower()
+                month_norm = utils.MONTH_TO_NUMBER.get(month_name, "00")
+        else:
+            month_norm = "00"
+
+        # Day
+        day_norm = day_raw.zfill(2) if day_raw.isdigit() else "00"
+
+        iso_norm = iso_attr or f"{year_norm}-{month_norm}-{day_norm}"
+
+        return {
+            "iso": iso_norm,
+            "year": year_raw,
+            "month": month_raw,
+            "day": day_raw,
+        }
+
+    def _parse_pubdate(self):
+        # Publication dates in <conf-article-meta> section
+        for date in self.article.find_all("pub-date"):
+            date_type = date.get("pub-type", "")
+
+            pubdate_info = self._parse_date(date)
+            iso_date = pubdate_info.get("iso", "")
+
+            if date_type == "print":
+                self.base_metadata["pubdate_print"] = iso_date
+            elif date_type == "electronic":
+                self.base_metadata["pubdate_electronic"] = iso_date
+
     def _parse_references(self):
-        # TODO: check if IEEE gives us references at all
-        references = []
-        if self.article.find("references"):
-            for ref in self.article.find_all("reference"):
-                # output raw XML for reference service to parse later
-                ref_xml = str(ref.extract()).replace("\n", " ").replace("\xa0", " ")
-                references.append(ref_xml)
+        if not self.back:
+            return
 
-            self.base_metadata["references"] = references
+        ref_list_text = []
 
-    def _parse_funding(self):
-        funding = []
+        if self.back.find("ref-list"):
+            ref_results = self.back.find("ref-list").find_all("ref")
+        else:
+            ref_results = []
+        for r in ref_results:
+            # output raw XML for reference service to parse later
+            s = str(r.extract()).replace("\n", " ").replace("\xa0", " ")
+            ref_list_text.append(s)
+        self.base_metadata["references"] = ref_list_text
 
-        # Look for funding info in article metadata
-
-        articleinfo = self.article.find("articleinfo")
-        # import pdb; pdb.set_trace()
-        if articleinfo.find("fundrefgrp"):
-            funding_sections = articleinfo.find("fundrefgrp").find_all("fundref", [])
-
-            for funding_section in funding_sections:
-                funder = {}
-
-                # Get funder name
-                funder_name = funding_section.find("funder_name")
-                if funder_name:
-                    funder.setdefault("agencyname", self._clean_output(funder_name.get_text()))
-
-                # Get award/grant numbers
-                award_nums = funding_section.find_all("grant_number")
-                if award_nums:
-                    # Join multiple award numbers with comma if present
-                    awards = [self._clean_output(award.get_text()) for award in award_nums]
-                    funder.setdefault("awardnumber", ", ".join(awards))
-
-                if funder:
-                    funding.append(funder)
-
-        if funding:
-            self.base_metadata["funding"] = funding
+    def _parse_title(self):
+        # Article title
+        if self.article.find("title-group"):
+            if self.article.find("title-group").find("article-title"):
+                self.base_metadata["title"] = (
+                    self.article.find("title-group").find("article-title").get_text(strip=True)
+                )
 
     def parse(self, text):
         """
@@ -253,26 +334,36 @@ class IEEEParser(BaseBeautifulSoupParser):
         except Exception as err:
             raise XmlLoadException(err)
 
-        if d.find("publication", None):
-            self.publication = d.find("publication")
+        if d.find("conf-article", None):
+            self.confarticle = d.find("conf-article")
 
-            if self.publication.find("publicationinfo", None):
-                self.publicationinfo = self.publication.find("publicationinfo")
+            if self.confarticle.find("conf-front", None):
+                self.conffront = self.confarticle.find("conf-front")
 
-            if self.publication.find("volume", None):
-                self.volumeinfo = self.publication.find("volume").find("volumeinfo", None)
-                self.article = self.publication.find("volume").find("article", None)
+                if self.confarticle.find("conf-proc-meta", None):
+                    self.confprocmeta = self.confarticle.find("conf-proc-meta")
+                if self.confarticle.find("conf-meta", None):
+                    self.confmeta = self.confarticle.find("conf-meta")
+                if self.confarticle.find("conf-article-meta", None):
+                    self.article = self.confarticle.find("conf-article-meta")
 
-        self._parse_ids()
-        self._parse_pub()
-        self._parse_page()
-        self._parse_pubdate()
-        self._parse_title_abstract()
-        self._parse_permissions()
+            if self.confarticle.find("body", None):
+                self.body = self.confarticle.find("body")
+
+            if self.confarticle.find("back", None):
+                self.back = self.confarticle.find("back")
+
+        self._parse_abstract()
         self._parse_authors()
-        self._parse_keywords()
-        self._parse_references()
         self._parse_funding()
+        self._parse_ids()
+        self._parse_keywords()
+        self._parse_page()
+        self._parse_permissions()
+        self._parse_pub()
+        self._parse_pubdate()
+        self._parse_references()
+        self._parse_title()
 
         output = self.format(self.base_metadata, format="IEEE")
 
