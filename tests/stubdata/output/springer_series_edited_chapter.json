@@ -1,0 +1,266 @@
+{
+  "abstract": {
+    "textEnglish": "The modeling of dynamical systems is a pervasive concern for not only describing but also predicting and controlling natural phenomena and engineered systems. Current data-driven approaches often assume prior knowledge of the relevant state variables or result in overparameterized state spaces. Boyuan Chen and his co-authors proposed a neural network model that estimates the degrees of freedom and attempts to discover the state variables of a dynamical system. Despite its innovative approach, this baseline model lacks a connection to the physical principles governing the systems it analyzes, leading to unreliable state variables. This research proposes a method that leverages the physical characteristics of second-order Hamiltonian systems to constrain the baseline model. The proposed model outperforms the baseline model in identifying a minimal set of non-redundant and interpretable state variables."
+  },
+  "authors": [
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/01tgyzw49",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.4280.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2180 6431",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "National University of Singapore, 21 Lower Kent Ridge Road, 119077, Singapore, Singapore"
+        }
+      ],
+      "attrib": {
+        "email": "chavelli@comp.nus.edu.sg"
+      },
+      "name": {
+        "given_name": "F\u00e9lix",
+        "surname": "Chavelli"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/01tgyzw49",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.4280.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2180 6431",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "National University of Singapore, 21 Lower Kent Ridge Road, 119077, Singapore, Singapore"
+        }
+      ],
+      "attrib": {
+        "email": "khoozy@comp.nus.edu.sg"
+      },
+      "name": {
+        "given_name": "Zi-Yu",
+        "surname": "Khoo"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/01tgyzw49",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.4280.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2180 6431",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "National University of Singapore, 21 Lower Kent Ridge Road, 119077, Singapore, Singapore"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/03hjh0h14",
+              "affIDType": "ROR"
+            }
+          ],
+          "affPubRaw": "CNRS@CREATE LTD, 1 Create Way, 138602, Singapore, Singapore"
+        }
+      ],
+      "attrib": {
+        "corresp": true,
+        "email": "dawen.wu@cnrsatcreate.sg"
+      },
+      "name": {
+        "given_name": "Dawen",
+        "surname": "Wu"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/00f44np30",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.452278.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0004 0470 8348",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "Singapore Institute of Manufacturing Technology, Agency for Science, Technology and Research (A*STAR), 138634, Singapore, Singapore"
+        }
+      ],
+      "attrib": {
+        "email": "sclow@simtech.a-star.edu.sg"
+      },
+      "name": {
+        "given_name": "Jonathan Sze Choong",
+        "surname": "Low"
+      }
+    },
+    {
+      "affiliation": [
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/01tgyzw49",
+              "affIDType": "ROR"
+            },
+            {
+              "affID": "grid.4280.e",
+              "affIDType": "GRID"
+            },
+            {
+              "affID": "0000 0001 2180 6431",
+              "affIDType": "ISNI"
+            }
+          ],
+          "affPubRaw": "National University of Singapore, 21 Lower Kent Ridge Road, 119077, Singapore, Singapore"
+        },
+        {
+          "affPubID": [
+            {
+              "affID": "https://ror.org/03hjh0h14",
+              "affIDType": "ROR"
+            }
+          ],
+          "affPubRaw": "CNRS@CREATE LTD, 1 Create Way, 138602, Singapore, Singapore"
+        }
+      ],
+      "attrib": {
+        "email": "steph@nus.edu.sg"
+      },
+      "name": {
+        "given_name": "St\u00e9phane",
+        "surname": "Bressan"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "commentText": "Computer Science; Artificial Intelligence; Computer Communication Networks; Database Management; Data Mining and Knowledge Discovery; Information Storage and Retrieval; Computer Applications"
+    }
+  ],
+  "copyright": {
+    "statement": "\u00a9 The Editor(s) (if applicable) and The Author(s), under exclusive license to Springer Nature Singapore Pte Ltd. 2025",
+    "status": true
+  },
+  "keywords": [
+    {
+      "keyString": "Knowledge Discovery"
+    },
+    {
+      "keyString": "Multimedia Information Extraction"
+    },
+    {
+      "keyString": "Video Information Retrieval"
+    },
+    {
+      "keyString": "Dynamical System"
+    },
+    {
+      "keyString": "Intrinsic Dimensionality"
+    },
+    {
+      "keyString": "Physics-Informed Machine Learning"
+    }
+  ],
+  "pagination": {
+    "firstPage": "3",
+    "lastPage": "15",
+    "pageRange": "3-15"
+  },
+  "persistentIDs": [
+    {
+      "DOI": "10.1007/978-981-96-6008-7_1",
+      "ISBN": [
+        {
+          "isbnString": "978-981-96-6007-0",
+          "pubtype": "ppub"
+        },
+        {
+          "isbnString": "978-981-96-6008-7",
+          "pubtype": "epub"
+        }
+      ]
+    }
+  ],
+  "pubDate": {
+    "printDate": "2025"
+  },
+  "publication": {
+    "ISSN": [
+      {
+        "issnString": "print",
+        "pubtype": "0302-9743"
+      },
+      {
+        "issnString": "electronic",
+        "pubtype": "1611-3349"
+      }
+    ],
+    "pubName": "Intelligent Information and Database Systems: 17th Asian Conference, ACIIDS 2025, Kitakyushu, Japan, April 23-25, 2025, Proceedings, Part I",
+    "pubYear": "2025",
+    "volumeNum": "15683"
+  },
+  "recordData": {
+    "createdTime": "",
+    "loadFormat": "Springer",
+    "loadLocation": "",
+    "loadType": "fromFile",
+    "parsedTime": "2026-07-01T17:49:52.239710Z",
+    "recordOrigin": ""
+  },
+  "references": [
+    "<ref id=\"CR1\"><label>1.</label><mixed-citation publication-type=\"other\">Asperti, A.: Sparsity in variational autoencoders. arXiv e-prints <ext-link ext-link-type=\"uri\" xlink:href=\"http://arxiv.org/abs/1812.07238\">arXiv:1812.07238</ext-link> (2018)</mixed-citation></ref>",
+    "<ref id=\"CR2\"><label>2.</label><mixed-citation publication-type=\"book\"><person-group person-group-type=\"author\"><name><surname>Bellman</surname><given-names>RE</given-names></name></person-group><source>Adaptive Control Processes : A Guided Tour</source><year>1961</year><publisher-loc>Princeton</publisher-loc><publisher-name>Princeton University Press</publisher-name><pub-id pub-id-type=\"doi\">10.1515/9781400874668</pub-id></mixed-citation></ref>",
+    "<ref id=\"CR3\"><label>3.</label><mixed-citation publication-type=\"other\">Bertalan, T., Dietrich, F., Mezi\u0107, I., Kevrekidis, I.G.: On learning Hamiltonian systems from data. Chaos: Interdisc. J. Nonlinear Sci. <bold>29</bold>(12), 121107 (2019)</mixed-citation></ref>",
+    "<ref id=\"CR4\"><label>4.</label><mixed-citation publication-type=\"book\"><person-group person-group-type=\"author\"><name><surname>Chavelli</surname><given-names>F</given-names></name><name><surname>Zi-Yu</surname><given-names>K</given-names></name><name><surname>Low</surname><given-names>J</given-names></name><name><surname>Bressan</surname><given-names>S</given-names></name></person-group><person-group person-group-type=\"editor\"><name><surname>Strauss</surname><given-names>C</given-names></name><name><surname>Amagasa</surname><given-names>T</given-names></name><name><surname>Kotsis</surname><given-names>G</given-names></name><name><surname>Tjoa</surname><given-names>AM</given-names></name><name><surname>Khalil</surname><given-names>I</given-names></name></person-group><article-title xml:lang=\"en\">Assessing the effectiveness of intrinsic dimension estimators for uncovering the phase space dimensionality of dynamical systems from state observations</article-title><source>Database and Expert Systems Applications</source><year>2023</year><publisher-loc>Cham</publisher-loc><publisher-name>Springer</publisher-name><fpage>259</fpage><lpage>265</lpage><pub-id pub-id-type=\"doi\">10.1007/978-3-031-39847-6_18</pub-id></mixed-citation></ref>",
+    "<ref id=\"CR5\"><label>5.</label><mixed-citation publication-type=\"journal\"><person-group person-group-type=\"author\"><name><surname>Chen</surname><given-names>B</given-names></name><name><surname>Huang</surname><given-names>K</given-names></name><name><surname>Raghupathi</surname><given-names>S</given-names></name><name><surname>Chandratreya</surname><given-names>I</given-names></name><name><surname>Du</surname><given-names>Q</given-names></name><name><surname>Lipson</surname><given-names>H</given-names></name></person-group><article-title xml:lang=\"en\">Automated discovery of fundamental variables hidden in experimental data</article-title><source>Nat. Comput. Sci.</source><year>2022</year><volume>2</volume><fpage>433</fpage><lpage>442</lpage><pub-id pub-id-type=\"doi\">10.1038/s43588-022-00281-6</pub-id></mixed-citation></ref>",
+    "<ref id=\"CR6\"><label>6.</label><mixed-citation publication-type=\"other\">Gao, L.M., Kutz, J.N.: Bayesian autoencoders for data-driven discovery of coordinates, governing equations and fundamental constants (2022)</mixed-citation></ref>",
+    "<ref id=\"CR7\"><label>7.</label><mixed-citation publication-type=\"other\">Gao, Z., Tan, C., Wu, L., Li, S.Z.: SimVP: simpler yet better video prediction. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 3170\u20133180 (2022)</mixed-citation></ref>",
+    "<ref id=\"CR8\"><label>8.</label><mixed-citation publication-type=\"other\">Ginsberg, J.: Engineering Dynamics, vol. 10, pp. 397\u2013400. Cambridge University Press (2008)</mixed-citation></ref>",
+    "<ref id=\"CR9\"><label>9.</label><mixed-citation publication-type=\"other\">Goodfellow, I.J., Bengio, Y., Courville, A.: Deep Learning. MIT Press, Cambridge (2016). <ext-link ext-link-type=\"uri\" xlink:href=\"http://www.deeplearningbook.org\">http://www.deeplearningbook.org</ext-link></mixed-citation></ref>",
+    "<ref id=\"CR10\"><label>10.</label><mixed-citation publication-type=\"other\">Greydanus, S., Dzamba, M., Yosinski, J.: Hamiltonian neural networks. In: Wallach, H., Larochelle, H., Beygelzimer, A., d\u2019 Alch\u00e9-Buc, F., Fox, E., Garnett, R. (eds.) Advances in Neural Information Processing Systems, vol. 32. Curran Associates, Inc. (2019)</mixed-citation></ref>",
+    "<ref id=\"CR11\"><label>11.</label><mixed-citation publication-type=\"journal\"><person-group person-group-type=\"author\"><name><surname>Karniadakis</surname><given-names>GE</given-names></name><name><surname>Kevrekidis</surname><given-names>IG</given-names></name><name><surname>Lu</surname><given-names>L</given-names></name><name><surname>Perdikaris</surname><given-names>P</given-names></name><name><surname>Wang</surname><given-names>S</given-names></name><name><surname>Yang</surname><given-names>L</given-names></name></person-group><article-title xml:lang=\"en\">Physics-informed machine learning</article-title><source>Nat. Rev. Phys.</source><year>2021</year><volume>3</volume><issue>6</issue><fpage>422</fpage><lpage>440</lpage><pub-id pub-id-type=\"doi\">10.1038/s42254-021-00314-5</pub-id></mixed-citation></ref>",
+    "<ref id=\"CR12\"><label>12.</label><mixed-citation publication-type=\"other\">Khoo, Z.Y., Wu, D., Low, J.S.C., Bressan, S.: Separable Hamiltonian neural networks. Phys. Rev. E <bold>110</bold>, 044205 (2024). <ext-link ext-link-type=\"doi\" xlink:href=\"10.1103/PhysRevE.110.044205\">https://doi.org/10.1103/PhysRevE.110.044205</ext-link></mixed-citation></ref>",
+    "<ref id=\"CR13\"><label>13.</label><mixed-citation publication-type=\"other\">Khoo, Z.Y., Wu, D., Low, J.S.C., Bressan, S.: Periodic Hamiltonian neural networks. IEEE Trans. Artif. Intell. <bold>1</bold>(01), 1\u20139 (5555). <ext-link ext-link-type=\"doi\" xlink:href=\"10.1109/TAI.2024.3515934\">https://doi.org/10.1109/TAI.2024.3515934</ext-link></mixed-citation></ref>",
+    "<ref id=\"CR14\"><label>14.</label><mixed-citation publication-type=\"other\">Kingma, D.P., Welling, M.: Auto-encoding variational bayes. In: 2nd International Conference on Learning Representations, ICLR 2014, Banff, AB, Canada, 14\u201316 April 2014, Conference Track Proceedings (2014)</mixed-citation></ref>",
+    "<ref id=\"CR15\"><label>15.</label><mixed-citation publication-type=\"other\">Levina, E., Bickel, P.: Maximum likelihood estimation of intrinsic dimension. In: Advances in Neural Information Processing Systems, vol. 17 (2004)</mixed-citation></ref>",
+    "<ref id=\"CR16\"><label>16.</label><mixed-citation publication-type=\"other\">Meyer, K.R., Hall, G.R.: Hamiltonian Differential Equations and the N-Body Problem, pp. 1\u201332. Springer, New York, (1992)</mixed-citation></ref>",
+    "<ref id=\"CR17\"><label>17.</label><mixed-citation publication-type=\"other\">Nolte, D.D.: The tangled tale of phase space. In: Galileo Unbound: A Path Across Life, the Universe and Everything. Oxford University Press (2018)</mixed-citation></ref>",
+    "<ref id=\"CR18\"><label>18.</label><mixed-citation publication-type=\"confproc\"><person-group person-group-type=\"author\"><name><surname>Sasaki</surname><given-names>R</given-names></name><name><surname>Takeishi</surname><given-names>N</given-names></name><name><surname>Yairi</surname><given-names>T</given-names></name><name><surname>Hori</surname><given-names>K</given-names></name></person-group><person-group person-group-type=\"editor\"><name><surname>Nayak</surname><given-names>AC</given-names></name><name><surname>Sharma</surname><given-names>A</given-names></name></person-group><article-title xml:lang=\"en\">Neural gray-box identification of nonlinear partial differential equations</article-title><source>PRICAI 2019: Trends in Artificial Intelligence</source><year>2019</year><publisher-loc>Cham</publisher-loc><publisher-name>Springer</publisher-name><fpage>309</fpage><lpage>321</lpage><pub-id pub-id-type=\"doi\">10.1007/978-3-030-29911-8_24</pub-id><volume content-type=\"number-in-series\">11671</volume></mixed-citation></ref>",
+    "<ref id=\"CR19\"><label>19.</label><mixed-citation publication-type=\"journal\"><person-group person-group-type=\"author\"><name><surname>Wang</surname><given-names>Y</given-names></name><etal/></person-group><article-title xml:lang=\"en\">PredRNN: a recurrent neural network for spatiotemporal predictive learning</article-title><source>IEEE Trans. Pattern Anal. Mach. Intell.</source><year>2023</year><volume>45</volume><issue>2</issue><fpage>2208</fpage><lpage>2225</lpage><pub-id pub-id-type=\"doi\">10.1109/TPAMI.2022.3165153</pub-id></mixed-citation></ref>",
+    "<ref id=\"CR20\"><label>20.</label><mixed-citation publication-type=\"other\">Wu, H., et al.: Earthfarseer: versatile spatio-temporal dynamical systems modeling in one model. In: Thirty-Eighth AAAI Conference on Artificial Intelligence (2024)</mixed-citation></ref>"
+  ],
+  "title": {
+    "textEnglish": "Physics-Informed Discovery of\u00a0State Variables in\u00a0Second-Order and\u00a0Hamiltonian Systems"
+  }
+}
