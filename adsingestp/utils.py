@@ -1,12 +1,13 @@
 import collections.abc
 import html
+import html.entities
 import logging
 import os
 import re
 
 import nameparser
 
-import adsingestp.custom_entity_conversions as conv
+from adsingestp.custom_entity_conversions import ASCII_CUST_MAP
 from adsingestp.ingest_exceptions import AuthorParserException
 
 logger = logging.getLogger(__name__)
@@ -418,6 +419,7 @@ class AuthorNames(object):
 
 # converts entities listed in ./custom_entity_conversions.py
 # see base.py's self.format method
+# Regex to find named entities
 ENTITY_RE = re.compile(r"&([a-zA-Z#][a-zA-Z0-9]+);")
 
 
@@ -429,11 +431,107 @@ class ConvertEntities(object):
         def replacer(match):
             name = match.group(1)
 
-            # If it's in our ASCII convuation map, convert it
-            if name in conv.ASCII_PUNCT_MAP:
-                return conv.ASCII_PUNCT_MAP[name]
+            # If it's in our ASCII conversion map, convert it
+            if name in ASCII_CUST_MAP:
+                return ASCII_CUST_MAP[name]
 
             # Otherwise leave unchanged
             return match.group(0)
 
         return ENTITY_RE.sub(replacer, text)
+
+    def _convert_html5_to_html4(self, text):
+        HTML4_BY_CP = html.entities.codepoint2name
+        HTML5_BY_NAME = html.entities.html5
+
+        SPECIAL_ENTITIES = {"amp", "lt", "gt"}
+
+        def convert_entity(match):
+            name = match.group(1)
+
+            # Preserve exactly as-is
+            if name in SPECIAL_ENTITIES:
+                return match.group(0)
+
+            html5_value = HTML5_BY_NAME.get(name + ";")
+            if html5_value is None:
+                return match.group(0)
+
+            result = []
+
+            for ch in html5_value:
+                cp = ord(ch)
+
+                #
+                # Cyrillic -> decimal NCR
+                #
+                if (
+                    0x0400 <= cp <= 0x04FF
+                    or 0x0500 <= cp <= 0x052F
+                    or 0x2DE0 <= cp <= 0x2DFF
+                    or 0xA640 <= cp <= 0xA69F
+                ):
+                    result.append(f"&#{cp};")
+                    continue
+
+                #
+                # Math, arrows, logic, technical
+                #
+                if (
+                    0x2190 <= cp <= 0x21FF
+                    or 0x2200 <= cp <= 0x22FF
+                    or 0x2300 <= cp <= 0x23FF
+                    or 0x27C0 <= cp <= 0x27EF
+                    or 0x2980 <= cp <= 0x29FF
+                    or 0x2A00 <= cp <= 0x2AFF
+                ):
+                    result.append(f"&#{cp};")
+                    continue
+
+                #
+                # Greek
+                #
+                if 0x0370 <= cp <= 0x03FF:
+                    if cp in HTML4_BY_CP:
+                        result.append(f"&{HTML4_BY_CP[cp]};")
+                    else:
+                        result.append(f"&#{cp};")
+                    continue
+
+                #
+                # Latin-1 Supplement (HTML4 accents)
+                #
+                if 0x00A0 <= cp <= 0x00FF:
+                    if cp in HTML4_BY_CP:
+                        result.append(f"&{HTML4_BY_CP[cp]};")
+                    else:
+                        result.append(f"&#{cp};")
+                    continue
+
+                #
+                # Latin Extended, Turkish, etc.
+                #
+                if 0x0100 <= cp <= 0x024F:
+                    result.append(f"&#{cp};")
+                    continue
+
+                #
+                # Use HTML4 name if available
+                #
+                if cp in HTML4_BY_CP:
+                    result.append(f"&{HTML4_BY_CP[cp]};")
+                else:
+                    result.append(f"&#{cp};")
+
+            return "".join(result)
+
+        return ENTITY_RE.sub(convert_entity, text)
+
+    def convert(self, input_text):
+        try:
+            new_text = self._convert_html5_to_html4(input_text)
+            new_text = self._convert_entities_to_ascii(new_text)
+        except Exception as err:
+            raise Exception("Entity conversion failed: %s" % err)
+        else:
+            return new_text

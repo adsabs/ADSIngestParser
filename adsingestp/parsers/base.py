@@ -490,9 +490,9 @@ class IngestBase(object):
         #
         # output["version"] = "XXX" # TODO need an example
 
-        # do a very quick custom entity conversion here:
+        ## do a very quick custom entity conversion here:
         if type(output) == dict:
-            json_output = ConvertEntities()._convert_entities_to_ascii(json.dumps(output))
+            json_output = ConvertEntities().convert(json.dumps(output))
             output = json.loads(json_output)
 
         output_clean = self._clean_empty(output)
@@ -572,12 +572,17 @@ class BaseBeautifulSoupParser(IngestBase):
         math_elements = r.find_all("tex-math")
         for e in math_elements:
             text = e.get_text()
+            doc_class = text.find("\\documentclass")
+            doc_class_len = len("\\documentclass")
             begin = text.find("\\begin{document}")
             end = text.find("\\end{document}")
             begin_len = len("\\begin{document}")
             if begin == -1 or end == -1:
                 continue
-            newtext = text[begin + begin_len : end]
+            if doc_class:
+                newtext = text[doc_class + doc_class_len : end]
+            else:
+                newtext = text[begin + begin_len : end]
             e.string = newtext
         return r
 
