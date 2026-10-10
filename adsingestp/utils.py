@@ -119,6 +119,91 @@ AIP_DISCARD_KEYWORDS = [
 ]
 
 
+class AuthorNameNormalizer(object):
+    def __init__(self):
+        self.van_regex = re.compile(r"van der ([^0-9]+)")
+        self.von_regex = re.compile(r"von ([^0-9]+)")
+        self.de_la_regex = re.compile(r"de la ([^0-9]+)")
+        self.de_regex = re.compile(r"de ([^0-9]+)")
+        self.del_regex = re.compile(r"del ([^0-9]+)")
+        self.compound_regex = re.compile(r"(\w+)\s(\w+)")
+
+        self.regex_array = [
+            self.van_regex,
+            self.von_regex,
+            self.de_la_regex,
+            self.de_regex,
+            self.del_regex,
+        ]
+
+    def apply_surname_regex(self, surname):
+        normalized_surname = surname
+        for regex in self.regex_array:
+            print
+            if regex.search(normalized_surname):
+                regex_groups = regex.search(normalized_surname).groups()
+                if self.compound_regex.search(regex_groups[-1]):
+                    compound_groups = self.compound_regex.search(regex_groups[-1]).groups()
+                    stripped_surname_1 = compound_groups[-1]
+                    stripped_surname_2 = compound_groups[-2]
+                    surname_article = normalized_surname.strip(" " + stripped_surname_1)
+                    surname_article = surname_article.strip(stripped_surname_2)
+                    normalized_surname = (
+                        surname_article
+                        + stripped_surname_2[0].upper()
+                        + stripped_surname_2[1:]
+                        + " "
+                        + stripped_surname_1[0].upper()
+                        + stripped_surname_1[1:]
+                    )
+                else:
+                    stripped_surname = regex_groups[-1]
+                    surname_article = normalized_surname.strip(stripped_surname)
+                    normalized_surname = (
+                        surname_article + stripped_surname[0].upper() + stripped_surname[1:]
+                    )
+                return normalized_surname
+
+        if self.compound_regex.search(normalized_surname):
+            compound_groups = self.compound_regex.search(normalized_surname).groups()
+            stripped_surname_1 = compound_groups[-1]
+            stripped_surname_2 = compound_groups[-2]
+            surname_article = normalized_surname.strip(" " + stripped_surname_1)
+            surname_article = surname_article.strip(stripped_surname_2)
+            normalized_surname = (
+                surname_article
+                + stripped_surname_2[0].upper()
+                + stripped_surname_2[1:]
+                + " "
+                + stripped_surname_1[0].upper()
+                + stripped_surname_1[1:]
+            )
+            return normalized_surname
+
+        normalized_surname = normalized_surname[0].upper() + normalized_surname[1:]
+        return normalized_surname
+
+    def _normalize(self, parsed_authors):
+        normalized_authors = []
+        if parsed_authors:
+            for author in parsed_authors:
+                try:
+                    normalized_surname = self.apply_surname_regex(author.get("surname"))
+                    normalized_authors.append(
+                        str(normalized_surname) + ", " + str(author["given"][0].upper())
+                    )
+                except (KeyError, IndexError):
+                    logger.error("Unable to normalize author name for {}".format(author))
+
+        else:
+            logger.error("Author name array does not exist or is empty")
+        return normalized_authors
+
+    def normalize(self, parsed_metadata):
+        parsed_authors = parsed_metadata.get("authors", [])
+        return self._normalize(parsed_authors)
+
+
 class AuthorNames(object):
     """
     Author names parser
